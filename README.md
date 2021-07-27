@@ -1,6 +1,6 @@
 # Grupo_03_Tacos
 ---
-# Integrantes:
+## Integrantes:
 ---
 ## Lopez Javier Nehuen:
 - 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
@@ -9,7 +9,7 @@
 
 
 
-# ***¡Paginas Referentes!***
+## ***¡Paginas Referentes!***
 
 * Por el uso del lenguaje, colores y animaciones: [Tacos Tacos Barcelona] (https://tacostacosbarcelona.com/)
 * Por el uso de iconos en el menú: [Mole Tacos Web] (http://moletacosweb.com.ar/)
