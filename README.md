@@ -10,5 +10,5 @@
 
 
 # ***¡Paginas Referentes!***
-*Por su uso del lenguaje, colores y animaciones: [Tacos Tacos Barcelona]
+* Por su uso del lenguaje, colores y animaciones: [Tacos Tacos Barcelona]
 (https://tacostacosbarcelona.com/#menu)
