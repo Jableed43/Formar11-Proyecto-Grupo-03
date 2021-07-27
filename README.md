@@ -1,2 +1,7 @@
-# Formar11-Proyecto-Grupo-03
-Proyecto integrador de curso full-stack de digital house
+# Grupo_03_Tacos
+---
+# Integrantes:
+---
+## Lopez Javier Nehuen:
+- 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+---
