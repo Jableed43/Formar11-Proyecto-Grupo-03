@@ -6,6 +6,9 @@
 - 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
 ---
 
+## Jonathan Ivan Quiroga:
+- 25 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+
 
 
 
