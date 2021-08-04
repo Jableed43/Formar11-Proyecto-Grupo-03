@@ -1,4 +1,4 @@
-# Grupo_03_Tacos
+# Grupo_03_TacoPado
 ---
 ## Integrantes:
 ---
