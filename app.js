@@ -18,7 +18,7 @@ app.get('/detalle-producto', (req, res) => res.sendFile(path.join(__dirname, 'vi
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')))
 
 /* app get detalle-producto */
-app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
+app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views','register.html')))
 
 
 /* Servidor escuchando, siempre va al final */
