@@ -253,6 +253,13 @@ section h2{
   font-size: 20px;
 }
 
+.nosotros-flex{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  }
+
 /* Section Beneficios */
  section#beneficios{
   background-color: #f1d367;
@@ -290,11 +297,20 @@ section h2{
   width: 100%;
  }
 
+ div.eligen-flex div{ 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  }
+
+
  #eligen, #fondo-eligen {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
  #ACA{
   background-color: #f1d367;
@@ -317,6 +333,13 @@ section h2{
   flex-direction: column;
   align-items: center;
 }
+
+div.sucursales-flex div{ 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  }
 
 #fondo-sucursal{
   background-color:#373737;
@@ -422,9 +445,10 @@ header div ul li {
 
 header div ul li a {
   color: black;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 25px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 ul.menu{
@@ -452,6 +476,45 @@ ul li img {
   height: 400px;
 }
 
+/* body */
+
+.nosotros-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#nosotros-img{
+  width: 485px;
+  height: 360px;
+  margin: 37px;
+  
+}
+
+section h1{
+  font-size: 50px;
+}
+
+.eligen-flex, .sucursales-flex{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+div.eligen-flex, div.sucursales-flex{
+  width: 100%;
+}
+
+div.eligen-flex div, div.sucursales-flex div{
+  width: 30%;
+  
+}
+
+section div img {
+  width: 30vw;
+  height: 300px;
+}
 
 
 }
@@ -459,6 +522,12 @@ ul li img {
 
 @media (min-width: 1024px) {
   
+  /* Header */
+  ul li img{
+    left: 310px;
+  }
+  
+
   /* Slideshow */
   .mySlides.fade img {
     height: 300px;
@@ -466,7 +535,7 @@ ul li img {
 
   /* Imagenes del body */
   section div img {
-    width: 84vw;
+    width: 31vw;
     height: 400px;
 }
 
