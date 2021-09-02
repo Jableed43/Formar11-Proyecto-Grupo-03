@@ -1,5 +1,8 @@
 /* General */
 
+/*  font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif; */
+
 *{
     padding: 0;
     margin: 0;
@@ -35,8 +38,9 @@ header{
 }
 
 img.logo{
-    margin-right: auto;
-    margin-bottom: 5px;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 95px;
 }
 
 i.fas.fa-user{
@@ -69,12 +73,6 @@ p#login{
 }
 
 
-header img {
-    width: 25vw;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
 header div input{
     display: none;
 }
@@ -82,6 +80,11 @@ header div input{
 header div ul li a{
     color: #f1d367;
 }
+
+#li-img{
+  display: none;
+}
+
 
 header div label {
   width: 40px;
@@ -119,7 +122,7 @@ input[type=checkbox]:checked ~ .menu{
 
 /* main */
 
-/* CARROUSEL */
+/* Slideshow */
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
@@ -128,7 +131,7 @@ input[type=checkbox]:checked ~ .menu{
   }
   
   .mySlides.fade img{
-    height: 20vh;
+    height: 160px;
   }
 
   /* Hide the images by default */
@@ -217,7 +220,7 @@ input[type=checkbox]:checked ~ .menu{
     to {opacity: 1}
   }
 
-  /* CIERRE CARROUSEL */
+  /* CIERRE Slideshow */
 
 /* Section Nosotros */ 
 
@@ -231,10 +234,14 @@ section h1{
   color: white;
   text-transform: uppercase;
   margin: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
 }
 
-section div img{
+section div img {
   width: 87vw;
+  height: 180px;
 }
 
 section h2{
@@ -242,22 +249,27 @@ section h2{
   text-transform: capitalize;
   margin: 20px;
   width: 75%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
 }
 
 /* Section Beneficios */
  section#beneficios{
   background-color: #f1d367;
   width: 100%;
-  height: 240px;
+  padding-bottom: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 
  }
 
- #beneficios h2{
+ #beneficios p{
   color: black;
+  font-size: 23px;
+  padding: 40px 10px;
+  font-family: 'Open Sans Condensed';
+  font-weight: 700;
  }
 
  #unite{
@@ -265,7 +277,7 @@ section h2{
   color: white;
   padding: 8px;
   width: 150px;
-  border-radius: 15%;
+  border-radius: 10%;
   font-size: 25px;
   font-weight: bold;
 
@@ -276,7 +288,6 @@ section h2{
   background-image: url(/images/Menu/mobile-violeta.png);
   background-repeat: repeat;
   width: 100%;
-  height: 163vh;
  }
 
  #eligen, #fondo-eligen {
@@ -287,10 +298,10 @@ section h2{
 
  #ACA{
   background-color: #f1d367;
-  color: white;
+  color: #2D2254;
   padding: 8px;
   width: 150px;
-  border-radius: 15%;
+  border-radius: 10%;
   font-size: 25px;
   font-weight: bold;
  }
@@ -298,6 +309,7 @@ section h2{
  #fondo-eligen{
   background-color: #2D2254;
   width: 100%;
+  padding-bottom: 40px;
  }
 /* section Sucursales */
 #sucursales, #fondo-sucursal {
@@ -317,8 +329,36 @@ section h2{
 
   /* MediaQueries */
 
+  /* 375PX */
+@media (min-width: 425px){
+  section div img {
+    width: 87vw;
+    height: 250px;
+}
+
+.mySlides.fade img {
+  height: 235px;
+}
+}
+
+/* Landscape 640px */
+@media (min-width: 640px) {
+  section div img {
+
+    width: 90vw;
+    height: 380px;
+  }
+
+  .mySlides.fade img {
+    height: 178px;
+}
+ }
+
   /* Tablet 768 px */
   @media (min-width: 768px) {
+
+    /* Header */
+
     i.fas.fa-user, i.fas.fa-shopping-cart{
       font-size: 50px;
     }
@@ -329,4 +369,108 @@ section h2{
       padding: 5px;
       font-size: 41px;
     }
+
+    img.logo {
+      width: 170px;
+      margin: 20px auto 20px 20px;
+  }
+
+    /* Slideshow */
+
+    .mySlides.fade img {
+      height: 300px;
+  }
+
 }
+
+/* Desktop */
+
+@media (min-width: 960px) {
+  /* Header */
+  img.logo{
+    display: none;
+  }
+
+  .flex-header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    padding: 0px 40px;
+}
+
+header div label {
+display: none;
+}
+
+input#busqueda {
+  display: block;
+  height: 37px;
+  border-radius: 8%;
+  border: none;
+}
+
+.menu{
+  display: flex;
+  width: 100%;
+}
+
+
+header div ul li {
+  background: none;
+  width: 100%;
+}
+
+header div ul li a {
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+ul.menu{
+  position: relative;
+}
+
+#li-img{
+display: flex;
+}
+
+header img {
+  width: 24vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+ul li img {
+  position: absolute;
+  left: 293px;
+  bottom: -67px;
+  z-index: 1;
+}
+
+.mySlides.fade img{
+  height: 400px;
+}
+
+
+
+}
+
+
+@media (min-width: 1024px) {
+  
+  /* Slideshow */
+  .mySlides.fade img {
+    height: 300px;
+  }
+
+  /* Imagenes del body */
+  section div img {
+    width: 84vw;
+    height: 400px;
+}
+
+
+}
+
+
