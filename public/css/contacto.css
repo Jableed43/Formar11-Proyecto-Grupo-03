@@ -84,11 +84,9 @@ header div ul li {
     background-color: #2d2254;
     margin-bottom: 1px;
     padding: 10px 0;
+    margin-left: 0px;
 }
 
-header {
-    margin-bottom: 15px;
-}
 
 .menu{
     display: none ;
@@ -103,7 +101,6 @@ input[type=checkbox]:checked ~ .menu{
   input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
@@ -157,7 +154,6 @@ footer {
     width: 100vw;
     display: block;
     text-align: center;
-    margin-top: 40px;
   }
   
   /* Títulos footer */
@@ -169,7 +165,6 @@ footer {
     font-size: 1.2em;
     padding-top: 5%;
     color: #312757;
-    margin-top: 40px;
   }
   
   /* Iconos rrss */
@@ -181,6 +176,7 @@ footer {
     display: flex;
     margin: auto;
     box-sizing: border-box;
+    justify-content: space-evenly;
   }
   
   section div a img {
@@ -239,6 +235,9 @@ footer {
     margin-left: 5%;
   }
   
+  a{
+    text-decoration: none;
+  }
   .links {
     font-family: 'Roboto Condensed', sans-serif;
     color: #2d2254;
