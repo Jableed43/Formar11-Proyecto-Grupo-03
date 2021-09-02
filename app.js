@@ -14,12 +14,14 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'home.html
 /* app get detalle-producto */
 app.get('/detalle-producto', (req, res) => res.sendFile(path.join(__dirname, 'views', 'detalle-producto.html')))
 
-/* app get detalle-producto */
+/* app get login */
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')))
 
-/* app get detalle-producto */
-app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
+/* app get register */
+app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views','register.html')))
 
+/* app get contact-form */
+app.get('/contacto', (req, res) => res.sendFile(path.join(__dirname, 'views','contacto.html')))
 
 /* Servidor escuchando, siempre va al final */
 app.listen(port, () => console.log("Server corriendo en http://localhost:"+port))
