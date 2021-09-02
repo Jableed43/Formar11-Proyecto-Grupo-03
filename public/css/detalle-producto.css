@@ -1,10 +1,11 @@
 * {
   margin:0;
   padding: 0;
-  font-family: Roboto;
+  font-family: "Roboto condensed";
   font-size: 20px;
   width: 80vw;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 /* Botón Volver a página menú */
@@ -80,14 +81,15 @@ p {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
   text-align: center;
-  margin-left: 5%;
   margin-top: 10px;
   color: #373737;
+  display: inline-block;
 }
 
 /* Botones de gusto */
-#opciones {
-  margin-left: 50vw;
+/*div#opciones {
+  display: flex;
+  justify-content: center;
 }
 .gusto {
   background-color: #f1d367;
@@ -96,13 +98,30 @@ p {
   font-family: 'Roboto Condensed', sans-serif;
   color: black;
   font-size: 1em;
-  text-align: center;
   transition: 0.3s;
   width: 60px;
-  padding: 5px 10px;
-  margin-top: 15px;
-  margin-left: 25%;
-  margin-bottom: 20px;
+  margin-bottom: 30px; 
+}*/
+div#opciones{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.gusto {
+background-color: #f1d367;
+border: none;
+border-radius: 5px;
+font-family: 'Roboto Condensed', sans-serif;
+color: black;
+font-size: 1em;
+text-align: center;
+transition: 0.3s;
+width: 60px;
+margin-top: 15px;
+margin-bottom: 20px;
+
 }
 
 .gusto:hover {
@@ -112,7 +131,10 @@ p {
 
 /* Cantidad y agregar carrito */
 #cantycarr {
-  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .cant {
@@ -125,7 +147,9 @@ p {
   font-weight: 900;
   padding-left: 8px;
   padding-right: 8px;
-  margin-top: 15px;
+  width: 30px;
+
+ 
 }
 
 input {
@@ -246,21 +270,29 @@ footer {
 }
 
 /* Iconos rrss */
+#contacto {
+  width: 100%;
+}
+
 .rrss {
-  display: inline-block;
-  width: 20vw; 
-  margin: 1px;;
+  display: flex;
+  margin: auto;
   box-sizing: border-box;
+}
+
+section div a img {
+  width: 80px;
 }
 
 /* Sección suscripción */
 #susc {
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 
 .email {
   width: 50%;
+  text-align: left;
   background-color: #eed887;
   border: none;
   border-bottom: 1px solid black;
@@ -292,6 +324,9 @@ footer {
 }
 
 /* Links */
+#links {
+  margin-top: 10%;
+}
 li {
   list-style: none;
   text-align: left;
@@ -299,4 +334,9 @@ li {
   font-family: 'Roboto Condensed', sans-serif;
   color: #2d2254;
   margin-left: 5%;
+}
+
+.links {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #2d2254;
 }
