@@ -2,7 +2,7 @@ header{
     background-color: #f1d367;
 }
 
-.flex-header{
+.header .flex-header{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -19,14 +19,13 @@ img.logo{
     display: none;
 }
 
+
 i.fas.fa-user{
-    color: #f1d367;
-    font-size: 20px;
-    border: 1px solid #2d2254;
-    border-radius: 50%;
-    background-color: #2d2254;
-    padding: 12px 16px;
-    margin: 10px 2px 5px;
+  color: #f1d367;
+  font-size: 20px;
+  border: 1px solid #2d2254;
+  border-radius: 50%;
+  margin: 10px 2px 5px;
 }
 
 i.fas.fa-shopping-cart {
@@ -35,11 +34,11 @@ i.fas.fa-shopping-cart {
     border: 1px solid #2d2254;
     border-radius: 50%;
     background-color: #2d2254;
-    padding: 12px;
+    padding: 7px;
     margin: 10px 2px 5px;
 }
 
-p.login{
+.header p.login{
     border-radius: 50%;
     border: 1.5px solid black;
     margin: 15px 20px 30px;
@@ -55,20 +54,31 @@ header div ul li a{
     font-size: 20px;
 }
 
-.li-img{
+.header .li-img{
   display: none;
 }
 
 header div label {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background-color: #2d2254;
   color: #f1d367;
-  padding: 10px;
+  padding: 6px;
   border-radius: 4px;
   margin: 10px 2px 5px;
   text-align: center;
   font-size: 18px;
+}
+
+.header label.input-user {
+  margin: 10px 2px 5px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 10px 2px 5px;
+  padding: 0;
+  height: 36px;
+  width: 36px;
 }
 
 header div ul li {
@@ -78,16 +88,21 @@ header div ul li {
     margin-bottom: 1px;
 }
 
-.user-cart{
-    margin-left: auto;
-}
 
-.menu{
+.header .menu{
     display: none ;
 }
 
-input[type=checkbox]:checked ~ nav .menu{
+.header .user{
+  display: none;
+}
+
+input#menu[type=checkbox]:checked ~ nav .menu{
     display: block;
+}
+
+input#user[type=checkbox]:checked ~ nav .user{
+  display: block;
 }
 
 /* mediaqueries */
@@ -96,12 +111,19 @@ input[type=checkbox]:checked ~ nav .menu{
 
   /* Header */
 
-  i.fas.fa-user, i.fas.fa-shopping-cart{
+   i.fas.fa-user, i.fas.fa-shopping-cart{
     font-size: 50px;
+    display: inline;
+
   }
 
+  .header label.input-user{
+    width: 65px;
+    height: 65px;
+    padding: 5px;
+  }
 
-  .home img.logo {
+   .home img.logo {
     width: 170px;
     margin: 20px auto 20px 20px;
 }
@@ -121,7 +143,7 @@ input[type=checkbox]:checked ~ nav .menu{
 
 @media (min-width: 960px) {
     /* Header */
-    img.logo{
+     img.logo{
       display: none;
     }
   
@@ -136,21 +158,21 @@ input[type=checkbox]:checked ~ nav .menu{
   display: none;
   }
   
-  input#busqueda {
+  .header input#busqueda {
     display: block;
     height: 37px;
     border-radius: 8%;
     border: none;
   }
   
-  .container-menu{
+  .header .container-menu{
     display: flex;
   }
   
  i.fas.fa-user, i.fas.fa-shopping-cart {
-    font-size: 15px;
+   display: none;
 }
-  .menu{
+.header .menu{
     width: 100%;
   }
   
@@ -167,16 +189,16 @@ input[type=checkbox]:checked ~ nav .menu{
     text-transform: uppercase;
   }
   
-  ul.menu{
+  .header ul.menu{
     display: flex;
     width: 30vw;
  }
 
- ul.menu-hiden{
+ .header ul.menu-hiden{
     width: 30vw;
  }
   
-  .logo-desktop {
+ .header .logo-desktop {
     z-index: 1;
     display: block;
     position: absolute;
@@ -196,7 +218,7 @@ input[type=checkbox]:checked ~ nav .menu{
 
 
 
-  ul li img{
+  .header ul li img{
     left: 310px;
   }
   

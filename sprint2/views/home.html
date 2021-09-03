@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="home">
-    <header>
+    <header class="header">
         
         <div class="flex-header">
             <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
@@ -20,11 +20,16 @@
                 <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
             </div>
             <div class="logo-desktop"><img src="/images/Menu/logo/Logo.png" alt=""></div>
+
+            <input type="checkbox" id='user'>
+            <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+          </nav>
+
             <div class="user-cart">
-              <i class="fas fa-user"></i>
             <i class="fas fa-shopping-cart"></i>
+
             </div>
-            
+
             <input type="checkbox" id='menu'>
             <label for='menu'>☰</label>
             <nav class="container-menu">
@@ -38,6 +43,12 @@
               <li class="texto"><a href="">Contacto</a> </li>
             </ul>
             </nav>
+
+            <nav class="container-user">
+              <ul class="user">
+                <li class="texto"><a href="">Ingresar</a> </li>
+                <li class="texto"><a href="">Registrarse</a> </li>
+            </ul>
 
         </div>
     </header>

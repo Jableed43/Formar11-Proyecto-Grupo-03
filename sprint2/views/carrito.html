@@ -14,19 +14,23 @@
 
 </head>
 <body class="carrito">
-    <header>
-        
+    <header class="header">
         <div class="flex-header">
             <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
               <div id="input">
                 <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
             </div>
             <div class="logo-desktop"><img src="/images/Menu/logo/Logo.png" alt=""></div>
+
+            <input type="checkbox" id='user'>
+            <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+          </nav>
+
             <div class="user-cart">
-              <i class="fas fa-user"></i>
             <i class="fas fa-shopping-cart"></i>
+
             </div>
-            
+
             <input type="checkbox" id='menu'>
             <label for='menu'>☰</label>
             <nav class="container-menu">
@@ -41,12 +45,18 @@
             </ul>
             </nav>
 
+            <nav class="container-user">
+              <ul class="user">
+                <li class="texto"><a href="">Ingresar</a> </li>
+                <li class="texto"><a href="">Registrarse</a> </li>
+            </ul>
+
         </div>
     </header>
 
     <main>
         <div class="container">
-            <h1>Carrito</h1>
+            <h1>Tu Pedido</h1>
             <div class="cart">
                 <div class="products">
                     <div class="product">
