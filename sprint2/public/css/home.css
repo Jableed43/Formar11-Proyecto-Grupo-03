@@ -77,21 +77,6 @@ body{
     top: 0;
   }
   
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
   
   /* Fading animation */
   .fade {
@@ -124,10 +109,10 @@ body{
 .home section h1{
   color: white;
   text-transform: uppercase;
-  margin: 20px;
+  margin: 10px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 17px;
 }
  
 
@@ -273,16 +258,6 @@ body{
   @media (min-width: 768px) {
 
 
- i.fas.fa-user, i.fas.fa-shopping-cart{
-      font-size: 50px;
-    }
-
-
-.home img.logo {
-      width: 170px;
-      margin: 20px auto 20px 20px;
-  }
-
     /* Slideshow */
 
     .mySlides.fade img {
@@ -298,9 +273,10 @@ body{
 
 /* body */
 
-.mySlides.fade img{
-  height: 400px;
+.slideshow-container{
+  width: 60%;
 }
+
 
 .home .nosotros-flex {
   display: flex;
@@ -310,18 +286,19 @@ body{
 }
 
 .home .nosotros-img{
-  width: 485px;
-  height: 360px;
-  margin: 37px;
+  width: 300px;
+  height: 200px;
+  margin: 0px 25px 15px 25px;
   
 }
 
 .home section h1{
-  font-size: 45px;
+  font-size: 30px;
+  margin: 5px;
 }
 
 .home section h2 {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .home .beneficios p {
@@ -355,14 +332,10 @@ body{
 
 @media (min-width: 1024px) {
   
-  /* header */
-  i.fas.fa-user, i.fas.fa-shopping-cart {
-    font-size: 40px;
-}
 
   /* Slideshow */
   .mySlides.fade img {
-    height: 360px;
+    height: 300px;
   }
 
   /* Imagenes del body */
