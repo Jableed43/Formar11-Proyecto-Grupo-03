@@ -14,10 +14,14 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'home.html
 /* app get detalle-producto */
 app.get('/detalle-producto', (req, res) => res.sendFile(path.join(__dirname, 'views', 'detalle-producto.html')))
 
-/* app get detalle-producto */
+/* app get carrito */
+app.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, 'views', 'carrito.html')))
+
+
+/* app get login */
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')))
 
-/* app get detalle-producto */
+/* app get register */
 app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
 
 
