@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/ef88cf4afb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home">
     <header>
         
         <div class="flex-header">
@@ -19,20 +19,26 @@
               <div id="input">
                 <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
             </div>
-            <div>
+            <div class="logo-desktop"><img src="/images/Menu/logo/Logo.png" alt=""></div>
+            <div class="user-cart">
               <i class="fas fa-user"></i>
             <i class="fas fa-shopping-cart"></i>
             </div>
             
             <input type="checkbox" id='menu'>
             <label for='menu'>☰</label>
-            <ul class="menu">
+            <nav class="container-menu">
+              <ul class="menu">
                 <li class="texto"><a href="">Menu</a> </li>
                 <li class="texto"><a href="#sucursales">Sucursales</a> </li>
-                <li id="li-img"><img src="/images/Menu/logo/Logo.png" alt=""></li>
-                <li class="texto"><a href= "#nosotros">Nosotros</a> </li>
-                <li class="texto"><a href="">Contacto</a> </li>
             </ul>
+            <ul class="menu-hiden"></ul>
+            <ul class="menu">
+              <li class="texto"><a href= "#nosotros">Nosotros</a> </li>
+              <li class="texto"><a href="">Contacto</a> </li>
+            </ul>
+            </nav>
+
         </div>
     </header>
     <main>
@@ -74,19 +80,19 @@
       </div>
         </section>
 
-        <section id="nosotros">
+        <section class="nosotros">
           <h1>nosotros</h2>
-          <div class="nosotros-flex"> <img id="nosotros-img" src="/images/Home/nosotros.jpg" alt="">
+          <div class="nosotros-flex"> <img class="nosotros-img" src="/images/Home/nosotros.jpg" alt="">
             <h2> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempore nemo.</h3>
             </div>
         </section>
 
-        <section id="beneficios">
+        <section class="beneficios">
           <p>Unite a nuestra comunidad, suma puntos, subí de nivel y disfruta de GRANDES BENEFICIOS</p>
-          <button id="unite">UNITE</button>
+          <button class="unite">UNITE</button>
         </section>
 
-        <section id="eligen">
+        <section class="eligen">
           <h1>Por qué nos eligen...</h1>
           <div class="eligen-flex">
             <div><img src="/images/Home/Eligen/ingrediente1.jpg" alt="">
@@ -99,14 +105,14 @@
               <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquam alias deserunt ab aperiam fugit.</h2>
             </div>
           </div>
-          <div id="fondo-eligen">
+          <div class="fondo-eligen">
             <h1>¿Hambre? Hacé tu pedido</h1>
             <button id="ACA">ACÁ</button>
           </div>
 
         </section>
 
-        <section id="sucursales">
+        <section class="sucursales">
           <h1>Sucursales</h1>
           <div class="sucursales-flex">
             <div><img src="/images/Home/Sucursal/sucursal1.jpeg" alt="">
@@ -119,7 +125,7 @@
               <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquam alias deserunt ab aperiam fugit.</h2>
             </div>
           </div>
-          <div id="fondo-sucursal">
+          <div class="fondo-sucursal">
             <h1 class="sucursal-bottom">SE DiCE DE MÍ...</h1>
             <h2 class="sucursal-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquam alias deserunt ab aperiam fugit.</h2>   
           </div>

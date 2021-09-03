@@ -1,21 +1,4 @@
-/* General */
 
-/*  font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif; */
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-li {
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
 
 /* Body */
 
@@ -26,99 +9,7 @@ body{
 }
 
 /* Header */
-header{
-    background-color: #f1d367;
-}
 
-.flex-header{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-right: 7px;
-}
-
-img.logo{
-  margin-right: auto;
-  margin-bottom: 5px;
-  width: 95px;
-}
-
-i.fas.fa-user{
-    color: #f1d367;
-    font-size: 20px;
-    border: 1px solid #2d2254;
-    border-radius: 50%;
-    background-color: #2d2254;
-    padding: 12px 16px;
-    margin: 10px 2px 5px;
-}
-
-i.fas.fa-shopping-cart {
-    color: #f1d367;
-    font-size: 20px;
-    border: 1px solid #2d2254;
-    border-radius: 50%;
-    background-color: #2d2254;
-    padding: 12px;
-    margin: 10px 2px 5px;
-}
-
-
-
-p#login{
-    border-radius: 50%;
-    border: 1.5px solid black;
-    margin: 15px 20px 30px;
-    width: 30px;
-}
-
-
-header div input{
-    display: none;
-}
-
-header div ul li a{
-    color: #f1d367;
-}
-
-#li-img{
-  display: none;
-}
-
-
-header div label {
-  width: 40px;
-  height: 40px;
-  background-color: #2d2254;
-  color: #f1d367;
-  padding: 10px;
-  border-radius: 4px;
-  margin: 10px 2px 5px;
-  text-align: center;
-  font-size: 18px;
-}
-
-
-
-header div ul li {
-    text-align: center;
-    width: 100vw;
-    background-color: #2d2254;
-    margin-bottom: 1px;
-    padding: 10px 0;
-}
-
-header {
-    margin-bottom: 15px;
-}
-
-.menu{
-    display: none ;
-}
-
-input[type=checkbox]:checked ~ .menu{
-    display: block;
-}
 
 /* main */
 
@@ -224,27 +115,28 @@ input[type=checkbox]:checked ~ .menu{
 
 /* Section Nosotros */ 
 
-section#nosotros{
+.home section.nosotros{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-section h1{
+.home section h1{
   color: white;
   text-transform: uppercase;
   margin: 20px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 35px;
 }
+ 
 
-section div img {
+.home section div img {
   width: 87vw;
   height: 180px;
 }
 
-section h2{
+.home section h2{
   color: white;
   text-transform: capitalize;
   margin: 20px;
@@ -253,7 +145,7 @@ section h2{
   font-size: 20px;
 }
 
-.nosotros-flex{
+.home .nosotros-flex{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -261,7 +153,7 @@ section h2{
   }
 
 /* Section Beneficios */
- section#beneficios{
+.home section.beneficios{
   background-color: #f1d367;
   width: 100%;
   padding-bottom: 40px;
@@ -271,7 +163,7 @@ section h2{
 
  }
 
- #beneficios p{
+ .home .beneficios p{
   color: black;
   font-size: 23px;
   padding: 40px 10px;
@@ -279,7 +171,7 @@ section h2{
   font-weight: 700;
  }
 
- #unite{
+ .home  .unite{
   background-color: #2d2254;
   color: white;
   padding: 8px;
@@ -291,13 +183,13 @@ section h2{
  }
 
  /* section Eligen */
- #eligen{
+ .home .eligen{
   background-image: url(/images/Menu/mobile-violeta.png);
   background-repeat: repeat;
   width: 100%;
  }
 
- div.eligen-flex div{ 
+ .home div.eligen-flex div{ 
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -305,14 +197,14 @@ section h2{
   }
 
 
- #eligen, #fondo-eligen {
+.home .eligen, .fondo-eligen {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 
- #ACA{
+.home #ACA{
   background-color: #f1d367;
   color: #2D2254;
   padding: 8px;
@@ -322,29 +214,29 @@ section h2{
   font-weight: bold;
  }
 
- #fondo-eligen{
+ .home .fondo-eligen{
   background-color: #2D2254;
   width: 100%;
   padding-bottom: 40px;
  }
 /* section Sucursales */
-#sucursales, #fondo-sucursal {
+.home .sucursales, .fondo-sucursal {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-div.sucursales-flex div{ 
+.home div.sucursales-flex div{ 
   display: flex;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
   }
 
-#fondo-sucursal{
+.home .fondo-sucursal{
   background-color:#373737;
 }
-.sucursal-bottom{
+.home .sucursal-bottom{
   color: #f1d367;
 }
 
@@ -354,7 +246,7 @@ div.sucursales-flex div{
 
   /* 375PX */
 @media (min-width: 425px){
-  section div img {
+.home section div img {
     width: 87vw;
     height: 250px;
 }
@@ -366,13 +258,13 @@ div.sucursales-flex div{
 
 /* Landscape 640px */
 @media (min-width: 640px) {
-  section div img {
+ .home section div img {
 
     width: 90vw;
     height: 380px;
   }
 
-  .mySlides.fade img {
+ .mySlides.fade img {
     height: 178px;
 }
  }
@@ -380,20 +272,13 @@ div.sucursales-flex div{
   /* Tablet 768 px */
   @media (min-width: 768px) {
 
-    /* Header */
 
-    i.fas.fa-user, i.fas.fa-shopping-cart{
+ i.fas.fa-user, i.fas.fa-shopping-cart{
       font-size: 50px;
     }
 
-    header div label{
-      width: 65px;
-      height: 65px;
-      padding: 5px;
-      font-size: 41px;
-    }
 
-    img.logo {
+.home img.logo {
       width: 170px;
       margin: 20px auto 20px 20px;
   }
@@ -409,109 +294,57 @@ div.sucursales-flex div{
 /* Desktop */
 
 @media (min-width: 960px) {
-  /* Header */
-  img.logo{
-    display: none;
-  }
+ 
 
-  .flex-header {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 40px;
-    padding: 0px 40px;
-}
-
-header div label {
-display: none;
-}
-
-input#busqueda {
-  display: block;
-  height: 37px;
-  border-radius: 8%;
-  border: none;
-}
-
-.menu{
-  display: flex;
-  width: 100%;
-}
-
-
-header div ul li {
-  background: none;
-  width: 100%;
-}
-
-header div ul li a {
-  color: black;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-ul.menu{
-  position: relative;
-}
-
-#li-img{
-display: flex;
-}
-
-header img {
-  width: 24vw;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-ul li img {
-  position: absolute;
-  left: 293px;
-  bottom: -67px;
-  z-index: 1;
-}
+/* body */
 
 .mySlides.fade img{
   height: 400px;
 }
 
-/* body */
-
-.nosotros-flex {
+.home .nosotros-flex {
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
-#nosotros-img{
+.home .nosotros-img{
   width: 485px;
   height: 360px;
   margin: 37px;
   
 }
 
-section h1{
-  font-size: 50px;
+.home section h1{
+  font-size: 45px;
 }
 
-.eligen-flex, .sucursales-flex{
+.home section h2 {
+  font-size: 35px;
+}
+
+.home .beneficios p {
+  font-size: 50px;
+  padding: 40px 20px;
+}
+
+.home .eligen-flex, .sucursales-flex{
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
 }
 
-div.eligen-flex, div.sucursales-flex{
+.home div.eligen-flex, div.sucursales-flex{
   width: 100%;
 }
 
-div.eligen-flex div, div.sucursales-flex div{
+.home div.eligen-flex div, div.sucursales-flex div{
   width: 30%;
   
 }
 
-section div img {
+.home section div img {
   width: 30vw;
   height: 300px;
 }
@@ -522,21 +355,20 @@ section div img {
 
 @media (min-width: 1024px) {
   
-  /* Header */
-  ul li img{
-    left: 310px;
-  }
-  
+  /* header */
+  i.fas.fa-user, i.fas.fa-shopping-cart {
+    font-size: 40px;
+}
 
   /* Slideshow */
   .mySlides.fade img {
-    height: 300px;
+    height: 360px;
   }
 
   /* Imagenes del body */
-  section div img {
+  .home section div img {
     width: 31vw;
-    height: 400px;
+    height: 330px;
 }
 
 
