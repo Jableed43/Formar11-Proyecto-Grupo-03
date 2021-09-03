@@ -131,7 +131,7 @@
   }
 
   .Detalleprodu .medpag {
-    order: 1;
+    order: 3n;
     width: 30%;
   }
   

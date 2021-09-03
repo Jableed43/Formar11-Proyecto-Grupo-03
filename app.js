@@ -23,5 +23,8 @@ app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views','re
 /* app get contact-form */
 app.get('/contacto', (req, res) => res.sendFile(path.join(__dirname, 'views','contacto.html')))
 
+/* app get carga-productos */
+app.get('/carga-productos', (req, res) => res.sendFile(path.join(__dirname, 'views','carga-productos.html')))
+
 /* Servidor escuchando, siempre va al final */
 app.listen(port, () => console.log("Server corriendo en http://localhost:"+port))

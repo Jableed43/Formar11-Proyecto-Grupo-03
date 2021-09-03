@@ -6,10 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle de producto</title>
     <link rel="stylesheet" href= "/css/styles.css">
+    <script src="https://kit.fontawesome.com/ef88cf4afb.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="Detalleprodu">
-    <header><h1>Encabezado</h1></header>
+  <header class="header">
+        
+    <div class="flex-header">
+        <img class="logo" src='/images/logomin.png' alt='Logo' />
+          <div id="input">
+            <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
+        </div>
+        <div class="logo-desktop"><img src="/images/Logo.png" alt=""></div>
+
+        <input type="checkbox" id='user'>
+        <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+      </nav>
+
+        <div class="user-cart">
+        <i class="fas fa-shopping-cart"></i>
+
+        </div>
+
+        <input type="checkbox" id='menu'>
+        <label for='menu'>☰</label>
+        <nav class="container-menu">
+          <ul class="menu">
+            <li class="texto"><a href="">Menu</a> </li>
+            <li class="texto"><a href="">Sucursales</a> </li>
+        </ul>
+        <ul class="menu-hiden"></ul>
+        <ul class="menu">
+          <li class="texto"><a href= "">Nosotros</a> </li>
+          <li class="texto"><a href="">Contacto</a> </li>
+        </ul>
+        </nav>
+
+        <nav class="container-user">
+          <ul class="user">
+            <li class="texto"><a href="">Ingresar</a> </li>
+            <li class="texto"><a href="">Registrarse</a> </li>
+        </ul>
+
+    </div>
+</header>
     <main>
         <button class="menu">Volver al Menú</button>
         
