@@ -15,11 +15,12 @@ h1 {
     color: #373737;
     font-size: 2em;
     text-align: center;
-    margin: 3%;
+    margin: auto;
 }
 
 .datos {
     margin-top: 5%;
+    margin: auto;
 }
 
 h2 {
@@ -29,18 +30,18 @@ h2 {
 input {
     background-color: white;
     border: none;
+    width: 100%;
 }
 
 .recupera {
-    margin: 30px auto 0;
-    margin-top: 30px;
-
+    margin: 10% auto 0;
 }
 
 p {
     text-align: center;
     color: #373737;
     font-size: 1.2em;
+    margin: auto;
 }
 
 a {
@@ -60,7 +61,7 @@ button {
     text-decoration: none;
     text-align: center;
     transition: 0.3s;
-    width: 35%;
+    width: 45%;
     padding: 10px;
     margin: 5% auto 10%;
 }
@@ -74,4 +75,19 @@ a img {
     justify-content: space-around;
     width: 20%; 
     margin-left: 10%;
+}
+
+/* Register */
+.inicia {
+    margin: 5% auto;
+}
+
+@media (min-width: 769px) {
+    main {
+        width: 800px;
+    }
+    
+    button {
+        font-size: 1.5em;
+    }
 }
