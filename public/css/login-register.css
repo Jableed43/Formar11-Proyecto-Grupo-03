@@ -1,4 +1,4 @@
-main {
+.login main, .register main {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@ main {
     box-sizing: border-box;
 }
 
-h1 {
+.login h1, .register h1 {
     font-weight: 700;
     text-transform: uppercase;
     color: #373737;
@@ -18,39 +18,39 @@ h1 {
     margin: auto;
 }
 
-.datos {
+.login .datos, .register .datos {
     margin-top: 5%;
     margin: auto;
 }
 
-h2 {
+.login h2, .register h2 {
     color: #373737;
 }
 
-input {
+.login input, .register input {
     background-color: white;
     border: none;
     width: 100%;
 }
 
-.recupera {
+.login .recupera, .register .recupera {
     margin: 10% auto 0;
 }
 
-p {
+.login p, .register p {
     text-align: center;
     color: #373737;
     font-size: 1.2em;
     margin: auto;
 }
 
-a {
+.login a, .register a {
     text-align: center;
     font-weight: 700;
     margin: auto;
 }
 
-button {
+.login button, .register button {
     background-color: #312757;
     border: none;
     border-radius: 5px;
@@ -66,11 +66,11 @@ button {
     margin: 5% auto 10%;
 }
 
-.rrss {
+.login .rrss, .register .rrss {
     margin-top: 5%;
 }
 
-a img {
+.login a img, .register a img {
     display: inline-block;
     justify-content: space-around;
     width: 20%; 
@@ -78,16 +78,16 @@ a img {
 }
 
 /* Register */
-.inicia {
+.register .inicia {
     margin: 5% auto;
 }
 
 @media (min-width: 769px) {
-    main {
+    .login main, .register main {
         width: 800px;
     }
     
-    button {
+    .login button, .register button {
         font-size: 1.5em;
     }
 }
