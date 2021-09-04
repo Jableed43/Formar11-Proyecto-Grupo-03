@@ -21,6 +21,11 @@ app.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, 'views', 'ca
 /* app get login */
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')))
 
+
+/* app get header */
+app.get('/header', (req, res) => res.sendFile(path.join(__dirname, 'views', 'header.html')))
+
+
 /* app get register */
 app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
 
