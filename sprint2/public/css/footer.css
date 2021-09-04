@@ -1,0 +1,152 @@
+/* FOOTER */
+ footer {
+    background-color: #eed887;
+    width: 100vw;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /* Títulos footer */
+ .footer {
+    background-color: #eed887;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2em;
+  
+    color: #312757;
+    margin-top: 40px;
+  }
+  
+  /* Iconos rrss */
+  .footer-contenedor .contacto {
+    width: 100%;
+  }
+  
+  .footer-contenedor .rrss {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+  
+  .footer-contenedor section div a img {
+    width: 80px;
+  }
+  
+  /* Sección suscripción */
+  .footer-contenedor .susc {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .footer-contenedor .email {
+    width: 50%;
+    text-align: left;
+    background-color: #eed887;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  
+  .footer-contenedor .suscribirme {
+    background-color: #312757;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color:white;
+    font-size: .8em;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    width: 25%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 2%;
+    margin-bottom: 20px;
+  }
+  
+  /* Iconos medios de pago */
+  .footer-contenedor .mdepago {
+    display: inline-block;
+    width: 30vw; 
+    margin: 1px;
+    box-sizing: border-box;
+  }
+  
+  /* Links */
+  .footer-contenedor .links {
+    margin-top: 10%;
+  }
+  
+  .footer-contenedor .li {
+    text-align: left;
+    margin-left: 5%;
+  }
+  
+  
+  @media (min-width: 768px) {
+  
+    * {
+      font-size: 1.1em;
+    }
+  
+ footer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .footer-contenedor .contacto {
+      width: 50%;
+    }
+  
+    .footer-contenedor .susc {
+      order: 1;
+      width: 50%;
+    }
+  
+    .footer-contenedor .links {
+      order: 2;
+      width: 50%;
+    }
+    
+    .footer-contenedor .medpag {
+      order:3;
+      width: 50%;
+    }
+    
+    .footer-contenedor .medpag img {
+      width: 80px;
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .footer-contenedor * {
+      font-size: 1.1em;
+      align-items: flex-start;
+    }
+  
+    .footer-contenedor .contacto {
+      width: 30%;
+    }
+  
+     .medpag {
+      order: 3n;
+      width: 30%;
+    }
+    
+     .medpag img {
+      width: 120px;
+    }
+  
+    .footer-contenedor .links {
+      order: 2;
+      width: 30%;
+    }
+  
+    .footer-contenedor .susc {
+      order: 1;
+      width: 40%;
+      align-self: flex-start;
+    }
+  }
