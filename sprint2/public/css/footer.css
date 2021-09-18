@@ -1,0 +1,154 @@
+/* FOOTER */
+.footer {
+  background-color: #eed887;
+  width: 100vw;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Títulos footer */
+.footer .tfooter {
+  background-color: #eed887;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em;
+
+  color: #312757;
+  margin-top: 40px;
+}
+
+/* Iconos rrss */
+.footer .contacto {
+  width: 100%;
+}
+
+.footer .rrss {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.footer section div a img {
+  width: 80px;
+}
+
+/* Sección suscripción */
+.footer .susc {
+  width: 80%;
+  margin: auto;
+}
+
+.footer .email {
+  width: 50%;
+  text-align: left;
+  background-color: #eed887;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.footer .suscribirme{
+  background-color: #312757;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:white;
+  font-size: .8em;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  width: 25%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
+
+/* Iconos medios de pago */
+.footer .mdepago {
+  display: inline-block;
+  width: 30vw; 
+  margin: 1px;
+  box-sizing: border-box;
+}
+
+/* Links */
+.footer .links {
+  margin-top: 10%;
+}
+
+.footer .li {
+  text-align: left;
+  margin-left: 5%;
+}
+
+
+@media (min-width: 768px) {
+
+  .footer footer {
+    font-size: 1.1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+  .footer .contacto {
+    width: 50%;
+  }
+
+  .footer .rrss {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .footer .susc {
+    width: 50%;
+    margin: 0;
+    order: 1;
+  }
+
+  .footer .links a{
+    width: 50%;
+    order: 2;
+  }
+  
+  .footer .medpag {
+    order:3;
+    width: 50%;
+  }
+  
+  .footer .medpag img {
+    width: 80px;
+  }
+}
+
+@media (min-width: 960px) {
+  .footer *{
+    font-size: 1.2em;
+    align-items: flex-start;
+  }
+
+  .footer .contacto {
+    width: 30%;
+  }
+
+  .footer .medpag {
+    order: 3;
+    width: 30%;
+  }
+  
+  .footer .medpag img {
+    width: 120px;
+  }
+
+  .footer .links {
+    order: 2;
+    width: 30%;
+  }
+
+  .footer .susc {
+    order: 1;
+    width: 40%;
+    align-self: flex-start;
+  }
+}
