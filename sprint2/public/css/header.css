@@ -58,6 +58,13 @@ header .li-img{
 display: none;
 }
 
+
+header .logo-button-container{
+  display: flex;
+  align-items: center;
+}
+
+
 header div label {
 width: 36px;
 height: 36px;
@@ -89,11 +96,12 @@ header div ul li {
 }
 
 
+
 header .menu{
   display: none ;
 }
 
-header .user{
+header nav.container-user  ul.user{
 display: none;
 }
 
@@ -141,7 +149,7 @@ header div ul li a{
 }
 
 
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
   /* Header */
   header img.logo{
     display: none;
@@ -149,13 +157,20 @@ header div ul li a{
 
   header .flex-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-right: 40px;
     padding: 0px 40px;
+    width: 100%;
+    flex-direction: row;
 }
 
-header div label {
-display: none;
+i.fas.fa-user, i.fas.fa-shopping-cart{
+  width: 10%;
+}
+
+
+header .menu-bars{
+  display: none;
 }
 
 header input#busqueda {
@@ -169,13 +184,9 @@ header .container-menu{
   display: flex;
 }
 
-i.fas.fa-user, i.fas.fa-shopping-cart {
- display: none;
-}
 header .menu{
   width: 100%;
 }
-
 
 header div ul li {
   background: none;
@@ -196,18 +207,20 @@ header ul.menu{
 
 header ul.menu-hiden{
   width: 30vw;
+  display: flex;
+  justify-content: center;
 }
 
 header .logo-desktop {
   z-index: 1;
-  display: block;
   position: absolute;
-  right: 40%;
-  top: 20px;
+  top: 30px;
+  display: flex;
+  justify-content: center;
   }
 
 header img {
-  width: 235px;    
+  max-width: 300px; 
 }
 }
 
@@ -220,6 +233,23 @@ header ul li img{
   left: 310px;
 }
 
+header input#user[type=checkbox]:checked ~ .container-user{
+  display: flex;
+  }
 
+
+.container-user{
+    width: 100%;
+    height: 120px;
+    align-items: flex-end;
+    justify-content: center;
+    display: none;
+}
+
+i.fas.fa-user, i.fas.fa-shopping-cart, .input-user{
+  color: #2d2254;
+  border: none;
+  background: none;
+}
 
 }

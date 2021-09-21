@@ -12,46 +12,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="home">
-    <header>
+  <header>
         
-        <div class="flex-header">
-            <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
-              <div id="input">
-                <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
-            </div>
-            <div class="logo-desktop"><img src="/images/Menu/logo/Logo.png" alt=""></div>
-
-            <input type="checkbox" id='user'>
-            <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
-          </nav>
-
-            <div class="user-cart">
-            <i class="fas fa-shopping-cart"></i>
-
-            </div>
-
-            <input type="checkbox" id='menu'>
-            <label for='menu'>☰</label>
-            <nav class="container-menu">
-              <ul class="menu">
-                <li class="texto"><a href="">Menu</a> </li>
-                <li class="texto"><a href="">Sucursales</a> </li>
-            </ul>
-            <ul class="menu-hiden"></ul>
-            <ul class="menu">
-              <li class="texto"><a href= "">Nosotros</a> </li>
-              <li class="texto"><a href="">Contacto</a> </li>
-            </ul>
-            </nav>
-
-            <nav class="container-user">
-              <ul class="user">
-                <li class="texto"><a href="">Ingresar</a> </li>
-                <li class="texto"><a href="">Registrarse</a> </li>
-            </ul>
-
+    <div class="flex-header">
+        <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
+          <div id="input">
+            <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
         </div>
-    </header>
+
+
+          <input type="checkbox" id='user'>
+          <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+          <div class="user-cart">
+            <a href="/carrito">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+
+
+        <input type="checkbox" id='menu'>
+        <label for='menu' class="menu-bars">☰</label>
+        <nav class="container-menu">
+          <ul class="menu">
+            <li class="texto"><a href="">Menu</a> </li>
+            <li class="texto"><a href="">Sucursales</a> </li>
+        </ul>
+        <ul class="menu-hiden"><div class="logo-desktop"><img src="/images/Menu/logo/Logo.png" alt=""></div>
+        </ul>
+
+        <ul class="menu">
+          <li class="texto"><a href= "">Nosotros</a> </li>
+          <li class="texto"><a href="">Contacto</a> </li>
+        </ul>
+        </nav>
+
+        <nav class="container-user">
+          <ul class="user">
+            <li class="texto"><a href="">Ingresar</a> </li>
+            <li class="texto"><a href="">Registrarse</a> </li>
+        </ul>
+      </nav>
+
+    </div>
+</header>
     <main>
         <section>
     
@@ -139,37 +142,40 @@
 
 </body>
 
-<footer class="footer-contenedor" >
-    <section class="contacto">
-      <h2 class="footer">SEGUINOS</h2>
-      <div class="rrss">
-        <a href="#"><img src="/images/Iconos redes/Recurso_1.png" alt="facebook"></a>
-        <a href="#"><img src="/images/Iconos redes/Recurso_3.png" alt="instagram"></a>
-        <a href="#"><img src="/images/Iconos redes/Recurso_4.png" alt="whatsapp"></a>
-      </div>
-    </section>
+<footer class="footer">
+  <section class="contacto">
+    <h2 class="tfooter">SEGUINOS</h2>
+    <div class="rrss">
+      <a href="#"><img src="/images/Iconos redes/Recurso 1.png" alt="facebook"></a>
+      <a href="#"><img src="/images/Iconos redes/Recurso 3.png" alt="instagram"></a>
+      <a href="#"><img src="/images/Iconos redes/Recurso 4.png" alt="whatsapp"></a>
+    </div>
+  </section>
 
-    <section class="susc">
-      <input class= "email" type="text" value="Email"><a class="suscribirme" href="">SUSCRIBIRME</a>
-      <p>Recibí las ofertas, descuentos y novedades antes que nadie!</p>
-    </section>
+  <section class="susc">
+    <input class= "email" type="text" placeholder="Email"><a class="suscribirme" href="">SUSCRIBIRME</a>
+    <p>Recibí las ofertas, descuentos y novedades antes que nadie!</p>
+  </section>
 
-    <section class="medpag">
-      <h2 class="footer">MEDIOS DE PAGO</h2>
-      <img src="/images/Iconos redes/descarga.png" alt="Mercado pago" class="mdepago">
-      <img src="/images/Iconos redes/descarga_(1).png" alt="Efectivo" class="mdepago">
-      <p>Horarios<br>Todos los días de 9 a 23hs</p>
-    </section>
+  <section class="medpag">
+    <h2 class="tfooter">MEDIOS DE PAGO</h2>
+    <div>
+    <img src="/images/Iconos redes/descarga.png" alt="Mercado pago" class="mdepago">
+    <img src="/images/Iconos redes/descarga (1).png" alt="Efectivo" class="mdepago">
+    </div>
+    
+    <p>Horarios<br>Todos los días de 9 a 23hs</p>
+  </section>
 
-    <section class="links">
-      <ul>
-        <li><a class="Links" href="">FAQ'S</a></li>
-        <li><a class="Links" href="">Contacto</a></li>
-        <li><a class="Links" href="">Tarjeta de Bonificación</a></li>
-        <li><a class="Links" href="">Nosotros</a></li>
-        <li><a class="Links" href="">Sucursales</a></li>
-        <li><a class="Links" href="">Mapa de sitio</a></li>
-      </ul>
-    </section>
-  </footer>
+  <section class="links">
+    <ul>
+      <li><a class="Links" href="">FAQ'S</a></li>
+      <li><a class="Links" href="">Contacto</a></li>
+      <li><a class="Links" href="">Tarjeta de Bonificación</a></li>
+      <li><a class="Links" href="">Nosotros</a></li>
+      <li><a class="Links" href="">Sucursales</a></li>
+      <li><a class="Links" href="">Mapa de sitio</a></li>
+    </ul>
+  </section>
+</footer>
 </html>
