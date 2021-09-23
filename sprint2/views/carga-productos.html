@@ -12,114 +12,160 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     </head>
 <body class="detalle">
-    <img src="/images/Logo.png" alt="Logo">
-    <article>
-        <button>Miniatura</button> <button>Detalle</button>        
-    </article>
-    <article>
-        <h2>Título</h2>
-        <input type="text" id="title" name="título" placeholder="Nombre de plato">
-        <h2>Descripción</h2>
-        <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
-    </article>
-    <button>Descartar</button>
-    <article>
-        <h2>Media</h2>
-        <input type="file" />
-        <label for="desc">Descripción</label>
-        <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
-    </article>
-    <button>Descartar</button>
-    <article>
-        <h2>Organizar</h2>
 
-        <label for="categoria">Categoría</label>
+    <header>
+        
+        <div class="flex-header">
+            <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
+              <div id="input">
+                <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
+            </div>
+    
+    
+              <input type="checkbox" id='user'>
+              <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+              <div class="user-cart">
+              <i class="fas fa-shopping-cart"></i>
+              </div>
+    
+    
+            <input type="checkbox" id='menu'>
+            <label for='menu' class="menu-bars">☰</label>
+            <nav class="container-menu">
+              <ul class="menu">
+                <li class="texto"><a href="">Menu</a> </li>
+                <li class="texto"><a href="">Sucursales</a> </li>
+            </ul>
+            <ul class="menu-hiden"><div class="logo-desktop"><img src="/images/Menu/logo/Logo.png" alt=""></div>
+            </ul>
+    
+            <ul class="menu">
+              <li class="texto"><a href= "">Nosotros</a> </li>
+              <li class="texto"><a href="">Contacto</a> </li>
+            </ul>
+            </nav>
+    
+            <nav class="container-user">
+              <ul class="user">
+                <li class="texto"><a href="">Ingresar</a> </li>
+                <li class="texto"><a href="">Registrarse</a> </li>
+            </ul>
+          </nav>
+    
+        </div>
+    </header>
 
-        <select class="cat" name="categoria">
-          <option value="Principal">Principal</option>
-          <option value="entrada">Entrada</option>
-          <option value="acompañamiento">Acompañamiento</option>
-          <option value="Salsa">Salsa</option>
-          <option value="bebida">Bebida</option>
-          <option value="postre">Postre</option>
+    <main>
+        <img src="/images/Logo.png" alt="Logo">
+        <article>
+            <button>Miniatura</button> <button>Detalle</button>        
+        </article>
+        <article>
+            <h2>Título</h2>
+            <input type="text" id="title" name="título" placeholder="Nombre de plato">
+            <h2>Descripción</h2>
+            <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
+        </article>
+        <button>Descartar</button>
+        <article>
+            <h2>Media</h2>
+            <input type="file" />
+            <label for="desc">Descripción</label>
+            <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
+        </article>
+        <button>Descartar</button>
+        <article>
+            <h2>Organizar</h2>
+    
+            <label for="categoria">Categoría</label>
+    
+            <select class="cat" name="categoria">
+              <option value="Principal">Principal</option>
+              <option value="entrada">Entrada</option>
+              <option value="acompañamiento">Acompañamiento</option>
+              <option value="Salsa">Salsa</option>
+              <option value="bebida">Bebida</option>
+              <option value="postre">Postre</option>
+            </select>
+    
+            <label for="subcategoria">Subcategoría</label>
+            <select class="cat" name="categoria">
+                <option value="taco">Taco</option>
+                <option value="burrito">Burrito</option>
+                <option value="quesadilla">Quesadilla</option>
+                <option value="Bebida c/alcohol">Bebida c/alcohol</option>
+                <option value="Bebida s/alcohol">Bebida s/alcohol</option>
+              </select>
+              <input type="number" name="orden" placeholder="1">
+              <label for="primero">Primero</label>
+              <input type="checkbox">
+              <label for="ultimo">Último</label>
+              <input type="checkbox">
+    
+              <label for="clave">Palabras Clave</label>
+              <input type="text">
+    
+              <label for="precio">Precio</label>
+              <input type="number" placeholder="$0000.00">
+        </article>
+        
+        <button>Descartar</button>
+    
+        <article>
+            <h2>Variantes</h2>
+            <label for="Relleno">Relleno</label>
+        <select class="relleno" name="relleno">
+            <option value="carne">Carne</option>
+            <option value="pollo">Pollo</option>
+            <option value="cerdo">Cerdo</option>
+            <option value="veg">Vegetariano</option>
         </select>
-
-        <label for="subcategoria">Subcategoría</label>
-        <select class="cat" name="categoria">
-            <option value="taco">Taco</option>
-            <option value="burrito">Burrito</option>
-            <option value="quesadilla">Quesadilla</option>
-            <option value="Bebida c/alcohol">Bebida c/alcohol</option>
-            <option value="Bebida s/alcohol">Bebida s/alcohol</option>
-          </select>
-          <input type="number" name="orden" placeholder="1">
-          <label for="primero">Primero</label>
-          <input type="checkbox">
-          <label for="ultimo">Último</label>
-          <input type="checkbox">
-
-          <label for="clave">Palabras Clave</label>
-          <input type="text">
-
-          <label for="precio">Precio</label>
-          <input type="number" placeholder="$0000.00">
-    </article>
     
-    <button>Descartar</button>
-
-    <article>
-        <h2>Variantes</h2>
-        <label for="Relleno">Relleno</label>
-    <select class="relleno" name="relleno">
-        <option value="carne">Carne</option>
-        <option value="pollo">Pollo</option>
-        <option value="cerdo">Cerdo</option>
-        <option value="veg">Vegetariano</option>
-    </select>
-
-    <label for="Bebida">Bebida</label>
-    <select class="ml" name="bebida cant">
-        <option value="100ml">100ml</option>
-        <option value="500ml">500ml</option>
-        <option value="750ml">750ml</option>
-        <option value="1l">1l</option>
-    </select>
-
-    <label for="Tortilla">Tortilla</label>
-    <select class="tortilla" name="tortilla">
-        <option value="Maíz">Maíz</option>
-        <option value="Sin TACC">Sin TACC</option>
-        <option value="Trigo">Trigo</option>
-    </select>
-
-        <label for="Picor">Picor</label>
-    <select class="picante" name="picante">
-        <option value="Suave">Suave</option>
-        <option value="Picante">Picante</option>
-        <option value="Muy Picante">Muy Picante</option>
-        <option value="Ultra Picante">Ultra Picante</option>
-    </select>
-    </article>
-
-    <button>Descartar</button>
-
-    <article>
-        <h2>Valores Nutricionales</h2>
-        <label for="Calorías">Calorías</label>
-        <input type="number">
-        <label for="Grasas Totales (g)">Grasas Totales (g)</label>
-        <input type="number">
-        <label for="Carbohidratos (g)">Carbohidratos (g)</label>
-        <input type="number">
-        <label for="Proteínas">Proteínas</label>
-        <input type="number">
-    </article>
-
-    <button>Descartar</button>
+        <label for="Bebida">Bebida</label>
+        <select class="ml" name="bebida cant">
+            <option value="100ml">100ml</option>
+            <option value="500ml">500ml</option>
+            <option value="750ml">750ml</option>
+            <option value="1l">1l</option>
+        </select>
     
-    <button>Guardar</button>
-    <button>Preview</button>
-    <button>Descartar</button>
+        <label for="Tortilla">Tortilla</label>
+        <select class="tortilla" name="tortilla">
+            <option value="Maíz">Maíz</option>
+            <option value="Sin TACC">Sin TACC</option>
+            <option value="Trigo">Trigo</option>
+        </select>
+    
+            <label for="Picor">Picor</label>
+        <select class="picante" name="picante">
+            <option value="Suave">Suave</option>
+            <option value="Picante">Picante</option>
+            <option value="Muy Picante">Muy Picante</option>
+            <option value="Ultra Picante">Ultra Picante</option>
+        </select>
+        </article>
+    
+        <button>Descartar</button>
+    
+        <article>
+            <h2>Valores Nutricionales</h2>
+            <label for="Calorías">Calorías</label>
+            <input type="number">
+            <label for="Grasas Totales (g)">Grasas Totales (g)</label>
+            <input type="number">
+            <label for="Carbohidratos (g)">Carbohidratos (g)</label>
+            <input type="number">
+            <label for="Proteínas">Proteínas</label>
+            <input type="number">
+        </article>
+    
+        <button>Descartar</button>
+        
+        <button>Guardar</button>
+        <button>Preview</button>
+        <button>Descartar</button>
+    </main>
+
 
     <footer>
         <nav>

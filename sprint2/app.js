@@ -29,8 +29,12 @@ app.get('/carga-productos', (req, res) => res.sendFile(path.join(__dirname, 'vie
 /* app get footer */
 app.get('/footer', (req, res) => res.sendFile(path.join(__dirname, 'views','footer.html')))
 
-/* app get footer */
+/* app get header */
 app.get('/header', (req, res) => res.sendFile(path.join(__dirname, 'views','header.html')))
+
+/* app get carrito */
+app.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, 'views','carrito.html')))
+
 
 
 /* Servidor escuchando, siempre va al final */
