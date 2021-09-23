@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ef88cf4afb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body class="carrito">
+    <header>
+        
+        <div class="flex-header">
+            <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
+              <div id="input">
+                <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
+            </div>
+    
+    
+              <input type="checkbox" id='user'>
+              <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+              <div class="user-cart">
+                  <a href="/carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                  </a>
+              
+              </div>
+    
+    
+            <input type="checkbox" id='menu'>
+            <label for='menu' class="menu-bars">☰</label>
+            <nav class="container-menu">
+              <ul class="menu">
+                <li class="texto"><a href="">Menu</a> </li>
+                <li class="texto"><a href="">Sucursales</a> </li>
+            </ul>
+            <ul class="menu-hiden"><div class="logo-desktop"><img src="/images/Menu/logo/Logo.png" alt=""></div>
+            </ul>
+    
+            <ul class="menu">
+              <li class="texto"><a href= "">Nosotros</a> </li>
+              <li class="texto"><a href="">Contacto</a> </li>
+            </ul>
+            </nav>
+    
+            <nav class="container-user">
+              <ul class="user">
+                <li class="texto"><a href="">Ingresar</a> </li>
+                <li class="texto"><a href="">Registrarse</a> </li>
+            </ul>
+          </nav>
+    
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Tu Pedido</h1>
+            <div class="cart">
+                <div class="products">
+
+                    <div class="product">
+                        <img src="/images/Menu/Tacos/1-beerbatteredfishtaco.png">
+                        <div class="product-info">
+                            <h3 class="product-name">Taco de pollo</h3>
+                            <h4 class="product-price">$ 300</h4>
+                        </div>
+                            <div>
+                            <p class="product-quantity">Cantidad: <input value="1" name=""></p>
+                            <p class="product-remove">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                <span class="remove">Borrar</span></p>
+                            </div>
+                        
+                    </div>
+
+                    <div class="product">
+                        <img src="/images/Menu/Nachos/1-Hero_Queso-Loaded-Nachos.png">
+                        <div class="product-info">
+                            <h3 class="product-name">Super Nachos Con Queso</h3>
+                            <h4 class="product-price">$ 700</h4>
+                        </div>
+
+                        <div>
+                            <p class="product-quantity">Cantidad: <input value="1" name="">
+                                <p class="product-remove">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <span class="remove">Borrar</span>
+                                </p>
+                        </div>
+
+                    </div>
+
+                    <div class="product">
+                        <img src="/images/Menu/Salsas/Hero_bowl-of-guac.png">
+                        <div class="product-info">
+                            <h3 class="product-name">Guacamole</h3>
+                            <h4 class="product-price">$ 100</h4>
+                        </div>
+
+                        <div>
+                            <p class="product-quantity">Cantidad: <input value="1" name="">
+                                <p class="product-remove">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <span class="remove">Borrar</span>
+                                </p>
+                        </div>
+
+                    </div>
+
+                    <div class="product">
+                        <img src="/images/Menu/Crispy Chicken/1-Crispy-Chicken-Taco.png">
+                        <div class="product-info">
+                            <h3 class="product-name">Burrito</h3>
+                            <h4 class="product-price">$ 300</h4>
+                        </div>
+
+                        <div>
+                            <p class="product-quantity">Cantidad: <input value="1" name="">
+                                <p class="product-remove">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <span class="remove">Borrar</span>
+                                </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="cart-total">
+                    <p>
+                        <span>Precio Total</span>
+                        <span>$ 1400</span>
+                    </p>
+                    <p>
+                        <span>Cantidad de productos</span>
+                        <span>4</span>
+                    </p>
+                    <a href="#">Pagar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="https://kit.fontawesome.com/ef88cf4afb.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+        <header></header>
+        <main></main>
+        
+        <footer class="footer">
+          <section class="contacto">
+            <h2 class="tfooter">SEGUINOS</h2>
+            <div class="rrss">
+              <a href="#"><img src="/images/Iconos redes/Recurso 1.png" alt="facebook"></a>
+              <a href="#"><img src="/images/Iconos redes/Recurso 3.png" alt="instagram"></a>
+              <a href="#"><img src="/images/Iconos redes/Recurso 4.png" alt="whatsapp"></a>
+            </div>
+          </section>
+    
+          <section class="susc">
+            <input class= "email" type="text" placeholder="Email"><a class="suscribirme" href="">SUSCRIBIRME</a>
+            <p>Recibí las ofertas, descuentos y novedades antes que nadie!</p>
+          </section>
+    
+          <section class="medpag">
+            <h2 class="tfooter">MEDIOS DE PAGO</h2>
+            <div>
+            <img src="/images/Iconos redes/descarga.png" alt="Mercado pago" class="mdepago">
+            <img src="/images/Iconos redes/descarga (1).png" alt="Efectivo" class="mdepago">
+            </div>
+            
+            <p>Horarios<br>Todos los días de 9 a 23hs</p>
+          </section>
+    
+          <section class="links">
+            <ul>
+              <li><a class="Links" href="">FAQ'S</a></li>
+              <li><a class="Links" href="">Contacto</a></li>
+              <li><a class="Links" href="">Tarjeta de Bonificación</a></li>
+              <li><a class="Links" href="">Nosotros</a></li>
+              <li><a class="Links" href="">Sucursales</a></li>
+              <li><a class="Links" href="">Mapa de sitio</a></li>
+            </ul>
+          </section>
+        </footer>
+    </body>
+    </html>
+</body>
+</html>
