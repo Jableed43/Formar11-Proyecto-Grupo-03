@@ -294,4 +294,19 @@ margin-top: 15px;
 }
 
 
-
+@media (min-width: 1024px){
+.Detalleprodu main .menu {
+  border: 1px solid grey;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+  width: 26vw;
+  border-radius: 10px;
+  height: 4%;
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  background-color: #2d2254;
+}
+}

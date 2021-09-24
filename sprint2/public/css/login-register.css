@@ -1,94 +1,82 @@
+  /* Style inputs */
+  .login-register input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
 
-.login main, .register main {
+  .login-register input[type=password], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .login-register  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login-register input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .login-register .container {
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 80px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .login-register .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .login-register .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .login-register .row{
+    border-radius: 18px;
+    background-color: rgba(255,255,255,0.5);
+  }
+  
+  .login-register .buttons.div{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 10% auto;
-    background-color: #f1d367;
-    padding: 5%;
-    box-sizing: border-box;
     align-items: center;
-}
+  }
 
-.login main h1 , .register main h1 {
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #373737;
-    font-size: 25px;
-    text-align: center;
-    margin: auto;
-}
+  .login-register div.buttons, .login-register div.buttons div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.login .datos, .register .datos {
-    margin-top: 5%;
-    width: 50%;
-}
+  .login-register div.buttons p:first-child{
+    margin-bottom: 5px;
+  }
 
-.login main h2, .register main h2 {
-    color: #373737;
-}
 
-.login main input, .register main input {
-    background-color: white;
-    border: none;
-    width: 100%;
-    height: 25px;
-}
-
-.login .recupera, .register .recupera {
-    margin: 10% auto 0;
-}
-
-.login main p, .register main p {
-    text-align: center;
-    color: #373737;
-    font-size: 15px;
-    margin: auto;
-}
-
-.login main a, .register main a {
-    text-align: center;
-    font-weight: 700;
-    margin: auto;
-}
-
-.login button, .register button {
-    background-color: #312757;
-    border: none;
-    border-radius: 5px;
-    color:white;
-    font-size: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    transition: 0.3s;
-    width: 45%;
-    padding: 10px;
-    margin: 5% auto 10%;
-}
-
-.login main .rrss, .register main .rrss {
-    margin-top: 5%;
-}
-
-.login main a img, .register main a img {
-    display: inline-block;
-    justify-content: space-around;
-    width: 20%; 
-    margin-left: 10%;
-}
-
-/* Register */
-.register .inicia {
-    margin: 5% auto;
-}
-
-@media (min-width: 769px) {
-    .login main, .register main {
-        width: 800px;
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .login-register .column, .login-register input[type=submit] {
+      width: 100%;
+      margin-top: 0;
     }
-    
-    .login button, .register button {
-        font-size: 15px;
-    }
-}
+  }
+
+  
