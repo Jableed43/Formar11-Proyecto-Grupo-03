@@ -1,0 +1,53 @@
+[
+    {
+        "nivel": "Basico",
+        "puntos": 0,
+        "suma": 600,
+        "cumpleaños": true,
+        "voucher2x1": 1,
+        "descuento": 5,
+        "bienvenida":300,
+        "level": null,
+        "tacos": 400,
+        "burritos": 500,
+        "quesadilla": 400,
+        "entradas": 600,
+        "bebidas":300,
+        "dulces":500,
+        "salsa":200
+    },
+    {
+        "nivel": "Intermedio",
+        "puntos": 170,
+        "suma": 400,
+        "cumpleaños": true,
+        "voucher2x1": 2,
+        "descuento": 10,
+        "bienvenida":null,
+        "level": 400,
+        "tacos": 400,
+        "burritos": 500,
+        "quesadilla": 400,
+        "entradas": 600,
+        "bebidas":300,
+        "dulces":500,
+        "salsa":200
+    },
+    {
+        "nivel": "Avanzado",
+        "puntos": 340,
+        "suma": 200,
+        "cumpleaños": true,
+        "voucher2x1": 4,
+        "descuento": 15,
+        "bienvenida":null,
+        "level": 500,
+        "tacos": 400,
+        "burritos": 500,
+        "quesadilla": 400,
+        "entradas": 600,
+        "bebidas":300,
+        "dulces":500,
+        "salsa":200
+    }
+]

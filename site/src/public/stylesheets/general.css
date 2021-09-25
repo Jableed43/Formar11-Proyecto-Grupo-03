@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+a {
+    color: #2d2254;;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+:root {
+    --Gris: #373737;
+    --Violeta: #2d2254;
+    --Amarillo: #f1d367;
+    --Blanco: #ffffff;
+}
+

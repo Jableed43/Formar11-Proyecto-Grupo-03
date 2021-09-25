@@ -1,0 +1,52 @@
+<%- include("../partials/head.ejs") %>
+
+<body class="formcontacto">
+
+    <%- include("../partials/header.ejs") %>
+
+<main class="login-register">
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <img src="/images/Logo.png" style="width:100%">
+    </div>
+    <div class="column">
+      <h1>Crear cuenta</h1>
+      <form action="/action_page.php">
+        <label for="user">Nombre Completo</label>
+        <input type="text" id="user" name="user" placeholder="Ingrese usuario...">
+        <label for="user">Correo Electrónico</label>
+        <input type="text" id="user" name="user" placeholder="Ingrese usuario...">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese contraseña...">
+        <label for="password">Confirmar Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese contraseña...">
+        
+        <div class="buttons">
+
+        <p>Al crear una cuenta, aceptas las <a href="#">Condiciones de uso</a> y <a href="#">Aviso de privacidad</a> de Tacopado</p>
+        <input type="submit" value="Registrarme">
+
+
+        <div>
+          <p>¿Olvidaste tu usuario o contraseña?</p>
+          <input type="submit" value="Recuperar usuario">
+      </div>
+
+        <div>
+          <p>¿Ya tenes una cuenta?</p>
+          <input type="submit" value="Iniciá sesión">
+      </div>
+        
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+
+<%- include("../partials/footer.ejs") %>
+
+  </body>
+  </html>

@@ -1,0 +1,98 @@
+<%- include("../partials/head.ejs") %>
+
+<body class="Detalleprodu">
+    
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <button class="menu">Volver al Menú</button>
+        <div class="foto-container">
+          <button class="antsig">&#8249;</button>
+          
+          <!-- Imagen producto -->
+          <img class="foto" src="/images/Menu/Burrito/Burrito_BOB_990x725.jpg" alt="Foto de producto" width="100%">
+
+         <button class="antsig">&#8250;</button>
+        </div>
+        
+          <!-- Legales -->
+
+        <div  class="legales">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ea odit optio, exercitationem a ab rem beatae velit incidunt unde fuga itaque consequatur voluptatem. Quibusdam soluta sint iste perspiciatis error?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae id doloribus quam odio sequi modi ratione vero, magni culpa, similique mollitia!</p>
+        </div>
+
+        <!-- Información producto -->
+        <section class="detalle">
+            <article class="categoria">categoria / subcategoría</article>
+            
+            <h1 class="nombreprod">Burrito "Ortega"</h1>
+            
+            <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore laborum obcaecati atque nobis soluta dolores voluptatum voluptate vel, repudiandae eaque veritatis, at illo quidem, similique ut culpa aliquam odio. Ab.</p>
+
+          <!-- Gusto de producto -->
+            <div class="opciones">
+            <button class="gusto">Carne</button> <button class="gusto">Pollo</button>
+            </div>
+            
+            <article class="cantycarr">
+            <a href="#" class="cant">-</a>
+            <input type="number" class="numero" value="1" >
+            <a href="#" class="cant">+</a>
+            
+            <a href="http://localhost:3030/carrito" class="carrito">Agregar al Carrito</a>
+            </article>
+
+            <article class="tablainfo">
+                <div class="columna">
+                  <div class="carta">650<br>Calorías</div>
+                </div>
+                <div class="columna">
+                  <div class="carta">34<br>Grasas(g)</div>
+                </div>
+                <div class="columna">
+                  <div class="carta">27.6<br>Prot (g)</div>
+                </div>
+                <div class="columna">
+                  <div class="carta">56.2<br>Carb (g)</div>
+                </div>
+            </article>
+
+            <h2>Información Nutricional</h2>
+
+            <article>
+              <table>
+                <tr>
+                  <td class="c1">Grasa Saturada (g)</td>
+                  <td class="c2">14.7</td>
+                  <tr>
+                    <td class="c1">Grasas trans (g)</td>
+                    <td class="c2">1</td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Colesterol (mg)</td>
+                    <td class="c2">83.4</td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Azúcares (g)</td>
+                    <td class="c2">2.2</td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Sodio (mg)</td>
+                    <td class="c2">1464.8</td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Fibra (g)</td>
+                    <td class="c2">5.4</td>
+                  </tr>
+                </tr>
+                </tr>
+              </table>
+            </article>
+        </section>
+
+    </main>
+    
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+</html>
