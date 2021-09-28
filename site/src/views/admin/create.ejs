@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <%- include("../partials/edit-create-head.ejs") %>
+    
+    <title>Crear Producto</title>
+</head>
+<body>
+
+    <%- include("../partials/admin-header.ejs") %>
+
+    <main class="create">
+      <div class="logo">
+        <img src='/images/logomin.png' alt="Logo Tacopado">
+      </div>
+      <h1>CREA TU PRODUCTO</h1>
+      <article>
+            <button>Miniatura</button> <button>Detalle</button>        
+      </article>
+      <div class="contenedor">
+        <article>
+            <h2>Título</h2>
+            <input type="text" id="title" name="título" placeholder="Nombre de plato">
+            <h2>Descripción</h2>
+            <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
+        </article>
+        <button>Descartar</button>
+      </div>
+      <div class="contenedor2">
+        <article>
+          <h2>Media</h2>
+          <div>
+            <input type="file" />
+            <label for="desc"></label>
+            <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
+          </div>
+        </article>
+        <div>
+           <button>Examinar</button><button>Añadir URL</button><button>Descartar</button>
+        </div>
+      </div>  
+      <div class="contenedor3">
+        <article>
+          <h2>Organizar</h2>
+          <div>
+    
+            <label for="categoria">Categoría</label>
+    
+            <select class="cat" name="categoria">
+              <option value="Principal">Principal</option>
+              <option value="entrada">Entrada</option>
+              <option value="acompañamiento">Acompañamiento</option>
+              <option value="Salsa">Salsa</option>
+              <option value="bebida">Bebida</option>
+              <option value="postre">Postre</option>
+            </select>
+          </div>
+          <div>
+            <label for="subcategoria">Subcategoría</label>
+              <select class="cat" name="categoria">
+                <option value="taco">Taco</option>
+                <option value="burrito">Burrito</option>
+                <option value="quesadilla">Quesadilla</option>
+                <option value="Bebida c/alcohol">Bebida c/alcohol</option>
+                <option value="Bebida s/alcohol">Bebida s/alcohol</option>
+              </select>
+          </div>
+          <div>
+              <label for="primero">Primero</label>
+              <input type="checkbox">
+              <label for="ultimo">Último</label>
+              <input type="checkbox">
+              <br>
+              <label for="primero"></label>
+              <input type="number" name="orden" placeholder="1">
+          </div>
+          <div>
+              <label for="clave">Palabras Clave</label>
+              <input type="text">
+          </div>
+          <div class="ultimo-input">
+              <label for="precio">Precio</label>
+              <input type="number" placeholder="$0000.00">
+          </div>
+        </article>
+        
+        <button>Descartar</button>
+      </div>
+      <div class="contenedor4">
+    
+        <article>
+          <div>
+              <h2>Variantes</h2>
+              <label for="Relleno">Relleno</label>
+            <select class="relleno" name="relleno">
+              <option value="carne">Carne</option>
+              <option value="pollo">Pollo</option>
+              <option value="cerdo">Cerdo</option>
+              <option value="veg">Vegetariano</option>
+            </select>
+          </div>
+          <div>
+            <label for="Bebida">Bebida</label>
+            <select class="ml" name="bebida cant">
+              <option value="100ml">100ml</option>
+              <option value="500ml">500ml</option>
+              <option value="750ml">750ml</option>
+              <option value="1l">1l</option>
+            </select>
+          </div>
+          <div>
+            <label for="Tortilla">Tortilla</label>
+            <select class="tortilla" name="tortilla">
+              <option value="Maíz">Maíz</option>
+              <option value="Sin TACC">Sin TACC</option>
+              <option value="Trigo">Trigo</option>
+            </select>
+          </div>
+          <div class="ultimo-input">
+              <label for="Picor">Picor</label>
+            <select class="picante" name="picante">
+              <option value="Suave">Suave</option>
+              <option value="Picante">Picante</option>
+              <option value="Muy Picante">Muy Picante</option>
+              <option value="Ultra Picante">Ultra Picante</option>
+            </select>
+          </div>
+        </article>
+    
+        <button>Descartar</button>
+      </div>
+      <div class="contenedor5">
+    
+        <article>
+          <h2>Valores Nutricionales</h2>
+          <div>
+            <label for="Calorías">Calorías</label>
+            <input type="number">
+          </div>
+          <div>
+            <label for="Grasas Totales (g)">Grasas Totales (g)</label>
+            <input type="number">
+          </div>
+          <div>
+            <label for="Carbohidratos (g)">Carbohidratos (g)</label>
+            <input type="number">
+          </div>
+          <div>
+            <label for="Proteínas">Proteínas</label>
+            <input type="number">
+          </div>
+        </article>
+    
+        <button>Descartar</button>
+        <div>
+          <button>Guardar</button><button>Preview</button><button>Descartar</button>
+        </div>
+      </div>
+      
+      
+    </main>
+    <%- include("../partials/admin-footer.ejs") %>
+</body>
+</html>

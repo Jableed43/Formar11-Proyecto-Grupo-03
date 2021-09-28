@@ -1,0 +1,111 @@
+.beneficios main {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-image: url('/images/fondo-violeta.png');
+  }
+  .beneficios main h2{
+      text-align: center;
+      font-size: 2em;
+      font-family: 'Open Sans Condensed', sans-serif;
+      padding: 0;
+      color: white;
+      background-color: #2d2254;
+      margin-bottom: 30px;
+      margin-top: 62px;
+  }
+  .beneficios main section div.paquetes div.nivel{
+       display: flex;
+       justify-content: space-around;
+  }
+  .beneficios main section div.paquetes div.nivel div.caja1{
+     width: 260px;
+     height: 250px;
+     box-shadow: 0px 0px 10px rgb(189, 184, 184);
+     border-radius: 3%;
+     margin: 20px 0;
+     background-color: #f1d367;
+     align-self: center;
+     position: relative;
+  }
+  .beneficios main section div.paquetes div.nivel div.caja2{
+    width: 260px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgb(189, 184, 184);
+    border-radius: 3%;
+    margin: 20px 0;
+    background-color: #f1d367;
+    justify-content: center;
+    position: relative;
+  }
+  .beneficios main section div.paquetes div.nivel div.caja3{
+    width: 260px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgb(189, 184, 184);
+    border-radius: 3%;
+    margin: 20px 0;
+    background-color: #f1d367;
+    justify-content: center;
+    position: relative;
+  }
+  .beneficios main section div.paquetes nav{
+    margin-right:23px;
+  }
+  .beneficios main section div.canjes div.nivel{
+       display: flex;
+       justify-content: space-around;
+  }
+  .beneficios main section div.canjes div.nivel div.caja4{
+     width: 260px;
+     height: 250px;
+     box-shadow: 0px 0px 10px rgb(189, 184, 184);
+     border-radius: 3%;
+     margin: 20px 0;
+     background-color: #f1d367;
+     align-self: center;
+     position: relative;
+  }
+  .beneficios main section div.canjes div.nivel div.caja5{
+    width: 260px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgb(189, 184, 184);
+    border-radius: 3%;
+    margin: 20px 0;
+    background-color: #f1d367;
+    align-self: center;
+    position: relative;
+  }
+  .beneficios main section div.canjes div.nivel div.caja6{
+    width: 260px;
+    height: 250px;
+    box-shadow: 0px 0px 10px rgb(189, 184, 184);
+    border-radius: 3%;
+    margin: 20px 0;
+    background-color: #f1d367;
+    align-self: center;
+    position: relative;
+  }
+  .beneficios main section div.canjes nav{
+    margin-left: 30px;
+  }
+  .beneficios main section div nav ul{
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+  .beneficios main section div h3{
+    text-align: center;
+    color: #463686;
+    background-color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+  
+  /*main desktop*/
+  @media (min-width: 769px){
+    .beneficios main section div.paquetes{
+       display: flex;
+       justify-content: space-around;
+    } 
+    .beneficios main section div.canjes{
+       display: flex;
+       justify-content: space-around;  
+    }
+  }

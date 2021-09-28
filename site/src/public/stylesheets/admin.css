@@ -1,0 +1,40 @@
+body.admin main{
+    color: white;
+    background-image: url('/images/fondo-violeta.png');
+}
+body.admin main h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2d2254;
+}
+body.admin main a div.top-button{
+    text-align: center;
+    margin: 20px 0;
+}
+body.admin main div.table-responsive{
+    display: flex;
+    justify-content: center;
+}
+body.admin main table.table{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+    align-items: center;
+}
+body.admin main table.table button{
+    width: 70px;
+}
+footer.admin-footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1d367;
+}
+footer.admin-footer div{
+    width: 100px;
+    margin: 20px 0;
+    text-align: center;
+}
+footer.admin-footer div i{
+    font-size: 35px;
+}
