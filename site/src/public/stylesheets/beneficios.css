@@ -1,8 +1,10 @@
+body.beneficios{
+    background-image: url('/images/fondo-violeta.png');
+}
 .beneficios main {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-image: url('/images/fondo-violeta.png');
   }
   .beneficios main h2{
       text-align: center;
