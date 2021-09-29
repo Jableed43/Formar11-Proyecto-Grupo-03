@@ -38,6 +38,7 @@ main.create button{
     border-radius: 10%;
     font-size: 20px;
     font-weight: bold;
+    margin: 2px;
 }
 
 main.create button.borrar{
