@@ -22,7 +22,7 @@ body.menu{
 }
 .menu main section.top-menu div img{
     border-radius: 50%;
-    border: 1.5px solid #037027;
+    border: 1.5px solid #2D2254;;
     width: 80px;
     height: 80px;
     margin-left: 10px;
@@ -31,7 +31,7 @@ body.menu{
 .menu main section.top-menu div p{
     font-size: 16px;
     font-family: 'Open Sans Condensed', sans-serif;
-    color:  #037027;
+    color:  #2D2254;
     
  
     width: 100px;
