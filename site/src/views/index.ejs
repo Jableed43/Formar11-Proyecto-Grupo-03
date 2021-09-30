@@ -14,64 +14,72 @@
           <div class="mySlides fade">
             <!-- <div class="numbertext">1 / 3</div> -->
             <img src="/images/Carrousel/BurritoBowl_SliderImages_1740x715.jpg" style="width:100%">
-            <div class="text">Bienvenidos!</div>
           </div>
         
           <div class="mySlides fade">
             <!-- <div class="numbertext">2 / 3</div> -->
             <img src="/images/Carrousel/razones-comer-tacos-saludables.jpg" style="width:100%">
-            <div class="text">Bienvenidos!</div>
           </div>
         
           <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
             <img src="/images/Carrousel/EL_BIGOTE_MEXICANO_CANTABRIA_LIERGANES_13.jpg" style="width:100%">
-            <div class="text">Bienvenidos!</div>
           </div>
         
-          <!-- Next and previous buttons -->
-          <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-          <button class="menu-slideshow">Ver Menú</button>
+
         </div>
         
        <!--          NAV BAR            -->
 
-        <section class="top-menu">
-          <div>
-              <img src="/images/Iconos Tacotime/Taco_GRIcon_300x300-120x120.png" alt="taco icono">
-              <p>Tacos</p>
-          </div>
-          <div>
-            <img src="/images/Iconos Tacotime/Burrito_GRIcon_300x300.png" alt="burrito icono">
-            <p>Burritos</p>
-          </div>
-          <div>
-            <img src="/images/Iconos Tacotime/Quesa_GRIcon_300x300.png" alt="quesadilla icono">
-            <p>Quesadillas</p>
-          </div>
-        
-          <div>
-            <img src="/images/Iconos Tacotime/Nacho_GRIcon_300x300.png" alt="nacho icono">
-            <p>Nachos</p>
-          </div>
-          <div>
-            <img src="/images/Iconos Tacotime/MexiFries_GRIcon_300x300.png" alt="papas icono">
-            <p>Papas</p>
-          </div>
-          <div>
-            <img src="/images/Iconos Tacotime/TacoSalad_GRIcon_300x300.png" alt="ensalada icono">
-            <p>Ensaladas</p>
-          </div>
-          <div>
-            <img src="/images/Iconos Tacotime/Dessert_GRIcon_300x300.png" alt="postre icono">
-            <p>Postres</p>
-          </div>
-      </section>
+
+
+              <!-- Menu Slide container -->
+<div class="menu-container">
+
+  <!-- Iconos -->
+  <div class="icono-container icono-fade">
+    <img src="/images/Iconos Tacotime/Taco_GRIcon_300x300-120x120.png" alt="taco icono">
+    <div class="icono-nombre">Tacos</div>
+  </div>
+
+  <div class="icono-container icono-fade">
+    <img src="/images/Iconos Tacotime/Burrito_GRIcon_300x300.png" alt="burrito icono">
+    <div class="icono-nombre">Burritos</div>
+  </div>
+
+  <div class="icono-container icono-fade">
+      <img src="/images/Iconos Tacotime/Quesa_GRIcon_300x300.png" alt="quesadilla icono">
+      <div class="icono-nombre">Quesadillas</div>
+    </div>
+
+    <div class="icono-container icono-fade">
+      <img src="/images/Iconos Tacotime/Nacho_GRIcon_300x300.png" alt="nacho icono">
+      <div class="icono-nombre">Nachos</div>
+    </div>
+
+    <div class="icono-container icono-fade">
+      <img src="/images/Iconos Tacotime/MexiFries_GRIcon_300x300.png" alt="papas icono">
+      <div class="icono-nombre">Papas</div>
+    </div>
+
+    <div class="icono-container icono-fade">
+      <img src="/images/Iconos Tacotime/TacoSalad_GRIcon_300x300.png" alt="ensalada icono">
+      <div class="icono-nombre">Ensaladas</div>
+    </div>
+
+    <div class="icono-container icono-fade">
+      <img src="/images/Iconos Tacotime/Dessert_GRIcon_300x300.png" alt="postre icono">
+      <div class="icono-nombre">Postres</div>
+    </div>
+          
+  <!-- Next and previous buttons -->
+  <a class="previo" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
 
       <!--                     PRODUCTOS                   -->
 <section class="articulos">
-  <h2>Tacos</h2>
   <div class="productos">
     <div class="contenedor">
       <div class="art1">
@@ -86,11 +94,15 @@
               <li>Carb</li>
             </ul>
           </nav>
-          <button>ver más</button>
+          <div class="botonera-contenedor">
+            <button class="ver-mas">ver más</button>
+            <button class="plus">+</button>
+          </div>
+
         </article>
       </div>
     </div>
-    <br>
+    
     <div class="contenedor">
       <div class="art2">
         <article>
@@ -104,11 +116,15 @@
               <li>Carb</li>
             </ul>
           </nav>
-          <button>ver más</button>
+          <div class="botonera-contenedor">
+            <button class="ver-mas">ver más</button>
+            <button class="plus">+</button>
+          </div>
+
         </article>
       </div>
     </div>
-    <br>
+    
     <div class="contenedor">
       <div class="art3">
         <article>
@@ -122,11 +138,15 @@
               <li>Carb</li>
             </ul>
           </nav>
-          <button>ver más</button>
+          <div class="botonera-contenedor">
+            <button class="ver-mas">ver más</button>
+            <button class="plus">+</button>
+          </div>
+
         </article>
       </div>
     </div>
-    <br>
+    
     <div class="contenedor">
       <div class="art4">
         <article>
@@ -140,7 +160,12 @@
               <li>Carb</li>
             </ul>
           </nav>
-          <button>ver más</button>
+          <div class="botonera-contenedor">
+            <button class="ver-mas">ver más</button>
+            <button class="plus">+</button>
+          </div>
+
+
         </article>
       </div>
     </div>
@@ -208,6 +233,8 @@
       <%- include("./partials/footer.ejs") %>
   
       <script src="/javascripts/CARROUSEL.js"></script>
+      <script src="/javascripts/menu-bar.js"></script>
+
   
   </body>
 </html>
