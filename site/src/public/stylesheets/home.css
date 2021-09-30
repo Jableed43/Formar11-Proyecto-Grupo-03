@@ -48,7 +48,7 @@ body{
   
   
   /* On hover, add a black background color with a little bit see-through */
-  .menu-slideshow:hover {
+  .home-slideshow:hover {
     background-color: black;
   }
   
@@ -95,7 +95,7 @@ body{
 
   /* CIERRE Slideshow */
 
-/* barra menu */
+/*                          NAV BAR                            */
 
 .home main section.top-menu .items-menu{
   display: contents;
@@ -108,6 +108,7 @@ body{
   background-color: #f1d367;
   justify-content: center;
   align-self: center;
+  display: none;
 }
 
 .home main section.top-menu div{
@@ -133,6 +134,133 @@ body{
     width: 100px;
     text-align: center;
 }
+
+
+/*                          PRODUCTOS                            */
+
+
+.home main section.articulos h2{
+  text-align: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.home main section.articulos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.home main section.articulos div.productos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home main section.articulos div.contenedor div.art1, div.art2, div.art3, div.art4{
+  width: 250px;
+  background-color: white;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  border-radius: 30px;
+}
+
+.home main section.articulos div.contenedor div.art1:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor div.art2:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor div.art3:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor div.art4:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor article{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.home main section.articulos div.contenedor article img{
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+
+}
+.home main section.articulos div.contenedor article p{
+  text-align: center;
+  font-size: 20px;
+}
+.home main section.articulos div.contenedor article nav{
+width: 100%;
+}
+.home main section.articulos div.contenedor article nav ul{
+  display: flex;
+  background-color: #f1d367;
+  justify-content: space-around;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.home main section.articulos div.contenedor article nav li{
+  margin-right: 22px;
+}
+.home main section.articulos div.contenedor article button{
+  font-size: 14px;
+  align-items: center;
+  padding: 10px 0;
+  width: 50%;
+  border-radius: 28px;
+  margin-bottom: 10px;
+}
+/* .home main section.articulos div.contenedor div.art2{
+  display: none;
+}
+.home main section.articulos div.contenedor div.art3{
+  display: none;
+}
+.home main section.articulos div.contenedor div.art4{
+  display: none;
+} */
+
+
+/*main tablet*/
+@media (min-width: 361px){
+  .home main section.top-menu .items-menu{
+      display: contents;
+  }
+  .home main section.articulos div.contenedor div.art2{
+      display: block;
+  }
+  .home main section.articulos div.productos{
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  
+}
+
+
+/*main desktop*/
+@media (min-width: 769px) {
+  .home main section.articulos div.productos{
+      justify-content: space-around;
+  }
+  .home main section.articulos div.contenedor div.art3{
+      display: block;
+  }
+  .home main section.articulos div.contenedor div.art4{
+      display: block;
+  }
+}
+
+
 /* .home main section.top-menu .items-menu{
     display: none;
 } */
@@ -144,6 +272,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 
 .home section h1{
@@ -163,7 +292,7 @@ body{
 .home main section h2{
   color: white;
   text-transform: capitalize;
-  margin: 20px;
+  margin: 20px 0;
   width: 75%;
   font-size: 20px;
   text-align: center;
