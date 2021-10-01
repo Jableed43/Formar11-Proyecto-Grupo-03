@@ -104,18 +104,13 @@ body{
 .home main  section.top-menu{
   padding-top: 20px;
   padding-bottom: 20px;
-  display: flex;
+  display: none;
   background-color: #f1d367;
   justify-content: center;
   align-self: center;
-  display: none;
 }
 
-.home main section.top-menu div{
-    width: 100px;
-    height: 110px;
-    margin: 0 10px;
-}
+
 .home main section.top-menu div img{
     border-radius: 50%;
     border: 1.5px solid #2D2254;;
@@ -126,8 +121,8 @@ body{
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 .home main section.top-menu div p{
-    font-size: 16px;
-    font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
+     font-family: 'Open Sans Condensed', sans-serif;
     color:  #2D2254;
     
  
@@ -143,6 +138,7 @@ body{
   display: flex;
   justify-content: space-between;
 }
+
 
 /* Hide the images by default */
 .home main .icono-container {
@@ -314,6 +310,22 @@ width: 100%;
 /*main desktop*/
 @media (min-width: 768px) {
 
+  /* .home main section.top-menu div {
+    width: 100px;
+    height: 110px;
+    margin: 0 10px;
+} */
+
+  .home main section.top-menu {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+/* Slideshow container */
+.home main .menu-container {
+display: none;
+}
+
 
 
   .home main section.articulos div.productos {
@@ -328,10 +340,7 @@ width: 100%;
   width: 45%;
 }
 
-.home main section.articulos div.contenedor article {
 
-  margin: 5px;
-}
 
 
 }
@@ -491,11 +500,7 @@ width: 100%;
 
 /* Landscape 640px */
 @media (min-width: 640px) {
- .home main section div img {
 
-    width: 90vw;
-    height: 380px;
-  }
 
  .mySlides.fade img {
     height: 178px;
@@ -590,6 +595,14 @@ width: 100%;
   .home main section div img {
     width: 31vw;
     height: 330px;
+}
+
+.home main section div.art1 img, .home main section div.art2 img, .home main section div.art3 img, .home main section div.art4 img {
+  height: 100%;
+}
+
+.home main section.articulos div.contenedor {
+  width: 23%;
 }
 
 
