@@ -22,7 +22,8 @@ body{
   }
   
   .mySlides.fade img{
-    height: 160px;
+    height: auto;
+    width: 100%;
   }
 
   /* Hide the images by default */
@@ -237,7 +238,7 @@ body{
 }
 
 .mySlides.fade img {
-  height: 235px;
+  height: auto;
 }
 }
 
@@ -250,7 +251,8 @@ body{
   }
 
  .mySlides.fade img {
-    height: 178px;
+  max-width: 100vw;
+  height: auto;
 }
  }
 
@@ -261,7 +263,7 @@ body{
     /* Slideshow */
 
     .mySlides.fade img {
-      height: 300px;
+      height: auto;
   }
 
 }
@@ -272,11 +274,6 @@ body{
  
 
 /* body */
-
-.slideshow-container{
-  width: 60%;
-}
-
 
 .home .nosotros-flex {
   display: flex;
@@ -334,8 +331,14 @@ body{
   
 
   /* Slideshow */
+
+  .slideshow-container{
+    width: 1000px;
+  }
+  
   .mySlides.fade img {
-    height: 300px;
+    height: auto;
+    max-width: 100%;
   }
 
   /* Imagenes del body */
