@@ -30,10 +30,27 @@ const controller = {
 	},
     // Update - Form to edit
 	edit: (req, res) => {
-		products.find(e => e.id === req.params.id)
-		res.render('edit', {products})
+		const product = products.find(product => product.id === +req.params.id)
+		res.render('edit', {product})
 	},
-	
+	// Update - Method to update
+	update: (req, res) => {
+		const productUpdate = products.find(product => product.id === +req.params.id)
+		const {title, price, category, subcategory, description} = req.body
+		if (productUpdate) {
+            productUpdate.title = title
+            productUpdate.price = +price
+			productUpdate.subcategory = subcategory
+            productUpdate.category = category
+            productUpdate.description = description
+
+			fs.writeFileSync(productsFilePath, JSON.stringify(products))
+
+            res.redirect(`/products/detail/$(req.params.id)`)
+		} else {
+			res.redirect('/')
+		}
+	},
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {

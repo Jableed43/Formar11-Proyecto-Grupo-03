@@ -90,7 +90,7 @@
             </article>
 
             <div class="final-buttons">
-              <a href="/products/create"><button class="b1">Crear</button></a><a href="/products/edit<%= productDetail.id %>"><button class="b2">Editar</button></a><a><button class="b3">Eliminar</button></a>
+              <a href="/products/create"><button class="b1">Crear</button></a><a href="/products/edit/<%= productDetail.id %>"><button class="b2">Editar</button></a><form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST"><button class="b3">Eliminar</button></form>
             </div>
         </section>
 

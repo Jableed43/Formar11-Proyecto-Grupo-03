@@ -14,17 +14,17 @@
       <div class="logo">
         <img src='/images/logomin.png' alt="Logo Tacopado">
       </div>
-      <h1>Estás editando: <%= product.name %> </h1>
+      <h1>Estás editando: <i> <%= product.title %> </i></h1>
       <article>
             <button>Miniatura</button> <button>Detalle</button>        
       </article>
 
-      <form  action="/products" method="POST">
+      <form  action="/products/edit/<%= product.id %>?_method_PUT" method="POST">
 
         <div class="contenedor">
           <article>
              <h2>Título</h2>
-             <input type="text" id="title" name="título" value="<%= product.name %>">
+             <input type="text" id="title" name="título" value="<%= product.title %>">
              <h2>Descripción</h2>
              <textarea id="desc" name="desc" value="<%= product.description %>" style="height:170px"></textarea>
          </article>
