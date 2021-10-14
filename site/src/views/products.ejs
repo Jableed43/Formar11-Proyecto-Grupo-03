@@ -8,12 +8,16 @@
             <h2 class="products-title">Todos los productos</h2>
 
             <!-- Show the "comidas" products -->
-            <h3>Comidas:</h3>
-            <div class="row">
+            
+            <div class="category-container">
+            
+            <h3>comidas:</h3>
 
+            <div class="row">
+                
                 <% products.map(product => { %>
                 <% if(product.category === "comida") { %>
-                    
+
                 <div class="contenedor">
                     <section class="products">
                         <a href="/products/detail/<%= product.id %> ">
@@ -42,6 +46,7 @@
             <% } %>
             <% }) %>
             </div>
+        </div>
             <!-- Show the "bebidas" products -->
             <h3>Bebidas:</h3>
             <div class="row">
