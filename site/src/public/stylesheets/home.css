@@ -415,6 +415,10 @@ display: none;
   text-align: center;
  }
 
+ .home .beneficios a{
+  color: #f1d367;
+ }
+
  .home  .unite{
   background-color: #2d2254;
   color: white;
