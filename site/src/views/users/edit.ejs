@@ -1,0 +1,37 @@
+<%- include("../partials/head.ejs") %>
+
+<body class="formcontacto">
+
+    <%- include("../partials/header.ejs") %>
+
+<main class="login-register">
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <img src="/images/Logo.png" style="width:100%">
+    </div>
+    <div class="column">
+      <h1>Modificar datos</h1>
+      <form action="/users/edit/:id?_method=PUT" method="POST">
+        <label for="user">Nombre Completo</label>
+        <input type="text" id="user" name="name" value="<%= userToEdit.name %>">
+        <label for="user">Correo Electrónico</label>
+        <input type="text" id="email" name="email" value="<%= userToEdit.email %>">
+        
+        <div class="buttons">
+
+        <p>¿Confirma los cambios realizados?</p>
+        <input type="submit" value="Editar">
+       
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+
+<%- include("../partials/footer.ejs") %>
+
+  </body>
+  </html>

@@ -1,98 +1,38 @@
 [
-  {
-    "id": 1,
-    "first_name": "Taco",
-    "last_name": "Pado",
-    "email": "tacopado@gmail.com",
-    "password": "tacotaco",
-    "category": "admin"
-  },
-  {
-    "id": 2,
-    "first_name": "Mace",
-    "last_name": "Cadd",
-    "email": "mcadd1@gmail.com",
-    "password": "NCsBalwzrEB",
-    "category": "user"
-  }, 
-  {
-    "id": 3,
-    "first_name": "Arliene",
-    "last_name": "Count",
-    "email": "acount2@gmail.com",
-    "password": "Z3f0pU",
-    "category": "user"
-  }, 
-  {
-    "id": 4,
-    "first_name": "Arnaldo",
-    "last_name": "Chappel",
-    "email": "achappel3@gmail.de",
-    "password": "T4KYDVXtkBD6",
-    "category": "user"
-  }, 
-  {
-    "id": 5,
-    "first_name": "Warner",
-    "last_name": "Wolfer",
-    "email": "wwolfer4@google.com",
-    "password": "n8ObvQ57Hlg",
-    "category": "user"
-  }, 
-  {
-    "id": 6,
-    "first_name": "Conni",
-    "last_name": "Krabbe",
-    "email": "ckrabbe5@yahoo.com",
-    "password": "HroRO6g",
-    "category": "user"
-  }, 
-  {
-    "id": 7,
-    "first_name": "Fergus",
-    "last_name": "Laville",
-    "email": "flaville6@yahoo.com",
-    "password": "2NpAK63s0ZBO",
-    "category": "user"
-  }, 
-  {
-    "id": 8,
-    "first_name": "Alvera",
-    "last_name": "Callicott",
-    "email": "acallicott7@google.com",
-    "password": "OSMq0TTp",
-    "category": "user"
-  }, 
-  {
-    "id": 9,
-    "first_name": "Peirce",
-    "last_name": "Renard",
-    "email": "prenard8@hotmail.com",
-    "password": "AaMbPrvY46o",
-    "category": "user"
-  }, 
-  {
-    "id": 10,
-    "first_name": "Augustina",
-    "last_name": "Oldridge",
-    "email": "aoldridge9@twitter.com",
-    "password": "pQMFro6f",
-    "category": "user"
-  },
-  {
-    "id": 11,
-    "first_name": "Kurt",
-    "last_name": "Jeffry",
-    "email": "kjeffrya@hotmail.com",
-    "password": "dAmWvcJ",
-    "category": "user"
-  }, 
-  {
-    "id": 12,
-    "first_name": "Rosco",
-    "last_name": "Dykes",
-    "email": "rdykesb@gmail.com",
-    "password": "n59tqo0",
-    "category": "user"
-  }
+    {
+      "id": 1,
+      "name": "Taco",
+      "email": "tacopado@gmail.com",
+      "password": "tacotaco",
+      "sexo": "m",
+      "provincia": "Buenos Aires",
+      "img": "default-img.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Mace Cadd",
+        "email": "mcadd1@gmail.com",
+        "password": "1234",
+        "sexo": "m",
+        "provincia": "Buenos Aires",
+        "img": "Mace.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Arliene Count",
+        "email": "acount2@gmail.com",
+        "password": "1234",
+        "sexo": "f",
+        "provincia": "Corrientes",
+        "img": "Arliene.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Arnaldo Chappel",
+        "email": "achappel13@gmail.com",
+        "password": "1234",
+        "sexo": "nc",
+        "provincia": "Neuquén",
+        "img": "images.jpg"
+    }
 ]

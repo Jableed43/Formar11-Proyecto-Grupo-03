@@ -228,6 +228,9 @@ header img {
 @media (min-width: 1024px) {
 
 /* Header */
+header {
+  padding-bottom: 50px;
+}
 
 header ul li img{
   left: 310px;
