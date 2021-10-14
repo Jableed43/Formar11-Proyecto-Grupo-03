@@ -1,0 +1,83 @@
+body.products h2.products-title{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background-color: rgba(255,255,255,0.5);
+}
+body.products h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 105px;
+    margin: 20px 40px;
+}
+body.products div.contenedor{
+    width: 250px;
+    height: 310px;
+    background-color: white;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    border-radius: 6%;
+    margin: 15px 10px;
+}
+body.products div.contenedor:hover{
+    background-color: #463686;
+    color: white;
+}
+body.products div.contenedor article img{
+    width: 80%;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+body.products div.contenedor article p{
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+    font-style: normal;
+}
+body.products div.contenedor article nav ul{
+    display: flex;
+    background-color: #f1d367;
+    justify-content: space-around;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    margin: 20px 0;
+}
+body.products div.contenedor article nav ul li{
+    margin-right: 22px;
+}
+body.products div.contenedor article button{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    width: 80px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 85px;
+}
+body.products div.row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 500px){
+    body.products div.row{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 1044px){
+    body.products h2.products-title{
+        margin-top: 100px;
+    }
+}

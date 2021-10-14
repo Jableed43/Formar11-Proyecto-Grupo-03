@@ -10,7 +10,7 @@
           <button class="antsig">&#8249;</button>
           
           <!-- Imagen producto -->
-          <img class="foto" src="/images/Menu/Burrito/Burrito_BOB_990x725.jpg" alt="Foto de producto" width="100%">
+          <img class="foto" src="/images/imgmenu/<%= productDetail.images %>" alt="Foto de producto" width="100%">
 
          <button class="antsig">&#8250;</button>
         </div>
@@ -18,16 +18,16 @@
           <!-- Legales -->
 
         <div  class="legales">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ea odit optio, exercitationem a ab rem beatae velit incidunt unde fuga itaque consequatur voluptatem. Quibusdam soluta sint iste perspiciatis error?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae id doloribus quam odio sequi modi ratione vero, magni culpa, similique mollitia!</p>
+          <p>Legales</p>
         </div>
 
         <!-- Información producto -->
         <section class="detalle">
-            <article class="categoria">categoria / subcategoría</article>
+            <article class="categoria"><%= productDetail.category %> / <%= productDetail.subcategory %></article>
             
-            <h1 class="nombreprod">Burrito "Ortega"</h1>
+            <h1 class="nombreprod"><%= productDetail.title%></h1>
             
-            <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore laborum obcaecati atque nobis soluta dolores voluptatum voluptate vel, repudiandae eaque veritatis, at illo quidem, similique ut culpa aliquam odio. Ab.</p>
+            <p class="desc"><%= productDetail.description %></p>
 
           <!-- Gusto de producto -->
             <div class="opciones">
@@ -44,16 +44,16 @@
 
             <article class="tablainfo">
                 <div class="columna">
-                  <div class="carta">650<br>Calorías</div>
+                  <div class="carta"><%= productDetail.calories %><br>Calorías</div>
                 </div>
                 <div class="columna">
-                  <div class="carta">34<br>Grasas(g)</div>
+                  <div class="carta"><%= productDetail.totalfat %><br>Grasas(g)</div>
                 </div>
                 <div class="columna">
-                  <div class="carta">27.6<br>Prot (g)</div>
+                  <div class="carta"><%= productDetail.protein %><br>Prot (g)</div>
                 </div>
                 <div class="columna">
-                  <div class="carta">56.2<br>Carb (g)</div>
+                  <div class="carta"><%= productDetail.carb %><br>Carb (g)</div>
                 </div>
             </article>
 
@@ -63,31 +63,35 @@
               <table>
                 <tr>
                   <td class="c1">Grasa Saturada (g)</td>
-                  <td class="c2">14.7</td>
+                  <td class="c2"><%= productDetail.saturatedfat %></td>
                   <tr>
                     <td class="c1">Grasas trans (g)</td>
-                    <td class="c2">1</td>
+                    <td class="c2"><%= productDetail.transfat %></td>
                   </tr>
                   <tr>
                     <td class="c1">Colesterol (mg)</td>
-                    <td class="c2">83.4</td>
+                    <td class="c2"><%= productDetail.cholesterol %></td>
                   </tr>
                   <tr>
                     <td class="c1">Azúcares (g)</td>
-                    <td class="c2">2.2</td>
+                    <td class="c2"><%= productDetail.sugars %></td>
                   </tr>
                   <tr>
                     <td class="c1">Sodio (mg)</td>
-                    <td class="c2">1464.8</td>
+                    <td class="c2"><%= productDetail.sodium %></td>
                   </tr>
                   <tr>
                     <td class="c1">Fibra (g)</td>
-                    <td class="c2">5.4</td>
+                    <td class="c2"><%= productDetail.fiber %></td>
                   </tr>
                 </tr>
                 </tr>
               </table>
             </article>
+
+            <div class="final-buttons">
+              <a href="/products/create"><button class="b1">Crear</button></a><a href="/products/edit/<%= productDetail.id %>"><button class="b2">Editar</button></a><form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST"><button class="b3">Eliminar</button></form>
+            </div>
         </section>
 
     </main>
