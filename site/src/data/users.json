@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Taco",
+      "email": "tacopado@gmail.com",
+      "password": "tacotaco",
+      "sexo": "m",
+      "provincia": "Buenos Aires",
+      "img": "default-img.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Mace Cadd",
+        "email": "mcadd1@gmail.com",
+        "password": "1234",
+        "sexo": "m",
+        "provincia": "Buenos Aires",
+        "img": "Mace.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Arliene Count",
+        "email": "acount2@gmail.com",
+        "password": "1234",
+        "sexo": "f",
+        "provincia": "Corrientes",
+        "img": "Arliene.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Arnaldo Chappel",
+        "email": "achappel13@gmail.com",
+        "password": "1234",
+        "sexo": "nc",
+        "provincia": "Neuquén",
+        "img": "images.jpg"
+    }
+]
