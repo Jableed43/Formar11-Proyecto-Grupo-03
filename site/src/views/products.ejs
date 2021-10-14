@@ -8,45 +8,44 @@
             <h2 class="products-title">Todos los productos</h2>
 
             <!-- Show the "comidas" products -->
-            
+
             <div class="category-container">
             
-            <h3>comidas:</h3>
-
-            <div class="row">
-                
-                <% products.map(product => { %>
-                <% if(product.category === "comida") { %>
-
-                <div class="contenedor">
-                    <section class="products">
-                        <a href="/products/detail/<%= product.id %> ">
-                            <article>
-                                <img src="/images/imgmenu/<%= product.images %>" alt= "Foto Producto">
-                                <p><%= product.title %></p>
-                                <nav>
-                                    <ul type="none">
-                                        <li>Cal</li>
-                                        <li>Gr tot</li>
-                                        <li>Prot</li>
-                                        <li>Carb</li>
+                <h3>comidas:</h3>
+    
+                <div class="row">
+                    
+                    <% products.map(product => { %>
+                    <% if(product.category === "comida") { %>
+                    <div class="contenedor">
+                        <section class="products">
+                            <a href="/products/detail/<%= product.id %> ">
+                                <article>
+                                    <img src="/images/imgmenu/<%= product.images %>" alt= "Foto Producto">
+                                    <p><%= product.title %></p>
+                                    <nav>
+                                        <ul type="none">
+                                            <li>Cal</li>
+                                            <li>Gr tot</li>
+                                            <li>Prot</li>
+                                            <li>Carb</li>
+                                        </ul>
+                                        <ul type="none">
+                                        <li><%= product.calories %></li>
+                                        <li><%= product.totalfat %></li>
+                                        <li><%= product.protein %></li>
+                                        <li><%= product.carb %></li>
                                     </ul>
-                                    <ul type="none">
-                                    <li><%= product.calories %></li>
-                                    <li><%= product.totalfat %></li>
-                                    <li><%= product.protein %></li>
-                                    <li><%= product.carb %></li>
-                                </ul>
-                                </nav>
-                                <button>ver más</button>
-                            </article>
-                        </a>
-                    </section>
+                                    </nav>
+                                    <button>ver más</button>
+                                </article>
+                            </a>
+                        </section>
+                    </div>
+                <% } %>
+                <% }) %>
                 </div>
-            <% } %>
-            <% }) %>
             </div>
-        </div>
             <!-- Show the "bebidas" products -->
             <h3>Bebidas:</h3>
             <div class="row">
