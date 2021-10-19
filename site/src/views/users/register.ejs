@@ -13,7 +13,7 @@
     </div>
     <div class="column">
       <h1>Crear cuenta</h1>
-      <form action="register" method="post">
+      <form action="register" method="post"enctype="multipart/form-data">
         <label for="user">Nombre Completo</label>
         <input type="text" id="user" name="name" placeholder="Ingrese usuario...">
         <label for="user">Correo Electrónico</label>
@@ -57,8 +57,8 @@
         <option value="provincia">Tierra del Fuego</option>
         <option value="provincia">Tucumán</option>
         </select>
-        <label for="avatar">Foto de perfil</label>
-        <input type="file" name="avatar">
+        <label for="img">Foto de perfil</label>
+        <input type="file" name="img">
         
         <div class="buttons">
         <p>Al crear una cuenta, aceptas las <a href="#">Condiciones de uso</a> y <a href="#">Aviso de privacidad</a> de Tacopado</p>

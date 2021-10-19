@@ -5,65 +5,54 @@
 
     <main>
      
-            <h2 class="products-title">Todos los productos</h2>
+            <h2 class="products-title">Nuestro menú</h2>
 
             <!-- Show the "comidas" products -->
-            <h3>Comidas:</h3>
-            <div class="row">
+            <h2 class="products-title">Tacos</h2>
+            <% products = Tacos %>
+            <%- include("./partials/products.ejs") %>
 
-                <% products.map(product => { %>
-                <% if(product.category === "comida") { %>
-                    
-                <div class="contenedor">
-                    <section class="products">
-                        <a href="/products/detail/<%= product.id %> ">
-                            <article>
-                                <img src="/images/imgmenu/<%= product.images %>" alt= "Foto Producto">
-                                <p><%= product.title %></p>
-                                <nav>
-                                    <ul type="none">
-                                        <li>Cal</li>
-                                        <li>Gr tot</li>
-                                        <li>Prot</li>
-                                        <li>Carb</li>
-                                    </ul>
-                                </nav>
-                                <button>ver más</button>
-                            </article>
-                        </a>
-                    </section>
-                </div>
-            <% } %>
-            <% }) %>
-            </div>
-            <!-- Show the "bebidas" products -->
-            <h3>Bebidas:</h3>
-            <div class="row">
+            <h2 class="products-title">Burritos</h2>
+            <% products = Burritos %>
+            <%- include("./partials/products.ejs") %>
 
-                <% products.map(product => { %>
-                <% if(product.category === "bebidas") { %>
-                    
-                <div class="contenedor">
-                    <section class="products">
-                        <a href="/products/detail/<%= product.id %> ">
-                            <article>
-                                <img src="/images/imgmenu/<%= product.images %>" alt= "Foto Producto">
-                                <p><%= product.title %></p>
-                                <nav>
-                                    <ul type="none">
-                                        <li>Cal</li>
-                                        <li>Gr tot</li>
-                                        <li>Prot</li>
-                                        <li>Carb</li>
-                                    </ul>
-                                </nav>
-                                <button>ver más</button>
-                            </article>
-                        </a>
-                    </section>
-                </div>
-            <% } %>
-            <% }) %>
+            <h2 class="products-title">Quesadillas</h2>
+            <% products = Quesadillas %>
+            <%- include("./partials/products.ejs") %>
+
+            <h2 class="products-title">Entradas</h2>
+            <% products = Entradas %>
+            <%- include("./partials/products.ejs") %>
+
+            <h2 class="products-title">Platos</h2>
+            <% products = Platos %>
+            <%- include("./partials/products.ejs") %>
+
+            <h2 class="products-title">Ensaladas</h2>
+            <% products = Ensaladas %>
+            <%- include("./partials/products.ejs") %>
+
+            <h2 class="products-title">Salsas</h2>
+            <% products = Salsas %>
+            <%- include("./partials/products.ejs") %>
+            
+            <h2 class="products-title">Dulces</h2>
+            <% products = Dulces %>
+            <%- include("./partials/products.ejs") %>
+
+            <!-- Show the "bebidas" products -->          
+            <h2 class="products-title">Gaseosas</h2>
+            <% products = Gaseosas %>
+            <%- include("./partials/products.ejs") %>
+
+            <h2 class="products-title">Jugos</h2>
+            <% products = Jugo %>
+            <%- include("./partials/products.ejs") %>
+
+            <h2 class="products-title">Agua</h2>
+            <% products = Agua %>
+            <%- include("./partials/products.ejs") %>
+            
             </div>
             
             
