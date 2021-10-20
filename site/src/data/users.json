@@ -46,5 +46,29 @@
     "provincia": "provincia",
     "id": 5,
     "img": "default-img.jpg"
+  },
+  {
+    "name": "Juan Carlos",
+    "email": "comoestas@asd.com",
+    "password": [
+      "asdf123",
+      "asdf123"
+    ],
+    "sexo": "Masculino",
+    "provincia": "provincia",
+    "id": 6,
+    "img": "img-1634747800303.jpeg"
+  },
+  {
+    "name": "Marta Tuada",
+    "email": "marta@asd.com",
+    "password": [
+      "1234",
+      "1234"
+    ],
+    "sexo": "Femenino",
+    "provincia": "provincia",
+    "id": 7,
+    "img": "img-1634748081769.jpeg"
   }
 ]
