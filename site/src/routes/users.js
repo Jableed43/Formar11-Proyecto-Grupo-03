@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
 const multer = require('multer');
-const upload = multer({dest:'uploads/'})
+const upload = multer({dest:'../public/images/users'})
 const path = require('path')
 
 const storage = multer.diskStorage({
@@ -23,7 +23,7 @@ router.post('/login', usersControllers.login);
 
 /* POST register */
 router.get('/register', usersControllers.register);
-router.post('/register',subir.single('img'), usersControllers.create);
+router.post('/register',subir.single('img'), usersControllers.newUser);
 
 /* GET carrito */
 router.get('/carrito', usersControllers.carrito);

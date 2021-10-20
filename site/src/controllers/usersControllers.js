@@ -17,11 +17,11 @@ const controller = {
     // Para registrar usuario por método POST
     newUser: (req,res, next) => {
         let user = req.body
-        user.id = user.length + 1
+        user.id = Math.floor((Math.random() * 10) + 1)
         user.img = req.file ? req.file.filename : 'default-img.jpg'
         users.push(user)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
-        res.redirect(`users/user/${user.id}`);
+        res.redirect(`user/${user.id}`);
     },    
     login: (req, res, next) => {
         res.render('users/login');
