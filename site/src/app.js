@@ -1,19 +1,19 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var methodOverride = require('method-override');
-const {urlencoded} = require('express')
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override');
+const {urlencoded} = require('express');
+const session = require('express-session');
+
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const productsRouter = require ('./routes/products');
+const adminRouter = require ('./routes/admin');
 
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var productsRouter = require ('./routes/products');
-var adminRouter = require ('./routes/admin');
-
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +25,7 @@ app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'public')));
 app.use(methodOverride('_method'));
+app.use(session({secret: 'secret key'}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -1,10 +1,18 @@
-var express = require('express');
-var router = express.Router();
-var usersControllers = require('../controllers/usersControllers')
+const express = require('express');
+const router = express.Router();
+const usersControllers = require('../controllers/usersControllers')
+const { check } = require('express-validator');
+
+// Validator
+const validate = [
+    check('user')
+    .notEmpty().withMessage('Debes ingresar un usuario registrado')
+]
 
 /* POST login */
 router.get('/login', usersControllers.login);
 router.post('/login', usersControllers.login);
+router.post('/login', usersControllers.processLogin);
 
 /* POST register */
 router.get('/register', usersControllers.register);

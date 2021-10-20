@@ -22,9 +22,14 @@ const controller = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
         res.redirect('users/user');
     },    
-    login: (req, res, next) => {
+    // login: (req, res, next) => {
+    //     res.render('users/login');
+    // },
+
+    processLogin: (req, res, next) => {
         res.render('users/login');
     },
+
     create: (req,res,next) => {
         let usuario = {
             id: req.body.id,
