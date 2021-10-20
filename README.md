@@ -8,6 +8,9 @@
 ## Sanchez Florencia Teresita:
 - 29 Años, Desarrolladora Web Full Stack en Digital House y Fundación Formar.
 ---
+## Vecces Yamila:
+- 21 Años, Desarrolladora Web Full Stack en Digital House y Fundación Formar.
+---
 ## Micaela Desireé Gutierrez:
 - 24 años, estudiante de Desarrollo Web Full Stack con Fundación Formar y Digital House, reside en Castelar - Pcia de Buenos Aires.
 
