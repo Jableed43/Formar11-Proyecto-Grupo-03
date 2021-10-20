@@ -25,19 +25,21 @@
             <h2>Descripción</h2>
             <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
         </article>
-        <button>Descartar</button>
+        <button class="borrar">Resetear</button>
       </div>
       <div class="contenedor2">
         <article>
-            <h2>Media</h2>
-            <input type="file" />
-            <br>
-            <label for="desc"></label>
-            <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
-        </article>
-        <div>
-           <button>Examinar</button><button>Añadir URL</button><button>Descartar</button>
-        </div>
+            <h2>Imagenes</h2>
+            <div>
+              <input type="file" id="files" class="hidden"/>
+              <label class="file" for="files">Seleccione Foto</label>
+              <label for="desc"></label>
+              <textarea id="desc" name="desc" placeholder="Escribí la descripción del producto aquí.."></textarea>
+            </div>        
+          </article>
+          <div class="botonera-imagenes">
+            <button>Examinar</button><button>Añadir URL</button><button class="borrar">Resetear</button>
+          </div>
       </div>  
       <div class="contenedor3">
         <article>
@@ -83,7 +85,7 @@
           </div>
         </article>
         
-        <button>Descartar</button>
+        <button class="borrar">Resetear</button>
       </div>
       <div class="contenedor4">
     
@@ -129,7 +131,7 @@
           </div>
         </article>
     
-        <button>Descartar</button>
+        <button class="borrar">Resetear</button>
       </div>
       <div class="contenedor5">
     
@@ -153,9 +155,9 @@
           </div>
         </article>
     
-        <button>Descartar</button>
-        <div>
-          <button>Guardar</button><button>Preview</button><button>Descartar</button>
+        <button class="borrar">Resetear</button>
+        <div class="botonera-bottom-page">
+          <button class="guardar">Guardar</button><button>Preview</button><button class="borrar">Resetear</button>
         </div>
       </div>
       

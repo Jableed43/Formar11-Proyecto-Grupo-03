@@ -4,6 +4,7 @@ main.create{
     margin: 0;
     background-image: url('../images/fondo-violeta.png');
     color: white;
+    margin-bottom: 90px;
 }
 main.create h1{
     font-family: 'Open Sans Condensed', sans-serif;
@@ -23,6 +24,31 @@ main.create div.contenedor{
     display: flex;
     flex-direction: column;
 }
+
+main.create div article div textarea, #desc{
+    height: 170px;
+    width: 80%;
+}
+
+main.create button{
+    background-color: #f1d367;
+    color: white;
+    padding: 5px;
+    width: 150px;
+    border-radius: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2px;
+}
+
+main.create button.borrar{
+    background-color: tomato;
+}
+
+main.create button.guardar{
+    background-color: green;
+}
+
 main.create div.contenedor article{
     width: 90%;    background-color: rgba(255, 255, 255, 0.5);
     align-self: center;
@@ -32,13 +58,11 @@ main.create div.contenedor article textarea{
     margin-bottom: 20px;
 }
 main.create div.contenedor button{
-    width: 90px;
     align-self: center;
 }
 main.create div.contenedor2{
     display: flex;
     flex-direction: column;
-    height: 400px;
 }
 main.create div.contenedor2 article{
     width: 90%;
@@ -55,9 +79,27 @@ main.create div.contenedor2 div{
     
 }
 main.create div.contenedor2 article div input{
-    width: 150px;
-    margin-bottom: 10px;
+    display: none;
 }
+
+main.create div.contenedor2 article div label.file{
+    background-color: #f1d367;
+    color: white;
+    padding: 5px;
+    width: 150px;
+    border-radius: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+main.create div.contenedor2 .botonera-imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 main.create article{
     text-align: center;
     margin: 20px 0;
@@ -65,6 +107,7 @@ main.create article{
 main.create div.contenedor3{
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 main.create div.contenedor3 article{
     display: flex;
@@ -87,7 +130,6 @@ main.create div.contenedor3 article div.ultimo-input{
    margin-bottom: 20px;
 }
 main.create div.contenedor3 button{
-    width: 90px;
     align-self: center;
 }
 main.create div.contenedor4{
@@ -115,7 +157,6 @@ main.create div.contenedor4 article div.ultimo-input{
     margin-bottom: 20px;
  }
 main.create div.contenedor4 button{
-    width: 90px;
     align-self: center;
 }
 main.create div.contenedor5{
@@ -131,7 +172,6 @@ main.create div.contenedor5 article{
     border-radius: 6%;
 }
 main.create div.contenedor5 button{
-    width: 90px;
     align-self: center;
 }
 main.create div.contenedor5 div{
@@ -140,6 +180,12 @@ main.create div.contenedor5 div{
 }
 main.create div.contenedor5 div label{
     width: 125px;
+}
+main.create div.contenedor5 .botonera-bottom-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 main.create h2{
     text-align: center;
@@ -151,7 +197,13 @@ footer.admin-footer{
     display: flex;
     justify-content: space-around;
     background-color: #f1d367;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 90px;
 }
+
 footer.admin-footer div{
     width: 100px;
     margin: 20px 0;
@@ -166,6 +218,7 @@ footer.admin-footer div i{
     main.create div.contenedor2 article div{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     main.create div.contenedor2 article div input{
         align-self: center;
