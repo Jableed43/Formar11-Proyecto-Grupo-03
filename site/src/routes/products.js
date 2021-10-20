@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 let productsController = require('../controllers/productsControllers')
+const multer = require('multer');
+
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 

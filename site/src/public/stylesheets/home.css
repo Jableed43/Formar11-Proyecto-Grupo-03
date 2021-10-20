@@ -31,31 +31,26 @@ body{
     display: none;
   }
   
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
+  /* Menu button */
+  .home button.menu-slideshow{
     position: absolute;
+    background-color: rgba(255,255,255,0.2);
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
     top: 50%;
-    width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: black;
     font-weight: bold;
-    font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
+}
   
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
   
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+  .home-slideshow:hover {
+    background-color: black;
   }
   
   /* Caption text */
@@ -97,7 +92,265 @@ body{
     to {opacity: 1}
   }
 
+
+
   /* CIERRE Slideshow */
+
+/*                          NAV BAR                            */
+
+.home main section.top-menu .items-menu{
+  display: contents;
+}
+
+.home main  section.top-menu{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+  background-color: #f1d367;
+  justify-content: center;
+  align-self: center;
+}
+
+
+.home main section.top-menu div img{
+    border-radius: 50%;
+    border: 1.5px solid #2D2254;;
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    padding: 0;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+.home main section.top-menu div p{
+  font-size: 25px;
+     font-family: 'Open Sans Condensed', sans-serif;
+    color:  #2D2254;
+    
+ 
+    width: 100px;
+    text-align: center;
+}
+
+
+/* Slideshow container */
+.home main .menu-container {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Hide the images by default */
+.home main .icono-container {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(241,211,103,0.5 );
+  margin-top: 65px;
+}
+
+/* Next & previous buttons */
+.home main .previo, .proximo {
+  cursor: pointer;
+  position: absolute;
+  top: 61%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.home main .proximo {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.home main .previo:hover, .proximo:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.home main .icono-nombre {
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  top: 0;
+
+}
+
+/* Number text (1/3 etc) */
+.home main .numero-icono {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+/*                          PRODUCTOS                            */
+
+
+.home main section.articulos h2{
+  text-align: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.home main section.articulos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.home main section.articulos div.productos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home main section.articulos div.contenedor{
+  width: 50%;
+  width: 90%;
+  margin-top: 20px;
+}
+
+
+.home main section.articulos div.contenedor div.art1, div.art2, div.art3, div.art4{
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  border-radius: 30px;
+}
+
+.home main section.articulos div.contenedor div.art1:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor div.art2:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor div.art3:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor div.art4:hover{
+  background-color: #463686;
+  color: white;
+}
+.home main section.articulos div.contenedor article{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.home main section.articulos div.contenedor article img{
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+
+}
+.home main section.articulos div.contenedor article p{
+  text-align: center;
+  font-size: 20px;
+}
+.home main section.articulos div.contenedor article nav{
+width: 100%;
+}
+.home main section.articulos div.contenedor article nav ul{
+  display: flex;
+  background-color: #f1d367;
+  justify-content: space-around;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.home main section.articulos div.contenedor article nav li{
+  margin-right: 22px;
+}
+.home main div.botonera-contenedor{
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 28px;
+  margin-bottom: 10px;
+  justify-content: space-around;
+}
+
+.home main div.botonera-contenedor button.plus, button.ver-mas{
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  width: 40%;
+}
+
+
+
+
+/*main tablet*/
+
+
+/*main desktop*/
+@media (min-width: 768px) {
+
+  /* .home main section.top-menu div {
+    width: 100px;
+    height: 110px;
+    margin: 0 10px;
+} */
+
+  .home main section.top-menu {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+/* Slideshow container */
+.home main .menu-container {
+display: none;
+}
+
+
+
+  .home main section.articulos div.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.home main section.articulos div.contenedor {
+  width: 45%;
+}
+
+
+
+
+}
+
+
+/* .home main section.top-menu .items-menu{
+    display: none;
+} */
+
 
 /* Section Nosotros */ 
 
@@ -105,6 +358,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 
 .home section h1{
@@ -117,14 +371,20 @@ body{
  
 
 .home main section div img {
-  width: 87vw;
-  height: 180px;
+  width: 80%;
+  
 }
+
+.home main section div.icono-container img {
+  width: 50%;
+  
+}
+
 
 .home main section h2{
   color: white;
   text-transform: capitalize;
-  margin: 20px;
+  margin: 20px 0;
   width: 75%;
   font-size: 20px;
   text-align: center;
@@ -232,10 +492,7 @@ body{
 
   /* 375PX */
 @media (min-width: 425px){
-.home main section div img {
-    width: 87vw;
-    height: 250px;
-}
+
 
 .mySlides.fade img {
   height: auto;
@@ -244,11 +501,7 @@ body{
 
 /* Landscape 640px */
 @media (min-width: 640px) {
- .home main section div img {
 
-    width: 90vw;
-    height: 380px;
-  }
 
  .mySlides.fade img {
   max-width: 100vw;
@@ -345,6 +598,14 @@ body{
   .home main section div img {
     width: 31vw;
     height: 330px;
+}
+
+.home main section div.art1 img, .home main section div.art2 img, .home main section div.art3 img, .home main section div.art4 img {
+  height: 100%;
+}
+
+.home main section.articulos div.contenedor {
+  width: 23%;
 }
 
 
