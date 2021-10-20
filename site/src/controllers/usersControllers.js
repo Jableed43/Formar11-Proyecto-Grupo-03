@@ -17,7 +17,7 @@ const controller = {
     // Para registrar usuario por método POST
     newUser: (req,res, next) => {
         let user = req.body
-        user.id = Math.floor((Math.random() * 10) + 1)
+        user.id = users[users.length - 1].id + 1;
         user.img = req.file ? req.file.filename : 'default-img.jpg'
         users.push(user)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
@@ -25,22 +25,6 @@ const controller = {
     },    
     login: (req, res, next) => {
         res.render('users/login');
-    },
-    create: (req,res,next) => {
-        let usuario = {
-            id: req.body.id,
-            name: req.body.name,
-            email: req.body.email,
-            password: req.body.password,
-            sexo: req.body.sexo,
-            provincia: req.body.provincia,
-            img: req.file.img
-        }
-        let usuarios = JSON.parse(fs.readFileSync('users.json', {encoding: 'utf-8'}));
-        usuarios.push(usuario);
-        let usuarioJSON = JSON.stringify(usuarios);
-        fs.writeFilySync('users.json',usuarioJSON)
-        res.redirect(`/users/user/${req.params.id}`)
     },
     carrito: (req, res, next) => {
         res.render('users/carrito');
