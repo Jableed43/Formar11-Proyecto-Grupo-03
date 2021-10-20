@@ -33,7 +33,7 @@ const controller = {
     create: (req,res,next) => {
         let usuario = {
             id: req.body.id,
-            name: req.body.edad,
+            name: req.body.name,
             email: req.body.email,
             password: req.body.password,
             sexo: req.body.sexo,
