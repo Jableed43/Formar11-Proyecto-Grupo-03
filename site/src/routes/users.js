@@ -1,14 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
-const upload = require('../middlewares/multerProducts')
-
-
 
 /* POST login */
 router.get('/login', usersControllers.login);
 router.post('/login', usersControllers.login);
-router.post('/login', usersControllers.processLogin);
 
 /* POST register */
 router.get('/register', usersControllers.register);

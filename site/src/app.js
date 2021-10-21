@@ -5,10 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 const {urlencoded} = require('express')
-const multer = require('multer')
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var productsRouter = require ('./routes/products');
+var adminRouter = require ('./routes/admin');
 
 
-const app = express();
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,7 +25,6 @@ app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'public')));
 app.use(methodOverride('_method'));
-app.use(session({secret: 'secret key'}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
