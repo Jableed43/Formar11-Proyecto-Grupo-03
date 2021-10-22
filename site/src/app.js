@@ -35,7 +35,11 @@ app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+<<<<<<< HEAD
   res.status(404).render('404')
+=======
+  res.status(404).render('index')
+>>>>>>> 618022151775f7c9f0bf535d6ddad78133bc573b
 });
 
 
