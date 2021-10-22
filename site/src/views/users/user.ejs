@@ -7,9 +7,9 @@
 
   <div class="card">
     <img src="/images/users/<%= userProfile.img %>" alt="profile photo" style="width:100%">
-    <% if (userProfile.sexo === "m"){ %>
+    <% if (userProfile.sexo === "Masculino"){ %>
       <h1>¡Bienvenido <%= userProfile.name %>!</h1>
-      <% } else if (userProfile.sexo === "f") { %>
+      <% } else if (userProfile.sexo === "Femenino") { %>
       <h1>¡Bienvenida <%= userProfile.name %>!</h1>
       <% } else { %>
         <h1>¡Bienvenid@ <%= userProfile.name %>!</h1>

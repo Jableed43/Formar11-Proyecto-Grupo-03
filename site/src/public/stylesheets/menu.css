@@ -74,13 +74,9 @@ body.menu{
 }
 .menu main section.articulos{
     display: flex;
-    flex-direction: column;
+   
     justify-content: center;
 
-}
-.menu main section.articulos div.productos{
-     display: flex;
-     justify-content: center;
 }
 .menu main section.articulos div.contenedor div.art1{
     width: 250px;
@@ -170,6 +166,7 @@ body.menu{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 14px;
     width: 80px;
+    height: 30px;
     align-items: center;
     margin-bottom: 20px;
     margin-left: 85px;

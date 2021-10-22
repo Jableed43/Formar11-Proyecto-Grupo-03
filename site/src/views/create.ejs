@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
     
-    <%- include("../partials/edit-create-head.ejs") %>
+    <%- include("./partials/edit-create-head.ejs") %>
     
     <title>Crear Producto</title>
 </head>
 <body>
 
-    <%- include("../partials/admin-header.ejs") %>
+    <%- include("./partials/admin-header.ejs") %>
 
     <main class="create">
-      <div class="logo">
+       <div class="logo">
         <img src='/images/logomin.png' alt="Logo Tacopado">
-      </div>
-      <h1>CREA TU PRODUCTO</h1>
-      <article>
+       </div>
+       <h1>CREA TU PRODUCTO</h1>
+       <article>
             <button>Miniatura</button> <button>Detalle</button>        
-      </article>
-      <div class="contenedor">
-        <article>
+       </article>
+
+      <form  action="/products" method="POST">
+
+       <div class="contenedor">
+         <article>
             <h2>Título</h2>
             <input type="text" id="title" name="título" placeholder="Nombre de plato">
             <h2>Descripción</h2>
@@ -40,8 +43,8 @@
         <div class="botonera-imagenes">
            <button>Examinar</button><button>Añadir URL</button><button class="borrar">Descartar</button>
         </div>
-      </div>  
-      <div class="contenedor3">
+       </div>  
+       <div class="contenedor3">
         <article>
           <h2>Organizar</h2>
           <div>
@@ -49,23 +52,24 @@
             <label for="categoria">Categoría</label>
     
             <select class="cat" name="categoria">
-              <option value="Principal">Principal</option>
-              <option value="entrada">Entrada</option>
-              <option value="acompañamiento">Acompañamiento</option>
-              <option value="Salsa">Salsa</option>
-              <option value="bebida">Bebida</option>
-              <option value="postre">Postre</option>
+              <option value="Principal">comida</option>
+              <option value="entrada">bebida</option>
             </select>
           </div>
           <div>
             <label for="subcategoria">Subcategoría</label>
               <select class="cat" name="categoria">
-                <option value="taco">Taco</option>
-                <option value="burrito">Burrito</option>
-                <option value="quesadilla">Quesadilla</option>
-                <option value="Bebida c/alcohol">Bebida c/alcohol</option>
-                <option value="Bebida s/alcohol">Bebida s/alcohol</option>
-                <option value="Ninguno">Ninguno</option>
+                <option value="tacos">Tacos</option>
+                <option value="burritos">Burritos</option>
+                <option value="quesadillas">Quesadillas</option>
+                <option value="entradas">Entradas</option>
+                <option value="platos">Platos</option>
+                <option value="ensaladas">Ensaladas</option>
+                <option value="salsas">Salsas</option>
+                <option value="dulces">Dulces</option>
+                <option value="gaseosas">Gaseosas</option>
+                <option value="jugos">Jugos</option>
+                <option value="aguas">Agua</option>
               </select>
           </div>
           <div>
@@ -110,6 +114,7 @@
               <option value="500ml">500ml</option>
               <option value="750ml">750ml</option>
               <option value="1l">1l</option>
+              <option value="ninguno">Ninguno</option>
             </select>
           </div>
           <div>
@@ -133,9 +138,15 @@
           </div>
         </article>
     
+<<<<<<< HEAD:site/src/views/create.ejs
+        <button>Descartar</button>
+       </div>
+       <div class="contenedor5">
+=======
         <button class="borrar">Descartar</button>
       </div>
       <div class="contenedor5">
+>>>>>>> 571f2bf93d9752f54e5fceaa6b46da35483fa2e6:site/src/views/admin/create.ejs
     
         <article>
           <h2>Valores Nutricionales</h2>
@@ -161,10 +172,10 @@
         <div class="botonera-bottom-page">
           <button class="guardar">Guardar</button><button>Preview</button><button class="borrar">Descartar</button>
         </div>
-      </div>
-      
+       </div>
+    </form>  
       
     </main>
-    <%- include("../partials/admin-footer.ejs") %>
+    <%- include("./partials/admin-footer.ejs") %>
 </body>
 </html>

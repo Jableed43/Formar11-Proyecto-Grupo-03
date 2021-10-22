@@ -13,52 +13,52 @@
     </div>
     <div class="column">
       <h1>Crear cuenta</h1>
-      <form action="register" method="post">
+      <form action="register" method="post"enctype="multipart/form-data">
         <label for="user">Nombre Completo</label>
-        <input type="text" id="user" name="name" placeholder="Ingrese usuario...">
+        <input type="text" id="user" name="name" placeholder="Ingrese nombre completo..." required>
         <label for="user">Correo Electrónico</label>
-        <input type="text" id="user" name="email" placeholder="Ingrese usuario...">
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese contraseña...">
-        <label for="password">Confirmar Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese contraseña...">
-        <label for="user">Sexo</label>
-        <select name="sexo" id="sexo">
+        <input type="text" id="user" name="email" placeholder="Ingrese e-mail..." required>
+        <label for="password" >Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese contraseña..." required>
+        <label for="password" >Confirmar Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese contraseña..." required>
+        <label for="user" >Sexo</label>
+        <select name="sexo" id="sexo" required>
         <option name="sexo" selected hidden>Seleccione aquí</option>
         <option name="sexo" id="m">Masculino</option>
         <option name="sexo" id="f">Femenino</option>
         <option name="sexo" id="nc">Prefiero no decirlo</option>
         </select>
-        <label for="user">Provincia</label>
-        <select name="provincia" id="provincia">
+        <label for="user" >Provincia</label>
+        <select name="provincia" id="provincia" required>
         <option value="provincia" selected hidden>Seleccione aquí</option>
-        <option value="provincia">Buenos Aires</option>
-        <option value="provincia">Capital Federal</option>
-        <option value="provincia">Catamarca</option>
-        <option value="provincia">Chaco</option>
-        <option value="provincia">Chubut</option>
-        <option value="provincia">Córdoba</option>
-        <option value="provincia">Corrientes</option>
-        <option value="provincia">Entre Ríos</option>
-        <option value="provincia">Formosa</option>
-        <option value="provincia">Jujuy</option>
-        <option value="provincia">La Pampa</option>
-        <option value="provincia">La Rioja</option>
-        <option value="provincia">Mendoza</option>
-        <option value="provincia">Misiones</option>
-        <option value="provincia">Neuquén</option>
-        <option value="provincia">Río Negro</option>
-        <option value="provincia">Salta</option>
-        <option value="provincia">San Juan</option>
-        <option value="provincia">San Luis</option>
-        <option value="provincia">Santa Cruz</option>
-        <option value="provincia">Santa Fe</option>
-        <option value="provincia">Santiago del Estero</option>
-        <option value="provincia">Tierra del Fuego</option>
-        <option value="provincia">Tucumán</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Capital Federal">Capital Federal</option>
+        <option value="Catamarca">Catamarca</option>
+        <option value="Chaco">Chaco</option>
+        <option value="Chubut">Chubut</option>
+        <option value="Córdoba">Córdoba</option>
+        <option value="Corrientes">Corrientes</option>
+        <option value="Entre Ríos">Entre Ríos</option>
+        <option value="Formosa">Formosa</option>
+        <option value="Jujuy">Jujuy</option>
+        <option value="La Pampa">La Pampa</option>
+        <option value="La Rioja">La Rioja</option>
+        <option value="Mendoza">Mendoza</option>
+        <option value="Misiones">Misiones</option>
+        <option value="Neuquén">Neuquén</option>
+        <option value="Río Negro">Río Negro</option>
+        <option value="Salta">Salta</option>
+        <option value="San Juan">San Juan</option>
+        <option value="San Luis">San Luis</option>
+        <option value="Santa Cruz">Santa Cruz</option>
+        <option value="Santa Fé">Santa Fé</option>
+        <option value="Santiago del Estero">Santiago del Estero</option>
+        <option value="Tierra del Fuego">Tierra del Fuego</option>
+        <option value="Tucumán">Tucumán</option>
         </select>
-        <label for="avatar">Foto de perfil</label>
-        <input type="file" name="avatar">
+        <label for="img">Foto de perfil</label>
+        <input type="file" name="img">
         
         <div class="buttons">
         <p>Al crear una cuenta, aceptas las <a href="#">Condiciones de uso</a> y <a href="#">Aviso de privacidad</a> de Tacopado</p>

@@ -8,6 +8,24 @@ body{
 
 }
 
+
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
 /* Header */
 
 
@@ -540,8 +558,8 @@ display: none;
 }
 
 .home .nosotros-img{
-  width: 300px;
-  height: 200px;
+  width: 40vw;
+  height: auto;
   margin: 0px 25px 15px 25px;
   
 }
@@ -577,7 +595,7 @@ display: none;
 
 .home main section div img {
   width: 30vw;
-  height: 300px;
+  height: auto;
 }
 
 
@@ -601,7 +619,7 @@ display: none;
   /* Imagenes del body */
   .home main section div img {
     width: 31vw;
-    height: 330px;
+    height: auto;
 }
 
 .home main section div.art1 img, .home main section div.art2 img, .home main section div.art3 img, .home main section div.art4 img {

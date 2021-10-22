@@ -1,38 +1,62 @@
 [
-    {
-      "id": 1,
-      "name": "Taco",
-      "email": "tacopado@gmail.com",
-      "password": "tacotaco",
-      "sexo": "m",
-      "provincia": "Buenos Aires",
-      "img": "default-img.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Mace Cadd",
-        "email": "mcadd1@gmail.com",
-        "password": "1234",
-        "sexo": "m",
-        "provincia": "Buenos Aires",
-        "img": "Mace.jpeg"
-    },
-    {
-        "id": 3,
-        "name": "Arliene Count",
-        "email": "acount2@gmail.com",
-        "password": "1234",
-        "sexo": "f",
-        "provincia": "Corrientes",
-        "img": "Arliene.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Arnaldo Chappel",
-        "email": "achappel13@gmail.com",
-        "password": "1234",
-        "sexo": "nc",
-        "provincia": "Neuquén",
-        "img": "images.jpg"
-    }
+  {
+    "id": 1,
+    "name": "Taco",
+    "email": "tacopado@gmail.com",
+    "password": "tacotaco",
+    "sexo": "m",
+    "provincia": "Buenos Aires",
+    "img": "default-img.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mace Cadd",
+    "email": "mcadd1@gmail.com",
+    "password": "1234",
+    "sexo": "m",
+    "provincia": "Buenos Aires",
+    "img": "Mace.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Arliene Count",
+    "email": "acount2@gmail.com",
+    "password": "1234",
+    "sexo": "f",
+    "provincia": "Corrientes",
+    "img": "Arliene.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Arnaldo Chappel",
+    "email": "achappel13@gmail.com",
+    "password": "1234",
+    "sexo": "nc",
+    "provincia": "Neuquén",
+    "img": "images.jpg"
+  },
+  {
+    "name": "Coco Rita",
+    "email": "Coco@asd.com",
+    "password": [
+      "1234",
+      "1234"
+    ],
+    "sexo": "Femenino",
+    "provincia": "provincia",
+    "id": 5,
+    "img": "default-img.jpg"
+  },
+  {
+    "name": "asd",
+    "email": "",
+    "password": [
+      "",
+      ""
+    ],
+    "sexo": "Seleccione aquí",
+    "provincia": "provincia",
+    "id": 6,
+    "img": "img-1634865222148.jpeg"
+  }
 ]
