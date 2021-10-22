@@ -2,18 +2,18 @@ var express = require('express');
 var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
 const subir = require('../middlewares/multer')
-const { body } = require('express-validator');
+const { check } = require('express-validator');
 const { BandwidthLimitExceeded } = require('http-errors');
 
 // Validaciones
 const validacionesRegister = [
-    body('name').notEmpty().withMessage('Debes completar el campo de nombre completo'),
-    body('email')
+    check('name').notEmpty().withMessage('Debes completar el campo de nombre completo'),
+    check('email')
     .notEmpty().withMessage('Debes completar el campo de email').bail()
     .isEmail().withMessage('Debes completar un email válido'),
-    body('password').notEmpty().withMessage('Debes completar el campo de contraseña'),
-    body('sexo').notEmpty().withMessage('Debes seleccionar una opción'),
-    body('provincia').notEmpty().withMessage('Debes seleccionar una opción'),
+    check('password').notEmpty().withMessage('Debes completar el campo de contraseña'),
+    check('sexo').notEmpty().withMessage('Debes seleccionar una opción'),
+    check('provincia').notEmpty().withMessage('Debes seleccionar una opción'),
 ]
 
 /* POST login */
