@@ -17,7 +17,15 @@ const controller = {
     },
     // Para registrar usuario por método POST
     newUser: (req,res, next) => {
-        let error = validationResult(req);
+        const errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            res.send('Campos completados correctamente')
+        } 
+        else {
+            res.send(errors.mapped())
+        }
+            
         
         let user = req.body
         user.id = users[users.length - 1].id + 1;

@@ -58,5 +58,29 @@
     "provincia": "provincia",
     "id": 6,
     "img": "img-1634865222148.jpeg"
+  },
+  {
+    "name": "",
+    "email": "",
+    "password": [
+      "",
+      ""
+    ],
+    "sexo": "Seleccione aquí",
+    "provincia": "provincia",
+    "id": 7,
+    "img": "default-img.jpg"
+  },
+  {
+    "name": "Antonio",
+    "email": "",
+    "password": [
+      "",
+      ""
+    ],
+    "sexo": "Seleccione aquí",
+    "provincia": "provincia",
+    "id": 8,
+    "img": "default-img.jpg"
   }
 ]
