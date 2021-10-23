@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator')
+const { validationResult, body } = require('express-validator')
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -17,14 +17,18 @@ const controller = {
     },
     // Para registrar usuario por método POST
     newUser: (req,res, next) => {
-        let error = validationResult(req);
-        
-        let user = req.body
-        user.id = users[users.length - 1].id + 1;
-        user.img = req.file ? req.file.filename : 'default-img.jpg'
-        users.push(user)
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
-        res.redirect(`user/${user.id}`);
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let user = req.body
+            user.id = users[users.length - 1].id + 1;
+            user.img = req.file ? req.file.filename : 'default-img.jpg'
+            users.push(user)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
+            res.redirect(`user/${user.id}`);
+        } else {
+            res.render('users/register', {errors: errors.array(), old: req.body})
+        }
+       
     },    
     login: (req, res, next) => {
         res.render('users/login');
