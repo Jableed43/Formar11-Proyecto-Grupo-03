@@ -1,6 +1,20 @@
 var express = require('express');
 var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
+const subir = require('../middlewares/multer')
+const { body } = require('express-validator');
+const { BandwidthLimitExceeded } = require('http-errors');
+
+// Validaciones
+const validacionesRegister = [
+    body('name').notEmpty().withMessage('Debes completar el campo de nombre completo'),
+    body('email')
+    .notEmpty().withMessage('Debes completar el campo de email').bail()
+    .isEmail().withMessage('Debes completar un email válido'),
+    body('password').notEmpty().withMessage('Debes completar el campo de contraseña'),
+    body('sexo').notEmpty().withMessage('Debes seleccionar una opción'),
+    body('provincia').notEmpty().withMessage('Debes seleccionar una opción'),
+]
 
 /* POST login */
 router.get('/login', usersControllers.login);
@@ -8,8 +22,7 @@ router.post('/login', usersControllers.login);
 
 /* POST register */
 router.get('/register', usersControllers.register);
-router.post('/register', upload.single('image')
-, usersControllers.create);
+router.post('/register',validacionesRegister,subir.single('img'), usersControllers.newUser);
 
 /* GET carrito */
 router.get('/carrito', usersControllers.carrito);

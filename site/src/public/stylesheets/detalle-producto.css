@@ -1,5 +1,5 @@
 body.Detalleprodu {
-  background: none;
+  background-image: url(/images/Menu/mobile-gris.png);
 }
 
 .Detalleprodu main{
@@ -232,6 +232,29 @@ margin-top: 15px;
   text-align: right;
   font-size: .8em;
 }
+.Detalleprodu section div.final-buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Detalleprodu section div.final-buttons button{
+  width: 80px;
+  height: 30px;
+  margin: 0 5px;
+  font-size: 20px;
+  color: black;
+  border: none;
+}
+.Detalleprodu section div.final-buttons button.b1{
+  background-color: green 
+}
+.Detalleprodu section div.final-buttons button.b2{
+  background-color: yellow;
+}
+.Detalleprodu section div.final-buttons button.b3{
+  background-color: red;
+}
+
 
 /* Condiciones legales */
 .Detalleprodu .legales {
