@@ -26,7 +26,10 @@ app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'public')));
 app.use(methodOverride('_method'));
-app.use(session({secret: 'clave secreta'}))
+app.use(session({
+  secret: 'clave secreta',
+  resave: true,
+  saveUninitialized: true}))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

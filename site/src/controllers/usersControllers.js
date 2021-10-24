@@ -36,13 +36,20 @@ const controller = {
         res.render('users/login');
     },
     processLogin: (req, res, next) => {
-        const userToLogin = users.find(user => user.email === res.body.email)
+        const userToLogin = users.find(user => user.email === req.body.email)
 
         if (userToLogin && userToLogin.contraseña === req.body.password) {
             req.session.loggedUser = userToLogin
             res.send('Usuario logueado')
         } else {
-            res.render('user/login', {errors: {msg: 'Email o contraseña incorrecta'}})
+            res.render('users/login', {errors: {msg: 'Email o contraseña incorrecta'}})
+        }
+    },
+    check: (req, res, next) => {
+        if(req.session.userToLogin !== undefined) {
+            res.send(`El usuario logueado es ${req.session.loggedUser}`)
+        } else {
+            res.send('Usuario no logueado')
         }
     },
     carrito: (req, res, next) => {

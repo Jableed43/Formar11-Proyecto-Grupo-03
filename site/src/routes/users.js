@@ -10,12 +10,17 @@ const validateRegister = require('../middlewares/validateRegister')
 
 /* POST login */
 router.get('/login', usersControllers.login);
-router.post('/login',usersControllers.login);
-// processLogin
+router.post('/login',usersControllers.processLogin, usersControllers.login);
+router.post('/login',usersControllers.check);
+
+// Chequea si el usuario está logueado
+router.get('/logueado', usersControllers.check)
+
 
 /* POST register */
 router.get('/register', usersControllers.register);
 router.post('/register',subir.single('img'), validateRegister, usersControllers.newUser);
+
 
 /* GET carrito */
 router.get('/carrito', usersControllers.carrito);
