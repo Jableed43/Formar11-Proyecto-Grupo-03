@@ -1,21 +1,21 @@
-const { body } = require('express-validator');
+const { check } = require('express-validator');
 
 // Validación Register
 module.exports = [
-    body('name')
+    check('name')
         .notEmpty().withMessage('Debes completar el campo de nombre completo').bail(),
 
-    body('email')
+    check('email')
         .notEmpty().withMessage('Debes completar el campo de email').bail()
         .isEmail().withMessage('Debes completar un email válido'),
 
-    body('password')
+    check('password')
         .notEmpty().withMessage('Debes completar el campo de contraseña').bail()
         .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
 
-    body('sexo')
+    check('sexo')
         .notEmpty().withMessage('Debes seleccionar una opción').bail(),
         
-    body('provincia')
+    check('provincia')
         .notEmpty().withMessage('Debes seleccionar una opción')
 ]

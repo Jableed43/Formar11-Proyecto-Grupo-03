@@ -3,18 +3,19 @@ var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
 const subir = require('../middlewares/multer')
 const { BandwidthLimitExceeded } = require('http-errors');
-const validate = require('../middlewares/validateRegister')
+const validateRegister = require('../middlewares/validateRegister')
 
 // Validaciones
 
 
 /* POST login */
 router.get('/login', usersControllers.login);
-router.post('/login', usersControllers.login);
+router.post('/login',usersControllers.login);
+// processLogin
 
 /* POST register */
 router.get('/register', usersControllers.register);
-router.post('/register',validate, subir.single('img'), usersControllers.newUser);
+router.post('/register',subir.single('img'), validateRegister, usersControllers.newUser);
 
 /* GET carrito */
 router.get('/carrito', usersControllers.carrito);
