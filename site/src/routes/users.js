@@ -1,17 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
-const subir = require('../middlewares/multer')
 const { BandwidthLimitExceeded } = require('http-errors');
-const validateRegister = require('../middlewares/validateRegister')
+const subir = require('../middlewares/multer')
+const validate = require('../middlewares/validateRegister')
+const userRegistered = require('../middlewares/userRegistered')
+const guestUser = require('../middlewares/guestUser');
+const validateRegister = require('../middlewares/validateRegister');
 
 // Validaciones
 
 
 /* POST login */
-router.get('/login', usersControllers.login);
-router.post('/login',usersControllers.processLogin, usersControllers.login);
-router.post('/login',usersControllers.check);
+router.get('/login', guestUser, usersControllers.login)
+router.post('/login', usersControllers.processLogin)
 
 // Chequea si el usuario está logueado
 router.get('/logueado', usersControllers.check)
@@ -19,7 +21,7 @@ router.get('/logueado', usersControllers.check)
 
 /* POST register */
 router.get('/register', usersControllers.register);
-router.post('/register',subir.single('img'), validateRegister, usersControllers.newUser);
+router.post('/register', validate, usersControllers.newUser);
 
 
 /* GET carrito */

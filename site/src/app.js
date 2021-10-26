@@ -6,6 +6,8 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 const {urlencoded} = require('express')
 const session = require('express-session');
+const recordame = require('./middlewares/cookieReminder')
+const localsCheck = require('./middlewares/localsCheck')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -30,11 +32,14 @@ app.use(session({
   secret: 'clave secreta',
   resave: true,
   saveUninitialized: true}))
+app.use(recordame)
+app.use(localsCheck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/admin', adminRouter);
+
 
 
 // catch 404 and forward to error handler
