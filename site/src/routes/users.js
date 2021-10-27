@@ -14,6 +14,15 @@ const validacionesRegister = [
     check('password').notEmpty().withMessage('Debes completar el campo de contraseña'),
     check('sexo').notEmpty().withMessage('Debes seleccionar una opción'),
     check('provincia').notEmpty().withMessage('Debes seleccionar una opción'),
+    check('img').custom((value, { req }) => {
+        let acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+        let fileExtension = path.extname(file.orginalname);
+        if (req.file) {
+        if (!acceptedExtensions.includes(fileExtension)) {
+            throw new Error (`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
+        }}
+    })
+
 ]
 
 /* POST login */
