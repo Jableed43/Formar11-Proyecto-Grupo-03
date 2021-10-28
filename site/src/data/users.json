@@ -36,14 +36,14 @@
     "img": "images.jpg"
   },
   {
-    "name": "Coco Rita",
-    "email": "Coco@asd.com",
+    "name": "Juan Carlos",
+    "email": "comoestas@asd.com",
     "password": [
-      "1234",
-      "1234"
+      "321",
+      "321"
     ],
-    "sexo": "Femenino",
-    "provincia": "provincia",
+    "sexo": "m",
+    "provincia": "Chaco",
     "id": 5,
     "img": "default-img.jpg"
   },

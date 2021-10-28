@@ -20,49 +20,28 @@ const controller = {
         const userProfile = users.find(e => e.id === +id)
         res.render('users/user', {userProfile});
     },
-    // Para registrar usuario por método POST
-    newUser: (req, res) => {
-        const errors = validationResult(req)
-    
-        if (errors.isEmpty()) {
-        
-            const user = {
-                name: req.body.name,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                provincia: req.body.provincia
-            }
-        
-            users.push(user)
-        
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
-        
-            res.redirect(`user/${user.id}`);
+    // Para registrar usuario por método POST    
+    newUser: (req,res, next) => {
+        let errors = validationResult(req);
+        if (errors.errors.length > 0) {
+        res.render('users/register', 
+        {errors: errors.mapped(),
+         old: req.body})
         } else {
-            
-            res.render('users/register',  {errors: errors.mapped(), old: req.body})
+            let user = req.body
+            user.id = users[users.length - 1].id + 1;
+            user.img = req.file ? req.file.filename : 'default-img.jpg'
+            users.push(user)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
+            res.redirect(`user/${user.id}`);
         }
-    },
-    // newUser: (req,res, next) => {
-    //     let errors = validationResult(req);
-    //     if (errors.errors.length > 0) {
-    //     res.render('users/register', 
-    //     {errors: errors.mapped(),
-    //      old: req.body})
-    //     } else {
-    //         let user = req.body
-    //         user.id = users[users.length - 1].id + 1;
-    //         user.password = bcrypt.hashSync(req.body.password, 10);
-    //         user.img = req.file ? req.file.filename : 'default-img.jpg'
-    //         users.push(user)
-    //         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
-    //         res.redirect(`user/${user.id}`);
-    //     }
        
-    // },
-    login: (req, res) => {
-        res.render('users/login')
-      },
+    },    
+    
+    login: (req, res, next) => {
+        res.render('users/login');
+    }, 
+
     processLogin: (req, res) => {
 
         const userToLogin = users.find(user => user.email === req.body.email)

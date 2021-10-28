@@ -13,76 +13,78 @@
     </div>
     <div class="column">
       <h1>Crear cuenta</h1>
-        <form action="register" method="post"enctype="multipart/form-data">
-          <div class="campo">
-            <label for="user">Nombre Completo</label>
-            <input type="text" value="<%= locals.old && old.name ? old.name : '' %>" id="user" name="name" class="form-control"<% locals.errors && errors.name ? 'is-invalid' : null %> placeholder="Ingrese nombre completo..." required>
-            <% if (locals.errors && errors.name) { %>
-            <small class="mensajeError"> <%= errors.name.msg %> </small>
-            <% } %>
+
+      <form action="register" method="post"enctype="multipart/form-data">
+        <div class="campo">
+        <label for="user">Nombre Completo</label>
+        <input type="text" value="<%= locals.old && old.name ? old.name : '' %>" id="user" name="name" class="form-control<% locals.errors && errors.name ? 'is-invalid' : 'null' %>" placeholder="Ingrese nombre completo..." required>
+        <% if (locals.errors && errors.name) { %>
+          <small class="mensajeError"> <%= errors.name.msg %> </small>
+          <% } %>
+        </div><br>
+
+        <div class="campo">
+        <label for="user">Correo Electrónico</label>
+        <input type="text" value="<%= locals.old && old.email ? old.email : '' %>"id="user" name="email" class="form-control <% locals.errors && errors.email ? 'is-invalid' : 'null' %>" placeholder="Ingrese e-mail..." required>
+        <% if (locals.errors && errors.email) { %>
+          <small class="mensajeError"> <%= errors.email.msg %> </small>
+          <% } %>
+        </div><br>
+
+        <div class="campo">
+        <label for="password" >Contraseña</label>
+        <input type="password" id="password" name="password" class="form-control <% locals.errors && errors.password ? 'is-invalid' : 'null' %>" placeholder="Ingrese contraseña..." required>
+        </div><br>
+
+        <div class="campo">
+        <label for="password" >Confirmar Contraseña</label>
+        <input type="password" id="password" name="password" class="form-control <% locals.errors && errors.password ? 'is-invalid' : 'null' %>" placeholder="Ingrese contraseña..." required>
+        </div><br>
+
+        <div class="campo">
+        <label for="user" >Sexo</label>
+        <select name="sexo" id="sexo" class="form-control <% locals.errors && errors.sexo ? 'is-invalid' : 'null' %>" required>
+        <option name="sexo" selected hidden>Seleccione aquí</option>
+        <% 
+          let sexo = ['Masculino','Femenino','Prefiero no decirlo']
+          %>
+          <% for (const sexSelec of sexo) { %>
+            <option value="<%= sexSelec %>"><%= sexSelec %></option>
+          <% } %>
+        </select>
+        <% if (locals.errors && errors.sexo) { %>
+          <small class="mensajeError"> <%= errors.sexo.msg %> </small>
+          <% } %> 
+        </div><br>
+        
+        <div class="campo">
+        <label for="user" >Provincia</label>
+        <select name="provincia" id="provincia" class="form-control<% locals.errors && errors.provincia ? 'is-invalid' : 'is-valid' %>" required>
+          <option value="provincia" selected hidden>Seleccione aquí</option>
+          <% 
+          let provincias = ['Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fé', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
+          %>
+          <% for (const unaPcia of provincias) { %>
+            <option value="<%= unaPcia %>"><%= unaPcia %></option>
+          <% } %>        
+        </select>
+        <% if (locals.errors && errors.provincia) { %>
+          <small class="mensajeError"> <%= errors.provincia.msg %> </small>
+          <% } %>
           </div><br>
-
-          <div class="campo">
-            <label for="user">Correo Electrónico</label>
-            <input type="text" value="<%= locals.old && old.email ? old.email : '' %>"id="user" name="email" class="form-control"<% locals.errors && errors.email ? 'is-invalid' : null %> placeholder="Ingrese e-mail..." required>
-            <% if (locals.errors && errors.email) { %>
-              <small class="mensajeError"> <%= errors.email.msg %> </small>
-              <% } %>
-          </div><br>
-
-          <div class="campo">
-            <label for="password" >Contraseña</label>
-            <input type="password" id="password" name="password" class="form-control"<% locals.errors && errors.password ? 'is-invalid' : null %> placeholder="Ingrese contraseña..." required>
-          </div><br>
-
-          <div class="campo">
-            <label for="password" >Confirmar Contraseña</label>
-            <input type="password" id="password" name="password" class="form-control"<% locals.errors && errors.password ? 'is-invalid' : null %> placeholder="Ingrese contraseña..." required>
-          </div><br>
-
-          <div class="campo">
-            <label for="user" >Sexo</label>
-            <select name="sexo" id="sexo" class="form-control"<% locals.errors && errors.sexo ? 'is-invalid' : null %> required>
-            <option name="sexo" selected hidden>Seleccione aquí</option>
-            <% 
-              let sexo = ['Masculino','Femenino','Prefiero no decirlo']
-              %>
-              <% for (const sexSelec of sexo) { %>
-                <option value="<%= sexSelec %>"><%= sexSelec %></option>
-              <% } %>
-            </select>
-            <% if (locals.errors && errors.sexo) { %>
-              <small class="mensajeError"> <%= errors.sexo.msg %> </small>
-              <% } %> 
-            </div><br>
-
-            <div class="campo">
-              <label for="user" >Provincia</label>
-              <select name="provincia" id="provincia" class="form-control"<% locals.errors && errors.provincia ? 'is-invalid' : null %> required>
-                <option value="provincia" selected hidden>Seleccione aquí</option>
-                <% 
-                let provincias = ['Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fé', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
-                %>
-                <% for (const unaPcia of provincias) { %>
-                  <option value="<%= unaPcia %>"><%= unaPcia %></option>
-                <% } %>        
-              </select>
-              <% if (locals.errors && errors.provincia) { %>
-                <small class="mensajeError"> <%= errors.provincia.msg %> </small>
-                <% } %>
-            </div><br>
 
         <label for="img">Foto de perfil</label>
         <input type="file" name="img">
-        
+        <% if (locals.errors && errors.img) { %>
+          <small class="mensajeError"> <%= errors.img.msg %> </small>
+          <% } %>
+
         <div class="buttons">
         <p>Al crear una cuenta, aceptas las <a href="#">Condiciones de uso</a> y <a href="#">Aviso de privacidad</a> de Tacopado</p>
         <input type="submit" value="Registrarme">
 
 
         <div>
-          <!-- <p>¿Olvidaste tu usuario o contraseña?</p>
-          <button>Recuperar contraseña</button> -->
           <input type="checkbox" name="recordarme" id="recordarme"><p>Recordarme</p>
       </div>
 
