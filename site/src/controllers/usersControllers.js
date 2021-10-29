@@ -21,23 +21,23 @@ const controller = {
         res.render('users/user', {userProfile});
     },
     // Para registrar usuario por método POST    
-    newUser: (req,res, next) => {
-        let errors = validationResult(req);
-        if (errors.errors.length > 0) {
-        res.render('users/register', 
-        {errors: errors.mapped(),
-         old: req.body})
-        } else {
-            let user = req.body
-            user.id = users[users.length - 1].id + 1;
-            user.img = req.file ? req.file.filename : 'default-img.jpg'
-            users.push(user)
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
-            res.redirect(`user/${user.id}`);
-        }
+    // newUser: (req,res, next) => {
+    //     // let errors = validationResult(req);
+    //     // if (errors.errors.length > 0) {
+    //     // res.render('users/register', 
+    //     // {errors: errors.mapped(),
+    //     //  old: req.body})
+    //     // } else {
+    //         let user = req.body
+    //         user.id = users[users.length - 1].id + 1;
+    //         user.img = req.file ? req.file.filename : 'default-img.jpg'
+    //         users.push(user)
+    //         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
+    //         res.redirect(`user/${user.id}`);
+    //     // }
        
-    },    
-    
+    // },    
+
     login: (req, res, next) => {
         res.render('users/login');
     }, 
@@ -46,10 +46,10 @@ const controller = {
 
         const userToLogin = users.find(user => user.email === req.body.email)
 
-        if (userToLogin && bcrypt.compareSync(req.body.password, userToLogin.contraseña)) {
+        if (userToLogin && bcrypt.compareSync(req.body.password, userToLogin.password)) {
             req.session.loggedUser = userToLogin
             if (req.body.recordarme !== undefined) {
-                res.cookie('recordarme', userToLogin.email, {maxAge: 20*1000} )
+                res.cookie('recordarme', userToLogin.email, {maxAge: 20*1000*60*30} )
             }
             res.redirect('/')
         } else {
@@ -100,33 +100,38 @@ const controller = {
         users = users.filter(p => p.id !== +req.params.id)
         fs.writeFileSync(usersFilePath, JSON.stringify(users))
         res.redirect('/')
+    },
+
+
+    newUser : (req, res, next) => {
+        const errors = validationResult(req)
+    
+        if (errors.isEmpty()) {
+        
+            let user = {
+                nombre: req.body.nombre,
+                email: req.body.email,
+                contraseña: bcrypt.hashSync(req.body.password, 10),
+                provincia: req.body.provincia
+            }
+        
+            users.push(user)
+        
+            fs.writeFileSync(ruta, JSON.stringify(users, null, 2))
+        
+            res.redirect(`users/${user.id}`)
+        } else {
+            
+            res.render('users/register',  {errors: errors.mapped(), old: req.body})
+        }
     }
+
 }
 
-module.exports = controller
+module.exports = controller;
 
-// processRegister: (req, res) => {
-//     const errors = validationResult(req)
 
-//     if (errors.isEmpty()) {
-    
-//         const usuario = {
-//             nombre: req.body.nombre,
-//             email: req.body.email,
-//             contraseña: bcrypt.hashSync(req.body.password, 10),
-//             pais: req.body.pais
-//         }
-    
-//         usuariosRegistrados.push(usuario)
-    
-//         fs.writeFileSync(ruta, JSON.stringify(usuariosRegistrados, null, 2))
-    
-//         res.redirect('/')
-//     } else {
-        
-//         res.render('user/register',  {errors: errors.mapped(), old: req.body})
-//     }
-// },
+
 
 // newUser: (req,res, next) => {
 //     let errors = validationResult(req);

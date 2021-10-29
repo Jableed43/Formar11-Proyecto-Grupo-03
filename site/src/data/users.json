@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Taco",
     "email": "tacopado@gmail.com",
-    "password": "tacotaco",
+    "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
     "sexo": "m",
     "provincia": "Buenos Aires",
     "img": "default-img.jpg"
@@ -129,6 +129,30 @@
     "sexo": "Masculino",
     "provincia": "San Luis",
     "id": 12,
+    "img": "default-img.jpg"
+  },
+  {
+    "name": "fer",
+    "email": "gabrielpkeilty@gmail.com",
+    "password": [
+      "123123",
+      "123123"
+    ],
+    "sexo": "Femenino",
+    "provincia": "San Luis",
+    "id": 13,
+    "img": "img-1635452723803.png"
+  },
+  {
+    "name": "ruben rada",
+    "email": "rubenrada@gmail.com",
+    "password": [
+      "9898",
+      "9898"
+    ],
+    "sexo": "Masculino",
+    "provincia": "La Rioja",
+    "id": 14,
     "img": "default-img.jpg"
   }
 ]
