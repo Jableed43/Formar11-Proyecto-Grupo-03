@@ -1,14 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
-// const subir = require('../middlewares/multer')
 const { check } = require('express-validator');
 const { BandwidthLimitExceeded } = require('http-errors');
 const subir = require('../middlewares/multer')
-const validate = require('../middlewares/validateRegister')
-const userRegistered = require('../middlewares/userRegistered')
-const guestUser = require('../middlewares/guestUser');
+
 const validateRegister = require('../middlewares/validateRegister');
+const validateLogin = require('../middlewares/validateLogin');
+const loggedUser = require('../middlewares/loggedUser');
+const userLoginCheck = require('../middlewares/userLoginCheck');
+
 
 // Validaciones
 // const validacionesRegister = [
@@ -31,11 +32,8 @@ const validateRegister = require('../middlewares/validateRegister');
 // ]
 
 /* POST login */
-router.get('/login', guestUser, usersControllers.login)
-router.post('/login', usersControllers.processLogin)
-
-// Chequea si el usuario está logueado
-router.get('/logueado', usersControllers.check)
+router.get('/login', loggedUser, usersControllers.login)
+router.post('/login', validateLogin, usersControllers.processLogin)
 
 
 /* POST register */
@@ -46,7 +44,7 @@ router.post('/register',subir.single('img'), validateRegister, usersControllers.
 router.get('/carrito', usersControllers.carrito);
 
 /* GET perfil */
-router.get('/user/:id', usersControllers.perfil);
+router.get('/users/user/:id', userLoginCheck,usersControllers.perfil);
 
 /* PUT editar */
 router.get('/edit/:id', usersControllers.edit);
@@ -54,6 +52,9 @@ router.put('/edit/:id', usersControllers.update);
 
 /* DELETE user */ 
 router.delete('/delete/:id', usersControllers.destroy); 
+
+router.get('/profile', userLoginCheck, usersControllers.profile)
+router.get('/logout', usersControllers.logout)
 
 module.exports = router;
 

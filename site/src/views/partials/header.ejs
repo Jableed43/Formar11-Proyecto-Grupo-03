@@ -32,11 +32,27 @@
         </ul>
         </nav>
 
+
+
+
         <nav class="container-user">
-          <ul class="user">
-            <li class="texto"><a href="http://localhost:3030/users/login">Ingresar</a> </li>
-            <li class="texto"><a href="http://localhost:3030/users/register">Registrarse</a> </li>
-        </ul>
+
+              
+          
+            <% if (locals.user) { %>  
+              <ul class="user">      
+                    <li class="texto"><a href="/users/profile">Mi Perfil</a> </li>
+                    <li class="texto"><a href="/users/logout">Cerrar Sesión</a> </li> 
+                  </ul>
+
+            <%  }else{ %>     
+              <ul class="user">                
+                <li class="texto"><a href="/users/login">Ingresar</a> </li>
+                <li class="texto"><a href="/users/register">Registrarse</a> </li> 
+              </ul>
+            <% } %>    
+    
+
       </nav>
 
     </div>

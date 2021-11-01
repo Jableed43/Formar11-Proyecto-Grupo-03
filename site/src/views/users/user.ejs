@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <div class="card">
-    <img src="/images/users/<%= userProfile.img %>" alt="profile photo" style="width:100%">
-    <% if (userProfile.sexo === "Masculino"){ %>
-      <h1>¡Bienvenido <%= userProfile.name %>!</h1>
-      <% } else if (userProfile.sexo === "Femenino") { %>
-      <h1>¡Bienvenida <%= userProfile.name %>!</h1>
+    <img src="/images/users/<%= user.img %>" alt="profile photo" style="width:100%">
+    <% if (user.sexo === "Masculino"){ %>
+      <h1>¡Bienvenido <%= user.name %>!</h1>
+      <% } else if (user.sexo === "Femenino") { %>
+      <h1>¡Bienvenida <%= user.name %>!</h1>
       <% } else { %>
-        <h1>¡Bienvenid@ <%= userProfile.name %>!</h1>
+        <h1>¡Bienvenid@ <%= user.name %>!</h1>
       <% } %>
     <p class="price">Tu perfil Tacopado</p>
-    <p>Tu email es <%= userProfile.email %></p>
-    <p>Nos elegís desde <%= userProfile.provincia %></p>
-    <form action="edit/<%= userProfile.id %>?_method=PUT" method="POST">
+    <p>Tu email es <%= user.email %></p>
+    <p>Nos elegís desde <%= user.provincia %></p>
+    <form action="edit/<%= user.id %>?_method=PUT" method="POST">
     <p><button>Editar datos</button></p>
     </form>
-    <form action="edit/<%= userProfile.id %>?_method=DELETE" method="POST">
+    <form action="edit/<%= user.id %>?_method=DELETE" method="POST">
     <p><button>Eliminar perfil</button></p>
     </form>
   </div>

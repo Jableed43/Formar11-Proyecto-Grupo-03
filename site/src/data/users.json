@@ -6,7 +6,8 @@
     "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
     "sexo": "m",
     "provincia": "Buenos Aires",
-    "img": "default-img.jpg"
+    "img": "default-img.jpg",
+    "rol": "admin"
   },
   {
     "id": 2,
@@ -36,123 +37,48 @@
     "img": "images.jpg"
   },
   {
-    "name": "Juan Carlos",
-    "email": "comoestas@asd.com",
-    "password": [
-      "321",
-      "321"
-    ],
-    "sexo": "m",
-    "provincia": "Chaco",
     "id": 5,
-    "img": "default-img.jpg"
+    "name": "jorge",
+    "email": "jorge@jorgecompany.com",
+    "password": [
+      "898989",
+      "898989"
+    ],
+    "provincia": "Buenos Aires"
   },
   {
-    "name": "asd",
-    "email": "",
-    "password": [
-      "",
-      ""
-    ],
-    "sexo": "Seleccione aquí",
-    "provincia": "provincia",
     "id": 6,
-    "img": "img-1634865222148.jpeg"
+    "name": "pepe",
+    "email": "pepe@pol.com",
+    "password": "$2a$10$ZhdaQUkD2YkBgyA6ePbv0e/QK4OdHOYViwDsNkqUJQXVG4Wh6X.Pa",
+    "provincia": "San Juan"
   },
   {
-    "name": "",
-    "email": "",
-    "password": [
-      "",
-      ""
-    ],
-    "sexo": "Seleccione aquí",
-    "provincia": "provincia",
     "id": 7,
-    "img": "default-img.jpg"
+    "name": "rufian",
+    "email": "pepe@pol.com",
+    "password": "$2a$10$a50fQI9b9lX6770i18VQ7OhgxAfH2TqnJbvcIodQpQSrATsO5WUS6",
+    "provincia": "Capital Federal"
   },
   {
-    "name": "Antonio",
-    "email": "",
-    "password": [
-      "",
-      ""
-    ],
-    "sexo": "Seleccione aquí",
-    "provincia": "provincia",
     "id": 8,
-    "img": "default-img.jpg"
+    "name": "ruben",
+    "email": "ruben@aol.com",
+    "password": "$2a$10$xwxa3jN.kLB.bI0MtwoAE.B6e84cYXCqG6xhIGoaix4DFnFkEzHBi",
+    "provincia": "Santiago del Estero"
   },
   {
-    "name": "",
-    "email": "",
-    "password": [
-      "",
-      ""
-    ],
-    "sexo": "Seleccione aquí",
-    "provincia": "provincia",
     "id": 9,
-    "img": "default-img.jpg"
+    "name": "solita",
+    "email": "solita@sylveira.com",
+    "password": "$2a$10$Qh4I9tDHB.WQS3T1zqIe0uC/aHEPhA484cnzWiwwTpcNYX8oebRlG",
+    "provincia": "Río Negro"
   },
   {
-    "name": "Jorgito",
-    "email": "",
-    "password": [
-      "",
-      ""
-    ],
-    "sexo": "Seleccione aquí",
-    "provincia": "provincia",
     "id": 10,
-    "img": "default-img.jpg"
-  },
-  {
-    "name": "Juliana gonzaleza",
-    "email": "",
-    "password": [
-      "",
-      ""
-    ],
-    "sexo": "Seleccione aquí",
-    "provincia": "provincia",
-    "id": 11,
-    "img": "default-img.jpg"
-  },
-  {
-    "name": "Reberto Elias",
-    "email": "Reberto@google.com",
-    "password": [
-      "12345678",
-      "12345678"
-    ],
-    "sexo": "Masculino",
-    "provincia": "San Luis",
-    "id": 12,
-    "img": "default-img.jpg"
-  },
-  {
-    "name": "fer",
-    "email": "gabrielpkeilty@gmail.com",
-    "password": [
-      "123123",
-      "123123"
-    ],
-    "sexo": "Femenino",
-    "provincia": "San Luis",
-    "id": 13,
-    "img": "img-1635452723803.png"
-  },
-  {
-    "name": "ruben rada",
-    "email": "rubenrada@gmail.com",
-    "password": [
-      "9898",
-      "9898"
-    ],
-    "sexo": "Masculino",
-    "provincia": "La Rioja",
-    "id": 14,
-    "img": "default-img.jpg"
+    "name": "reberto",
+    "email": "reber@yaho.com",
+    "password": "$2a$10$SgV4pYeqXgFhGDSKkvia/OGklfG4syazQ9ES.vv0Iqzwo5JN1i.k6",
+    "provincia": "Buenos Aires"
   }
 ]
