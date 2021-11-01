@@ -16,7 +16,6 @@ body.products h3{
 }
 body.products div.contenedor{
     width: 250px;
-    height: 310px;
     background-color: white;
     justify-content: center;
     position: relative;
@@ -31,10 +30,10 @@ body.products div.contenedor:hover{
     color: white;
 }
 body.products div.contenedor article img{
-    width: 80%;
+    width: 100%;
     text-align: center;
-    margin-left: 25px;
     margin-top: 20px;
+
 }
 body.products div.contenedor article p{
     text-align: center;
@@ -53,7 +52,7 @@ body.products div.contenedor article nav ul{
     margin: 20px 0;
 }
 body.products div.contenedor article nav ul li{
-    margin-right: 22px;
+    width: 100%;
 }
 body.products div.contenedor article button{
     font-family: 'Open Sans Condensed', sans-serif;
@@ -61,8 +60,13 @@ body.products div.contenedor article button{
     width: 80px;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 85px;
 }
+body.products .product-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
 body.products div.row{
     display: flex;
     flex-direction: column;
