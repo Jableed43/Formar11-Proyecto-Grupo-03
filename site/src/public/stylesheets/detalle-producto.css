@@ -6,8 +6,15 @@ body.Detalleprodu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 20px;
   justify-content: center;
+}
+
+.Detalleprodu .button-container{
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 /* Botón Volver a página menú */
@@ -17,13 +24,9 @@ body.Detalleprodu {
   font-size: 12px;
   font-weight: 500;
   transition: 0.3s;
-  width: 26vw;
   border-radius: 10px;
-  height: 4%;
-  position: absolute;
-  top: 85px;
-  left: 20px;
   background-color: #2d2254;
+  padding: 10px;
 }
 
 .Detalleprodu .menu:hover{
@@ -38,6 +41,7 @@ body.Detalleprodu {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .Detalleprodu .foto {
@@ -54,6 +58,7 @@ body.Detalleprodu {
   font-weight: bolder;
   font-size: 3em;
   width: 8%;
+  display: none;
 }
 
 .Detalleprodu .antsig:hover {
@@ -236,6 +241,8 @@ margin-top: 15px;
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 .Detalleprodu section div.final-buttons button{
   width: 80px;
@@ -323,12 +330,7 @@ margin-top: 15px;
   font-size: 12px;
   font-weight: 500;
   transition: 0.3s;
-  width: 26vw;
   border-radius: 10px;
-  height: 4%;
-  position: absolute;
-  top: 130px;
-  left: 20px;
   background-color: #2d2254;
 }
 }
