@@ -84,4 +84,8 @@ body.products div.row{
     body.products h2.products-title{
         margin-top: 100px;
     }
+    body.products .row{
+        max-width: 1200px;
+        margin: auto;
+    }
 }

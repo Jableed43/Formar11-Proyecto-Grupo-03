@@ -391,6 +391,10 @@ display: none;
   font-weight: 700;
   font-size: 17px;
 }
+
+.home .eligen-flex{
+  width: 100%;
+}
  
 
 .home main section div img {
