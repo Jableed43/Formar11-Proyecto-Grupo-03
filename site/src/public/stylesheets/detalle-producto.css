@@ -47,6 +47,8 @@ body.Detalleprodu {
 .Detalleprodu .foto {
   background-color: white;
   width: 90vw;
+  border: 5px solid #f1d367;
+  border-radius: 20px;
 }
 
 /* Botones para moverse entre productos */
