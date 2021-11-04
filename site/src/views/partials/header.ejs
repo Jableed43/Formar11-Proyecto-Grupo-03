@@ -9,10 +9,14 @@
         </div>
 
 
-          <input type="checkbox" id='user'>
+        <input type="checkbox" id='user'>          
+        <% if (locals.userLogin) { %>
+          <label for='user' class="input-user"><img class="imgUser" src="/images/users/<%= locals.userLogin.img ? locals.userLogin.img : 'default-img.jpg'%>" alt="imagen de usuario"> </label>
+        <%  }else{ %> 
           <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+        <% } %>
           <div class="user-cart">
-          <a href="http://localhost:3030/users/carrito"><i class="fas fa-shopping-cart"></i></a>
+          <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
           </div>
 
 
@@ -39,9 +43,9 @@
 
               
           
-            <% if (locals.user) { %>  
+            <% if (locals.userLogin) { %>  
               <ul class="user">      
-                    <li class="texto"><a href="/users/profile">Mi Perfil</a> </li>
+                    <li class="texto"><a href="/users/user">Mi Perfil</a> </li>
                     <li class="texto"><a href="/users/logout">Cerrar Sesión</a> </li> 
                   </ul>
 

@@ -15,10 +15,11 @@ const controller = {
     register: (req, res, next) => {
         res.render('users/register');
     },
-    perfil: (req, res) => {
-        const {id} = req.params
-        const userProfile = users.find(e => e.id === +id)
-        res.render('users/user', {userProfile});
+    perfil : (req,res) => {
+        let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
+        return res.render('users/user',{
+            user : users.find(user => user.id === req.session.userLogin.id)
+        })
     },
     newUser : (req, res, next) => {
         const errors = validationResult(req)
@@ -121,12 +122,6 @@ const controller = {
 		} else {
 			res.redirect('/')
         }
-    },
-    profile : (req,res) => {
-        let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
-        return res.render('users/profile',{
-            user : users.find(user => user.id === req.session.userLogin.id)
-        })
     },
     destroy : (req, res) => {
         users = users.filter(p => p.id !== +req.params.id)
