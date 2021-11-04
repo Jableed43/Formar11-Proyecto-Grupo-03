@@ -59,16 +59,18 @@
   background-color: #312757;
   border: none;
   border-radius: 5px;
-  color:white;
-  font-size: 10px;
   text-decoration: none;
   text-align: center;
   transition: 0.3s;
-  width: 25%;
   padding: 10px;
-  margin-top: 15px;
-  margin-left: 2%;
-  margin-bottom: 20px;
+}
+
+.footer .suscribirme button{
+color: white;
+background-color: inherit;
+border: none;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 /* Iconos medios de pago */
