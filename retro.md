@@ -59,3 +59,23 @@
 - null.
 
 ![retro3](https://user-images.githubusercontent.com/85651952/134752262-e601871d-c810-4f82-af4c-50375d79faf0.png)
+
+---
+# Breve retrospectiva cuarto Sprint (dinámica estrella de mar)
+## Comenzar a hacer
+- Empezar a trabajar desde el día 0
+## Hacer más
+- Consulta docentes durante el proceso
+- Mantener buen ritmo de trabajo
+- Guardar cambios en conjunto
+## Continuar haciendo
+- Ayudarnos entre los integrantes del equipo
+- Organización en Trello
+- Comunicación dentro del Sprint
+- Reuniones frecuentes
+## Hacer menos
+- Dejar menos trabajo de un sprint a otro
+## Dejar de hacer
+- Procrastinar
+
+![Sprint 4](https://user-images.githubusercontent.com/85651952/141027960-2f7177bb-1bcf-4d91-a7b4-f656870a99f2.jpeg)
