@@ -81,7 +81,7 @@
 ![Sprint 4](https://user-images.githubusercontent.com/85651952/141027960-2f7177bb-1bcf-4d91-a7b4-f656870a99f2.jpeg)
 
 ---
-# Breve retrospectiva cuarto Sprint (dinámica estrella de mar)
+# Breve retrospectiva quinto Sprint (dinámica estrella de mar)
 ## Comenzar a hacer
 - Empezar a trabajar desde el día 0
 - Priorizar lo elemental del sprint
