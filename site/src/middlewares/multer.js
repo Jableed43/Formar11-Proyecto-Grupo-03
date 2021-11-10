@@ -9,8 +9,16 @@ const storage = multer.diskStorage({
       cb(null, `img-${Date.now()}${path.extname(file.originalname)}`)
     }
   })
-  
-const subir = multer({ storage: storage })
 
 
+const fileFilter = function (req, file, cb) {
+  if (!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
+    req.fileValidationError = "Solo se permiten imágenes";
+    return cb(null, false, req);
+  }
+  cb(null, true);
+}
+
+
+const subir = multer ({ storage, fileFilter })
 module.exports = subir

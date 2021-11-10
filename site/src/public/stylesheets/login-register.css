@@ -1,86 +1,95 @@
-/* Style inputs */
-.login-register input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
+.log-reg * {
+  box-sizing: border-box;
+}
 
-  .login-register input[type=password], select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  
-  .login-register  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .login-register input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Style the container/contact section */
-  .login-register .container {
-    border-radius: 5px;
-    padding: 10px;
-    padding-top: 80px;
-  }
-  
-  /* Create two columns that float next to eachother */
-  .login-register .column {
-    float: left;
+.log-reg .login-register {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  width: 90vw;
+  margin: 5% auto 0;
+  padding: 5%;
+}
+
+.log-reg h1 {
+  text-align: center;
+  color: #2d2254;
+  font-size: 2em;
+}
+
+.log-reg small {
+  color: #f1d367;
+  background-color: #2d2254;
+  border-radius: 2px;
+  padding: 2px;
+  text-align: right;
+}
+.log-reg .camposform {
+  width: 100%;
+}
+
+.log-reg .campo {
+  margin: 5% auto;
+}
+
+.log-reg input {
+  width: 100%;
+  padding: 10px;
+}
+
+.log-reg .buttons {
+  margin: 10px auto;
+  width: fit-content;
+  background-color: #373737;
+  border: 1px solid #f1d367;
+  border-radius: 15px;
+  color: #f1d367;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 40px;
+  outline: none;
+  padding: 10px 15px;
+  text-align: center;
+  transition: all 300ms cubic-bezier(.23,1,.32,1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  align-self: center;
+  will-change: transform;
+}
+
+.log-reg .buttons:disabled {
+  pointer-events: none;
+}
+
+.log-reg .buttons:hover {
+  color: #f1d367;
+  background-color: #2d2254;
+  box-shadow: rgba(0, 0, 0, .25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.log-reg .buttons:active{
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.log-reg p {
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .log-reg .login-register {
+    max-width: 1200px;
+    display: flex;
+  } 
+
+  .log-reg .imagen {
     width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .login-register .row:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 
-  .login-register .row{
-    border-radius: 18px;
-    background-color: rgba(255,255,255,0.5);
+  .log-reg .camposform {
+    width: 50%;
   }
-  
-  .login-register .buttons.div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .login-register div.buttons, .login-register div.buttons div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .login-register div.buttons p:first-child{
-    margin-bottom: 5px;
-  }
-
-  .mensajeError {
-    color: #f1d367;
-  }
-
-  .login-register.campo {
-    margin: 10px;
-  }
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .login-register .column, .login-register input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+}

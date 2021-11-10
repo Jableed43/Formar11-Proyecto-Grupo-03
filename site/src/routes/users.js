@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var usersControllers = require('../controllers/usersControllers')
 const subir = require('../middlewares/multer')
-const { check } = require('express-validator');
+const { check, body } = require('express-validator');
 const { BandwidthLimitExceeded } = require('http-errors');
 
 // Validaciones
@@ -11,18 +11,17 @@ const validacionesRegister = [
     check('email')
     .isEmail().withMessage('Debes completar un email válido').bail()
     .notEmpty().withMessage('Debes completar el campo de email'),
-    check('password').notEmpty().withMessage('Debes completar el campo de contraseña'),
-    check('sexo').notEmpty().withMessage('Debes seleccionar una opción'),
-    check('provincia').notEmpty().withMessage('Debes seleccionar una opción'),
-    check('img').custom((value, { req }) => {
-        let acceptedExtensions = ['.jpg', '.jpeg', '.png'];
-        let fileExtension = path.extname(file.orginalname);
-        if (req.file) {
-        if (!acceptedExtensions.includes(fileExtension)) {
-            throw new Error (`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
-        }}
-    })
+    check('p1').notEmpty().withMessage('Debes completar el campo de contraseña y las contraseñas deben coincidir'),
+    check('p2').notEmpty().withMessage('Debes completar el campo de contraseña y las contraseñas deben coincidir'),
+    body('p2').custom((value,{req}) => {
+        if(value !== req.body.p1){
+            return false
+        }
+        return true
+    }).withMessage('La verificación de la contraseña no coincide'),
 
+    check('sexo').notEmpty().withMessage('Debes seleccionar una opción'),
+    check('provincia').notEmpty().withMessage('Debes seleccionar una opción')
 ]
 
 /* POST login */

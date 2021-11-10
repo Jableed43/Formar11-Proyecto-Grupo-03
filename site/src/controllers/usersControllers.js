@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
+const bcrypt = require('bcryptjs')
+const { fileFilter } = require('../middlewares/multer')
+
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -10,6 +13,7 @@ const controller = {
     register: (req, res, next) => {
         res.render('users/register');
     },
+    // Para mostrar vista perfil
     perfil: (req, res) => {
         const {id} = req.params
         const userProfile = users.find(e => e.id === +id)
@@ -18,19 +22,28 @@ const controller = {
     // Para registrar usuario por método POST
     newUser: (req,res, next) => {
         let errors = validationResult(req);
-        if (errors.errors.length > 0) {
+        // Para validar la imagen
+        if (req.fileValidationError) {
+            let img = {
+                param : "img",
+                msj: "Solo se permiten imágenes"
+            }
+            errors.errors.push(img)
+        }
+        if (!errors.isEmpty()) {
         res.render('users/register', 
         {errors: errors.mapped(),
          old: req.body})
         } else {
             let user = req.body
+            user.rol = "client";
             user.id = users[users.length - 1].id + 1;
+            user.p1 = bcrypt.hashSync(req.body.p1, 10)
             user.img = req.file ? req.file.filename : 'default-img.jpg'
             users.push(user)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
             res.redirect(`user/${user.id}`);
         }
-       
     },    
     login: (req, res, next) => {
         res.render('users/login');
@@ -42,22 +55,37 @@ const controller = {
         const userEdit = users.find(e => e.id === +req.params.id)
         res.render(`users/edit/${req.params.userEdit.id}`, {userEdit})
     },
+    // Para modificar datos de usuario
     update: (req,res,next) => {
-		const userUpdate = users.find(e => e.id === +req.params.id)
-		const {name,email,password,sexo,provincia,avatar} = req.body 
-		if (userUpdate) {
-			userUpdate.name = name
-			userUpdate.email = email
-			userUpdate.password = password
-			userUpdate.sexo = sexo
-			userUpdate.provincia = provincia
-    
-			fs.writeFileSync(usersFilePath, JSON.stringify(users))
-			res.redirect(`/users/user/${req.params.id}`)
-		} else {
-			res.redirect('/')
+        let errors = validationResult(req);
+        // Para validar la imagen
+        if (req.fileValidationError) {
+            let img = {
+                param : "img",
+                msj: "Solo se permiten imágenes"
+            }
+            errors.errors.push(img)
         }
+        if (!errors.isEmpty()) {
+        res.render('users/register', 
+        {errors: errors.mapped(),
+         old: req.body})
+        } else {
+            const userUpdate = users.find(e => e.id === +req.params.id)
+            const {name,email,password,sexo,provincia,avatar} = req.body 
+            if (userUpdate) {
+                userUpdate.name = name
+                userUpdate.email = email
+                userUpdate.password = password
+                userUpdate.sexo = sexo
+                userUpdate.provincia = provincia
+                userUpdate.avatar = file
+        
+                fs.writeFileSync(usersFilePath, JSON.stringify(users))
+                res.redirect(`/users/edit/${req.params.id}`)
+        }}
     },
+    // Para borrar información de usuario
     destroy : (req, res) => {
         users = users.filter(p => p.id !== +req.params.id)
         fs.writeFileSync(usersFilePath, JSON.stringify(users))
