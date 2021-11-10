@@ -5,15 +5,21 @@
     <div class="contenedor">
         <section class="products">
             <a href="/products/detail/<%= product.id %> ">
-                <article>
+                <article class="product-container">
                     <img src="/images/imgmenu/<%= product.images %>" alt= "Foto Producto">
                     <p><%= product.title %></p>
                     <nav>
+                        <ul type="numbers">
+                            <li>Calorias</li>
+                            <li>Grasas Totales</li>
+                            <li>Proteinas</li>
+                            <li>Carbohidratos</li>
+                        </ul>
                         <ul type="none">
-                            <li>Cal</li>
-                            <li>Gr tot</li>
-                            <li>Prot</li>
-                            <li>Carb</li>
+                            <li><%= product.calories %></li>
+                            <li><%= product.totalfat %></li>
+                            <li><%= product.protein %></li>
+                            <li><%= product.carb %></li>
                         </ul>
                     </nav>
                     <button>Ver más</button>

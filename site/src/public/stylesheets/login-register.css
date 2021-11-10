@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .log-reg .login-register {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
@@ -9,6 +10,57 @@
   margin: 5% auto 0;
   padding: 5%;
 }
+=======
+.login-register .botonLogin{
+  background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+  .login-register input[type=password], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .login-register  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login-register input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .login-register .container {
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 80px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .login-register .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .login-register .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+>>>>>>> 6a6e3827d272d5cbb88815b7f2b6ff5b36616e63
 
 .log-reg h1 {
   text-align: center;
