@@ -48,9 +48,6 @@ const controller = {
 
         
             res.redirect(`user/${user.id}`)
-        } else {
-            
-            res.render('users/register',  {errors: errors.mapped(), old: req.body})
         }
     },    
     login: (req, res, next) => {

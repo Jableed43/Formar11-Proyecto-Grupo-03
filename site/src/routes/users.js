@@ -4,7 +4,7 @@ var usersControllers = require('../controllers/usersControllers')
 const subir = require('../middlewares/multer')
 const { check, body } = require('express-validator');
 const { BandwidthLimitExceeded } = require('http-errors');
-const subir = require('../middlewares/multer')
+
 
 const validateRegister = require('../middlewares/validateRegister');
 const validateLogin = require('../middlewares/validateLogin');
