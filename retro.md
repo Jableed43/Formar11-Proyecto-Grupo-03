@@ -79,3 +79,28 @@
 - Procrastinar
 
 ![Sprint 4](https://user-images.githubusercontent.com/85651952/141027960-2f7177bb-1bcf-4d91-a7b4-f656870a99f2.jpeg)
+
+---
+# Breve retrospectiva cuarto Sprint (dinámica estrella de mar)
+## Comenzar a hacer
+- Empezar a trabajar desde el día 0
+- Priorizar lo elemental del sprint
+- Consulta docentes durante el proceso
+## Hacer más
+- Reuniones frecuentes
+- Mantener buen ritmo de trabajo
+- Tomar iniciativa
+- Comunicación dentro del sprint
+## Continuar haciendo
+- Ayudarnos entre los integrantes del equipo
+- Organización en Trello
+- Comunicación dentro del Sprint
+- Reuniones frecuentes
+## Hacer menos
+- Dejar menos trabajo de un sprint a otro
+## Dejar de hacer
+- Procrastinar
+- Colgar en Whatsapp
+
+
+![Sprint 5](https://user-images.githubusercontent.com/85651952/141028597-6f69281e-3747-4e40-887c-6093701a055b.jpeg)
