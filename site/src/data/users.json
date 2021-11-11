@@ -37,19 +37,6 @@
     "img": "images.jpg"
   },
   {
-    "id": 5,
-    "name": "jorge",
-    "email": "jorge@jorgecompany.com",
-    "password": [
-      "898989",
-      "898989"
-    ],
-    "sexo": "m",
-    "provincia": "Chaco",
-    "id": 5,
-    "img": "img-1634960437578.png"
-  },
-  {
     "name": "asdf",
     "email": "asdf@asdf.com",
     "password": [

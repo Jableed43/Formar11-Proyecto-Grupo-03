@@ -29,7 +29,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname, '..','public')));
 app.use(methodOverride('_method'));
 app.use(session({secret: 'clave secreta'}));
 app.use(recordame);
