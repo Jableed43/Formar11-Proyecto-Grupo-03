@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <%- include("../partials/edit-create-head.ejs") %>
+
+    <title>Crear Producto</title>
+</head>
+<body>
+    
+    <%- include("../partials/admin-header.ejs") %>
+
+    <main class="create">
+      <div class="logo">
+        <img src='/images/logomin.png' alt="Logo Tacopado">
+      </div>
+      <h1>CREA UN NUEVO PRODUCTO</h1>
+
+      <form action="create" method="post" enctype="multipart/form-data">
+      <div class="contenedor">
+        <article>
+            <h2>Título</h2>
+            <input type="text" id="title" name="title" placeholder="Nombre de plato">
+            <h2>Descripción</h2>
+            <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
+        </article>
+      </div>
+
+      <div class="contenedor2">
+        <article>
+            <h2>Imagen del producto</h2>
+            <div>
+            <input type="file" id="images" name="images" hidden multiple accept="image/*">
+            <label class="file" for="images">Foto Producto</label>
+            </div>
+            <% if (locals.errors && errors.images) { %>
+              <small class="mensajeError"> <%= errors.images.msg %> </small>
+              <% } %>
+            </div>        
+          </article>
+      </div>  
+
+      <div class="contenedor3">
+        <article>
+          <h2>Organizar</h2>
+          <div>    
+            <label for="categoria">Categoría</label>
+            <select name="category" id="category" required>
+              <option name="category" selected hidden>Seleccione aquí</option>
+              <% 
+                let category = ['Comida','Bebida']
+                %>
+                <% for (const catSelec of category) { %>
+                  <option value="<%= catSelec %>"><%= catSelec %></option>
+                <% } %>
+              </select>
+              <% if (locals.errors && errors.category) { %>
+                <small class="mensajeError"> <%= errors.category.msg %> </small>
+                <% } %> 
+          </div>
+          <div>
+            <label for="subcategoria">Subcategoría</label>
+            <select name="subcategory" id="subcategory" required>
+              <option value="subcategory" selected hidden>Seleccione aquí</option>
+              <% 
+              let subcategory = ['Tacos', 'Burritos', 'Quesadillas', 'Entradas', 'Platos', 'Ensaladas', 'Salsas', 'Dulces', 'Gaseosas', 'Jugo', 'Agua']
+              %>
+              <% for (const subSelec of subcategory) { %>
+                <option value="<%= subSelec %>"><%= subSelec %></option>
+              <% } %>
+            </select>
+            <% if (locals.errors && errors.subcategory) { %>
+              <small class="mensajeError"> <%= errors.subcategory.msg %> </small>
+              <% } %> 
+          </div>
+
+          <div class="ultimo-input">
+              <label for="precio">Precio</label>
+              <input type="number" name="price" id="price" placeholder="Inserte precio aquí...">
+          </div>
+        </article>
+    
+        <article>
+          <h2>Valores Nutricionales</h2>
+          <div>
+            <label for="Calorías" name="calories" id="calories">Calorías</label>
+            <input type="number" placeholder="(kcal)">
+          </div>
+          <div>
+            <label for="Grasas Totales" name="totalfat" id="totalfat">Grasas Totales</label>
+            <input type="number" placeholder="(g)">
+          </div>
+          <div>
+            <label for="Carbohidratos" name="carb" id="carb">Carbohidratos</label>
+            <input type="number" placeholder="(g)">
+          </div>
+          <div>
+            <label for="Proteínas" name="protein" id="protein">Proteínas</label>
+            <input type="number" placeholder="(g)">
+          </div>
+          <div>
+            <label for="Grasas Trans" name="transfat" id="transfat">Grasas Trans</label>
+            <input type="number" placeholder="(g)">
+          </div>
+          <div>
+            <label for="Grasas Saturadas" name="saturatedfat" id="saturatedfat">Grasas Saturadas</label>
+            <input type="number" placeholder="(g)">
+          </div>
+          <div>
+            <label for="Colesterol" name="cholesterol" id="cholesterol">Colesterol</label>
+            <input type="number" placeholder="(mg)">
+          </div>
+          <div>
+            <label for="Sodio" name="sodium" id="sodium">Sodio</label>
+            <input type="number" placeholder="(mg)">
+          </div>
+          <div>
+            <label for="Azúcares" name="sugar" id="sugar">Azúcares</label>
+            <input type="number" placeholder="(g)">
+          </div>
+          <div>
+            <label for="Fibras" name="fiber" id="fiber">Fibras</label>
+            <input type="number" placeholder="(g)">
+          </div>
+         
+        </article>
+
+        <div class="botonera-bottom-page">
+          <button class="guardar" type="submit">Guardar</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
+        </div>
+      </div>
+    </form>
+      
+    </main>
+      
+    <%- include("../partials/admin-footer.ejs") %>
+
+</body>
+</html> 

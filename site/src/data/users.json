@@ -153,5 +153,29 @@
     "rol": "client",
     "id": 15,
     "img": "default-img.jpg"
+  },
+  {
+    "name": "asdf",
+    "email": "asdf@asdf.com",
+    "p1": "$2a$10$vGXgX2z24Er7TSu2PZuhe.bghLZO4aJ0QdEF2FihxBkaCYPOOqB.i",
+    "p2": "321",
+    "sexo": "Masculino",
+    "provincia": "Buenos Aires",
+    "submit": "Registrarme",
+    "rol": "client",
+    "id": 16,
+    "img": "default-img.jpg"
+  },
+  {
+    "name": "adsf",
+    "email": "asdf",
+    "p1": "$2a$10$M.WH9.tZMxxa.eTYDqvqaeX6USprih0UTiX10GNvch.TXB//7bBZG",
+    "p2": "asdf",
+    "sexo": "Femenino",
+    "provincia": "provincia",
+    "submit": "Registrarme",
+    "rol": "client",
+    "id": 17,
+    "img": "default-img.jpg"
   }
 ]
