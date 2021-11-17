@@ -142,5 +142,15 @@
     "rol": "client",
     "id": 15,
     "img": "default-img.jpg"
+  },
+  {
+    "id": 16,
+    "rol": "client",
+    "name": "Sara",
+    "email": "saragonzalez@arnet.com",
+    "password": "$2a$10$/pIBzwPaqKpOTkCYnCKYIuO/cYaLMzwKMm3FpN28rOUuursGVxiaW",
+    "img": "default-img.jpg",
+    "sexo": "Femenino",
+    "provincia": "Río Negro"
   }
 ]

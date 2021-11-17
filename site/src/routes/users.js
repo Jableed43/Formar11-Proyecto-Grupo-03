@@ -44,11 +44,11 @@ router.post('/register',subir.single('img'), validateRegister, usersControllers.
 router.get('/carrito', usersControllers.carrito);
 
 /* GET perfil */
-router.get('/user', userLoginCheck,usersControllers.perfil);
+router.get('/user',usersControllers.perfil);
 
 /* PUT editar */
-router.get('/edit/:id', usersControllers.edit);
-router.put('/edit/:id', usersControllers.update);
+router.get('/edit/user', usersControllers.edit);
+router.put('/edit/user', usersControllers.update);
 
 /* DELETE user */ 
 router.delete('/delete/:id', usersControllers.destroy); 

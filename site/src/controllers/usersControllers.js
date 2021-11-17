@@ -16,9 +16,15 @@ const controller = {
         res.render('users/register');
     },
     // Para mostrar vista perfil
+    // perfil: (req, res) => {
+    //     const {id} = req.params
+    //     const userProfile = users.find(e => e.id === +id)
+    //     res.render('users/user', {userProfile});
+    // },
+    // Falta decidir si utilizar este o el otro, consultar al equipo
     perfil: (req, res) => {
-        const {id} = req.params
-        const userProfile = users.find(e => e.id === +id)
+        let users = JSON.parse(fs.readFileSync(usersFilePath,'utf-8'));
+        const userProfile = users.find(user => user.id === req.session.userLogin.id)
         res.render('users/user', {userProfile});
     },
     // Para registrar usuario por método POST
@@ -37,18 +43,38 @@ const controller = {
         {errors: errors.mapped(),
          old: req.body})
         } else {
-            let user = req.body
-            user.rol = "client";
-            user.id = users[users.length - 1].id + 1;
-            user.p1 = bcrypt.hashSync(req.body.p1, 10)
-            user.img = req.file ? req.file.filename : 'default-img.jpg'
+            let  {name, sexo, provincia, email, password} = req.body
+
+            let user={
+            id : users[users.length - 1].id + 1,
+            rol : "client",
+            name, 
+            email, 
+            password : bcrypt.hashSync(req.body.password, 10),          
+            img : req.file ? req.file.filename : 'default-img.jpg',
+            sexo, 
+            provincia}
+
             users.push(user)
         
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
+            
+        return res.redirect('/') 
+        } 
+        
+        // else {
+        //     let user = req.body
+        //     user.rol = "client";
+        //     user.id = users[users.length - 1].id + 1;
+        //     user.p1 = bcrypt.hashSync(req.body.p1, 10)
+        //     user.img = req.file ? req.file.filename : 'default-img.jpg'
+        //     users.push(user)
+        
+        //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
 
         
-            res.redirect(`user/${user.id}`)
-        }
+        //     res.redirect(`user/${user.id}`)
+        // }
     },    
     login: (req, res, next) => {
         res.render('users/login');
@@ -134,9 +160,3 @@ module.exports = controller;
 
 
 
-// profile : (req,res) => {
-//     let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
-//     return res.render('users/profile',{
-//         user : users.find(user => user.id === req.session.userLogin.id)
-//     })
-// },
