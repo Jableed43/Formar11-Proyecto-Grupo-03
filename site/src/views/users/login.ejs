@@ -1,0 +1,61 @@
+<%- include("../partials/head.ejs") %>
+
+  <body class="log-reg">
+
+    <%- include("../partials/header.ejs") %>
+
+      <main class="login-register">
+
+          <section class="imagen">
+            <img src="/images/login.png" style="width:100%">
+          </section>
+
+          
+          <section class="camposform">
+          <h1>¡Logueate!</h1>
+          <form action="/users/login" method="POST">
+
+            <div class="campo">
+              <label for="user">Tu Correo Electrónico</label>
+              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="user" name="email" placeholder="Ingrese e-mail registrado..." required>
+              <% if (locals.errors && errors.email) { %>
+                <small class="mensajeError">
+                  <%= errors.email.msg %>
+                </small>
+                <% } %>
+            </div>
+
+            <div class="campo">
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" name="password" placeholder="Ingrese su contraseña..." required>
+              <% if (locals.errors && errors.msg) { %>
+                <small class="mensajeError"> <%= errors.msg %> </small>
+                <% } %>
+            </div>
+
+              <div class="buttons">
+              <label for="submit">Ingresar</label>
+              <input type="submit" id="submit" name="submit" value="Ingresar" hidden>
+              </div>
+
+              <div>
+                <input type="checkbox" name="recordarme" id="recordarme"><p>Recordarme</p>
+            </div>
+              </div>
+
+              <p>¿Sos nuevo en Tacopado?</p>
+              <div class="buttons">
+                <label for="submit">Registrarme</label>
+                <button href="users/register" id="submit" name="submit" value="Ingresar" hidden>Registrarme</button>
+                </div>
+          </form>
+        </section>
+
+
+      </main>
+
+      <%- include("../partials/footer.ejs") %>
+
+  </body>
+
+  </html>

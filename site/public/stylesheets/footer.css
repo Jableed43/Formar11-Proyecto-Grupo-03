@@ -1,0 +1,222 @@
+/* FOOTER */
+
+
+.footer {
+  background-color: #eed887;
+  width: 100vw;
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Títulos footer */
+.footer .tfooter {
+  background-color: #eed887;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #312757;
+  padding-top: 12px;
+}
+
+
+/* Iconos rrss */
+.footer .contacto {
+  width: 100%;
+}
+
+.footer .rrss {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.footer section div a img {
+  width: 80px;
+}
+
+.footer section.susc p{
+  margin-top: 15px;
+}
+
+/* Sección suscripción */
+.footer .susc {
+  width: 80%;
+  margin: auto;
+}
+
+.footer .email {
+  width: 50%;
+  text-align: left;
+  background-color: #eed887;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.footer .suscribirme{
+  background-color: #312757;
+  border: none;
+  border-radius: 5px;
+  color:white;
+  font-size: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  width: 25%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
+
+/* Iconos medios de pago */
+.footer .mdepago {
+  display: inline-block;
+  width: 30vw; 
+  margin: 1px;
+  box-sizing: border-box;
+  max-width: 106px;
+}
+
+/* Links */
+.footer .links {
+  margin-top: 10%;
+}
+
+.footer .li {
+  text-align: left;
+  margin-left: 5%;
+}
+
+
+@media (min-width: 768px) {
+
+  footer.footer {
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    flex-direction: row;
+}
+
+.footer h2.tfooter{
+  font-size: 27px;
+  width: 100%;
+}
+    
+.footer p{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer .medpag p{
+  text-align: center;
+  width: 100%;
+}
+  .footer .contacto {
+    width: 50%;
+  }
+
+  .footer .rrss {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+
+  .footer .susc {
+    width: 50%;
+    margin: 0;
+  }
+
+  .footer section.susc p{
+    width: 88%;
+    font-size: 20px;
+  }
+
+  .footer .links a{
+    width: 50%;
+    order: 2;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .footer .links {
+    margin-top: 0;
+    text-align: start;
+}
+  
+  .footer .medpag {
+    order: 1;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  
+  .footer .medpag img {
+    width: 80px;
+  }
+}
+
+@media (min-width: 960px) {
+
+
+footer.footer {
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  flex-direction: row;
+}
+
+.footer p, .footer .links a, .footer section.susc p, .footer input{
+  font-size: 25px;
+}
+
+.footer h2.tfooter {
+  font-size: 30px;
+  width: 100%;
+}
+
+
+  .footer .contacto {
+    width: 30%;
+  }
+
+  .footer .medpag {
+    order: 0;
+    width: 30%;
+  }
+  
+  .footer .medpag div {
+  width: 100%;
+  } 
+
+  .footer .medpag img {
+    width: 50%;
+  }
+
+  .footer .links {
+    width: 24%;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+
+  .footer .susc {
+    order: 1;
+    width: 40%;
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,249 @@
+main.create{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-image: url('../images/fondo-violeta.png');
+    color: white;
+    margin-bottom: 90px;
+}
+main.create h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2d2254;
+}
+main.create div.logo{
+    background-color: #2d2254;
+    text-align: center;
+}
+main.create div.logo img{
+    width: 150px;
+    margin: 20px 0;
+}
+main.create div.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+main.create div article div textarea, #desc{
+    height: 170px;
+    width: 80%;
+}
+
+main.create button{
+    background-color: #f1d367;
+    color: white;
+    padding: 5px;
+    width: 150px;
+    border-radius: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2px;
+}
+
+main.create button.borrar{
+    background-color: tomato;
+}
+
+main.create button.guardar{
+    background-color: green;
+}
+
+main.create div.contenedor article{
+    width: 90%;    background-color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    border-radius: 8%;
+}
+main.create div.contenedor article textarea{
+    margin-bottom: 20px;
+}
+main.create div.contenedor button{
+    align-self: center;
+}
+main.create div.contenedor2{
+    display: flex;
+    flex-direction: column;
+}
+main.create div.contenedor2 article{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    border-radius: 6%;
+}
+main.create div.contenedor2 article textarea{
+    margin-bottom: 20px;
+}
+main.create div.contenedor2 div{
+    align-self: center;
+    margin-top: 20px;
+    
+}
+main.create div.contenedor2 article div input{
+    display: none;
+}
+
+main.create div.contenedor2 article div label.file{
+    background-color: #f1d367;
+    color: white;
+    padding: 5px;
+    width: 150px;
+    border-radius: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+main.create div.contenedor2 .botonera-imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main.create article{
+    text-align: center;
+    margin: 20px 0;
+}
+main.create div.contenedor3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+main.create div.contenedor3 article{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    border-radius: 6%;
+}
+main.create div.contenedor3 article div{
+    margin: 15px 0;
+}
+main.create div.contenedor3 div label{
+    width: 100px;
+}
+main.create div.contenedor3 div select{
+    width: 100px;
+}
+main.create div.contenedor3 article div.ultimo-input{
+   margin-bottom: 20px;
+}
+main.create div.contenedor3 button{
+    align-self: center;
+}
+main.create div.contenedor4{
+    display: flex;
+    flex-direction: column;
+}
+main.create div.contenedor4 article{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    border-radius: 6%;
+}
+main.create div.contenedor4 article div{
+    margin: 15px 0;
+}
+main.create div.contenedor4 div label{
+    width: 55px;
+}
+main.create div.contenedor4 div select{
+    width: 100px;
+}
+main.create div.contenedor4 article div.ultimo-input{
+    margin-bottom: 20px;
+ }
+main.create div.contenedor4 button{
+    align-self: center;
+}
+main.create div.contenedor5{
+    display: flex;
+    flex-direction: column;
+}
+main.create div.contenedor5 article{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    border-radius: 6%;
+}
+main.create div.contenedor5 button{
+    align-self: center;
+}
+main.create div.contenedor5 div{
+    align-self: center;
+    margin: 20px 0;
+}
+main.create div.contenedor5 div label{
+    width: 125px;
+}
+main.create div.contenedor5 .botonera-bottom-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main.create h2{
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: black;
+    margin-top: 20px;
+}
+footer.admin-footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1d367;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 90px;
+}
+
+footer.admin-footer div{
+    width: 100px;
+    margin: 20px 0;
+    text-align: center;
+}
+footer.admin-footer div i{
+    font-size: 35px;
+    color: black;
+}
+
+@media (min-width: 480px){
+    main.create div.contenedor2 article div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main.create div.contenedor2 article div input{
+        align-self: center;
+    }
+    main.create div.contenedor2 article div textarea{
+        align-self: center;
+    }
+}
+
+/*main desktop*/
+@media (min-width: 769px){
+    main.create div.contenedor article{
+        border-radius: 0;
+    }
+    main.create div.contenedor2 article{
+        border-radius: 0;
+    }
+    main.create div.contenedor3 article{
+        border-radius: 0;
+    }
+    main.create div.contenedor4 article{
+        border-radius: 0;
+    }
+    main.create div.contenedor5 article{
+        border-radius: 0;
+    }
+
+}

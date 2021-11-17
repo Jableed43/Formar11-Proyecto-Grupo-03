@@ -1,0 +1,212 @@
+body.menu{
+    background-image: none;
+}
+.menu main {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.menu main  section.top-menu{
+    padding-top: 90px;
+    padding-bottom: 20px;
+    display: flex;
+    background-color: #f1d367;
+    justify-content: center;
+    align-self: center;
+}
+
+.menu main section.top-menu div{
+    width: 100px;
+    height: 110px;
+    margin: 0 10px;
+}
+.menu main section.top-menu div img{
+    border-radius: 50%;
+    border: 1.5px solid #2D2254;;
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    padding: 0;
+}
+.menu main section.top-menu div p{
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:  #2D2254;
+    
+ 
+    width: 100px;
+    text-align: center;
+}
+.menu main section.top-menu .items-menu{
+    display: none;
+}
+.menu main section.slogan{
+    display: flex;
+    background-color: rgba(255,255,255,0.5);
+    margin: 10px 0;
+    flex-direction: column;
+    align-self: center;
+}
+.menu main section.slogan h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.menu main section.slogan p{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+}
+.menu main section.articulos h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+.menu main section.articulos{
+    display: flex;
+   
+    justify-content: center;
+
+}
+.menu main section.articulos div.contenedor div.art1{
+    width: 250px;
+    height: 310px;
+    background-color: white;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+.menu main section.articulos div.contenedor div.art2{
+    width: 250px;
+    height: 310px;
+    background-color: white;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+.menu main section.articulos div.contenedor div.art3{
+    width: 250px;
+    height: 310px;
+    background-color: white;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+.menu main section.articulos div.contenedor div.art4{
+    width: 250px;
+    height: 310px;
+    background-color: white;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+.menu main section.articulos div.contenedor div.art1:hover{
+    background-color: #463686;
+    color: white;
+}
+.menu main section.articulos div.contenedor div.art2:hover{
+    background-color: #463686;
+    color: white;
+}
+.menu main section.articulos div.contenedor div.art3:hover{
+    background-color: #463686;
+    color: white;
+}
+.menu main section.articulos div.contenedor div.art4:hover{
+    background-color: #463686;
+    color: white;
+}
+.menu main section.articulos div.contenedor article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu main section.articulos div.contenedor article img{
+    width: 80%;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.menu main section.articulos div.contenedor article p{
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.menu main section.articulos div.contenedor article nav ul{
+    display: flex;
+    background-color: #f1d367;
+    justify-content: space-around;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    margin: 20px 0;
+}
+.menu main section.articulos div.contenedor article nav li{
+    margin-right: 22px;
+}
+.menu main section.articulos div.contenedor article button{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 85px;
+}
+.menu main section.articulos div.contenedor div.art2{
+    display: none;
+}
+.menu main section.articulos div.contenedor div.art3{
+    display: none;
+}
+.menu main section.articulos div.contenedor div.art4{
+    display: none;
+}
+
+
+/*main tablet*/
+@media (min-width: 361px){
+    .menu main section.top-menu .items-menu{
+        display: contents;
+    }
+    .menu main section.articulos div.contenedor div.art2{
+        display: block;
+    }
+    .menu main section.articulos div.productos{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
+
+
+/*main desktop*/
+@media (min-width: 769px) {
+    .menu main section.articulos div.productos{
+        justify-content: space-around;
+    }
+    .menu main section.articulos div.contenedor div.art3{
+        display: block;
+    }
+    .menu main section.articulos div.contenedor div.art4{
+        display: block;
+    }
+}

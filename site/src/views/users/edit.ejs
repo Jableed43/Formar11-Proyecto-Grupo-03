@@ -1,0 +1,97 @@
+<%- include("../partials/head.ejs") %>
+
+  <body class="log-reg">
+
+    <%- include("../partials/header.ejs") %>
+
+      <main class="login-register">
+
+          <section class="imagen">
+            <img src="/images/edit.png" style="width:100%">
+          </section>
+
+          
+          <section class="camposform">
+          <h1>Estas editando tus datos</h1>
+          <form action="edit/<%= userUpdate.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+            <div class="campo">
+              <label for="user">Nombre Completo</label>
+              <input type="text" value="<%= userUpdate.name %>" id="user" name="name" placeholder="Ingrese nombre completo..." required>
+              <% if (locals.errors && errors.name) { %>
+                <small class="mensajeError">
+                  <%= errors.name.msg %>
+                </small>
+                <% } %>
+            </div>
+
+            <div class="campo">
+              <label for="user">Correo Electrónico</label>
+              <input type="text" value="<%= userUpdate.email %>" id="user" name="email" placeholder="Ingrese e-mail..." required>
+              <% if (locals.errors && errors.email) { %>
+                <small class="mensajeError">
+                  <%= errors.email.msg %>
+                </small>
+                <% } %>
+            </div>
+
+            <div class="campo">
+            <label for="user">Sexo</label>
+            <select name="sexo" id="sexo" required>
+              <option name="sexo" selected hidden>Confirme este dato</option>
+              <% 
+                let sexo = ['Masculino','Femenino','Prefiero no decirlo']
+                %>
+                <% for (const sexSelec of sexo) { %>
+                  <option value="<%= sexSelec %>"><%= sexSelec %></option>
+                <% } %>
+              </select>
+              <% if (locals.errors && errors.sexo) { %>
+                <small class="mensajeError"> <%= errors.sexo.msg %> </small>
+                <% } %> 
+          </div>
+
+            <div class="campo">
+            <label for="user">Provincia</label>
+            <select name="provincia" id="provincia" required>
+              <option value="provincia" selected hidden>Confirme este dato</option>
+              <% 
+              let provincias = ['Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fé', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
+              %>
+              <% for (const unaPcia of provincias) { %>
+                <option value="<%= unaPcia %>"><%= unaPcia %></option>
+              <% } %>        
+            </select>
+            <% if (locals.errors && errors.provincia) { %>
+              <small class="mensajeError"> <%= errors.provincia.msg %> </small>
+              <% } %>
+          </div>
+
+          <div class="campo">
+          <label>Selecciona una nueva foto de perfil</label>
+          <div class="buttons">
+          <label for="img" >Subir imagen</label>
+          <input type="file" id="img" name="img" hidden multiple accept="image/*">
+          </div>
+          <% if (locals.errors && errors.img) { %>
+            <small class="mensajeError"> <%= errors.img.msg %> </small>
+            <% } %>
+          </div>
+
+            
+              <div class="buttons">
+              <label for="submit">Editar datos</label>
+              <input type="submit" id="submit" name="submit" value="Editar datos" hidden>
+              </div>
+
+          </form>
+        </section>
+
+
+      </main>
+
+      <%- include("../partials/footer.ejs") %>
+
+  </body>
+
+  </html>

@@ -1,0 +1,95 @@
+.log-reg * {
+  box-sizing: border-box;
+}
+
+.log-reg .login-register {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  width: 90vw;
+  margin: 5% auto 0;
+  padding: 5%;
+}
+
+.log-reg h1 {
+  text-align: center;
+  color: #2d2254;
+  font-size: 2em;
+}
+
+.log-reg small {
+  color: #f1d367;
+  background-color: #2d2254;
+  border-radius: 2px;
+  padding: 2px;
+  text-align: right;
+}
+.log-reg .camposform {
+  width: 100%;
+}
+
+.log-reg .campo {
+  margin: 5% auto;
+}
+
+.log-reg input {
+  width: 100%;
+  padding: 10px;
+}
+
+.log-reg .buttons {
+  margin: 10px auto;
+  width: fit-content;
+  background-color: #373737;
+  border: 1px solid #f1d367;
+  border-radius: 15px;
+  color: #f1d367;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 40px;
+  outline: none;
+  padding: 10px 15px;
+  text-align: center;
+  transition: all 300ms cubic-bezier(.23,1,.32,1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  align-self: center;
+  will-change: transform;
+}
+
+.log-reg .buttons:disabled {
+  pointer-events: none;
+}
+
+.log-reg .buttons:hover {
+  color: #f1d367;
+  background-color: #2d2254;
+  box-shadow: rgba(0, 0, 0, .25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.log-reg .buttons:active{
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.log-reg p {
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .log-reg .login-register {
+    max-width: 1200px;
+    display: flex;
+  } 
+
+  .log-reg .imagen {
+    width: 50%;
+  }
+
+  .log-reg .camposform {
+    width: 50%;
+  }
+}

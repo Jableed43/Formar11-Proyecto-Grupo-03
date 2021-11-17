@@ -1,0 +1,102 @@
+<%- include("../partials/head.ejs") %>
+
+<body class="Detalleprodu">
+    
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <button class="menu">Volver al Menú</button>
+        <div class="foto-container">
+          <button class="antsig">&#8249;</button>
+          
+          <!-- Imagen producto -->
+          <img class="foto" src="/images/imgmenu/<%= productDetail.images %>" alt="Foto de producto" width="100%">
+
+         <button class="antsig">&#8250;</button>
+        </div>
+        
+          <!-- Legales -->
+
+        <div  class="legales">
+          <p>Legales</p>
+        </div>
+
+        <!-- Información producto -->
+        <section class="detalle">
+            <article class="categoria"><%= productDetail.category %> / <%= productDetail.subcategory %></article>
+            
+            <h1 class="nombreprod"><%= productDetail.title%></h1>
+            
+            <p class="desc"><%= productDetail.description %></p>
+
+          <!-- Gusto de producto -->
+            <div class="opciones">
+            <button selected class="gusto">Carne</button> <button class="gusto">Pollo</button>
+            </div>
+            
+            <article class="cantycarr">
+            <a href="#" class="cant">-</a>
+            <input type="number" class="numero" value="1" >
+            <a href="#" class="cant">+</a>
+            
+            <a href="/users/carrito" class="carrito">Agregar al Carrito</a>
+            </article>
+
+            <article class="tablainfo">
+                <div class="columna">
+                  <div class="carta"><%= productDetail.calories %><br>Calorías</div>
+                </div>
+                <div class="columna">
+                  <div class="carta"><%= productDetail.totalfat %><br>Grasas(g)</div>
+                </div>
+                <div class="columna">
+                  <div class="carta"><%= productDetail.protein %><br>Prot (g)</div>
+                </div>
+                <div class="columna">
+                  <div class="carta"><%= productDetail.carb %><br>Carb (g)</div>
+                </div>
+            </article>
+
+            <h2>Información Nutricional</h2>
+
+            <article>
+              <table>
+                <tr>
+                  <td class="c1">Grasa Saturada (g)</td>
+                  <td class="c2"><%= productDetail.saturatedfat %></td>
+                  <tr>
+                    <td class="c1">Grasas trans (g)</td>
+                    <td class="c2"><%= productDetail.transfat %></td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Colesterol (mg)</td>
+                    <td class="c2"><%= productDetail.cholesterol %></td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Azúcares (g)</td>
+                    <td class="c2"><%= productDetail.sugars %></td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Sodio (mg)</td>
+                    <td class="c2"><%= productDetail.sodium %></td>
+                  </tr>
+                  <tr>
+                    <td class="c1">Fibra (g)</td>
+                    <td class="c2"><%= productDetail.fiber %></td>
+                  </tr>
+                </tr>
+                </tr>
+              </table>
+            </article>
+
+            <div class="final-buttons">
+              <a href="/products/create"><button class="b1">Crear</button></a><a href="/products/edit/<%= productDetail.id %>"><button class="b2">Editar</button></a><form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST"><button class="b3">Eliminar</button></form>
+            </div>
+        </section>
+
+    </main>
+    
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+</html>

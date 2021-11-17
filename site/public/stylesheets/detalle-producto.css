@@ -1,0 +1,334 @@
+body.Detalleprodu {
+  background-image: url(/images/Menu/mobile-gris.png);
+}
+
+.Detalleprodu main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+/* Botón Volver a página menú */
+.Detalleprodu main .menu {
+  border: 1px solid grey;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+  width: 26vw;
+  border-radius: 10px;
+  height: 4%;
+  position: absolute;
+  top: 85px;
+  left: 20px;
+  background-color: #2d2254;
+}
+
+.Detalleprodu .menu:hover{
+  background-color: #3b3a36;
+}
+
+/* Cuadro de foto y botones antsig */
+.foto-container{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Detalleprodu .foto {
+  background-color: white;
+  width: 90vw;
+}
+
+/* Botones para moverse entre productos */
+.Detalleprodu .antsig {
+  border: none;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #2d2254;
+  font-weight: bolder;
+  font-size: 3em;
+  width: 8%;
+}
+
+.Detalleprodu .antsig:hover {
+  color: #f1d367;
+}
+
+/* Cuadro con información de plato */
+.Detalleprodu .detalle {
+  width: 90vw;
+  background-color: #f1d367;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* Categoría */
+.Detalleprodu .categoria {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .7em;
+  color: #373737;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.Detalleprodu h1 {
+  color: #2d2254;
+  font-size: 2em;
+  text-align: center;
+}
+
+
+
+.Detalleprodu .desc {
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+  color: #373737;
+}
+
+
+
+/* Botones de gusto */
+
+.Detalleprodu div.opciones{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.Detalleprodu .gusto {
+background-color: #f1d367;
+border: none;
+border-radius: 5px;
+color: black;
+font-size: 1em;
+text-align: center;
+transition: 0.3s;
+width: 60px;
+margin-top: 15px;
+
+
+}
+
+.Detalleprodu .gusto:hover {
+    background-color: #2d2254;
+    color: white;
+}
+
+/* Cantidad y agregar carrito */
+.Detalleprodu .cantycarr {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.Detalleprodu .cant {
+  background-color: #2d2254;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 900;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 30px;
+
+ 
+}
+
+.Detalleprodu main input {
+  text-align: center;
+  width: 30px;
+}
+
+.Detalleprodu .carrito{
+  background-color: #312757;
+  border: none;
+  border-radius: 5px;
+  color:white;
+  font-size: .8em;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  width: 25%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
+
+/* Columnas de info */
+.Detalleprodu .tablainfo{
+  content: "";
+  display: table;
+  clear: both;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.Detalleprodu .columna {
+  float: center;
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.Detalleprodu .carta {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/* Grilla nutricional */
+.Detalleprodu h2 {
+  display: block;
+  background-color: white;
+  color: #373737;
+  font-size: 1em;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 7px;
+}
+
+.Detalleprodu table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 80%;
+  border: none;
+  padding-bottom: 15px;
+  margin: auto;
+}
+
+.Detalleprodu th, td {
+  text-align: left;
+  padding: 2%;
+}
+
+.Detalleprodu tr:nth-child(even) {
+  background-color: #eed887;
+}
+
+.Detalleprodu .c1 {
+  font-weight: 300;
+  color: #373737;
+  font-size: .8em;
+}
+
+.Detalleprodu .c2 {
+  font-weight: 500;
+  color: #373737;
+  text-align: right;
+  font-size: .8em;
+}
+.Detalleprodu section div.final-buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Detalleprodu section div.final-buttons button{
+  width: 80px;
+  height: 30px;
+  margin: 0 5px;
+  font-size: 20px;
+  color: black;
+  border: none;
+}
+.Detalleprodu section div.final-buttons button.b1{
+  background-color: green 
+}
+.Detalleprodu section div.final-buttons button.b2{
+  background-color: yellow;
+}
+.Detalleprodu section div.final-buttons button.b3{
+  background-color: red;
+}
+
+
+/* Condiciones legales */
+.Detalleprodu .legales {
+  display: flex;
+  color: #373737;
+  margin: 0px 23px;
+  font-size: 10px;
+  order: 1;
+  margin-top: 20px;
+}
+
+@media (min-width: 960px) {
+  .Detalleprodu main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.legales p{
+    font-size: 17px;
+    width: 55%;
+}
+
+ 
+
+  .Detalleprodu .foto {
+    width: 80%;
+  }
+
+  .foto-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+  .Detalleprodu .detalle {
+    width: 40%;
+    margin-left: 40px;
+    margin-top: 50px;
+    padding-bottom: 70px;
+    margin-bottom: 60px;
+  }
+
+
+  .Detalleprodu .legales {
+    width: 100%;
+    display: flex;
+    color: #373737;
+    margin: 0px 23px;
+    font-size: 13px;
+    order: 1;
+    margin-left: 50px;
+  }
+}
+
+
+@media (min-width: 1024px){
+.Detalleprodu main .menu {
+  border: 1px solid grey;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+  width: 26vw;
+  border-radius: 10px;
+  height: 4%;
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  background-color: #2d2254;
+}
+}

@@ -1,0 +1,121 @@
+<%- include("../partials/head.ejs") %>
+
+  <body class="log-reg">
+
+    <%- include("../partials/header.ejs") %>
+
+      <main class="login-register">
+
+          <section class="imagen">
+            <img src="/images/register.png" style="width:100%">
+          </section>
+
+          
+          <section class="camposform">
+          <h1>¡Sumate a Tacopado!</h1>
+          <form action="register" method="post" enctype="multipart/form-data">
+
+            <div class="campo">
+              <label for="user">Nombre Completo</label>
+              <input type="text" value="<%= locals.old && old.name ? old.name : '' %>" id="user" name="name" placeholder="Ingrese nombre completo...">
+              <% if (locals.errors && errors.name) { %>
+                <small class="mensajeError">
+                  <%= errors.name.msg %>
+                </small>
+                <% } %>
+            </div>
+
+            <div class="campo">
+              <label for="user">Correo Electrónico</label>
+              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="user" name="email" placeholder="Ingrese e-mail...">
+              <% if (locals.errors && errors.email) { %>
+                <small class="mensajeError">
+                  <%= errors.email.msg %>
+                </small>
+                <% } %>
+            </div>
+
+            <div class="campo">
+              <label for="password">Contraseña</label>
+              <input type="password" id="p1" name="password" placeholder="Ingrese contraseña...">
+            <% if (locals.errors && errors.password) { %>
+              <small class="mensajeError"> <%= errors.password.msg %> </small>
+              <% } %>
+            </div>
+
+            <div class="campo">
+              <label for="password">Confirmar Contraseña</label>
+              <input type="password" id="p2" name="p2" placeholder="Ingrese contraseña...">
+            <% if (locals.errors && errors.p2) { %>
+              <small class="mensajeError"> <%= errors.p2.msg %> </small>
+              <% } %>
+            </div>
+
+            <div class="campo">
+            <label for="user">Sexo</label>
+            <select name="sexo" id="sexo">
+              <option name="sexo" selected hidden>Seleccione aquí</option>
+              <% 
+                let sexo = ['Masculino','Femenino','Prefiero no decirlo']
+                %>
+                <% for (const sexSelec of sexo) { %>
+                  <option value="<%= sexSelec %>"><%= sexSelec %></option>
+                <% } %>
+              </select>
+              <% if (locals.errors && errors.sexo) { %>
+                <small class="mensajeError"> <%= errors.sexo.msg %> </small>
+                <% } %> 
+          </div>
+
+            <div class="campo">
+            <label for="user">Provincia</label>
+            <select name="provincia" id="provincia">
+              <option value="provincia" selected hidden>Seleccione aquí</option>
+              <% 
+              let provincias = ['Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fé', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
+              %>
+              <% for (const unaPcia of provincias) { %>
+                <option value="<%= unaPcia %>"><%= unaPcia %></option>
+              <% } %>        
+            </select>
+            <% if (locals.errors && errors.provincia) { %>
+              <small class="mensajeError"> <%= errors.provincia.msg %> </small>
+              <% } %>
+          </div>
+
+          <div class="campo">
+          <label>Selecciona una foto de perfil</label>
+          <div class="buttons">
+          <label for="img" >Subir imagen</label>
+          <input type="file" id="img" name="img" hidden multiple accept="image/*">
+          </div>
+          <% if (locals.errors && errors.img) { %>
+            <small class="mensajeError"> <%= errors.img.msg %> </small>
+            <% } %>
+          </div>
+
+            
+              <p>Al crear una cuenta, aceptas las <a href="#">Condiciones de uso</a> y <a href="#">Aviso de
+                  privacidad</a> de Tacopado</p>
+              <div class="buttons">
+              <label for="submit">Registrarme</label>
+              <input type="submit" id="submit" name="submit" value="Registrarme" hidden>
+              </div>
+
+              <div>
+                <p>¿Ya tenes una cuenta?</p>
+                <div class="buttons">
+                <a href="/users/login" id="login" name="login" value="login">Iniciá sesión</a>
+              </div>
+
+          </form>
+        </section>
+
+
+      </main>
+
+      <%- include("../partials/footer.ejs") %>
+
+  </body>
+
+  </html>

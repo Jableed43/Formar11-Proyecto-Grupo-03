@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "/stylesheets/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ef88cf4afb.js" crossorigin="anonymous"></script>
+    <title>Administrador</title>
+</head>
+<body class="admin">
+
+    <%- include("../partials/admin-header.ejs") %>
+    
+    <main>
+
+      <h3>Listado de productos</h3>
+
+      <a href="/admin/create">
+         <div class="top-button">
+           <button>Nuevo Producto <i class="fas fa-plus"></i></button>
+         </div>
+      </a>
+      <div class="table-responsive">
+       <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Categoría</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="taco">Taco</td>
+            <td>$400</td>
+            <td>Comida</td>
+            <td>
+              <a href="admin/edit">
+                 <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </div>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Burrito</td>
+            <td>$500</td>
+            <td>Comida</td>
+            <td>
+              <a href="admin/edit">
+                <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+                </div>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Quesadilla</td>
+            <td>$400</td>
+            <td>Comida</td>
+            <td>
+              <a href="admin/edit">
+                <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+                </div>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Nachos</td>
+            <td>$600</td>
+            <td>Comida</td>
+            <td>
+              <a href="admin/edit">
+                <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+                </div>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Papas</td>
+            <td>$600</td>
+            <td>Comida</td>
+            <td>
+              <a href="admin/edit">
+                <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+                </div>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Bebida</td>
+            <td>$300</td>
+            <td>Bebida</td>
+            <td>
+              <a href="admin/edit">
+                <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+                </div>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Postre</td>
+            <td>$500</td>
+            <td>Postre</td>
+            <td>
+              <a href="admin/edit">
+                <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+                </div>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Salsa</td>
+            <td>$200</td>
+            <td>Salsa</td>
+            <td>
+              <a href="admin/edit">
+                <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+
+                </div>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+       </table>
+      </div> 
+    </main>
+
+    <%- include("../partials/admin-footer.ejs") %>
+    
+</body>
+</html>

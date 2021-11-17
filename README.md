@@ -2,15 +2,20 @@
 ---
 ## Integrantes:
 ---
+## Gutierrez Micaela Desireé:
+- 24 años, estudiante de Desarrollo Web Full Stack con Fundación Formar y Digital House, reside en Castelar - Pcia de Buenos Aires.
+---
+## Keilty Gabriel:
+- 32 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+---
 ## Lopez Javier Nehuen:
 - 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
 ---
 ## Sanchez Florencia Teresita:
-- 29 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+- 29 Años, Desarrolladora Web Full Stack en Digital House y Fundación Formar.
 ---
-## Yamila Vecces:
-- 21 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
----
+
+
 ## ***Bienvenidos a TacoPado***
 Ofrecemos una página pensada y realizada para los jovenes que quieren experimentar un viaje gastronomico a traves de nuestras especialidades mexicanas. Contamos con un variedad de ingredientes de alta calidad en nuestros productos que hacen de nuestra comida la mejor y a precio accesible. Queremos beneficiar a nuestros clientes mas comprometidos a traves de un programa de puntos.En nuestros servicios incluimos un carrito de compras para que agilmente puedan seleccionar a gusto nuestros productos y poder adquirirlos desde la comodidad de sus hogares.
 

@@ -1,0 +1,65 @@
+<header>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Vamo' Arriba</button>
+
+    <div class="flex-header">
+        <a href="http://localhost:3030/">
+          <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
+        </a>
+  
+          <div id="input">
+            <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
+        </div>
+
+
+        <input type="checkbox" id='user'>          
+        <% if (locals.userLogin) { %>
+          <label for='user' class="input-user"><img class="imgUser" src="/images/users/<%= locals.userLogin.img ? locals.userLogin.img : 'default-img.jpg'%>" alt="imagen de usuario"> </label>
+        <%  }else{ %> 
+          <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+        <% } %>
+          <div class="user-cart">
+          <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+
+
+        <input type="checkbox" id='menu'>
+        <label for='menu' class="menu-bars">☰</label>
+        <nav class="container-menu">
+          <ul class="menu">
+            <li class="texto"><a href="http://localhost:3030/products">Menu</a> </li>
+            <li class="texto"><a href="#suc">Sucursales</a> </li>
+        </ul>
+        <ul class="menu-hiden"><div class="logo-desktop"><a href="http://localhost:3030/"><img src="/images/Menu/logo/Logo.png" alt="logo"></a></div>
+        </ul>
+
+        <ul class="menu">
+          <li class="texto"><a href= "#nos">Nosotros</a> </li>
+          <li class="texto"><a href="http://localhost:3030/contacto">Contacto</a> </li>
+        </ul>
+        </nav>
+
+
+
+
+        <nav class="container-user">
+
+              
+          
+            <% if (locals.userLogin) { %>  
+              <ul class="user">      
+                    <li class="texto"><a href="/users/user">Mi Perfil</a> </li>
+                    <li class="texto"><a href="/users/logout">Cerrar Sesión</a> </li> 
+                  </ul>
+
+            <%  }else{ %>     
+              <ul class="user">                
+                <li class="texto"><a href="/users/login">Ingresar</a> </li>
+                <li class="texto"><a href="/users/register">Registrarse</a> </li> 
+              </ul>
+            <% } %>    
+    
+
+      </nav>
+
+    </div>
+</header>
