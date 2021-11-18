@@ -45,7 +45,7 @@ let controller = {
     // Update - Form to edit
     edit: (req, res) => {
         let productEdit = products.find(e => e.id === +req.params.id)
-        res.render('editProduct', { productEdit })
+        res.render('admin/editProduct', { productEdit })
     },
     // Update - Method to update
     update: (req, res) => {
@@ -67,9 +67,9 @@ let controller = {
             productUpdate.sodium = sodium
             productUpdate.sugars = sugars
             productUpdate.fiber = fiber
+            productUpdate.img = req.file ? req.file.filename : null
 
-
-            fs.writeFileSync(productsFilePath, JSON.stringify(products))
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
 
             res.redirect(`/products/detail/$(req.params.id)`)
         } else {
@@ -81,7 +81,7 @@ let controller = {
     destroy: (req, res) => {
         products = products.filter(product => product.id === +req.params.id)
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products))
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
 
         res.redirect('/')
     }
