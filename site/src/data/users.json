@@ -152,5 +152,15 @@
     "img": "default-img.jpg",
     "sexo": "Femenino",
     "provincia": "Río Negro"
+  },
+  {
+    "id": 17,
+    "rol": "client",
+    "name": "robertito gonzalez",
+    "email": "robertito@yahoo.com",
+    "password": "$2a$10$ljpIZMAwAPdZ8CZvzBGmuuG1b3UxijbdD.OjSvQ653RBuYNOV8axS",
+    "img": "default-img.jpg",
+    "sexo": "Masculino",
+    "provincia": "Buenos Aires"
   }
 ]
