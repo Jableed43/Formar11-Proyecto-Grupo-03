@@ -4,7 +4,7 @@ const { check, body } = require('express-validator');
 const validacionesProducts = [
     check('title').notEmpty().withMessage('Debes completar el campo de nombre de producto'),
     check('description').notEmpty().withMessage('Debes incluir una descripción'),
-    check('category').notEmpty().withMessage('Debes seleccionar una opción'),
+    check('category').custom("category" !== "null" || "default" ? "true" : "false"),
     check('subcategory').notEmpty().withMessage('Debes seleccionar una opción'),
     check('price').notEmpty().withMessage('Debes indicar un precio de venta'),
     check('calories').notEmpty().withMessage('Debes completar el campo'),

@@ -29,6 +29,8 @@
       <div class="contenedor2">
         <article>
             <h2>Imagen del producto</h2>
+
+            <img class="prod" src="/images/imgmenu/<%= productEdit.images %>" alt="Foto producto actual">
             <div>
             <input type="file" id="images" name="images" hidden multiple accept="image/*">
             <label class="file" for="images">Foto Producto</label>
@@ -61,7 +63,7 @@
           <div>
             <label for="subcategoria">Subcategoría</label>
             <select name="subcategory" id="subcategory" required>
-              <option value="subcategory" selected hidden>Seleccione aquí</option>
+              <option value="subcategory" name= "default" selected hidden>Seleccione aquí</option>
               <% 
               let subcategory = ['Tacos', 'Burritos', 'Quesadillas', 'Entradas', 'Platos', 'Ensaladas', 'Salsas', 'Dulces', 'Gaseosas', 'Jugo', 'Agua']
               %>

@@ -49,7 +49,7 @@ let controller = {
     // Update - Method to update
     update: (req, res) => {
         let productUpdate = products.find(product => product.id === +req.params.id)
-        const { title, price, category, subcategory, description, calories, totalfat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber } = req.body
+        const { title, price, category, subcategory, description, calories, totalfat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber,images } = req.body
         if (productUpdate) {
             productUpdate.title = title
             productUpdate.price = +price
@@ -66,7 +66,7 @@ let controller = {
             productUpdate.sodium = sodium
             productUpdate.sugars = sugars
             productUpdate.fiber = fiber
-            productUpdate.img = req.file ? req.file.filename : null
+            productUpdate.images = req.file ? req.file.filename : productUpdate.images
 
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
 

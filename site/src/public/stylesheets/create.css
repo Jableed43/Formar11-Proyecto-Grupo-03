@@ -230,6 +230,11 @@ small {
     text-align: right;
 }
 
+.prod {
+    width: 50vw;
+    border: #f1d367 solid 2px;
+}
+
 @media (min-width: 480px){
     main.create div.contenedor2 article div{
         display: flex;
@@ -260,6 +265,10 @@ small {
     }
     main.create div.contenedor5 article{
         border-radius: 0;
+    }
+    .prod {
+        width: 30vw;
+        border: #f1d367 solid 2px;
     }
 
 }
