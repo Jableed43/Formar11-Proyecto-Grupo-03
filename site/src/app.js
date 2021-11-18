@@ -31,7 +31,12 @@ app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..','public')));
 app.use(methodOverride('_method'));
-app.use(session({secret: 'clave secreta'}));
+
+app.use(session({
+  secret: 'cookie_secret',
+  resave: true,
+  saveUninitialized: true
+}));
 app.use(recordame);
 
 app.use(cookieReminder);

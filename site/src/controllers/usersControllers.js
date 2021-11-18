@@ -88,7 +88,7 @@ const controller = {
             req.session.userLogin = {
                 id : user.id,
                 name : user.name,
-                avatar : user.avatar,
+                img : user.img,
                 rol : user.rol
             }
             if(req.body.recordarme){
