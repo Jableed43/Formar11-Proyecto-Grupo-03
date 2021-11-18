@@ -34,6 +34,7 @@ module.exports = {
       },
       id_order: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references:{
           model:{
             tableName:'Orders'
