@@ -15,7 +15,7 @@ router.post('/create', upload.single('images'), validacionesProducts, adminContr
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', adminController.edit); 
-router.put('/edit/:id', adminController.update); 
+router.put('/edit/:id', validacionesProducts, adminController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 
