@@ -49,7 +49,7 @@ let controller = {
     // Update - Method to update
     update: (req, res) => {
         let productUpdate = products.find(product => product.id === +req.params.id)
-        const { title, price, category, subcategory, description, calories, totalfat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber,images } = req.body
+        const { title, price, category, subcategory, description, calories, totalfat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, images } = req.body
         if (productUpdate) {
             productUpdate.title = title
             productUpdate.price = +price

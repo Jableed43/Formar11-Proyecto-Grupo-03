@@ -179,12 +179,12 @@
             <% } %>
             
           <div>
-            <label for="Azúcares" name="sugar" id="sugar">Azúcares</label>
-            <input type="number" placeholder="(g)" name="sugar" id="sugar">
+            <label for="Azúcares" name="sugars">Azúcares</label>
+            <input type="number" placeholder="(g)" name="sugars">
           </div>
-          <% if (locals.errors && errors.sugar) { %>
+          <% if (locals.errors && errors.sugars) { %>
             <small class="mensajeError">
-              <%= errors.sugar.msg %>
+              <%= errors.sugars.msg %>
             </small>
             <% } %>
                         
