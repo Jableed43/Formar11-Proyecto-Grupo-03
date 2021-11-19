@@ -47,7 +47,7 @@ router.get('/carrito', usersControllers.carrito);
 router.get('/user',usersControllers.perfil);
 
 /* PUT editar */
-router.get('/edit/user', usersControllers.edit);
+router.get('/edit/user/:id', usersControllers.edit);
 router.put('/edit/user', usersControllers.update);
 
 /* DELETE user */ 

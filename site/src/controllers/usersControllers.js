@@ -114,7 +114,8 @@ const controller = {
     }, 
     edit: (req,res,next) => {
         const userEdit = users.find(e => e.id === +req.params.id)
-        res.render(`users/edit/${req.params.userEdit.id}`, {userEdit})
+        res.render('users/edit', 
+            {product : products.find(product => product.id === +req.params.id)})
     },
     // Para modificar datos de usuario
     update: (req,res,next) => {
