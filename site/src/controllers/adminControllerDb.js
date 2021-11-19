@@ -73,15 +73,26 @@ module.exports = {
     },
     update: (req, res, next) => {
         
-        const { title, price, category, subcategory, description } = req.body;
+        const { title, description, price, calories, total_fat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory } = req.body;
 
         let img = req.files[0] ? req.files[0].filename : undefined;
 
         db.Product.update({
             title,
             price,
-            subcategoryId: subcategory,
-
+            description,
+            calories,
+            total_fat,
+            carb,
+            protein,
+            transfat, 
+            saturatedfat, 
+            cholesterol, 
+            sodium,
+            sugars,
+            fiber,
+            img : images,
+            Id_subcategory: subcategory
         },
             {
                 where: {
@@ -95,7 +106,8 @@ module.exports = {
                 res.send(error)
             })
     },
-    deleteWine: (req, res) => {
+    // Delete - Delete one product from DB
+	destroy: (req, res) => {
 
         db.Product.destroy({
             where: {
@@ -103,7 +115,7 @@ module.exports = {
             }
         })
             .then(result => {
-                return res.redirect("/admin/products")
+                return res.redirect('/admin')
             })
             .catch((error) => {
                 res.send(error)
