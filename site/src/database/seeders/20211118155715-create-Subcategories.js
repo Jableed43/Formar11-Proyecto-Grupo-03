@@ -13,13 +13,37 @@ module.exports = {
           id_category: 1          
         },
         {
+          name : 'Agua',
+          id_category: 1          
+        },
+        {
           name : 'Taco',
           id_category: 2        
         },
         {
           name : 'Burrito',
           id_category: 2        
-        }    
+        },
+        {
+          name : 'Quesadilla',
+          id_category: 2        
+        },
+        {
+          name : 'Chips',
+          id_category: 2        
+        },
+        {
+          name : 'Papas',
+          id_category: 2        
+        },
+        {
+          name : 'Nachos',
+          id_category: 2        
+        },
+        {
+          name : 'Chile',
+          id_category: 2        
+        } 
       ], {});
    
   },

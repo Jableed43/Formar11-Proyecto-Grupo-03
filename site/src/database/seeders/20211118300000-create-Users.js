@@ -11,7 +11,7 @@ let users = [
     "img": "default-img.jpg",
     "id_rol": 1
   },
-  {Provinces
+  {
     "name": "Mace Cadd",
     "email": "mcadd1@gmail.com",
     "password": bcrypt.hashSync('123123',10),
