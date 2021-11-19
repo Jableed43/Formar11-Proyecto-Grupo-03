@@ -5,7 +5,7 @@ const adminUserCheck = require('../middlewares/adminUserCheck')
 
 
 /* GET home page. */
-router.get('/', adminUserCheck, adminController.admin);
+router.get('/', adminUserCheck, adminController.list);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', adminController.create); 

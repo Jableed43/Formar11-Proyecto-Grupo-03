@@ -5,10 +5,10 @@ const multer = require('multer');
 
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index); 
+router.get('/', productsController.list); 
 
 /* GET detalle de productos */
-router.get('/detail/:id', productsController.detalle);
+router.get('/detail/:id', productsController.detail);
 
 
 
