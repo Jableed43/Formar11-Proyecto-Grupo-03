@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
-let productsController = require('../controllers/productsControllerDb')
+let productsControllerDb = require('../controllers/productsControllerDb')
 const multer = require('multer');
 
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index); 
+router.get('/', productsControllerDb.list); 
 
 /* GET detalle de productos */
-router.get('/detail/:id', productsController.detalle);
+router.get('/detail/:id', productsControllerDb.detail);
 
 
 

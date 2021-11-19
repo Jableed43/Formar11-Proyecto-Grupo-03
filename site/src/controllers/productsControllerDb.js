@@ -3,7 +3,7 @@ const {Op} = require ('sequelize')
 
 module.exports = {
     list: (req,res) => {
-        db.products.findAll()
+        db.Product.findAll()
         .then(productos => {
             let Tacos = products.filter(element => element.subcategory === "Tacos")
 		    let Burritos = products.filter(element => element.subcategory === "Burritos")
@@ -23,7 +23,7 @@ module.exports = {
         })
     },
     detail: (req,res) => {
-        db.products.findByPK(+req.params.id)
+        db.Product.findByPK(+req.params.id)
         .then(producto => {
             res.render('detalle-producto', {products : producto})
         })
