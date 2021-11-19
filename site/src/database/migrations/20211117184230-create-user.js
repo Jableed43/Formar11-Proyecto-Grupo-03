@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      p1: {
+      password: {
         type: Sequelize.STRING,
         allowNull: false
       },
@@ -50,7 +50,7 @@ module.exports = {
           key:'id'
         }
       },
-      avatar: {
+      img: {
         type: Sequelize.STRING,
         allowNull: false
       }

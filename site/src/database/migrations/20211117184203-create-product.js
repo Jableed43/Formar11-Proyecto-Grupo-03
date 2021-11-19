@@ -28,7 +28,7 @@ module.exports = {
         type: Sequelize.DECIMAL,
         allowNull: false
       },
-      total_fat: {
+      totalfat: {
         type: Sequelize.DECIMAL,
         allowNull: false
       },

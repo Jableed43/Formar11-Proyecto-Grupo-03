@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     price: DataTypes.DECIMAL,
     calories: DataTypes.DECIMAL,
-    total_fat: DataTypes.DECIMAL,
+    totalfat: DataTypes.DECIMAL,
     carb: DataTypes.DECIMAL,
     protein: DataTypes.DECIMAL,
     transfat: DataTypes.DECIMAL,
