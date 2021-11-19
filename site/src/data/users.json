@@ -3,10 +3,11 @@
     "id": 1,
     "name": "Taco",
     "email": "tacopado@gmail.com",
-    "password": "tacotaco",
+    "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
     "sexo": "m",
     "provincia": "Buenos Aires",
-    "img": "default-img.jpg"
+    "img": "default-img.jpg",
+    "rol": "admin"
   },
   {
     "id": 2,
@@ -36,11 +37,12 @@
     "img": "images.jpg"
   },
   {
-    "name": "Juan Carlos",
-    "email": "comoestas@asd.com",
+    "id": 5,
+    "name": "jorge",
+    "email": "jorge@jorgecompany.com",
     "password": [
-      "321",
-      "321"
+      "898989",
+      "898989"
     ],
     "sexo": "m",
     "provincia": "Chaco",

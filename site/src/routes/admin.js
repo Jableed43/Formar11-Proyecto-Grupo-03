@@ -4,10 +4,11 @@ let adminController = require ('../controllers/adminControllers')
 let multer = require('multer');
 let upload = require ('../middlewares/multerProducts')
 let validacionesProducts = require ('../middlewares/validProducts')
+const adminUserCheck = require('../middlewares/adminUserCheck')
 
 
 /* GET home page. */
-router.get('/', adminController.admin);
+router.get('/', adminUserCheck, adminController.admin);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', adminController.create); 
