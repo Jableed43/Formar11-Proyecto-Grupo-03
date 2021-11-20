@@ -1,5 +1,6 @@
 const { check, body } = require('express-validator');
 
+
 // Validaciones para carga y edición de productos
 const validacionesProducts = [
     check('title').notEmpty().withMessage('Debes completar el campo de nombre de producto'),

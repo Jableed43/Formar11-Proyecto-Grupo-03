@@ -13,11 +13,11 @@
           
           <section class="camposform">
           <h1>¡Logueate!</h1>
-          <form action="users/login" method="post">
+          <form action="/users/login" method="POST">
 
             <div class="campo">
               <label for="user">Tu Correo Electrónico</label>
-              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="user" name="email" class="form-control <% locals.errors && errors.email ? 'is-invalid' : 'null' %>" placeholder="Ingrese e-mail registrado..." required>
+              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="user" name="email" placeholder="Ingrese e-mail registrado..." required>
               <% if (locals.errors && errors.email) { %>
                 <small class="mensajeError">
                   <%= errors.email.msg %>
@@ -27,10 +27,10 @@
 
             <div class="campo">
               <label for="password">Contraseña</label>
-              <input type="password" id="p1" name="p1" class="form-control <% locals.errors && errors.password ? 'is-invalid' : 'null' %>" placeholder="Ingrese su contraseña..." required>
-            <% if (locals.errors && errors.p1) { %>
-              <small class="mensajeError"> <%= errors.p1.msg %> </small>
-              <% } %>
+              <input type="password" id="password" name="password" placeholder="Ingrese su contraseña..." required>
+              <% if (locals.errors && errors.msg) { %>
+                <small class="mensajeError"> <%= errors.msg %> </small>
+                <% } %>
             </div>
 
               <div class="buttons">
@@ -39,8 +39,8 @@
               </div>
 
               <div>
-                <p>Recordarme</p>
-                <input type="checkbox" name="recordame" id="recordame">
+                <input type="checkbox" name="recordarme" id="recordarme"><p>Recordarme</p>
+            </div>
               </div>
 
               <p>¿Sos nuevo en Tacopado?</p>

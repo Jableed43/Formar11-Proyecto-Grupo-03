@@ -15,6 +15,13 @@ margin-bottom: 5px;
 width: 95px;
 }
 
+.imgUser{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .logo-desktop{
   display: none;
 }
@@ -119,6 +126,11 @@ display: block;
 
 /* Header */
 
+
+.imgUser{
+  width: 60px;
+  height: 60px;
+}
  i.fas.fa-user, i.fas.fa-shopping-cart{
   font-size: 50px;
   display: inline;

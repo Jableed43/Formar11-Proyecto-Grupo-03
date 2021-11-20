@@ -29,6 +29,11 @@ body{
 /* Header */
 
 
+/* Go Top Button */
+
+
+
+
 /* main */
 
 /* Slideshow */
@@ -132,7 +137,7 @@ body{
 
 .home main section.top-menu div img{
     border-radius: 50%;
-    border: 1.5px solid #2D2254;;
+    border: 1.5px solid #2D2254;
     width: 80px;
     height: 80px;
     margin-left: 10px;
@@ -432,6 +437,10 @@ display: none;
   padding: 40px 10px;
   font-weight: 700;
   text-align: center;
+ }
+
+ .home .beneficios a{
+  color: #f1d367;
  }
 
  .home  .unite{

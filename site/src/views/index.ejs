@@ -12,12 +12,12 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <a href="http://localhost:3030/products"><img src="/images/Carrousel/slide1.jpg" style="width:100%"></a>
+            <a href="/products"><img src="/images/Carrousel/slide1.jpg" style="width:100%"></a>
           </div>
         
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <a href="http://localhost:3030/users/register"><img src="/images/Carrousel/slide2.jpg" style="width:100%"></a>
+            <a href="/users/register"><img src="/images/Carrousel/slide2.jpg" style="width:100%"></a>
           </div>
         
           <div class="mySlides fade">
@@ -130,7 +130,7 @@
   
           <section class="beneficios">
             <p>Compa sumese a la pachanga, y disfrute de CHIDOS BENEFICIOS</p>
-            <button class="unite">Quiero ser Cuate!</button>
+            <button class="unite"> <a href="/users/register"> Quiero ser Cuate!</a></button>
           </section>
   
           <section class="eligen">
@@ -148,7 +148,7 @@
             </div>
             <div class="fondo-eligen">
               <h1>Andas como lima nueva? Pedí tus tacos!</h1>
-              <button id="ACA">Ándale!</button>
+              <button id="ACA"> <a href="/menu"> Ándale! </a></button>
             </div>
   
           </section>
@@ -176,8 +176,8 @@
 
       <%- include("./partials/footer.ejs") %>
       <script src="/javascripts/CARROUSEL.js"></script>
-
       <script src="/javascripts/menu-bar.js"></script>
+
 
   </body>
 </html>

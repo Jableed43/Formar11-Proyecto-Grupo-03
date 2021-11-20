@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
 let adminController = require ('../controllers/adminControllers')
+const adminUserCheck = require('../middlewares/adminUserCheck')
 let multer = require('multer');
 let upload = require ('../middlewares/multerProducts')
 let validacionesProducts = require ('../middlewares/validProducts')
 
 
 /* GET home page. */
-router.get('/', adminController.admin);
+router.get('/', adminUserCheck, adminController.admin);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', adminController.create); 
