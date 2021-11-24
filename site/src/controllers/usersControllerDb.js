@@ -30,7 +30,7 @@ module.exports = {
                             name: user.name,
                             email: user.email,
                             avatar: user.avatar,
-                            rol: user.rol
+                            rol: user.roles
                         }
                         if (req.body.recordarme) {
                             res.cookie('tacopadoCookie', req.session.user, { maxAge: 1000 * 60 * 60 })
