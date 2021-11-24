@@ -59,7 +59,7 @@ const controller = {
         
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
             
-        return res.redirect('/') 
+        return res.redirect('/users/login') 
         } 
         
         // else {
@@ -115,7 +115,7 @@ const controller = {
     edit: (req,res,next) => {
         const userEdit = users.find(e => e.id === +req.params.id)
         res.render('users/edit', 
-            {product : products.find(product => product.id === +req.params.id)})
+            {userUpdate : userEdit.find(userEdit => userEdit.id === +req.params.id)})
     },
     // Para modificar datos de usuario
     update: (req,res,next) => {
