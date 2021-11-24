@@ -151,7 +151,10 @@ const controller = {
     destroy : (req, res) => {
         users = users.filter(p => p.id !== +req.params.id)
         fs.writeFileSync(usersFilePath, JSON.stringify(users))
-        res.redirect('/')
+        req.session.destroy(function() {
+            res.clearCookie('tacopadoCookie', { path: '/' });
+            res.redirect('/')
+          })
     }
 
 }

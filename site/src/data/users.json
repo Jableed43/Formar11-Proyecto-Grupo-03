@@ -1,12 +1,1 @@
-[
-  {
-    "id": 1,
-    "name": "Taco",
-    "email": "tacopado@gmail.com",
-    "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
-    "sexo": "m",
-    "provincia": "Buenos Aires",
-    "img": "Mace.jpeg",
-    "rol": "admin"
-  }
-]
+[{"id":1,"name":"Taco","email":"tacopado@gmail.com","password":"$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G","sexo":"m","provincia":"Buenos Aires","img":"Mace.jpeg","rol":"admin"}]
