@@ -1,6 +1,7 @@
 const db = require('../database/models');
 const { validationResult } = require('express-validator')
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs')
 
 module.exports = {
     // Para mostrar vista de login
