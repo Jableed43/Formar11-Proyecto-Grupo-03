@@ -10,15 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      User.belongsTo(models.Rol,{
-        as : 'rol'  
+      User.belongsTo(models.Rol, {
+        as: 'roles'
       }),
-      User.belongsTo(models.Sex,{
-        as : 'province'  
-      }),
-      User.belongsTo(models.Province,{
-        as : 'sex'  
-      })
+        User.belongsTo(models.Sex, {
+          as: 'province'
+        }),
+        User.belongsTo(models.Province, {
+          as: 'sex'
+        })
     }
   };
   User.init({
