@@ -1,4 +1,4 @@
-const db = require('../database/models/index')
+const db = require('../database/models/product.js')
 const {Op} = require ('sequelize')
 const { validationResult } = require('express-validator')
 
@@ -6,9 +6,9 @@ const { validationResult } = require('express-validator')
 module.exports = {
     // List - Product's List
     list: (req,res) => {
-        db.products.findAll()
+        db.Product.findAll()
         .then(productos => {
-            res.render('admin', {products : productos})
+            res.render('admin', {Product : productos})
         })
         .catch(err=> {
             console.log('Error al requerir los productos de la base de datos '+ err)
@@ -33,7 +33,7 @@ module.exports = {
 
         let images = req.file ? req.file.filename : 'default-img.jpg';
 
-        db.product.create ({
+        db.Product.create ({
             title,
             description,
             price,
@@ -71,6 +71,7 @@ module.exports = {
             })
 
     },
+    // Update - Method to update
     update: (req, res, next) => {
         
         const { title, description, price, calories, total_fat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory } = req.body;

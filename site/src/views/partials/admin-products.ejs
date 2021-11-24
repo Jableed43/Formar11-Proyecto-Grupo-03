@@ -2,31 +2,25 @@
 
     <% products.map(product => { %>
             
-    <div class="contenedor">
-        <section class="products">
-            <a href="/products/detail/<%= product.id %> ">
-                <article class="product-container">
-                    <img src="/images/imgmenu/<%= product.images %>" alt= "Foto Producto">
-                    <p><%= product.title %></p>
-                    <nav>
-                        <ul type="numbers">
-                            <li>Calorias</li>
-                            <li>Grasas Totales</li>
-                            <li>Proteinas</li>
-                            <li>Carbohidratos</li>
-                        </ul>
-                        <ul type="none">
-                            <li><%= product.calories %></li>
-                            <li><%= product.totalfat %></li>
-                            <li><%= product.protein %></li>
-                            <li><%= product.carb %></li>
-                        </ul>
-                    </nav>
-                    <button>Ver más</button>
-                </article>
-            </a>
-        </section>
-    </div>
+        <tr>
+            <td class="taco"><%=product.title%></td>
+            <td><%=product.price%></td>
+            <td><%=product.category%></td>
+            <td><%=product.subcategory%></td>
+
+            <td>
+              <a href="admin/edit/<%= product.id %>">
+                 <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <form>
+                <div>
+                  <a href="admin/delete/<%= product.id %>">
+                    <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                 </a>
+                </div>
+              </form>
+            </td>
+          </tr>
 
 <% }) %>
 </div>
