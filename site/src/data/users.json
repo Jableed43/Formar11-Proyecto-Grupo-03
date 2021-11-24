@@ -6,7 +6,7 @@
     "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
     "sexo": "m",
     "provincia": "Buenos Aires",
-    "img": "default-img.jpg",
+    "img": "Mace.jpeg",
     "rol": "admin"
   },
   {
@@ -37,19 +37,6 @@
     "img": "images.jpg"
   },
   {
-    "id": 5,
-    "name": "jorge",
-    "email": "jorge@jorgecompany.com",
-    "password": [
-      "898989",
-      "898989"
-    ],
-    "sexo": "m",
-    "provincia": "Chaco",
-    "id": 5,
-    "img": "img-1634960437578.png"
-  },
-  {
     "name": "asdf",
     "email": "asdf@asdf.com",
     "password": [
@@ -62,98 +49,23 @@
     "img": "default-img.jpg"
   },
   {
-    "name": "asdf",
-    "email": "asdf@asdf.com",
-    "password": "$2a$10$lr51AtXvCrU7o5a0k1XSgemOT4S1X/iYm0/HaeTw8X1vQDNFYb5uy",
-    "sexo": "Femenino",
-    "provincia": "Córdoba",
     "id": 7,
-    "img": "img-1635532521927.txt"
+    "rol": "client",
+    "name": "Graciela Suarez",
+    "email": "gracielasu@yahoo.com.ar",
+    "password": "$2a$10$f8LVdRkQswpHs11BScJG..I82RlWiHQGZ/G0UIr0nZlghQbZWxeNO",
+    "img": "default-img.jpg",
+    "sexo": "Femenino",
+    "provincia": "Buenos Aires"
   },
   {
-    "name": "adsf",
-    "email": "asdf@asdf.com",
-    "password": "$2a$10$lHpMeAtpMUx6Ol7876Jd4eCDERP12219Fqy4wnISISyPcVE.jjjUe",
-    "sexo": "Femenino",
-    "provincia": "Río Negro",
     "id": 8,
-    "img": "default-img.jpg"
-  },
-  {
-    "name": "fghj",
-    "email": "asdf@asdf.com",
-    "p1": "$2a$10$jOJzEiwsfdQGEKh7pzoPZ.R0rZP4ECsVBNFUsgMJWqeB4fkI70MP2",
-    "p2": "asdf",
-    "sexo": "Masculino",
-    "provincia": "Río Negro",
-    "id": 9,
-    "img": "default-img.jpg"
-  },
-  {
-    "name": "Dario",
-    "email": "dario@mail.com",
-    "p1": "$2a$10$T6odPxJROkikvDH0iInKmub4XFLKlPRATDb51A1vtkFsYTAByAy4a",
-    "p2": "monito1234",
-    "sexo": "Masculino",
-    "provincia": "Capital Federal",
-    "id": 10,
-    "img": "default-img.jpg"
-  },
-  {
-    "name": "Cintia",
-    "email": "cintia@mail.com",
-    "p1": "$2a$10$aPyYBgolqlf7ZHtgn1DDvOcbScK8mRdB0II2nltwrUn1.lrejCDQW",
-    "p2": "asdf123",
+    "rol": "client",
+    "name": "fer",
+    "email": "fer@fer.com",
+    "password": "$2a$10$ubiOg5BDI657U9.JodABpuOIBqqvlULOF9XlDoKy3K50oYSLwfGdS",
+    "img": "default-img.jpg",
     "sexo": "Femenino",
-    "provincia": "Catamarca",
-    "id": 11,
-    "img": "img-1635910620081.png"
-  },
-  {
-    "name": "Persona mala",
-    "email": "mala@mail.com",
-    "p1": "$2a$10$6v.Eb1xKn83z1it80jUS.uJ6ifBoK4aW0OCbp0N9mRaTcLFI49836",
-    "p2": "asdf",
-    "sexo": "Prefiero no decirlo",
-    "provincia": "Salta",
-    "rol": "client",
-    "id": 12,
-    "img": "img-1635910832537.jpg"
-  },
-  {
-    "name": "lalala",
-    "email": "flor@mail.com",
-    "p1": "$2a$10$b8v4hWAftpxfnVapT5MIkeb0CDT3kbOPKQyH06tbuffFYL6m1c3fC",
-    "p2": "lalala",
-    "sexo": "Prefiero no decirlo",
-    "provincia": "Córdoba",
-    "submit": "Registrarme",
-    "rol": "client",
-    "id": 13,
-    "img": "img-1635974540921.png"
-  },
-  {
-    "name": "Diego",
-    "email": "diego@mail.com",
-    "p1": "$2a$10$YwvuJ9oHKE0SM2/ipjAojeGN047qcvZ7Q4Z4xivfUZU724LtKS9pC",
-    "p2": "asdf123",
-    "sexo": "Masculino",
-    "provincia": "Córdoba",
-    "submit": "Registrarme",
-    "rol": "client",
-    "id": 14,
-    "img": "img-1636491023316.png"
-  },
-  {
-    "name": "Lalo",
-    "email": "lalo@mail.com",
-    "p1": "$2a$10$hBGWbQxNdXtoFxSgNURUhOwxG6DgWZvKitVnqiNIIQAtbNH7C.65e",
-    "p2": "asdf123",
-    "sexo": "Femenino",
-    "provincia": "Chaco",
-    "submit": "Registrarme",
-    "rol": "client",
-    "id": 15,
-    "img": "default-img.jpg"
+    "provincia": "San Luis"
   }
 ]

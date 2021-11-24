@@ -25,6 +25,13 @@ main.create div.contenedor{
     flex-direction: column;
 }
 
+article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
 main.create div article div textarea, #desc{
     height: 170px;
     width: 80%;
@@ -181,11 +188,12 @@ main.create div.contenedor5 div{
 main.create div.contenedor5 div label{
     width: 125px;
 }
-main.create div.contenedor5 .botonera-bottom-page{
+article.botonera{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    margin:auto
 }
 main.create h2{
     text-align: center;
@@ -212,6 +220,19 @@ footer.admin-footer div{
 footer.admin-footer div i{
     font-size: 35px;
     color: black;
+}
+
+small {
+    color: #f1d367;
+    background-color: #2d2254;
+    border-radius: 2px;
+    padding: 2px;
+    text-align: right;
+}
+
+.prod {
+    width: 50vw;
+    border: #f1d367 solid 2px;
 }
 
 @media (min-width: 480px){
@@ -244,6 +265,10 @@ footer.admin-footer div i{
     }
     main.create div.contenedor5 article{
         border-radius: 0;
+    }
+    .prod {
+        width: 30vw;
+        border: #f1d367 solid 2px;
     }
 
 }
