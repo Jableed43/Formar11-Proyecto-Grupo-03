@@ -1,4 +1,4 @@
-const fs = require('fs');
+/*const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
@@ -43,14 +43,14 @@ const controller = {
         {errors: errors.mapped(),
          old: req.body})
         } else {
-            let  {name, sexo, provincia, email, password} = req.body
+            let  {name, sexo, provincia, email, p1} = req.body
 
             let user={
             id : users[users.length - 1].id + 1,
             rol : "client",
             name, 
             email, 
-            password : bcrypt.hashSync(req.body.password, 10),          
+            p1 : bcrypt.hashSync(req.body.p1, 10),          
             img : req.file ? req.file.filename : 'default-img.jpg',
             sexo, 
             provincia}
@@ -158,6 +158,4 @@ const controller = {
 
 module.exports = controller;
 
-
-
-
+*/

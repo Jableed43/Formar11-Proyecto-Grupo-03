@@ -11,9 +11,6 @@
 ## Lopez Javier Nehuen:
 - 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
 ---
-## Palomo Javier:
-- xx Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
----
 ## Sanchez Florencia Teresita:
 - 29 Años, Desarrolladora Web Full Stack en Digital House y Fundación Formar.
 ---
