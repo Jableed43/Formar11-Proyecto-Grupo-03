@@ -6,18 +6,18 @@ let users = [
     "name": "Taco",
     "email": "tacopado@gmail.com",
     "password": bcrypt.hashSync('123123',10),
-    "id_sexo": 1,
-    "id_provincia": 3,
-    "img": "default-img.jpg",
+    "id_sex": 1,
+    "id_province": 3,
+    "avatar": "default-img.jpg",
     "id_rol": 1
   },
   {
     "name": "Mace Cadd",
     "email": "mcadd1@gmail.com",
     "password": bcrypt.hashSync('123123',10),
-    "id_sexo": 1,
-    "id_provincia": 1,
-    "img": "Mace.jpeg",
+    "id_sex": 1,
+    "id_province": 1,
+    "avatar": "Mace.jpeg",
     "id_rol": 2
   }
 ]

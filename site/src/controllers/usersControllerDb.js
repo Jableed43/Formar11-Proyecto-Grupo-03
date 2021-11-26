@@ -11,7 +11,7 @@ module.exports = {
     // Para loguear usuario por método POST
     processLogin: (req, res) => {
         let errors = validationResult(req);
-        const { email, p1, recordar } = req.body;
+        const { email, password, recordar } = req.body;
         if (!errors.isEmpty()) {
             return res.render('users/login', {
                 errores: errors.mapped(),
@@ -21,17 +21,17 @@ module.exports = {
 
             db.User.findOne({
                 where: {
-                    email
+                    email: req.body.email.trim()
                 }
             })
                 .then((user) => {
-                    if (user && bcrypt.compareSync(p1.trim(), user.p1)) {
+                    if (user && bcrypt.compareSync(password.trim(), user.password)) {
                         req.session.user = {
                             id: user.id,
                             name: user.name,
                             email: user.email,
                             avatar: user.avatar,
-                            rol: user.rol
+                            rol: user.id_rol
                         }
                         if (req.body.recordarme) {
                             res.cookie('tacopadoCookie', req.session.user, { maxAge: 1000 * 60 * 60 })
@@ -63,12 +63,12 @@ module.exports = {
                 msj: "Solo se permiten imágenes"
             }
             errors.errors.push(img)
-            const { name, sexo, provincia, email, p1 } = req.body
+            const { name, sexo, provincia, email, password } = req.body
 
             db.User.create({
                 name,
                 email,
-                p1: bcrypt.hashSync(p1, 12),
+                password: bcrypt.hashSync(password, 12),
                 avatar: req.file ? req.file.filename : 'default-img.jpg',
                 sexo,
                 provincia,
@@ -120,14 +120,14 @@ module.exports = {
     // Update - Method to update
     update: (req, res, next) => {
         
-        const { name, sexo, provincia, email, p1 } = req.body;
+        const { name, sexo, provincia, email, password } = req.body;
 
         let img = req.files[0] ? req.files[0].filename : undefined;
 
         db.User.update({
             name,
             email,
-            p1: bcrypt.hashSync(p1, 12),
+            password: bcrypt.hashSync(password, 12),
             avatar: req.file ? req.file.filename : 'default-img.jpg',
             sexo,
             provincia

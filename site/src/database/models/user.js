@@ -11,23 +11,23 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.belongsTo(models.Rol, {
-        as: 'roles'
+        as: 'rol'
       }),
         User.belongsTo(models.Sex, {
-          as: 'province'
+          as: 'sex'
         }),
         User.belongsTo(models.Province, {
-          as: 'sex'
+          as: 'province'
         })
     }
   };
   User.init({
     name: DataTypes.STRING,
     email: DataTypes.STRING,
-    p1: DataTypes.STRING,
-    sexo: DataTypes.INTEGER,
-    provincia: DataTypes.INTEGER,
-    rol: DataTypes.INTEGER,
+    password: DataTypes.STRING,
+    id_sex: DataTypes.INTEGER,
+    id_province: DataTypes.INTEGER,
+    id_rol: DataTypes.INTEGER,
     avatar: DataTypes.STRING
   }, {
     sequelize,
