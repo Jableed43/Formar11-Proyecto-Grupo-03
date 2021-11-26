@@ -391,12 +391,16 @@ display: none;
   font-weight: 700;
   font-size: 17px;
 }
+
+.home .eligen-flex{
+  width: 100%;
+}
  
 
-.home main section div img {
+.home main section div img, .home main section div iframe  {
   width: 80%;
-  
-}
+  margin-bottom: 20px;
+  }
 
 .home main section div.icono-container img {
   width: 50%;

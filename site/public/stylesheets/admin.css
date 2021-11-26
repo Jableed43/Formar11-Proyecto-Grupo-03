@@ -3,6 +3,22 @@ body.admin main{
     background-image: url('/images/fondo-violeta.png');
     margin-bottom: 90px;
 }
+
+body.admin h1.titulo {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2d2254;
+}
+body.admin div.logo{
+    background-color: #2d2254;
+    text-align: center;
+}
+body.admin div.logo img{
+    width: 150px;
+    margin: 20px 0;
+}
+
 body.admin main h3{
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;

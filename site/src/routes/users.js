@@ -11,7 +11,6 @@ const validateLogin = require('../middlewares/validateLogin');
 const loggedUser = require('../middlewares/loggedUser');
 const userLoginCheck = require('../middlewares/userLoginCheck');
 
-
 /* POST login */
 router.get('/login', loggedUser, usersControllers.login)
 router.post('/login', validateLogin, usersControllers.processLogin)
@@ -28,7 +27,7 @@ router.get('/carrito', usersControllers.carrito);
 router.get('/user',usersControllers.profile);
 
 /* PUT editar */
-router.get('/edit/user/:id', usersControllers.edit);
+router.get('/edit/user', usersControllers.edit);
 router.put('/edit/user', usersControllers.update);
 
 /* DELETE user */ 

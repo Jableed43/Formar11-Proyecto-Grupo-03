@@ -7,7 +7,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 let controller = {
     // Acceder a admin
     admin: (req, res, next) => {
-        res.render('admin/admin');
+        res.render('admin/admin', {products});
     },
     // Create - Form to create
     create: (req, res) => {
