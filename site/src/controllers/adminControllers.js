@@ -6,8 +6,10 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 let controller = {
     // Acceder a admin
-    admin: (req, res, next) => {
-        res.render('admin/admin');
+    admin: (req,res) => {
+        return res.render('admin/admin', { 
+            products : JSON.parse(fs.readFileSync(path.join(__dirname, '../data/products.json'),'utf-8'))
+        });
     },
     // Create - Form to create
     create: (req, res) => {

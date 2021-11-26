@@ -1907,5 +1907,43 @@
     "fiber": "89",
     "id": 39,
     "images": "default-img.jpg"
+  },
+  {
+    "title": "polo",
+    "description": "popopiop",
+    "category": "Comida",
+    "subcategory": "Tacos",
+    "price": "400",
+    "calories": "1",
+    "totalfat": "1",
+    "carb": "1",
+    "protein": "1",
+    "transfat": "1",
+    "saturatedfat": "1",
+    "cholesterol": "1",
+    "sodium": "1",
+    "sugars": "1",
+    "fiber": "1",
+    "id": 40,
+    "images": "default-img.jpg"
+  },
+  {
+    "title": "palta",
+    "description": "palta",
+    "category": "Comida",
+    "subcategory": "Ensaladas",
+    "price": "500",
+    "calories": "1",
+    "totalfat": "1",
+    "carb": "1",
+    "protein": "1",
+    "transfat": "1",
+    "saturatedfat": "1",
+    "cholesterol": "1",
+    "sodium": "1",
+    "sugars": "1",
+    "fiber": "1",
+    "id": 41,
+    "images": "default-img.jpg"
   }
 ]

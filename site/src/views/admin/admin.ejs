@@ -37,7 +37,26 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+
+
+          <% products.forEach((product, index) => { %>
+            <tr>
+              <th scope="row"><%= index + 1 %> </th>
+              <td><%= product.title %> </td>
+              <td><%= product.price %> </td>
+              <td><%= product.category %> </td>
+              <td>
+                <a href="/products/edit/<%= product.id %>" class="editar"><i class="fas fa-edit"></i></a>
+                <div>
+                  <form action="/products/destroy/<%= product.id %>?_method=DELETE" method="POST">
+                    <button class="borrar" type="submit"><i class="fas fa-trash"></i></button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+          <% }) %>
+
+          <!-- <tr>
             <th scope="row">1</th>
             <td class="taco">Taco</td>
             <td>$400</td>
@@ -53,6 +72,11 @@
               </form>
             </td>
           </tr>
+
+
+
+
+
           <tr>
             <th scope="row">2</th>
             <td>Burrito</td>
@@ -166,7 +190,7 @@
               </a>
               <form>
                 <div>
-                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button> -->
 
                 </div>
               </form>
