@@ -11,29 +11,29 @@ module.exports = {
     // Para loguear usuario por método POST
     processLogin: (req, res) => {
         let errors = validationResult(req);
-        const { email, password, recordar } = req.body;
+        
         if (!errors.isEmpty()) {
             return res.render('users/login', {
                 errores: errors.mapped(),
                 data: req.body
             })
         } else {
-
+            const { email, password, recordarme } = req.body;
             db.User.findOne({
                 where: {
-                    email: req.body.email.trim()
+                    email: email.trim()
                 }
             })
                 .then((user) => {
                     if (user && bcrypt.compareSync(password.trim(), user.password)) {
-                        req.session.user = {
+                        req.session.userLogin = {
                             id: user.id,
                             name: user.name,
                             email: user.email,
                             avatar: user.avatar,
                             rol: user.id_rol
                         }
-                        if (req.body.recordarme) {
+                        if (recordarme) {
                             res.cookie('tacopadoCookie', req.session.user, { maxAge: 1000 * 60 * 60 })
                         }
                         return res.redirect('/')

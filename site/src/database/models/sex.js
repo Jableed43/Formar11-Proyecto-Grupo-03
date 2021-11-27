@@ -11,7 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Sex.hasMany(models.User,{
-        as : 'users'
+        foreignKey: {
+          name: 'id_sex',
+        },
+        as : 'user'
       })
     }
   };
