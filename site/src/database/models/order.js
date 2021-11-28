@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     id_client: DataTypes.INTEGER,
     created_at: DataTypes.DATE,
+    updated_at: DataTypes.DATE,
     total: DataTypes.DECIMAL
   }, {
     sequelize,
