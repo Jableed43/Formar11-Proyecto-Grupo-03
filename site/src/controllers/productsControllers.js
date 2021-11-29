@@ -27,7 +27,43 @@ const controller = {
         const {id} = req.params
 		const productDetail = products.find(e => e.id === +id)
         res.render('products/detalle-producto', {productDetail})
-    }
+    },
+	    // Para modificar un producto
+		// update: (req,res,next) => {
+		// 	let errors = validationResult(req);
+		// 	// Para validar la imagen
+		// 	if (req.fileValidationError) {
+		// 		let img = {
+		// 			param : "img",
+		// 			msj: "Solo se permiten imágenes"
+		// 		}
+		// 		errors.errors.push(img)
+		// 	}
+		// 	if (!errors.isEmpty()) {
+		// 	res.render('users/register', 
+		// 	{errors: errors.mapped(),
+		// 	 old: req.body})
+		// 	} else {
+		// 		const userUpdate = users.find(e => e.id === +req.params.id)
+		// 		const {name,email,password,sexo,provincia,avatar} = req.body 
+		// 		if (userUpdate) {
+		// 			userUpdate.name = name
+		// 			userUpdate.email = email
+		// 			userUpdate.password = password
+		// 			userUpdate.sexo = sexo
+		// 			userUpdate.provincia = provincia
+		// 			userUpdate.avatar = file
+			
+		// 			fs.writeFileSync(usersFilePath, JSON.stringify(users))
+		// 			res.redirect(`/users/edit/${req.params.id}`)
+		// 	}}
+		// },
+	// Para borrar un producto del listado
+	destroy : (req, res) => {
+		products = users.filter(product => product.id !== +req.params.id)
+		fs.writeFileSync(usersFilePath, JSON.stringify(products))
+		res.redirect('/')
+	}
 }
 
 
