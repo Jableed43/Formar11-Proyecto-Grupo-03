@@ -18,7 +18,7 @@
     <p>Tu email es <%= userProfile.email %></p>
     <p>Nos elegís desde <%= userProfile.provincia %></p>
     
-    <p><a href="/users/edit/<%= userProfile.id %>" class="button">Editar datos</a></p>
+    <p><a href="/users/edit/user/<%= userProfile.id %>" class="button">Editar datos</a></p>
     
     <form action="/users/delete/<%= userProfile.id %>?_method=DELETE" method="POST">
     <button class="button">Eliminar perfil</button>

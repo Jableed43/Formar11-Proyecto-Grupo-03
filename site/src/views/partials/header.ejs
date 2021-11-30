@@ -35,6 +35,9 @@
         <ul class="menu">
           <li class="texto"><a href= "#nos">Nosotros</a> </li>
           <li class="texto"><a href="/contacto">Contacto</a> </li>
+          <% if (locals.userLogin && locals.userLogin.rol ==="admin") { %>
+            <li class="texto"><a href="/admin">Admin</a> </li>           
+          <% } %>          
         </ul>
         </nav>
 

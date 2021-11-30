@@ -16,13 +16,13 @@
       </div>
       <h1>Estás editando <%= productEdit.title %></h1>
 
-      <form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST">
+      <form action="/admin/edit/<%= productEdit.id %>?_method=PUT" method="POST">
       <div class="contenedor">
         <article>
             <h2>Título</h2>
             <input type="text" id="title" name="title" value="<%= productEdit.title %>" placeholder="Nombre de plato">
             <h2>Descripción</h2>
-            <textarea id="description" name="description" value="<%= productEdit.description %>" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
+            <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"><%= productEdit.description %></textarea>
         </article>
       </div>
 

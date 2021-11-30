@@ -39,14 +39,17 @@ let controller = {
             product.images = req.file ? req.file.filename : 'default-img.jpg'
             products.push(product)
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-            res.redirect(`/products/detail/${product.id}`)
+            res.redirect('/admin')
          }
 
     },
     // Update - Form to edit
     edit: (req, res) => {
-        let productEdit = products.find(e => e.id === +req.params.id)
-        res.render('admin/editProduct', { productEdit })
+        let products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'))
+        let productEdit = products.find(products => products.id === +req.params.id)
+        res.render('admin/editProduct', {
+            productEdit
+        })
     },
     // Update - Method to update
     update: (req, res) => {
@@ -72,7 +75,7 @@ let controller = {
 
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
 
-            res.redirect(`/products/detail/$(req.params.id)`)
+            res.redirect('/admin')
         } else {
             res.redirect('/')
         }
@@ -80,11 +83,15 @@ let controller = {
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
-        products = products.filter(product => product.id === +req.params.id)
+        let products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'))
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
+        let product = products.find(product => product.id === +req.params.id);
 
-        res.redirect('/')
+        let productsModified = products.filter(product => product.id !== +req.params.id);
+
+        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
+
+        res.redirect('/admin')
     }
 }
 

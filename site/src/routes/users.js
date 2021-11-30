@@ -48,7 +48,7 @@ router.get('/user',usersControllers.perfil);
 
 /* PUT editar */
 router.get('/edit/user/:id', usersControllers.edit);
-router.put('/edit/user', usersControllers.update);
+router.put('/edit/user/:id', usersControllers.update);
 
 /* DELETE user */ 
 router.delete('/delete/:id', usersControllers.destroy); 

@@ -3,9 +3,6 @@ const path = require('path');
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const { fileFilter } = require('../middlewares/multer')
-// const usersFilePath = path.join(__dirname, '../data/users.json');
-// let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 const usersFilePath = path.join(__dirname,'..','data','users.json')
 let users = JSON.parse(fs.readFileSync(usersFilePath,'utf-8'));
 
@@ -114,44 +111,60 @@ const controller = {
     }, 
     edit: (req,res,next) => {
         const userEdit = users.find(e => e.id === +req.params.id)
-        res.render('users/edit', 
-            {product : products.find(product => product.id === +req.params.id)})
+        res.render('users/edit', {
+            userEdit
+        })
     },
     // Para modificar datos de usuario
-    update: (req,res,next) => {
-        let errors = validationResult(req);
-        // Para validar la imagen
-        if (req.fileValidationError) {
-            let img = {
-                param : "img",
-                msj: "Solo se permiten imágenes"
+    update : (req,res) => {
+
+            let user = users.find(user => user.id === req.session.userLogin.id);
+            let password = req.body.password ? bcrypt.hashSync(req.body.password,10) : user.password;
+            
+            let userModified = {
+                id : user.id,
+                name : req.body.name,
+                email : user.email,
+                password : password,
+                sexo : req.body.sexo,
+                provincia : req.body.provincia,
+                img : req.file ? req.file.filename : user.img,
+                rol : user.rol
+                //me borra nombre, provincia, sexo e imagen.
             }
-            errors.errors.push(img)
-        }
-        if (!errors.isEmpty()) {
-        res.render('users/register', 
-        {errors: errors.mapped(),
-         old: req.body})
-        } else {
-            const userUpdate = users.find(e => e.id === +req.params.id)
-            const {name,email,password,sexo,provincia,avatar} = req.body 
-            if (userUpdate) {
-                userUpdate.name = name
-                userUpdate.email = email
-                userUpdate.password = password
-                userUpdate.sexo = sexo
-                userUpdate.provincia = provincia
-                userUpdate.avatar = file
-        
-                fs.writeFileSync(usersFilePath, JSON.stringify(users))
-                res.redirect(`/users/edit/${req.params.id}`)
-        }}
-    },
+
+            if(req.file){
+                if(fs.existsSync(path.join(__dirname,'../public/images/users/' + user.img)) && user.img != "default.png"){
+                    fs.unlinkSync(path.join(__dirname,'../public/images/users/' + user.img))
+
+                }
+            }
+    
+            let usersModified = users.map(user => user.id === req.session.userLogin.id ? userModified : user);
+    
+            fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(usersModified,null,3),'utf-8');
+    
+            req.session.userLogin = {
+                id : user.id,
+                name : userModified.name,
+                sexo : userModified.sexo,
+                provincia : userModified.provincia,
+                img : userModified.img,
+                rol : user.rol
+            }
+    
+            return res.redirect('/')
+        },
+
     // Para borrar información de usuario
     destroy : (req, res) => {
-        users = users.filter(p => p.id !== +req.params.id)
-        fs.writeFileSync(usersFilePath, JSON.stringify(users))
-        res.redirect('/')
+        let user = users.find(user => user.id === +req.params.id);
+
+        let usersModified = users.filter(user => user.id !== +req.params.id);
+
+        fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(usersModified,null,3),'utf-8');
+
+        return res.redirect('/')    
     }
 
 }

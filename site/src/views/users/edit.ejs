@@ -13,11 +13,11 @@
           
           <section class="camposform">
           <h1>Estas editando tus datos</h1>
-          <form action="edit/<%= userUpdate.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <form action="/users/edit/user/<%= userEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
             <div class="campo">
               <label for="user">Nombre Completo</label>
-              <input type="text" value="<%= userUpdate.name %>" id="user" name="name" placeholder="Ingrese nombre completo..." required>
+              <input type="text" value="<%= userEdit.name %>" id="user" name="name" placeholder="Ingrese nombre completo..." required>
               <% if (locals.errors && errors.name) { %>
                 <small class="mensajeError">
                   <%= errors.name.msg %>
@@ -27,7 +27,7 @@
 
             <div class="campo">
               <label for="user">Correo Electrónico</label>
-              <input type="text" value="<%= userUpdate.email %>" id="user" name="email" placeholder="Ingrese e-mail..." required>
+              <input type="text" value="<%= userEdit.email %>" id="user" name="email" placeholder="Ingrese e-mail..." required>
               <% if (locals.errors && errors.email) { %>
                 <small class="mensajeError">
                   <%= errors.email.msg %>
