@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs')
 module.exports = {
     // Para mostrar vista de login
     login: (req, res) => {
-        res.render('users/login')
+        res.render('/users/login')
     },
     // Para loguear usuario por método POST
     processLogin: (req, res) => {
@@ -119,7 +119,7 @@ module.exports = {
     },
     // Update - Method to update
     update: (req, res, next) => {
-        
+
         const { name, sexo, provincia, email, p1 } = req.body;
 
         let img = req.files[0] ? req.files[0].filename : undefined;
@@ -145,7 +145,7 @@ module.exports = {
             })
     },
     // Delete - Delete one product from DB
-	destroy: (req, res) => {
+    destroy: (req, res) => {
 
         db.User.destroy({
             where: {
