@@ -20,7 +20,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      id_sexo: {
+      id_sex: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
@@ -30,7 +30,7 @@ module.exports = {
           key:'id'
         }
       },
-      id_provincia: {
+      id_province: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
@@ -50,7 +50,7 @@ module.exports = {
           key:'id'
         }
       },
-      img: {
+      avatar: {
         type: Sequelize.STRING,
         allowNull: false
       }

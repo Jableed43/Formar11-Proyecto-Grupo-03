@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Province.hasMany(models.User,{
+        foreignKey: {
+          name: 'id_province'
+        },
         as : 'users'
       })
     }

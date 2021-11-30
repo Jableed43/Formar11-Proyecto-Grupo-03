@@ -1,794 +1,1911 @@
 [
-    {
-    	"id" : 1,
-	    "title": "El original",
-    	"category": "comida",
-	    "subcategory": "Tacos",
-    	"images": "/1.jpg",
-	    "variety": ["carne","pollo"],
-    	"tortilla": "maíz",
-	    "description": "¡El original Tacopado! Una tortilla de maíz crujiente envuelve una abundante relleno de carne picada ligeramente sazonada o carne de pollo, junto con lechuga fresca, tomates jugosos y una mezcla recién rallada de queso cheddar y picantes para un sabor más que copado.",
-    	"key words": "crujiente",
-	    "price": 200,
-    	"calories": [170,143],
-	    "totalfat": [10.7,5],
-    	"carb": [9.7,10],
-	    "protein": [7.8,12],
-    	"transfat": [0.4,0],
-	    "saturatedfat": [4.3,2],
-    	"cholesterol": [29,37],
-	    "sodium": [339.2,280],
-    	"sugars": [1.1,1],
-	    "fiber": [1.9,1]
-	},
-	{
-    	"id" : 2,
-	    "title": "Taco Suave",
-    	"category": "comida",
-	    "subcategory": "Tacos",
-    	"images": "/2.jpg",
-	    "variety": ["carne", "pollo"],
-    	"tortilla": "trigo",
-	    "description": "Probá el lado más suave de Tacopado. Nuestro taco suave viene con el relleno original, incluida su carne picada fresca o carne de pollo, su lechuga fresca, tomates jugosos y una mezcla rallada de queso cheddar y picantes. Todo cuidadosamente envuelto en una tortilla de harina.",
-    	"key words": "suave",
-	    "price": 220,
-    	"calories": [180,230],
-	    "totalfat": [8.9,7.2],
-    	"carb": [15.8,24.2],
-	    "protein": [7.5,14.2],
-    	"transfat": [0.3,0],
-	    "saturatedfat": [3.9,3],
-    	"cholesterol": [21.6,36.5],
-	    "sodium": [380.6,492.4],
-    	"sugars": [0.7,0.5],
-	    "fiber": [1.5,1.7]
-	},
-	{
-    	"id" : 3,
-	    "title": "Tacopante",
-    	"category": "comida",
-	    "subcategory": "Tacos",
-    	"images": "/3.jpg",
-	    "variety": ["carne","pollo"],
-    	"tortilla": "trigo",
-	    "description": "Esta exclusiva de Tacopado lleva los tacos a un nivel completamente nuevo. Cambiamos la cáscara con pan de pita tibio y esponjoso, y lo rellenamos con frijoles refritos cocidos a fuego lento. Con relleno a elección: carne picada fresca o carne de pollo. Y con la infaltable lechuga fresca, tomates jugosos y coronandolo con queso cheddar rallado.",
-    	"key words": ["suave", "xxl"],
-	    "price": 500,
-    	"calories": [530,510],
-	    "totalfat": [32.2,27],
-    	"carb": [48.5,49.2],
-	    "protein": [18.5,22.4],
-    	"transfat": [0.7,0.3],
-	    "saturatedfat": [11.7,9.5],
-    	"cholesterol": [29.4,36.9],
-	    "sodium": [967.1,907.6],
-    	"sugars": [3.7,3.5],
-	    "fiber": [10,9.5]
-	},
-	{
-    	"id" : 4,
-	    "title": "¡Grande, taco!",
-	    "category": "comida",
-     	"subcategory": "Tacos",
-	    "images": "/4.jpg",
-	    "variety": ["carne","pollo"],
-	    "tortilla": "maíz",
-    	"description": "Un camino más grande a lo copado. Un taco nunca es suficiente, así que empacamos el doble de sabor y frescura en esta crujiente tortilla de maíz para agarrar con las dos manos. Disfrutá el doble de carne picada fresca o carne de pollo. Además tiene una mezcla rallada de queso cheddar y picantes, con lechuga fresca, tomates jugosos y una cucharada de crema agria fresca.",
-	    "key words": ["crujiente", "xxl"],
-    	"price": 580,
-	    "calories": [360,313],
-    	"totalfat": [25.1,18.5],
-	    "carb": [14.6,16],
-    	"protein": [18.7,27],
-	    "transfat": [0.8,0],
-    	"saturatedfat": [11.4,7],
-	    "cholesterol": [76.2,91],
-    	"sodium": [786.9, 668],
-	    "sugars": [2.2,2],
-	    "fiber": [3,2]
-	},
-    {
-        "id" : 5,
-        "title": "Copado Burrito",
-        "category": "comida",
-        "subcategory": "Burritos",
-        "images": "/5.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo",
-        "description": "Envolvé tus papilas gustativas alrededor de 5 capas de todo lo copado. Comenzamos con frijoles refritos cocidos a fuego lento y una capa de sabroso arroz mexicano, salsa de chile, una mezcla rallada de queso cheddar y picante. A tu elección el relleno de carne picada o carne de pollo.",
-        "key words": "suave",
-        "price": 220,
-        "calories": [660,630],
-        "totalfat": [35.1,28.2],
-        "carb": [70.1,71],
-        "protein": [25,30.3],
-        "transfat": [0.9,0.4],
-        "saturatedfat": [14,11.1],
-        "cholesterol": [49.7,59.8],
-        "sodium": [1598.4,1519],
-        "sugars": [2.1,1.8],
-        "fiber": [14.7,14.1]
-    },
-    {
-        "id" : 6,
-        "title": "El gran burrito gran",
-        "category": "comida",
-        "subcategory": "Burritos",
-        "images": "/6.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo",
-        "description": "Un burrito tan grande que no le cabía otro nombre. Actualizamos nuestra tortilla de harina fresca a un tamaño que puede contener rellenos adicionales. Elegí rellenarlo con carne picada o pollo, para ,ezcñarse em caás de salsa de chile picante, hebras de queso cheddar y picantes, lechuga fresca, tomates jugosos y crema agria fresca para hacer este burrito famoso de Tacopado.",
-        "key words": "suave",
-        "price": 550,
-        "calories": [650,590],
-        "totalfat": [34,21.8],
-        "carb": [56.2,57.8],
-        "protein": [27.6,36.7],
-        "transfat": [1,0.1],
-        "saturatedfat": [14.7,9.6],
-        "cholesterol": [83.4,101],
-        "sodium": [1464.8,1325.9],
-        "sugars": [2.2,1.6],
-        "fiber": [5.4,4.3]
-    },
-    {
-        "id" : 7,
-        "title": "Burrito de carne",
-        "category": "comida",
-        "subcategory": "Burritos",
-        "images": "/7.jpg",
-	    "variety": "carne",
-        "tortilla": "trigo",
-        "description": "Poné en tus manos este burrito 100% carne vacuna. Disfruta de la carne molida, perfectamente sazonada, combinada con una mezcla de queso cheddar, picantes y salsa de chile. Todo envuelto en una tortilla de harina de trigo y tibia",
-        "key words": "suave",
-        "price": 190,
-        "calories": 470,
-        "totalfat": 24.9,
-        "carb": 38.9,
-        "protein": 20.4,
-        "transfat": 0.8,
-        "saturatedfat": 10.5,
-        "cholesterol": 60.8,
-        "sodium": 1097.6,
-        "sugars": 0.7,
-        "fiber": 3.7
-    },
-    {
-        "id" : 8,
-        "title": "Burrito Mr. Bean",
-        "category": "comida",
-        "subcategory": "Burritos",
-        "images": "/8.jpg",
-	    "variety": "frijoles",
-        "tortilla": "trigo",
-        "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
-        "key words": ["suave", "vegetariano"],
-        "price": 180,
-        "calories": 540,
-        "totalfat": 31.6,
-        "carb": 61.6,
-        "protein": 18.8,
-        "transfat": 0.5,
-        "saturatedfat": 12.9,
-        "cholesterol": 20.1,
-        "sodium": 1225.2,
-        "sugars": 1.8,
-        "fiber": 18.9
-    },
-    {
-        "id" : 9,
-        "title": "Burrito combo",
-        "category": "comida",
-        "subcategory": "Burritos",
-        "images": "/9.jpg",
-	    "variety": "frijoles",
-        "tortilla": "trigo",
-        "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento y carne picada perfectamente sazonada, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
-        "key words": "suave",
-        "price": 230,
-        "calories": 510,
-        "totalfat": 28.7,
-        "carb": 50.3,
-        "protein": 20.1,
-        "transfat": 0.7,
-        "saturatedfat": 11.9,
-        "cholesterol": 42.3,
-        "sodium": 1185.5,
-        "sugars": 1.3,
-        "fiber": 11.3
-    },
-    {
-        "id" : 10,
-        "title": "Burrito Francisco",
-        "category": "comida",
-        "subcategory": "Burritos",
-        "images": "/10.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo",
-        "description": "Vos decís Papa, nosotros decimos burrito. Disfruta de croquetas de patata crujiente en capas con carne picada o carne de pollo sazonada. Todo acompañado de queso derretido, lechuga fresca rallada y crema agria enrollada en una tortilla de harina suave y tibia.",
-        "key words": "suave",
-        "price": 200,
-        "calories": [310,290],
-        "totalfat": [16.1,12.6],
-        "carb": [30.6,31.1],
-        "protein": [9.1,11.7],
-        "transfat": [0.3,0.1],
-        "saturatedfat": [6.8,5.4],
-        "cholesterol": [28,33.1],
-        "sodium": [713.8,674.1],
-        "sugars": [1.7,1.5],
-        "fiber": [2.4,2.1]
-    },
-    {
-        "id" : 11,
-        "title": "Quesadilla de ternera",
-        "category": "comida",
-        "subcategory": "Quesadillas",
-        "images": "/11.jpg",
-	    "variety": ["carne","cuchillo"],
-        "tortilla": "trigo",
-        "description": "No hay mejor manera de disfrutar tu elección de relleno de carne picada sazonada o cortada a cuchillo, con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
-        "key words": "suave",
-        "price": 250,
-        "calories": 829,
-        "totalfat": 51,
-        "carb": 52,
-        "protein": 40,
-        "transfat": 1,
-        "saturatedfat": 27,
-        "cholesterol": 138,
-        "sodium": 1527,
-        "sugars": 1,
-        "fiber": 5
-    },
-    {
-        "id" : 12,
-        "title": "Quesadilla de pollo",
-        "category": "comida",
-        "subcategory": "Quesadillas",
-        "images": "/12.jpg",
-	    "variety": "pollo",
-        "tortilla": "trigo",
-        "description": "No hay mejor manera de disfrutar pollo con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
-        "key words": "suave",
-        "price": 220,
-        "calories": 800,
-        "totalfat": 43.8,
-        "carb": 52.9,
-        "protein": 44.9,
-        "transfat": 0,
-        "saturatedfat": 23.9,
-        "cholesterol": 147.9,
-        "sodium": 1447.7,
-        "sugars": 0.3,
-        "fiber": 4.3
-    },
-    {
-        "id" : 13,
-        "title": "Quesadilla de queso",
-        "category": "comida",
-        "subcategory": "Quesadillas",
-        "images": "/13.jpg",
-	    "variety": "queso",
-        "tortilla": "trigo",
-        "description": "No hay mejor manera de disfrutar una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
-        "key words": "suave",
-        "price": 200,
-        "calories": 720,
-        "totalfat": 42.4,
-        "carb": 50.7,
-        "protein": 32.4,
-        "transfat": 0,
-        "saturatedfat": 23.6,
-        "cholesterol": 108.2,
-        "sodium": 1141.5,
-        "sugars": 0.3,
-        "fiber": 4.3
-    },
-    {
-        "id" : 14,
-        "title": "Mexicanísimo",
-        "category": "comida",
-        "subcategory": "Entradas",
-        "images": "/14.jpg",
-	    "variety": "frijoles",
-        "tortilla": "trigo",
-        "description": "Tené esa dosis de papas que te merecés y salsas de este clásico de Tacopado. Nuestros chips de tortilla crujiente se combinan con guacamole hecho con paltas frescas, queso y frijoles refritos cocidos a fuego lento ¿Mencionamos que estas creaciones vienen en sus propios tazones de tortilla de maíz?",
-        "key words": "crujiente",
-        "price": 170,
-        "calories": 780,
-        "totalfat": 51.8,
-        "carb": 79,
-        "protein": 20.9,
-        "transfat": 0.9,
-        "saturatedfat": 17,
-        "cholesterol": 21.5,
-        "sodium": 1527.4,
-        "sugars": 4.8,
-        "fiber": 25
-    },
-    {
-        "id" : 15,
-        "title": "Mucho Nacho",
-        "category": "comida",
-        "subcategory": "Entradas",
-        "images": "/15.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo",
-        "description": "Porque nunca son suficientes nachos, mejoramos este clásico mexicano con más de lo que amás: chips de tortilla recién hechos, acompañados de carne picada o carne de pollo sazonada. Además tiene salsa de chile picante, frijoles refritos a fuego lento, queso derretido, tomates jugosos y una cucharada de crema agria fría.",
-        "key words": "crujiente",
-        "price": 250,
-        "calories": [930,900],
-        "totalfat": [60.5,53.5],
-        "carb": [83.3,84.2],
-        "protein": [36.4,41.6],
-        "transfat": [1.9,1.4],
-        "saturatedfat": [24.1,21.1],
-        "cholesterol": [80.8,90.8],
-        "sodium": [2748.8,2669.4],
-        "sugars": [7.9,7.6],
-        "fiber": [26.9,26.3]
-    },
-    {
-        "id" : 16,
-        "title": "Papas con queso",
-        "category": "comida",
-        "subcategory": "Entradas",
-        "images": "/16.jpg",
-	    "variety": ["regular","grande"],
-        "tortilla": "trigo",
-        "description": "Amor a primer bocado. Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujiente de trigo recién fritos y combinados con una salsa melty de queso y pimientos. Este dúo viene en tamaño regular y grande, según el hambre que tengas",
-        "key words": "crujiente",
-        "price": [190, 230],
-        "calories": [300,600],
-        "totalfat": [15.2, 17.3],
-        "carb": [32.6, 65.2],
-        "protein": [8.8, 17.5],
-        "transfat": [0.5, 0.9],
-        "saturatedfat": [6.6, 13.1],
-        "cholesterol": [22, 44],
-        "sodium": [962.1, 1942.2],
-        "sugars": [2.9 ,5.8],
-        "fiber": [2.3, 4.6]
-    },
-    {
-        "id" : 17,
-        "title": "GuacaChips",
-        "category": "comida",
-        "subcategory": "Entradas",
-        "images": "/17.jpg",
-	    "variety": ["regular","grande"],
-        "tortilla": "trigo",
-        "description": "Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujientes se combinan con guacamole fresco hecho con palta perfectamente madura, tomates y cebollas cortados en cubitos y una mezcla de nuestras especias exclusivas. Este dúo viene en tamaño regular y grande, según el tamaño de tu antojo",
-        "key words": "crujiente",
-        "price": [280,300],
-        "calories": [370,740],
-        "totalfat": [25,50],
-        "carb": [36.6,73.2],
-        "protein": [6.9,13.8],
-        "transfat": [0.2,0.3],
-        "saturatedfat": [5.3,10.6],
-        "cholesterol": [0,0],
-        "sodium": [326.8,653.6],
-        "sugars": [1.5,2.9],
-        "fiber": [7.6,15.1]
-    },
-    {
-        "id" : 18,
-        "title": "Fuente de sabores",
-        "category": "comida",
-        "subcategory": "Platos",
-        "images": "/18.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo",
-        "description": "Una fuente para acabar con tu hambre. Con una chilada de pollo o carne tibia bañada en sala de chile picante y queso derretido, un taco de carne crujiente y un Tacopante de carne suave. Esta fuente se completa con frijoles refritos a fuego lento, un acompañamiento de queso derretido, arroz mexicano sazonado y tortilla crujiente de papas fritas, crema agria fresca y una bola de guacamole recién hecho.",
-        "key words": "crujiente",
-        "price": [1290,1090],
-        "calories": [1790,1740],
-        "totalfat": [104.1,93.6],
-        "carb": [177.2,178.6],
-        "protein": [61.2,69],
-        "transfat": [2.5,1.8],
-        "saturatedfat": [38.6,34.3],
-        "cholesterol": [120.6,135.7],
-        "sodium": [4016.4,3897.7],
-        "sugars": [11.3,10.8],
-        "fiber": [37,36.1]
-    },
-    {
-        "id" : 19,
-        "title": "La taco-bandeja",
-        "category": "comida",
-        "subcategory": "Platos",
-        "images": "/19.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo y maiz",
-        "description": "¿No podes elegir entre tacos crujientes y suaves? Con esta fuente podes tener ambos. Disfruta de dos tipos de taco, rellenos a tu elección: carne ligeramente sazonada o de carne de pollo. Disfruta de una variedad de acompañamientos: sabrozoz arroz mexicano, frijoles refritos a fuego lento, chips de tortilla crujientes, crema agria fresca y guacamoles recién hecho.",
-        "key words": ["crujiente", "suave"],
-        "price": [1300,1280],
-        "calories": [1050,1160],
-        "totalfat": [60.4,55.1],
-        "carb": [109,131.8],
-        "protein": [35.1,48.3],
-        "transfat": [1.4,0.7],
-        "saturatedfat": [21.8,19.6],
-        "cholesterol": [65.5,88],
-        "sodium": [2079.1,2344.2],
-        "sugars": [6.2,5.4],
-        "fiber": [25.2,25.1]
-    },
-    {
-        "id" : 20,
-        "title": "Fuente Tacopada",
-        "category": "comida",
-        "subcategory": "Platos",
-        "images": "/20.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": ["trigo","maiz"],
-        "description": "Combina texturas crujientes y suabes con nuestro taco más grande de carne o pollo tibio. Disfrutá de un montón de arroz mexicano sazonado, frijoles refritos a fuego lento y chips de tortilla frescos a un lado, cubierto con crema agria fresca y guacamole recién hecho",
-        "key words": ["crujiente", "suave"],
-        "price": [2000,1890],
-        "calories": [1520,1520],
-        "totalfat": [85.9,85],
-        "carb": [146,147.1],
-        "protein": [42.4,53.8],
-        "transfat": [1.3,0.9],
-        "saturatedfat": [30.5,29.9],
-        "cholesterol": [75.6,87.1],
-        "sodium": [2270.5,2364.5],
-        "sugars": [5.8,7.7],
-        "fiber": [17.6,21.5]
-    },
-    {
-        "id" : 21,
-        "title": "Fuente Chilacopada",
-        "category": "comida",
-        "subcategory": "Platos",
-        "images": "/21.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo",
-        "description": "Disfruta de dos chiladas empaquetadas con nuestra carne molida fresca y sazonada o carne de pollo, envuelto en una tortilla de harina tibia y bañada en salsa de chile picante con queso derretido caliente. Estos favoritos de Tacopado se combinan con un sabroso arroz mexicano, frijoles refritos hervidos a fuego lento y muchos chips de tortilla crujientes. Plus? una cucharada de crema agria fresca y una bola de guacamole fresco como acompañamiento.",
-        "key words": "suave",
-        "price": [1600,1500],
-        "calories": [1270,1220],
-        "totalfat": [69.1,17.9],
-        "carb": [135.9,53.7],
-        "protein": [42.9,30.9],
-        "transfat": [69.1,0.3],
-        "saturatedfat": [25.2,7.2],
-        "cholesterol": [80.1,80.3],
-        "sodium": [2992.1,1513.6],
-        "sugars": [6,1,1],
-        "fiber": [26.4,3.7]
-    },
-    {
-        "id" : 22,
-        "title": "Mega ensalada en taco",
-        "category": "comida",
-        "subcategory": "Ensaladas",
-        "images": "/22.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "trigo",
-        "description": "Una ensalada crujiente, de sabor crujiente. Esta ensalada de taco tiene mucho sabor en un tazón de tortilla de trigo recién frito. Disfrutala con carne fresca o carne blanca de pollo. Acunada en un colchol de lechuga crujiente rallada y tomates cortados en cubitos. Terminado con queso cheddar rallado, guacamole recién hecho y una cucharada de crema agria fresca, perfecta como aderezo para ensalada o como salsa para este tazón crujiente e irresistible.",
-        "key words": "crujiente",
-        "price": [590,500],
-        "calories": [980,940],
-        "totalfat": [68,58],
-        "carb": [66,67],
-        "protein": [29,37],
-        "transfat": [1,1],
-        "saturatedfat": [22,18],
-        "cholesterol": [97,112],
-        "sodium": [2158,2039],
-        "sugars": [8,7],
-        "fiber": [7,7]
-    },
-    {
-        "id" : 23,
-        "title": "Nacho ensalada",
-        "category": "comida",
-        "subcategory": "Ensaladas",
-        "images": "/23.jpg",
-	    "variety": ["carne","pollo"],
-        "tortilla": "maíz",
-        "description": "Una ensalada a la mexicana. Disfruta de una variedad de chips de tortilla crujientes hechos en casa, cubiertos con salsa de chile picante, queso derretido y pollo o carne a tu elección. Trae lechuga fresca, jugosos tomates y queso cheddar rallado que completan esta combinación perfecta de clásicos de Tacopado.",
-        "key words": "crujiente",
-        "price": [630,590],
-        "calories": [420,400],
-        "totalfat": [24.9,19.7],
-        "carb": [31.9,32.6],
-        "protein": [18.4,22.3],
-        "transfat": [0.8,0.4],
-        "saturatedfat": [10.6,8.4],
-        "cholesterol": [56.6,64.1],
-        "sodium": [1118.4,1058.9],
-        "sugars": [3.8,3.6],
-        "fiber": [4.1,3.7]
-    },
-    {
-        "id" : 24,
-        "title": "Salsa de frijoles picante",
-        "category": "comida",
-        "subcategory": "Salsas",
-        "images": "/24.jpg",
-	    "variety": "frijoles",
-        "tortilla": null,
-        "description": "Esta salsa cálida incluye frijoles refritos hervidos a fuego lento, salsa de chile picante y queso cheddar pegajoso, llenador y rico.",
-        "key words": "salsa",
-        "price": 70,
-        "calories": 282,
-        "totalfat": 22,
-        "carb": 26,
-        "protein": 11,
-        "transfat": 1,
-        "saturatedfat": 9,
-        "cholesterol": 10,
-        "sodium": 772,
-        "sugars": 2,
-        "fiber": 16
-    },
-    {
-        "id" : 25,
-        "title": "Arroz mexicano",
-        "category": "comida",
-        "subcategory": "Salsas",
-        "images": "/25.jpg",
-	    "variety": "arroz",
-        "tortilla": null,
-        "description": "Granos llenos de sabor. El arroz se potencia con muchas especias sabrosas y toques de cebolla y pimiento.",
-        "key words": "salsa",
-        "price": 80,
-        "calories": 220,
-        "totalfat": 3.3,
-        "carb": 40.7,
-        "protein": 4.6,
-        "transfat": 0,
-        "saturatedfat":0.6,
-        "cholesterol": 0,
-        "sodium": 549.3,
-        "sugars": 1.4,
-        "fiber": 1.5
-    },
-    {
-        "id" : 26,
-        "title": "Guacamole",
-        "category": "comida",
-        "subcategory": "Salsas",
-        "images": "/26.jpg",
-	    "variety": ["regular", "grande"],
-        "tortilla": null,
-        "description": "El dip favorito de todos. Nuestro guacamole fresco esta elaborado con paltas perfectamente maduras, tomates jugosos, cebollas picadas, y una mezcla de nuestras especias exclusivas.",
-        "key words": "salsa",
-        "price": [120,160],
-        "calories": [160,330],
-        "totalfat": [16.4,32.7],
-        "carb": [8.3,16.6],
-        "protein": [2.8,5.5],
-        "transfat": [0,0],
-        "saturatedfat":[2.7,5.5],
-        "cholesterol": [0,0],
-        "sodium": [157.3,314.6],
-        "sugars": [0.1,0.2],
-        "fiber": [5.5,11]
-    },
-    {
-        "id" : 27,
-        "title": "Queso derretido",
-        "category": "comida",
-        "subcategory": "Salsas",
-        "images": "/27.jpg",
-	    "variety": ["regular", "grande"],
-        "tortilla": null,
-        "description": "Tan copado que se derrite en tu boca. Nuestro queso derretido esta hecho con la combinación perfecta de pimientos picantes y sabroso queso.",
-        "key words": "salsa",
-        "price": [80,100],
-        "calories": [100,190],
-        "totalfat": [6.6,13.2],
-        "carb": [4.3,8.6],
-        "protein": [4.6,9.2],
-        "transfat": [0.3,0.6],
-        "saturatedfat":[4,7.9],
-        "cholesterol": [22,44],
-        "sodium": [792.6,1585.2],
-        "sugars": [1.5,3.1],
-        "fiber": [0.2,0.5]
-    },
-    {
-        "id" : 28,
-        "title": "Chips de canela",
-        "category": "comida",
-        "subcategory": "Dulces",
-        "images": "/28.jpg",
-	    "variety": "canela",
-        "tortilla": null,
-        "description": "Canela y azucar crujiente ¡Para que los amantes de los chips salten de alegría! Tu bocadillo favorito llegó en forma de postre. Nuestros chips están recién fritos y cargados con una mezcla de canela y azucar que le encantará a tu paladar.",
-        "key words": "dulce",
-        "price": 120,
-        "calories": 360,
-        "totalfat": 18.9,
-        "carb": 40.8,
-        "protein": 6.6,
-        "transfat": 0.4,
-        "saturatedfat":6.1,
-        "cholesterol": 0,
-        "sodium": 299.4,
-        "sugars": 4.6,
-        "fiber": 1
-    },
-    {
-        "id" : 29,
-        "title": "Churros",
-        "category": "comida",
-        "subcategory": "Dulces",
-        "images": "/29.jpg",
-	    "variety": "canela",
-        "tortilla": null,
-        "description": "Pequeño dulce, sabor pleno. Este amado dulce por todos viene en tamaño de un bocado. Recién fritos y espolvoreados con canela y azúcar para crear un sabor dulce, cálido y acogedor. Estos pedazos del cielo son fáciles de compartir... o de disfrutar en por tu cuenta.",
-        "key words": "dulce",
-        "price": 130,
-        "calories": 340,
-        "totalfat": 26.5,
-        "carb": 22.8,
-        "protein": 2,
-        "transfat": 0.5,
-        "saturatedfat":7.1,
-        "cholesterol": 0,
-        "sodium": 226.9,
-        "sugars": 1.4,
-        "fiber": 0.5
-    },
-    {
-        "id" : 30,
-        "title": "Coca cola",
-        "category": "bebidas",
-        "subcategory": "Gaseosas",
-        "images": "/30.png",
-	    "variety": ["300ml","550ml","1l","1.5l"],
-        "tortilla": null,
-        "description": "Algo fresco para tanto picor. Refrescate con una coca recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
-        "key words": "gaseosa",
-        "price": [200,300,400,460],
-        "calories": [150,260,360,480],
-        "totalfat": [0,0,0,0],
-        "carb": [41,72,98,131],
-        "protein": [0,0,0,0],
-        "transfat": [0,0,0,0],
-        "saturatedfat":[0,0,0,0],
-        "cholesterol": [0,0,0,0],
-        "sodium": [30,53,72,96],
-        "sugars": [41,72,98,131],
-        "fiber": [0,0,0,0]
-    },
-    {
-        "id" : 31,
-        "title": "Sprite",
-        "category": "bebidas",
-        "subcategory": "Gaseosas",
-        "images": "/31.jpg",
-	    "variety": ["300ml","550ml","1l","1.5l"],
-        "tortilla": null,
-        "description": "Algo fresco para tanto picor. Refrescate con una sprite recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
-        "key words": "gaseosa",
-        "price": [200,300,400,460],
-        "calories": [150,260,360,480],
-        "totalfat": [0,0,0,0],
-        "carb": [41,72,98,131],
-        "protein": [0,0,0,0],
-        "transfat": [0,0,0,0],
-        "saturatedfat":[0,0,0,0],
-        "cholesterol": [0,0,0,0],
-        "sodium": [30,53,72,96],
-        "sugars": [41,72,98,131],
-        "fiber": [0,0,0,0]
-    },
-    {
-        "id" : 32,
-        "title": "Fanta",
-        "category": "bebidas",
-        "subcategory": "Gaseosas",
-        "images": "/32.png",
-	    "variety": ["300ml","550ml","1l","1.5l"],
-        "tortilla": null,
-        "description": "Algo fresco para tanto picor. Refrescate con una fanta recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
-        "key words": "gaseosa",
-        "price": [200,300,400,460],
-        "calories": [150,260,360,480],
-        "totalfat": [0,0,0,0],
-        "carb": [41,72,98,131],
-        "protein": [0,0,0,0],
-        "transfat": [0,0,0,0],
-        "saturatedfat":[0,0,0,0],
-        "cholesterol": [0,0,0,0],
-        "sodium": [30,53,72,96],
-        "sugars": [41,72,98,131],
-        "fiber": [0,0,0,0]
-    },
-    {
-        "id" : 33,
-        "title": "Jugo de Lima y Mango",
-        "category": "bebidas",
-        "subcategory": "Jugo",
-        "images": "/33.jpg",
-	    "variety": ["300ml","550ml","1l","1.5l"],
-        "tortilla": null,
-        "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
-        "key words": "jugo",
-        "price": [150,200,300,400],
-        "calories": [100,200,320,450],
-        "totalfat": [0,0,0,0],
-        "carb": [41,72,98,131],
-        "protein": [0,0,0,0],
-        "transfat": [0,0,0,0],
-        "saturatedfat":[0,0,0,0],
-        "cholesterol": [0,0,0,0],
-        "sodium": [30,53,72,96],
-        "sugars": [41,72,98,131],
-        "fiber": [0,0,0,0]
-    },
-    {
-        "id" : 34,
-        "title": "Jugo de Lima y Frambuesa",
-        "category": "bebidas",
-        "subcategory": "Jugo",
-        "images": "/34.jpg",
-	    "variety": ["300ml","550ml","1l","1.5l"],
-        "tortilla": null,
-        "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
-        "key words": "jugo",
-        "price": [150,200,300,400],
-        "calories": [100,200,320,450],
-        "totalfat": [0,0,0,0],
-        "carb": [41,72,98,131],
-        "protein": [0,0,0,0],
-        "transfat": [0,0,0,0],
-        "saturatedfat":[0,0,0,0],
-        "cholesterol": [0,0,0,0],
-        "sodium": [30,53,72,96],
-        "sugars": [41,72,98,131],
-        "fiber": [0,0,0,0]
-    },
-    {
-        "id" : 35,
-        "title": "Clásica limonada",
-        "category": "bebidas",
-        "subcategory": "Jugo",
-        "images": "/35.jpg",
-	    "variety": ["300ml","550ml","1l","1.5l"],
-        "tortilla": null,
-        "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
-        "key words": "jugo",
-        "price": [150,200,300,400],
-        "calories": [100,200,320,450],
-        "totalfat": [0,0,0,0],
-        "carb": [41,72,98,131],
-        "protein": [0,0,0,0],
-        "transfat": [0,0,0,0],
-        "saturatedfat":[0,0,0,0],
-        "cholesterol": [0,0,0,0],
-        "sodium": [30,53,72,96],
-        "sugars": [41,72,98,131],
-        "fiber": [0,0,0,0]
-    },
-    {
-        "id" : 36,
-        "title": "Agua",
-        "category": "bebidas",
-        "subcategory": "Agua",
-        "images": "/36.jpg",
-	    "variety": ["300ml","550ml","1l","1.5l"],
-        "tortilla": null,
-        "description": "Algo fresco para tanto picor. Refrescate con agua fresca para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
-        "key words": "agua",
-        "price": [150,200,300,400],
-        "calories": [0,0,0,0],
-        "totalfat": [0,0,0,0],
-        "carb": [0,0,0,0],
-        "protein": [0,0,0,0],
-        "transfat": [0,0,0,0],
-        "saturatedfat":[0,0,0,0],
-        "cholesterol": [0,0,0,0],
-        "sodium": [30,53,72,96],
-        "sugars": [41,72,98,131],
-        "fiber": [0,0,0,0]
-    }
+  {
+    "id": 1,
+    "title": "El original",
+    "category": "comida",
+    "subcategory": "Tacos",
+    "images": "/1.jpg",
+    "description": "¡El original Tacopado! Una tortilla de maíz crujiente envuelve una abundante relleno de carne picada ligeramente sazonada o carne de pollo, junto con lechuga fresca, tomates jugosos y una mezcla recién rallada de queso cheddar y picantes para un sabor más que copado.",
+    "price": 200,
+    "calories": [
+      170,
+      143
+    ],
+    "totalfat": [
+      10.7,
+      5
+    ],
+    "carb": [
+      9.7,
+      10
+    ],
+    "protein": [
+      7.8,
+      12
+    ],
+    "transfat": [
+      0.4,
+      0
+    ],
+    "saturatedfat": [
+      4.3,
+      2
+    ],
+    "cholesterol": [
+      29,
+      37
+    ],
+    "sodium": [
+      339.2,
+      280
+    ],
+    "sugars": [
+      1.1,
+      1
+    ],
+    "fiber": [
+      1.9,
+      1
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Taco Suave",
+    "category": "comida",
+    "subcategory": "Tacos",
+    "images": "/2.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Probá el lado más suave de Tacopado. Nuestro taco suave viene con el relleno original, incluida su carne picada fresca o carne de pollo, su lechuga fresca, tomates jugosos y una mezcla rallada de queso cheddar y picantes. Todo cuidadosamente envuelto en una tortilla de harina.",
+    "key words": "suave",
+    "price": 220,
+    "calories": [
+      180,
+      230
+    ],
+    "totalfat": [
+      8.9,
+      7.2
+    ],
+    "carb": [
+      15.8,
+      24.2
+    ],
+    "protein": [
+      7.5,
+      14.2
+    ],
+    "transfat": [
+      0.3,
+      0
+    ],
+    "saturatedfat": [
+      3.9,
+      3
+    ],
+    "cholesterol": [
+      21.6,
+      36.5
+    ],
+    "sodium": [
+      380.6,
+      492.4
+    ],
+    "sugars": [
+      0.7,
+      0.5
+    ],
+    "fiber": [
+      1.5,
+      1.7
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Tacopante",
+    "category": "comida",
+    "subcategory": "Tacos",
+    "images": "/3.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Esta exclusiva de Tacopado lleva los tacos a un nivel completamente nuevo. Cambiamos la cáscara con pan de pita tibio y esponjoso, y lo rellenamos con frijoles refritos cocidos a fuego lento. Con relleno a elección: carne picada fresca o carne de pollo. Y con la infaltable lechuga fresca, tomates jugosos y coronandolo con queso cheddar rallado.",
+    "key words": [
+      "suave",
+      "xxl"
+    ],
+    "price": 500,
+    "calories": [
+      530,
+      510
+    ],
+    "totalfat": [
+      32.2,
+      27
+    ],
+    "carb": [
+      48.5,
+      49.2
+    ],
+    "protein": [
+      18.5,
+      22.4
+    ],
+    "transfat": [
+      0.7,
+      0.3
+    ],
+    "saturatedfat": [
+      11.7,
+      9.5
+    ],
+    "cholesterol": [
+      29.4,
+      36.9
+    ],
+    "sodium": [
+      967.1,
+      907.6
+    ],
+    "sugars": [
+      3.7,
+      3.5
+    ],
+    "fiber": [
+      10,
+      9.5
+    ]
+  },
+  {
+    "id": 4,
+    "title": "¡Grande, taco!",
+    "category": "comida",
+    "subcategory": "Tacos",
+    "images": "/4.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "maíz",
+    "description": "Un camino más grande a lo copado. Un taco nunca es suficiente, así que empacamos el doble de sabor y frescura en esta crujiente tortilla de maíz para agarrar con las dos manos. Disfrutá el doble de carne picada fresca o carne de pollo. Además tiene una mezcla rallada de queso cheddar y picantes, con lechuga fresca, tomates jugosos y una cucharada de crema agria fresca.",
+    "key words": [
+      "crujiente",
+      "xxl"
+    ],
+    "price": 580,
+    "calories": [
+      360,
+      313
+    ],
+    "totalfat": [
+      25.1,
+      18.5
+    ],
+    "carb": [
+      14.6,
+      16
+    ],
+    "protein": [
+      18.7,
+      27
+    ],
+    "transfat": [
+      0.8,
+      0
+    ],
+    "saturatedfat": [
+      11.4,
+      7
+    ],
+    "cholesterol": [
+      76.2,
+      91
+    ],
+    "sodium": [
+      786.9,
+      668
+    ],
+    "sugars": [
+      2.2,
+      2
+    ],
+    "fiber": [
+      3,
+      2
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Copado Burrito",
+    "category": "comida",
+    "subcategory": "Burritos",
+    "images": "/5.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Envolvé tus papilas gustativas alrededor de 5 capas de todo lo copado. Comenzamos con frijoles refritos cocidos a fuego lento y una capa de sabroso arroz mexicano, salsa de chile, una mezcla rallada de queso cheddar y picante. A tu elección el relleno de carne picada o carne de pollo.",
+    "key words": "suave",
+    "price": 220,
+    "calories": [
+      660,
+      630
+    ],
+    "totalfat": [
+      35.1,
+      28.2
+    ],
+    "carb": [
+      70.1,
+      71
+    ],
+    "protein": [
+      25,
+      30.3
+    ],
+    "transfat": [
+      0.9,
+      0.4
+    ],
+    "saturatedfat": [
+      14,
+      11.1
+    ],
+    "cholesterol": [
+      49.7,
+      59.8
+    ],
+    "sodium": [
+      1598.4,
+      1519
+    ],
+    "sugars": [
+      2.1,
+      1.8
+    ],
+    "fiber": [
+      14.7,
+      14.1
+    ]
+  },
+  {
+    "id": 6,
+    "title": "El gran burrito gran",
+    "category": "comida",
+    "subcategory": "Burritos",
+    "images": "/6.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Un burrito tan grande que no le cabía otro nombre. Actualizamos nuestra tortilla de harina fresca a un tamaño que puede contener rellenos adicionales. Elegí rellenarlo con carne picada o pollo, para ,ezcñarse em caás de salsa de chile picante, hebras de queso cheddar y picantes, lechuga fresca, tomates jugosos y crema agria fresca para hacer este burrito famoso de Tacopado.",
+    "key words": "suave",
+    "price": 550,
+    "calories": [
+      650,
+      590
+    ],
+    "totalfat": [
+      34,
+      21.8
+    ],
+    "carb": [
+      56.2,
+      57.8
+    ],
+    "protein": [
+      27.6,
+      36.7
+    ],
+    "transfat": [
+      1,
+      0.1
+    ],
+    "saturatedfat": [
+      14.7,
+      9.6
+    ],
+    "cholesterol": [
+      83.4,
+      101
+    ],
+    "sodium": [
+      1464.8,
+      1325.9
+    ],
+    "sugars": [
+      2.2,
+      1.6
+    ],
+    "fiber": [
+      5.4,
+      4.3
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Burrito de carne",
+    "category": "comida",
+    "subcategory": "Burritos",
+    "images": "/7.jpg",
+    "variety": "carne",
+    "tortilla": "trigo",
+    "description": "Poné en tus manos este burrito 100% carne vacuna. Disfruta de la carne molida, perfectamente sazonada, combinada con una mezcla de queso cheddar, picantes y salsa de chile. Todo envuelto en una tortilla de harina de trigo y tibia",
+    "key words": "suave",
+    "price": 190,
+    "calories": 470,
+    "totalfat": 24.9,
+    "carb": 38.9,
+    "protein": 20.4,
+    "transfat": 0.8,
+    "saturatedfat": 10.5,
+    "cholesterol": 60.8,
+    "sodium": 1097.6,
+    "sugars": 0.7,
+    "fiber": 3.7
+  },
+  {
+    "id": 8,
+    "title": "Burrito Mr. Bean",
+    "category": "comida",
+    "subcategory": "Burritos",
+    "images": "/8.jpg",
+    "variety": "frijoles",
+    "tortilla": "trigo",
+    "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
+    "key words": [
+      "suave",
+      "vegetariano"
+    ],
+    "price": 180,
+    "calories": 540,
+    "totalfat": 31.6,
+    "carb": 61.6,
+    "protein": 18.8,
+    "transfat": 0.5,
+    "saturatedfat": 12.9,
+    "cholesterol": 20.1,
+    "sodium": 1225.2,
+    "sugars": 1.8,
+    "fiber": 18.9
+  },
+  {
+    "id": 9,
+    "title": "Burrito combo",
+    "category": "comida",
+    "subcategory": "Burritos",
+    "images": "/9.jpg",
+    "variety": "frijoles",
+    "tortilla": "trigo",
+    "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento y carne picada perfectamente sazonada, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
+    "key words": "suave",
+    "price": 230,
+    "calories": 510,
+    "totalfat": 28.7,
+    "carb": 50.3,
+    "protein": 20.1,
+    "transfat": 0.7,
+    "saturatedfat": 11.9,
+    "cholesterol": 42.3,
+    "sodium": 1185.5,
+    "sugars": 1.3,
+    "fiber": 11.3
+  },
+  {
+    "id": 10,
+    "title": "Burrito Francisco",
+    "category": "comida",
+    "subcategory": "Burritos",
+    "images": "/10.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Vos decís Papa, nosotros decimos burrito. Disfruta de croquetas de patata crujiente en capas con carne picada o carne de pollo sazonada. Todo acompañado de queso derretido, lechuga fresca rallada y crema agria enrollada en una tortilla de harina suave y tibia.",
+    "key words": "suave",
+    "price": 200,
+    "calories": [
+      310,
+      290
+    ],
+    "totalfat": [
+      16.1,
+      12.6
+    ],
+    "carb": [
+      30.6,
+      31.1
+    ],
+    "protein": [
+      9.1,
+      11.7
+    ],
+    "transfat": [
+      0.3,
+      0.1
+    ],
+    "saturatedfat": [
+      6.8,
+      5.4
+    ],
+    "cholesterol": [
+      28,
+      33.1
+    ],
+    "sodium": [
+      713.8,
+      674.1
+    ],
+    "sugars": [
+      1.7,
+      1.5
+    ],
+    "fiber": [
+      2.4,
+      2.1
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Quesadilla de ternera",
+    "category": "comida",
+    "subcategory": "Quesadillas",
+    "images": "/11.jpg",
+    "variety": [
+      "carne",
+      "cuchillo"
+    ],
+    "tortilla": "trigo",
+    "description": "No hay mejor manera de disfrutar tu elección de relleno de carne picada sazonada o cortada a cuchillo, con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
+    "key words": "suave",
+    "price": 250,
+    "calories": 829,
+    "totalfat": 51,
+    "carb": 52,
+    "protein": 40,
+    "transfat": 1,
+    "saturatedfat": 27,
+    "cholesterol": 138,
+    "sodium": 1527,
+    "sugars": 1,
+    "fiber": 5
+  },
+  {
+    "id": 12,
+    "title": "Quesadilla de pollo",
+    "category": "comida",
+    "subcategory": "Quesadillas",
+    "images": "/12.jpg",
+    "variety": "pollo",
+    "tortilla": "trigo",
+    "description": "No hay mejor manera de disfrutar pollo con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
+    "key words": "suave",
+    "price": 220,
+    "calories": 800,
+    "totalfat": 43.8,
+    "carb": 52.9,
+    "protein": 44.9,
+    "transfat": 0,
+    "saturatedfat": 23.9,
+    "cholesterol": 147.9,
+    "sodium": 1447.7,
+    "sugars": 0.3,
+    "fiber": 4.3
+  },
+  {
+    "id": 13,
+    "title": "Quesadilla de queso",
+    "category": "comida",
+    "subcategory": "Quesadillas",
+    "images": "/13.jpg",
+    "variety": "queso",
+    "tortilla": "trigo",
+    "description": "No hay mejor manera de disfrutar una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
+    "key words": "suave",
+    "price": 200,
+    "calories": 720,
+    "totalfat": 42.4,
+    "carb": 50.7,
+    "protein": 32.4,
+    "transfat": 0,
+    "saturatedfat": 23.6,
+    "cholesterol": 108.2,
+    "sodium": 1141.5,
+    "sugars": 0.3,
+    "fiber": 4.3
+  },
+  {
+    "id": 14,
+    "title": "Mexicanísimo",
+    "category": "comida",
+    "subcategory": "Entradas",
+    "images": "/14.jpg",
+    "variety": "frijoles",
+    "tortilla": "trigo",
+    "description": "Tené esa dosis de papas que te merecés y salsas de este clásico de Tacopado. Nuestros chips de tortilla crujiente se combinan con guacamole hecho con paltas frescas, queso y frijoles refritos cocidos a fuego lento ¿Mencionamos que estas creaciones vienen en sus propios tazones de tortilla de maíz?",
+    "key words": "crujiente",
+    "price": 170,
+    "calories": 780,
+    "totalfat": 51.8,
+    "carb": 79,
+    "protein": 20.9,
+    "transfat": 0.9,
+    "saturatedfat": 17,
+    "cholesterol": 21.5,
+    "sodium": 1527.4,
+    "sugars": 4.8,
+    "fiber": 25
+  },
+  {
+    "id": 15,
+    "title": "Mucho Nacho",
+    "category": "comida",
+    "subcategory": "Entradas",
+    "images": "/15.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Porque nunca son suficientes nachos, mejoramos este clásico mexicano con más de lo que amás: chips de tortilla recién hechos, acompañados de carne picada o carne de pollo sazonada. Además tiene salsa de chile picante, frijoles refritos a fuego lento, queso derretido, tomates jugosos y una cucharada de crema agria fría.",
+    "key words": "crujiente",
+    "price": 250,
+    "calories": [
+      930,
+      900
+    ],
+    "totalfat": [
+      60.5,
+      53.5
+    ],
+    "carb": [
+      83.3,
+      84.2
+    ],
+    "protein": [
+      36.4,
+      41.6
+    ],
+    "transfat": [
+      1.9,
+      1.4
+    ],
+    "saturatedfat": [
+      24.1,
+      21.1
+    ],
+    "cholesterol": [
+      80.8,
+      90.8
+    ],
+    "sodium": [
+      2748.8,
+      2669.4
+    ],
+    "sugars": [
+      7.9,
+      7.6
+    ],
+    "fiber": [
+      26.9,
+      26.3
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Papas con queso",
+    "category": "comida",
+    "subcategory": "Entradas",
+    "images": "/16.jpg",
+    "variety": [
+      "regular",
+      "grande"
+    ],
+    "tortilla": "trigo",
+    "description": "Amor a primer bocado. Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujiente de trigo recién fritos y combinados con una salsa melty de queso y pimientos. Este dúo viene en tamaño regular y grande, según el hambre que tengas",
+    "key words": "crujiente",
+    "price": [
+      190,
+      230
+    ],
+    "calories": [
+      300,
+      600
+    ],
+    "totalfat": [
+      15.2,
+      17.3
+    ],
+    "carb": [
+      32.6,
+      65.2
+    ],
+    "protein": [
+      8.8,
+      17.5
+    ],
+    "transfat": [
+      0.5,
+      0.9
+    ],
+    "saturatedfat": [
+      6.6,
+      13.1
+    ],
+    "cholesterol": [
+      22,
+      44
+    ],
+    "sodium": [
+      962.1,
+      1942.2
+    ],
+    "sugars": [
+      2.9,
+      5.8
+    ],
+    "fiber": [
+      2.3,
+      4.6
+    ]
+  },
+  {
+    "id": 17,
+    "title": "GuacaChips",
+    "category": "comida",
+    "subcategory": "Entradas",
+    "images": "/17.jpg",
+    "variety": [
+      "regular",
+      "grande"
+    ],
+    "tortilla": "trigo",
+    "description": "Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujientes se combinan con guacamole fresco hecho con palta perfectamente madura, tomates y cebollas cortados en cubitos y una mezcla de nuestras especias exclusivas. Este dúo viene en tamaño regular y grande, según el tamaño de tu antojo",
+    "key words": "crujiente",
+    "price": [
+      280,
+      300
+    ],
+    "calories": [
+      370,
+      740
+    ],
+    "totalfat": [
+      25,
+      50
+    ],
+    "carb": [
+      36.6,
+      73.2
+    ],
+    "protein": [
+      6.9,
+      13.8
+    ],
+    "transfat": [
+      0.2,
+      0.3
+    ],
+    "saturatedfat": [
+      5.3,
+      10.6
+    ],
+    "cholesterol": [
+      0,
+      0
+    ],
+    "sodium": [
+      326.8,
+      653.6
+    ],
+    "sugars": [
+      1.5,
+      2.9
+    ],
+    "fiber": [
+      7.6,
+      15.1
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Fuente de sabores",
+    "category": "comida",
+    "subcategory": "Platos",
+    "images": "/18.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Una fuente para acabar con tu hambre. Con una chilada de pollo o carne tibia bañada en sala de chile picante y queso derretido, un taco de carne crujiente y un Tacopante de carne suave. Esta fuente se completa con frijoles refritos a fuego lento, un acompañamiento de queso derretido, arroz mexicano sazonado y tortilla crujiente de papas fritas, crema agria fresca y una bola de guacamole recién hecho.",
+    "key words": "crujiente",
+    "price": [
+      1290,
+      1090
+    ],
+    "calories": [
+      1790,
+      1740
+    ],
+    "totalfat": [
+      104.1,
+      93.6
+    ],
+    "carb": [
+      177.2,
+      178.6
+    ],
+    "protein": [
+      61.2,
+      69
+    ],
+    "transfat": [
+      2.5,
+      1.8
+    ],
+    "saturatedfat": [
+      38.6,
+      34.3
+    ],
+    "cholesterol": [
+      120.6,
+      135.7
+    ],
+    "sodium": [
+      4016.4,
+      3897.7
+    ],
+    "sugars": [
+      11.3,
+      10.8
+    ],
+    "fiber": [
+      37,
+      36.1
+    ]
+  },
+  {
+    "id": 19,
+    "title": "La taco-bandeja",
+    "category": "comida",
+    "subcategory": "Platos",
+    "images": "/19.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo y maiz",
+    "description": "¿No podes elegir entre tacos crujientes y suaves? Con esta fuente podes tener ambos. Disfruta de dos tipos de taco, rellenos a tu elección: carne ligeramente sazonada o de carne de pollo. Disfruta de una variedad de acompañamientos: sabrozoz arroz mexicano, frijoles refritos a fuego lento, chips de tortilla crujientes, crema agria fresca y guacamoles recién hecho.",
+    "key words": [
+      "crujiente",
+      "suave"
+    ],
+    "price": [
+      1300,
+      1280
+    ],
+    "calories": [
+      1050,
+      1160
+    ],
+    "totalfat": [
+      60.4,
+      55.1
+    ],
+    "carb": [
+      109,
+      131.8
+    ],
+    "protein": [
+      35.1,
+      48.3
+    ],
+    "transfat": [
+      1.4,
+      0.7
+    ],
+    "saturatedfat": [
+      21.8,
+      19.6
+    ],
+    "cholesterol": [
+      65.5,
+      88
+    ],
+    "sodium": [
+      2079.1,
+      2344.2
+    ],
+    "sugars": [
+      6.2,
+      5.4
+    ],
+    "fiber": [
+      25.2,
+      25.1
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Fuente Tacopada",
+    "category": "comida",
+    "subcategory": "Platos",
+    "images": "/20.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": [
+      "trigo",
+      "maiz"
+    ],
+    "description": "Combina texturas crujientes y suabes con nuestro taco más grande de carne o pollo tibio. Disfrutá de un montón de arroz mexicano sazonado, frijoles refritos a fuego lento y chips de tortilla frescos a un lado, cubierto con crema agria fresca y guacamole recién hecho",
+    "key words": [
+      "crujiente",
+      "suave"
+    ],
+    "price": [
+      2000,
+      1890
+    ],
+    "calories": [
+      1520,
+      1520
+    ],
+    "totalfat": [
+      85.9,
+      85
+    ],
+    "carb": [
+      146,
+      147.1
+    ],
+    "protein": [
+      42.4,
+      53.8
+    ],
+    "transfat": [
+      1.3,
+      0.9
+    ],
+    "saturatedfat": [
+      30.5,
+      29.9
+    ],
+    "cholesterol": [
+      75.6,
+      87.1
+    ],
+    "sodium": [
+      2270.5,
+      2364.5
+    ],
+    "sugars": [
+      5.8,
+      7.7
+    ],
+    "fiber": [
+      17.6,
+      21.5
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Fuente Chilacopada",
+    "category": "comida",
+    "subcategory": "Platos",
+    "images": "/21.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Disfruta de dos chiladas empaquetadas con nuestra carne molida fresca y sazonada o carne de pollo, envuelto en una tortilla de harina tibia y bañada en salsa de chile picante con queso derretido caliente. Estos favoritos de Tacopado se combinan con un sabroso arroz mexicano, frijoles refritos hervidos a fuego lento y muchos chips de tortilla crujientes. Plus? una cucharada de crema agria fresca y una bola de guacamole fresco como acompañamiento.",
+    "key words": "suave",
+    "price": [
+      1600,
+      1500
+    ],
+    "calories": [
+      1270,
+      1220
+    ],
+    "totalfat": [
+      69.1,
+      17.9
+    ],
+    "carb": [
+      135.9,
+      53.7
+    ],
+    "protein": [
+      42.9,
+      30.9
+    ],
+    "transfat": [
+      69.1,
+      0.3
+    ],
+    "saturatedfat": [
+      25.2,
+      7.2
+    ],
+    "cholesterol": [
+      80.1,
+      80.3
+    ],
+    "sodium": [
+      2992.1,
+      1513.6
+    ],
+    "sugars": [
+      6,
+      1,
+      1
+    ],
+    "fiber": [
+      26.4,
+      3.7
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Mega ensalada en taco",
+    "category": "comida",
+    "subcategory": "Ensaladas",
+    "images": "/22.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "trigo",
+    "description": "Una ensalada crujiente, de sabor crujiente. Esta ensalada de taco tiene mucho sabor en un tazón de tortilla de trigo recién frito. Disfrutala con carne fresca o carne blanca de pollo. Acunada en un colchol de lechuga crujiente rallada y tomates cortados en cubitos. Terminado con queso cheddar rallado, guacamole recién hecho y una cucharada de crema agria fresca, perfecta como aderezo para ensalada o como salsa para este tazón crujiente e irresistible.",
+    "key words": "crujiente",
+    "price": [
+      590,
+      500
+    ],
+    "calories": [
+      980,
+      940
+    ],
+    "totalfat": [
+      68,
+      58
+    ],
+    "carb": [
+      66,
+      67
+    ],
+    "protein": [
+      29,
+      37
+    ],
+    "transfat": [
+      1,
+      1
+    ],
+    "saturatedfat": [
+      22,
+      18
+    ],
+    "cholesterol": [
+      97,
+      112
+    ],
+    "sodium": [
+      2158,
+      2039
+    ],
+    "sugars": [
+      8,
+      7
+    ],
+    "fiber": [
+      7,
+      7
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Nacho ensalada",
+    "category": "comida",
+    "subcategory": "Ensaladas",
+    "images": "/23.jpg",
+    "variety": [
+      "carne",
+      "pollo"
+    ],
+    "tortilla": "maíz",
+    "description": "Una ensalada a la mexicana. Disfruta de una variedad de chips de tortilla crujientes hechos en casa, cubiertos con salsa de chile picante, queso derretido y pollo o carne a tu elección. Trae lechuga fresca, jugosos tomates y queso cheddar rallado que completan esta combinación perfecta de clásicos de Tacopado.",
+    "key words": "crujiente",
+    "price": [
+      630,
+      590
+    ],
+    "calories": [
+      420,
+      400
+    ],
+    "totalfat": [
+      24.9,
+      19.7
+    ],
+    "carb": [
+      31.9,
+      32.6
+    ],
+    "protein": [
+      18.4,
+      22.3
+    ],
+    "transfat": [
+      0.8,
+      0.4
+    ],
+    "saturatedfat": [
+      10.6,
+      8.4
+    ],
+    "cholesterol": [
+      56.6,
+      64.1
+    ],
+    "sodium": [
+      1118.4,
+      1058.9
+    ],
+    "sugars": [
+      3.8,
+      3.6
+    ],
+    "fiber": [
+      4.1,
+      3.7
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Salsa de frijoles picante",
+    "category": "comida",
+    "subcategory": "Salsas",
+    "images": "/24.jpg",
+    "variety": "frijoles",
+    "tortilla": null,
+    "description": "Esta salsa cálida incluye frijoles refritos hervidos a fuego lento, salsa de chile picante y queso cheddar pegajoso, llenador y rico.",
+    "key words": "salsa",
+    "price": 70,
+    "calories": 282,
+    "totalfat": 22,
+    "carb": 26,
+    "protein": 11,
+    "transfat": 1,
+    "saturatedfat": 9,
+    "cholesterol": 10,
+    "sodium": 772,
+    "sugars": 2,
+    "fiber": 16
+  },
+  {
+    "id": 25,
+    "title": "Arroz mexicano",
+    "category": "comida",
+    "subcategory": "Salsas",
+    "images": "/25.jpg",
+    "variety": "arroz",
+    "tortilla": null,
+    "description": "Granos llenos de sabor. El arroz se potencia con muchas especias sabrosas y toques de cebolla y pimiento.",
+    "key words": "salsa",
+    "price": 80,
+    "calories": 220,
+    "totalfat": 3.3,
+    "carb": 40.7,
+    "protein": 4.6,
+    "transfat": 0,
+    "saturatedfat": 0.6,
+    "cholesterol": 0,
+    "sodium": 549.3,
+    "sugars": 1.4,
+    "fiber": 1.5
+  },
+  {
+    "id": 26,
+    "title": "Guacamole",
+    "category": "comida",
+    "subcategory": "Salsas",
+    "images": "/26.jpg",
+    "variety": [
+      "regular",
+      "grande"
+    ],
+    "tortilla": null,
+    "description": "El dip favorito de todos. Nuestro guacamole fresco esta elaborado con paltas perfectamente maduras, tomates jugosos, cebollas picadas, y una mezcla de nuestras especias exclusivas.",
+    "key words": "salsa",
+    "price": [
+      120,
+      160
+    ],
+    "calories": [
+      160,
+      330
+    ],
+    "totalfat": [
+      16.4,
+      32.7
+    ],
+    "carb": [
+      8.3,
+      16.6
+    ],
+    "protein": [
+      2.8,
+      5.5
+    ],
+    "transfat": [
+      0,
+      0
+    ],
+    "saturatedfat": [
+      2.7,
+      5.5
+    ],
+    "cholesterol": [
+      0,
+      0
+    ],
+    "sodium": [
+      157.3,
+      314.6
+    ],
+    "sugars": [
+      0.1,
+      0.2
+    ],
+    "fiber": [
+      5.5,
+      11
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Queso derretido",
+    "category": "comida",
+    "subcategory": "Salsas",
+    "images": "/27.jpg",
+    "variety": [
+      "regular",
+      "grande"
+    ],
+    "tortilla": null,
+    "description": "Tan copado que se derrite en tu boca. Nuestro queso derretido esta hecho con la combinación perfecta de pimientos picantes y sabroso queso.",
+    "key words": "salsa",
+    "price": [
+      80,
+      100
+    ],
+    "calories": [
+      100,
+      190
+    ],
+    "totalfat": [
+      6.6,
+      13.2
+    ],
+    "carb": [
+      4.3,
+      8.6
+    ],
+    "protein": [
+      4.6,
+      9.2
+    ],
+    "transfat": [
+      0.3,
+      0.6
+    ],
+    "saturatedfat": [
+      4,
+      7.9
+    ],
+    "cholesterol": [
+      22,
+      44
+    ],
+    "sodium": [
+      792.6,
+      1585.2
+    ],
+    "sugars": [
+      1.5,
+      3.1
+    ],
+    "fiber": [
+      0.2,
+      0.5
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Chips de canela",
+    "category": "comida",
+    "subcategory": "Dulces",
+    "images": "/28.jpg",
+    "variety": "canela",
+    "tortilla": null,
+    "description": "Canela y azucar crujiente ¡Para que los amantes de los chips salten de alegría! Tu bocadillo favorito llegó en forma de postre. Nuestros chips están recién fritos y cargados con una mezcla de canela y azucar que le encantará a tu paladar.",
+    "key words": "dulce",
+    "price": 120,
+    "calories": 360,
+    "totalfat": 18.9,
+    "carb": 40.8,
+    "protein": 6.6,
+    "transfat": 0.4,
+    "saturatedfat": 6.1,
+    "cholesterol": 0,
+    "sodium": 299.4,
+    "sugars": 4.6,
+    "fiber": 1
+  },
+  {
+    "id": 29,
+    "title": "Churros",
+    "category": "comida",
+    "subcategory": "Dulces",
+    "images": "/29.jpg",
+    "variety": "canela",
+    "tortilla": null,
+    "description": "Pequeño dulce, sabor pleno. Este amado dulce por todos viene en tamaño de un bocado. Recién fritos y espolvoreados con canela y azúcar para crear un sabor dulce, cálido y acogedor. Estos pedazos del cielo son fáciles de compartir... o de disfrutar en por tu cuenta.",
+    "key words": "dulce",
+    "price": 130,
+    "calories": 340,
+    "totalfat": 26.5,
+    "carb": 22.8,
+    "protein": 2,
+    "transfat": 0.5,
+    "saturatedfat": 7.1,
+    "cholesterol": 0,
+    "sodium": 226.9,
+    "sugars": 1.4,
+    "fiber": 0.5
+  },
+  {
+    "id": 30,
+    "title": "Coca cola",
+    "category": "bebidas",
+    "subcategory": "Gaseosas",
+    "images": "/30.png",
+    "variety": [
+      "300ml",
+      "550ml",
+      "1l",
+      "1.5l"
+    ],
+    "tortilla": null,
+    "description": "Algo fresco para tanto picor. Refrescate con una coca recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
+    "key words": "gaseosa",
+    "price": [
+      200,
+      300,
+      400,
+      460
+    ],
+    "calories": [
+      150,
+      260,
+      360,
+      480
+    ],
+    "totalfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "carb": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "protein": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "transfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturatedfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "cholesterol": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sodium": [
+      30,
+      53,
+      72,
+      96
+    ],
+    "sugars": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "fiber": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Sprite",
+    "category": "bebidas",
+    "subcategory": "Gaseosas",
+    "images": "/31.jpg",
+    "variety": [
+      "300ml",
+      "550ml",
+      "1l",
+      "1.5l"
+    ],
+    "tortilla": null,
+    "description": "Algo fresco para tanto picor. Refrescate con una sprite recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
+    "key words": "gaseosa",
+    "price": [
+      200,
+      300,
+      400,
+      460
+    ],
+    "calories": [
+      150,
+      260,
+      360,
+      480
+    ],
+    "totalfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "carb": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "protein": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "transfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturatedfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "cholesterol": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sodium": [
+      30,
+      53,
+      72,
+      96
+    ],
+    "sugars": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "fiber": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Fanta",
+    "category": "bebidas",
+    "subcategory": "Gaseosas",
+    "images": "/32.png",
+    "variety": [
+      "300ml",
+      "550ml",
+      "1l",
+      "1.5l"
+    ],
+    "tortilla": null,
+    "description": "Algo fresco para tanto picor. Refrescate con una fanta recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
+    "key words": "gaseosa",
+    "price": [
+      200,
+      300,
+      400,
+      460
+    ],
+    "calories": [
+      150,
+      260,
+      360,
+      480
+    ],
+    "totalfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "carb": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "protein": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "transfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturatedfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "cholesterol": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sodium": [
+      30,
+      53,
+      72,
+      96
+    ],
+    "sugars": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "fiber": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Jugo de Lima y Mango",
+    "category": "bebidas",
+    "subcategory": "Jugo",
+    "images": "/33.jpg",
+    "variety": [
+      "300ml",
+      "550ml",
+      "1l",
+      "1.5l"
+    ],
+    "tortilla": null,
+    "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
+    "key words": "jugo",
+    "price": [
+      150,
+      200,
+      300,
+      400
+    ],
+    "calories": [
+      100,
+      200,
+      320,
+      450
+    ],
+    "totalfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "carb": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "protein": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "transfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturatedfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "cholesterol": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sodium": [
+      30,
+      53,
+      72,
+      96
+    ],
+    "sugars": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "fiber": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Jugo de Lima y Frambuesa",
+    "category": "bebidas",
+    "subcategory": "Jugo",
+    "images": "/34.jpg",
+    "variety": [
+      "300ml",
+      "550ml",
+      "1l",
+      "1.5l"
+    ],
+    "tortilla": null,
+    "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
+    "key words": "jugo",
+    "price": [
+      150,
+      200,
+      300,
+      400
+    ],
+    "calories": [
+      100,
+      200,
+      320,
+      450
+    ],
+    "totalfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "carb": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "protein": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "transfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturatedfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "cholesterol": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sodium": [
+      30,
+      53,
+      72,
+      96
+    ],
+    "sugars": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "fiber": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Clásica limonada",
+    "category": "bebidas",
+    "subcategory": "Jugo",
+    "images": "/35.jpg",
+    "variety": [
+      "300ml",
+      "550ml",
+      "1l",
+      "1.5l"
+    ],
+    "tortilla": null,
+    "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
+    "key words": "jugo",
+    "price": [
+      150,
+      200,
+      300,
+      400
+    ],
+    "calories": [
+      100,
+      200,
+      320,
+      450
+    ],
+    "totalfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "carb": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "protein": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "transfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturatedfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "cholesterol": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sodium": [
+      30,
+      53,
+      72,
+      96
+    ],
+    "sugars": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "fiber": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Agua",
+    "category": "bebidas",
+    "subcategory": "Agua",
+    "images": "/36.jpg",
+    "variety": [
+      "300ml",
+      "550ml",
+      "1l",
+      "1.5l"
+    ],
+    "tortilla": null,
+    "description": "Algo fresco para tanto picor. Refrescate con agua fresca para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
+    "key words": "agua",
+    "price": [
+      150,
+      200,
+      300,
+      400
+    ],
+    "calories": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "totalfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "carb": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "protein": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "transfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturatedfat": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "cholesterol": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sodium": [
+      30,
+      53,
+      72,
+      96
+    ],
+    "sugars": [
+      41,
+      72,
+      98,
+      131
+    ],
+    "fiber": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "title": "plato",
+    "description": "platpaltpaltpaltptplt",
+    "category": "Comida",
+    "subcategory": "Salsas",
+    "price": "100000000",
+    "calories": "12",
+    "totalfat": "12",
+    "carb": "12",
+    "protein": "12",
+    "transfat": "12",
+    "saturatedfat": "12",
+    "cholesterol": "12",
+    "sodium": "12",
+    "sugars": "12",
+    "fiber": "1",
+    "id": 37,
+    "images": "default-img.jpg"
+  },
+  {
+    "title": "plato",
+    "description": "palksfsjj",
+    "category": "Comida",
+    "subcategory": "Tacos",
+    "price": "8179238",
+    "calories": "98",
+    "totalfat": "89",
+    "carb": "89",
+    "protein": "89",
+    "transfat": "89",
+    "saturatedfat": "89",
+    "cholesterol": "89",
+    "sodium": "89",
+    "sugars": "98",
+    "fiber": "89",
+    "id": 38,
+    "images": "default-img.jpg"
+  },
+  {
+    "title": "plato",
+    "description": "palksfsjj",
+    "category": "Comida",
+    "subcategory": "Tacos",
+    "price": "8179238",
+    "calories": "98",
+    "totalfat": "89",
+    "carb": "89",
+    "protein": "89",
+    "transfat": "89",
+    "saturatedfat": "89",
+    "cholesterol": "89",
+    "sodium": "89",
+    "sugars": "98",
+    "fiber": "89",
+    "id": 39,
+    "images": "default-img.jpg"
+  }
 ]

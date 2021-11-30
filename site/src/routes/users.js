@@ -11,10 +11,9 @@ const validateLogin = require('../middlewares/validateLogin');
 const loggedUser = require('../middlewares/loggedUser');
 const userLoginCheck = require('../middlewares/userLoginCheck');
 
-
 /* POST login */
 router.get('/login', loggedUser, usersControllers.login)
-router.post('/login', validateLogin, usersControllers.processLogin)
+router.post('/login', usersControllers.processLogin)
 
 
 /* POST register */

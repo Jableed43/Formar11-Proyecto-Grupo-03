@@ -20,6 +20,10 @@
   padding-top: 12px;
 }
 
+.footer .links a{
+  font-size: 100px;
+}
+
 
 /* Iconos rrss */
 .footer .contacto {
@@ -55,20 +59,8 @@
   border-bottom: 1px solid black;
 }
 
-.footer .suscribirme{
-  background-color: #312757;
-  border: none;
-  border-radius: 5px;
-  color:white;
-  font-size: 10px;
-  text-decoration: none;
-  text-align: center;
-  transition: 0.3s;
-  width: 25%;
-  padding: 10px;
-  margin-top: 15px;
-  margin-left: 2%;
-  margin-bottom: 20px;
+.footer p{
+  color: #2d2254;
 }
 
 /* Iconos medios de pago */
@@ -108,10 +100,15 @@
   font-size: 27px;
   width: 100%;
 }
+
+.footer .links div{
+  text-align: center;
+}
     
 .footer p{
   font-size: 20px;
   font-weight: bold;
+  color: #2d2254;
 }
 
 .footer .medpag p{
@@ -139,9 +136,8 @@
   }
 
   .footer .links a{
-    width: 50%;
     order: 2;
-    font-size: 20px;
+    font-size: 100px;
     font-weight: bold;
   }
 
@@ -179,7 +175,7 @@ footer.footer {
   flex-direction: row;
 }
 
-.footer p, .footer .links a, .footer section.susc p, .footer input{
+.footer p, .footer, .footer section.susc p, .footer input{
   font-size: 25px;
 }
 
@@ -210,7 +206,10 @@ footer.footer {
     width: 24%;
     text-align: center;
     margin-right: 20px;
-    margin-top: 15px;
+  }
+
+  .footer div a.links i{
+    font-size: 80px;
   }
 
   .footer .susc {
@@ -218,5 +217,8 @@ footer.footer {
     width: 40%;
     align-self: flex-start;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

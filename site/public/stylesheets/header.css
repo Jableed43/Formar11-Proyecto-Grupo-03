@@ -16,7 +16,8 @@ width: 95px;
 }
 
 .imgUser{
-  width: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -116,7 +117,12 @@ header input#menu[type=checkbox]:checked ~ nav .menu{
 }
 
 header input#user[type=checkbox]:checked ~ nav .user{
-display: block;
+  display: flex;
+  flex-direction: row;
+}
+
+header ul.user{
+  width: 100%;
 }
 
 /* mediaqueries */
@@ -128,6 +134,7 @@ display: block;
 
 .imgUser{
   width: 60px;
+  height: 60px;
 }
  i.fas.fa-user, i.fas.fa-shopping-cart{
   font-size: 50px;
@@ -208,6 +215,7 @@ header div ul li a {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  width: 100%;
 }
 
 header ul.menu{
@@ -239,7 +247,8 @@ header img {
 
 /* Header */
 header {
-  padding-bottom: 50px;
+  padding-bottom: 15px;
+  
 }
 
 header ul li img{

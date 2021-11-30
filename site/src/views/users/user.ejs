@@ -17,12 +17,13 @@
     <p class="price">Tu perfil Tacopado</p>
     <p>Tu email es <%= userProfile.email %></p>
     <p>Nos elegís desde <%= userProfile.provincia %></p>
-    <form action="edit/<%= userProfile.id %>?_method=PUT" method="POST">
+    
     <p><a href="/users/edit/<%= userProfile.id %>" class="button">Editar datos</a></p>
+    
+    <form action="/users/delete/<%= userProfile.id %>?_method=DELETE" method="POST">
+    <button class="button">Eliminar perfil</button>
     </form>
-    <form action="edit/<%= userProfile.id %>?_method=DELETE" method="POST">
-    <p><a href="/users/delete/<%= userProfile.id %>" class="button">Editar datos</a></p>
-    </form>
+
   </div>
 <%- include("../partials/footer.ejs") %>
 </body>
