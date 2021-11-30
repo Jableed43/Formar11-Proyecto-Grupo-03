@@ -21,9 +21,8 @@
 }
 
 .footer .links a{
-  font-size: 100px;
+  font-size: 20px;
 }
-
 
 /* Iconos rrss */
 .footer .contacto {
@@ -137,7 +136,7 @@
 
   .footer .links a{
     order: 2;
-    font-size: 100px;
+    font-size: 25px;
     font-weight: bold;
   }
 
