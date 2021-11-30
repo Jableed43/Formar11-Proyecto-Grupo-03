@@ -9,7 +9,7 @@ let users = [
     "id_sex": 1,
     "id_province": 3,
     "avatar": "default-img.jpg",
-    "id_rol": 1
+    "id_rol": 1,
   },
   {
     "name": "Mace Cadd",
@@ -18,7 +18,7 @@ let users = [
     "id_sex": 1,
     "id_province": 1,
     "avatar": "Mace.jpeg",
-    "id_rol": 2
+    "id_rol": 2,
   }
 ]
 

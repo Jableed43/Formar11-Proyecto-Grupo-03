@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs')
 module.exports = {
     // Para mostrar vista de login
     login: (req, res) => {
-        res.render('/users/login')
+        res.render('users/login')
     },
     // Para loguear usuario por método POST
     processLogin: (req, res) => {
