@@ -23,16 +23,16 @@ let products =  [
     "images": "/2.jpg",
     "description": "Probá el lado más suave de Tacopado.",
     "price": 220,
-    "calories":   180  ,
-    "totalfat":   8.9  ,
-    "carb":   24.2  ,
-    "protein":   14.2  ,
-    "transfat":   0.3  ,
-    "saturatedfat":   3.9  ,
-    "cholesterol":   21.6  ,
-    "sodium":   492.4  ,
-    "sugars":   0.5  ,
-    "fiber":   1.7  ,
+    "calories": 180,
+    "totalfat": 8.9,
+    "carb": 24.2,
+    "protein": 14.2,
+    "transfat": 0.3,
+    "saturatedfat": 3.9,
+    "cholesterol": 21.6,
+    "sodium": 492.4,
+    "sugars": 0.5,
+    "fiber": 1.7,
     "id_subcategory": 4,
  }
 , {
@@ -40,16 +40,16 @@ let products =  [
     "images": "/3.jpg",
     "description": "Esta exclusiva de Tacopado lleva los tacos a un nivel completamente nuevo. Cambiamos la cáscara con pan de pita tibio y esponjoso, y lo rellenamos con frijoles refritos cocidos a fuego lento. Con relleno a elección: carne picada fresca o carne de pollo. Y con la infaltable lechuga fresca, tomates jugosos y coronandolo con queso cheddar rallado.",
     "price": 500,
-    "calories":   530  ,
-    "totalfat":   32.2  ,
-    "carb":   48.5  ,
-    "protein":   18.5  ,
-    "transfat":   0.7  ,
-    "saturatedfat":   11.7  ,
-    "cholesterol":   29.4  ,
-    "sodium":   967.1  ,
-    "sugars":   3.7  ,
-    "fiber":   10  ,
+    "calories": 530,
+    "totalfat": 32.2,
+    "carb": 48.5,
+    "protein": 18.5,
+    "transfat": 0.7,
+    "saturatedfat": 11.7,
+    "cholesterol": 29.4,
+    "sodium": 967.1,
+    "sugars": 3.7,
+    "fiber": 10,
     "id_subcategory": 4
 },
 {
@@ -57,16 +57,16 @@ let products =  [
     "images": "/4.jpg",
     "description": "Un camino más grande a lo copado. Un taco nunca es suficiente, así que empacamos el doble de sabor y frescura en esta crujiente tortilla de maíz para agarrar con las dos manos. Disfrutá el doble de carne picada fresca o carne de pollo. Además tiene una mezcla rallada de queso cheddar y picantes, con lechuga fresca, tomates jugosos y una cucharada de crema agria fresca.",
     "price": 580,
-    "calories":   360  ,
-    "totalfat":   25.1  ,
-    "carb":   14.6  ,
-    "protein":   18.7  ,
-    "transfat":   0.8  ,
-    "saturatedfat":   11.4  ,
-    "cholesterol":   76.2  ,
-    "sodium":   786.9  ,
-    "sugars":   2.2  ,
-    "fiber":   3  ,
+    "calories": 360,
+    "totalfat": 25.1,
+    "carb": 14.6,
+    "protein": 18.7,
+    "transfat": 0.8,
+    "saturatedfat": 11.4,
+    "cholesterol": 76.2,
+    "sodium": 786.9,
+    "sugars": 2.2,
+    "fiber": 3,
     "id_subcategory": 4
 },
   {
@@ -74,38 +74,38 @@ let products =  [
       "images": "/5.jpg",
         "description": "Envolvé tus papilas gustativas alrededor de 5 capas de todo lo copado. Comenzamos con frijoles refritos cocidos a fuego lento y una capa de sabroso arroz mexicano, salsa de chile, una mezcla rallada de queso cheddar y picante. A tu elección el relleno de carne picada o carne de pollo.",
         "price": 220,
-      "calories":   660  ,
-      "totalfat":   35.1  ,
-      "carb":   70.1  ,
-      "protein":   25  ,
-      "transfat":   0.9  ,
-      "saturatedfat":   14  ,
-      "cholesterol":   49.7  ,
-      "sodium":   1598.4  ,
-      "sugars":   2.1  ,
-      "fiber":   14.7  ,
+      "calories": 660,
+      "totalfat": 35.1,
+      "carb": 70.1,
+      "protein": 25,
+      "transfat": 0.9,
+      "saturatedfat": 14,
+      "cholesterol": 49.7,
+      "sodium": 1598.4,
+      "sugars": 2.1,
+      "fiber": 14.7,
       "id_subcategory": 5
   },
   {
         "title": "El gran burrito gran",
-        "id_subcategory": 1,
       "images": "/6.jpg",
         "description": "Un burrito tan grande que no le cabía otro nombre. Actualizamos nuestra tortilla de harina fresca a un tamaño que puede contener rellenos adicionales. Elegí rellenarlo con carne picada o pollo, para ,ezcñarse em caás de salsa de chile picante, hebras de queso cheddar y picantes, lechuga fresca, tomates jugosos y crema agria fresca para hacer este burrito famoso de Tacopado.",
         "price": 550,
-      "calories":   650  ,
-      "totalfat":   34  ,
-      "carb":   56.2  ,
-      "protein":   27.6  ,
-      "transfat":   1  ,
-      "saturatedfat":   14.7  ,
-      "cholesterol":   83.4  ,
-      "sodium":   1464.8  ,
-      "sugars":   2.2  ,
-      "fiber":   5.4  
+      "calories": 650,
+      "totalfat": 34,
+      "carb": 56.2,
+      "protein": 27.6,
+      "transfat": 1,
+      "saturatedfat": 14.7,
+      "cholesterol": 83.4,
+      "sodium": 1464.8,
+      "sugars": 2.2,
+      "fiber": 5.4,
+      "id_subcategory": 5
+
   },
   {
         "title": "Burrito de carne",
-        "id_subcategory": 1,
       "images": "/7.jpg",
         "description": "Poné en tus manos este burrito 100% carne vacuna. Disfruta de la carne molida, perfectamente sazonada, combinada con una mezcla de queso cheddar, picantes y salsa de chile. Todo envuelto en una tortilla de harina de trigo y tibia",
         "price": 190,
@@ -118,11 +118,11 @@ let products =  [
       "cholesterol": 60.8,
       "sodium": 1097.6,
       "sugars": 0.7,
-      "fiber": 3.7
+      "fiber": 3.7,
+      "id_subcategory": 5
   },
   {
         "title": "Burrito Mr. Bean",
-        "id_subcategory": 1,
       "images": "/8.jpg",
         "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
       "price": 180,
@@ -135,11 +135,11 @@ let products =  [
       "cholesterol": 20.1,
       "sodium": 1225.2,
       "sugars": 1.8,
-      "fiber": 18.9
+      "fiber": 18.9,
+      "id_subcategory": 5
   },
   {
         "title": "Burrito combo",
-        "id_subcategory": 1,
       "images": "/9.jpg",
         "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento y carne picada perfectamente sazonada, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
         "price": 230,
@@ -152,28 +152,28 @@ let products =  [
       "cholesterol": 42.3,
       "sodium": 1185.5,
       "sugars": 1.3,
-      "fiber": 11.3
+      "fiber": 11.3,
+      "id_subcategory": 5
   },
   {
          "title": "Burrito Francisco",
-        "id_subcategory": 1,
       "images": "/10.jpg",
         "description": "Vos decís Papa, nosotros decimos burrito. Disfruta de croquetas de patata crujiente en capas con carne picada o carne de pollo sazonada. Todo acompañado de queso derretido, lechuga fresca rallada y crema agria enrollada en una tortilla de harina suave y tibia.",
         "price": 200,
-      "calories":   310  ,
-      "totalfat":   16.1  ,
-      "carb":   30.6  ,
-      "protein":   9.1  ,
-      "transfat":   0.3  ,
-      "saturatedfat":   6.8  ,
-      "cholesterol":   28  ,
-      "sodium":   713.8  ,
-      "sugars":   1.7  ,
-      "fiber":   2.4  
+      "calories": 310,
+      "totalfat": 16.1,
+      "carb": 30.6,
+      "protein": 9.1,
+      "transfat": 0.3,
+      "saturatedfat": 6.8,
+      "cholesterol": 28,
+      "sodium": 713.8,
+      "sugars": 1.7,
+      "fiber": 2.4,
+      "id_subcategory": 5
   },
   {
          "title": "Quesadilla de ternera",
-        "id_subcategory": 1,
       "images": "/11.jpg",
         "description": "No hay mejor manera de disfrutar tu elección de relleno de carne picada sazonada o cortada a cuchillo, con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
         "price": 250,
@@ -186,11 +186,11 @@ let products =  [
       "cholesterol": 138,
       "sodium": 1527,
       "sugars": 1,
-      "fiber": 5
+      "fiber": 5,
+      "id_subcategory": 6
   },
   {
          "title": "Quesadilla de pollo",
-        "id_subcategory": 1,
       "images": "/12.jpg",
         "description": "No hay mejor manera de disfrutar pollo con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
         "price": 220,
@@ -203,11 +203,11 @@ let products =  [
       "cholesterol": 147.9,
       "sodium": 1447.7,
       "sugars": 0.3,
-      "fiber": 4.3
+      "fiber": 4.3,
+      "id_subcategory": 6
   },
   {
          "title": "Quesadilla de queso",
-        "id_subcategory": 1,
       "images": "/13.jpg",
         "description": "No hay mejor manera de disfrutar una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
         "price": 200,
@@ -220,11 +220,11 @@ let products =  [
       "cholesterol": 108.2,
       "sodium": 1141.5,
       "sugars": 0.3,
-      "fiber": 4.3
+      "fiber": 4.3,
+      "id_subcategory": 6
   },
   {
          "title": "Mexicanísimo",
-        "id_subcategory": 1,
       "images": "/14.jpg",
         "description": "Tené esa dosis de papas que te merecés y salsas de este clásico de Tacopado. Nuestros chips de tortilla crujiente se combinan con guacamole hecho con paltas frescas, queso y frijoles refritos cocidos a fuego lento ¿Mencionamos que estas creaciones vienen en sus propios tazones de tortilla de maíz?",
         "price": 170,
@@ -237,11 +237,11 @@ let products =  [
       "cholesterol": 21.5,
       "sodium": 1527.4,
       "sugars": 4.8,
-      "fiber": 25
+      "fiber": 25,
+      "id_subcategory": 8
   },
   {
          "title": "Mucho Nacho",
-        "id_subcategory": 1,
       "images": "/15.jpg",
         "description": "Porque nunca son suficientes nachos, mejoramos este clásico mexicano con más de lo que amás: chips de tortilla recién hechos, acompañados de carne picada o carne de pollo sazonada. Además tiene salsa de chile picante, frijoles refritos a fuego lento, queso derretido, tomates jugosos y una cucharada de crema agria fría.",
         "price": 250,
@@ -254,11 +254,11 @@ let products =  [
       "cholesterol":   80.8  ,
       "sodium":   2748.8,
       "sugars":   7.9,
-      "fiber":   26.9
+      "fiber":   26.9,
+      "id_subcategory": 9
   },
   {
          "title": "Papas con queso",
-        "id_subcategory": 1,
       "images": "/16.jpg",
         "description": "Amor a primer bocado. Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujiente de trigo recién fritos y combinados con una salsa melty de queso y pimientos. Este dúo viene en tamaño regular y grande, según el hambre que tengas",
         "price":   190,
@@ -271,11 +271,11 @@ let products =  [
       "cholesterol":   22, 
       "sodium":   962.1, 
       "sugars":   2.9 ,
-      "fiber":   2.3
+      "fiber":   2.3,
+      "id_subcategory": 8
   },
   {
          "title": "GuacaChips",
-        "id_subcategory": 1,
       "images": "/17.jpg",
         "description": "Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujientes se combinan con guacamole fresco hecho con palta perfectamente madura, tomates y cebollas cortados en cubitos y una mezcla de nuestras especias exclusivas. Este dúo viene en tamaño regular y grande, según el tamaño de tu antojo",
         "price":   280,
@@ -288,11 +288,11 @@ let products =  [
       "cholesterol":   0,
       "sodium":   326.8,
       "sugars":   1.5,
-      "fiber":   7.6
+      "fiber":   7.6,
+      "id_subcategory": 7
   },
   {
          "title": "Fuente de sabores",
-        "id_subcategory": 1,
       "images": "/18.jpg",
         "description": "Una fuente para acabar con tu hambre. Con una chilada de pollo o carne tibia bañada en sala de chile picante y queso derretido, un taco de carne crujiente y un Tacopante de carne suave. Esta fuente se completa con frijoles refritos a fuego lento, un acompañamiento de queso derretido, arroz mexicano sazonado y tortilla crujiente de papas fritas, crema agria fresca y una bola de guacamole recién hecho.",
         "price":   1290,
@@ -305,11 +305,11 @@ let products =  [
       "cholesterol":   120.6,
       "sodium":   4016.4,
       "sugars":   11.3,
-      "fiber":   37
+      "fiber":   37,
+      "id_subcategory": 4
   },
   {
          "title": "La taco-bandeja",
-        "id_subcategory": 1,
       "images": "/19.jpg",
       "description": "¿No podes elegir entre tacos crujientes y suaves? Con esta fuente podes tener ambos. Disfruta de dos tipos de taco, rellenos a tu elección: carne ligeramente sazonada o de carne de pollo. Disfruta de una variedad de acompañamientos: sabrozoz arroz mexicano, frijoles refritos a fuego lento, chips de tortilla crujientes, crema agria fresca y guacamoles recién hecho.",
       "price": 1300,
@@ -322,11 +322,11 @@ let products =  [
       "cholesterol": 65.5,
       "sodium": 2079.1,
       "sugars": 6.2,
-      "fiber": 25.2
+      "fiber": 25.2,
+      "id_subcategory": 4
   },
   {
          "title": "Fuente Tacopada",
-        "id_subcategory": 1,
       "images": "/20.jpg",
       "description": "Combina texturas crujientes y suabes con nuestro taco más grande de carne o pollo tibio. Disfrutá de un montón de arroz mexicano sazonado, frijoles refritos a fuego lento y chips de tortilla frescos a un lado, cubierto con crema agria fresca y guacamole recién hecho",
       "price": 2000,
@@ -339,11 +339,11 @@ let products =  [
       "cholesterol": 75.6,
       "sodium": 2270.5,
       "sugars": 5.8,
-      "fiber": 17.6
+      "fiber": 17.6,
+      "id_subcategory": 11
   },
   {
          "title": "Fuente Chilacopada",
-        "id_subcategory": 1,
       "images": "/21.jpg",
         "description": "Disfruta de dos chiladas empaquetadas con nuestra carne molida fresca y sazonada o carne de pollo, envuelto en una tortilla de harina tibia y bañada en salsa de chile picante con queso derretido caliente. Estos favoritos de Tacopado se combinan con un sabroso arroz mexicano, frijoles refritos hervidos a fuego lento y muchos chips de tortilla crujientes. Plus? una cucharada de crema agria fresca y una bola de guacamole fresco como acompañamiento.",
         "price": 1600,
@@ -356,11 +356,11 @@ let products =  [
       "cholesterol": 80.1,
       "sodium": 2992.1,
       "sugars": 6,
-      "fiber": 26.4
+      "fiber": 26.4,
+      "id_subcategory": 11
   },
   {
          "title": "Mega ensalada en taco",
-        "id_subcategory": 1,
       "images": "/22.jpg",
         "description": "Una ensalada crujiente, de sabor crujiente. Esta ensalada de taco tiene mucho sabor en un tazón de tortilla de trigo recién frito. Disfrutala con carne fresca o carne blanca de pollo. Acunada en un colchol de lechuga crujiente rallada y tomates cortados en cubitos. Terminado con queso cheddar rallado, guacamole recién hecho y una cucharada de crema agria fresca, perfecta como aderezo para ensalada o como salsa para este tazón crujiente e irresistible.",
         "price": 590,
@@ -373,11 +373,11 @@ let products =  [
       "cholesterol": 97,
       "sodium": 2158,
       "sugars": 8,
-      "fiber": 7
+      "fiber": 7,
+      "id_subcategory": 11
   },
   {
          "title": "Nacho ensalada",
-        "id_subcategory": 1,
       "images": "/23.jpg",
         "description": "Una ensalada a la mexicana. Disfruta de una variedad de chips de tortilla crujientes hechos en casa, cubiertos con salsa de chile picante, queso derretido y pollo o carne a tu elección. Trae lechuga fresca, jugosos tomates y queso cheddar rallado que completan esta combinación perfecta de clásicos de Tacopado.",
         "price": 630,
@@ -390,11 +390,11 @@ let products =  [
       "cholesterol": 56.6,
       "sodium": 1118.4,
       "sugars": 3.8,
-      "fiber": 4.1
+      "fiber": 4.1,
+      "id_subcategory": 11
   },
   {
          "title": "Salsa de frijoles picante",
-        "id_subcategory": 1,
       "images": "/24.jpg",
       "description": "Esta salsa cálida incluye frijoles refritos hervidos a fuego lento, salsa de chile picante y queso cheddar pegajoso, llenador y rico.",
       "price": 70,
@@ -407,11 +407,11 @@ let products =  [
       "cholesterol": 10,
       "sodium": 772,
       "sugars": 2,
-      "fiber": 16
+      "fiber": 16,
+      "id_subcategory": 10
   },
   {
          "title": "Arroz mexicano",
-        "id_subcategory": 1,
       "images": "/25.jpg",
       "description": "Granos llenos de sabor. El arroz se potencia con muchas especias sabrosas y toques de cebolla y pimiento.",
       "price": 80,
@@ -424,11 +424,12 @@ let products =  [
       "cholesterol": 0,
       "sodium": 549.3,
       "sugars": 1.4,
-      "fiber": 1.5
+      "fiber": 1.5,
+      "id_subcategory": 11
+      
   },
   {
          "title": "Guacamole",
-        "id_subcategory": 1,
       "images": "/26.jpg",
       "description": "El dip favorito de todos. Nuestro guacamole fresco esta elaborado con paltas perfectamente maduras, tomates jugosos, cebollas picadas, y una mezcla de nuestras especias exclusivas.",
       "price": 120,
@@ -441,11 +442,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 157.3,
       "sugars": 0.1,
-      "fiber": 5.5
+      "fiber": 5.5,
+      "id_subcategory": 10
   },
   {
          "title": "Queso derretido",
-        "id_subcategory": 1,
       "images": "/27.jpg",
       "description": "Tan copado que se derrite en tu boca. Nuestro queso derretido esta hecho con la combinación perfecta de pimientos picantes y sabroso queso.",
       "price": 80,
@@ -458,11 +459,11 @@ let products =  [
       "cholesterol": 22,
       "sodium": 792.6,
       "sugars": 1.5,
-      "fiber": 0.2
+      "fiber": 0.2,
+      "id_subcategory": 10
   },
   {
          "title": "Chips de canela",
-        "id_subcategory": 1,
       "images": "/28.jpg",
       "description": "Canela y azucar crujiente ¡Para que los amantes de los chips salten de alegría! Tu bocadillo favorito llegó en forma de postre. Nuestros chips están recién fritos y cargados con una mezcla de canela y azucar que le encantará a tu paladar.",
       "price": 120,
@@ -475,11 +476,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 299.4,
       "sugars": 4.6,
-      "fiber": 1
+      "fiber": 1,
+      "id_subcategory": 12
   },
   {
          "title": "Churros",
-        "id_subcategory": 1,
       "images": "/29.jpg",
       "description": "Pequeño dulce, sabor pleno. Este amado dulce por todos viene en tamaño de un bocado. Recién fritos y espolvoreados con canela y azúcar para crear un sabor dulce, cálido y acogedor. Estos pedazos del cielo son fáciles de compartir... o de disfrutar en por tu cuenta.",
       "price": 130,
@@ -492,11 +493,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 226.9,
       "sugars": 1.4,
-      "fiber": 0.5
+      "fiber": 0.5,
+      "id_subcategory": 12
   },
   {
          "title": "Coca cola",
-        "id_subcategory": 1,
       "images": "/30.png",
       "description": "Algo fresco para tanto picor. Refrescate con una coca recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 200,
@@ -509,11 +510,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 30,
       "sugars": 41,
-      "fiber": 0
+      "fiber": 0,
+      "id_subcategory": 2
   },
   {
          "title": "Sprite",
-        "id_subcategory": 1,
       "images": "/31.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con una sprite recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 200,
@@ -526,11 +527,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 30,
       "sugars": 41,
-      "fiber": 0
+      "fiber": 0,
+      "id_subcategory": 2
   },
   {
          "title": "Fanta",
-        "id_subcategory": 1,
       "images": "/32.png",
       "description": "Algo fresco para tanto picor. Refrescate con una fanta recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 200,
@@ -543,11 +544,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 30,
       "sugars": 41,
-      "fiber": 0
+      "fiber": 0,
+      "id_subcategory": 2
   },
   {
          "title": "Jugo de Lima y Mango",
-        "id_subcategory": 1,
       "images": "/33.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -560,11 +561,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 30,
       "sugars": 41,
-      "fiber": 0
+      "fiber": 0,
+      "id_subcategory": 1
   },
   {
          "title": "Jugo de Lima y Frambuesa",
-        "id_subcategory": 1,
       "images": "/34.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -577,11 +578,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 30,
       "sugars": 41,
-      "fiber": 0
+      "fiber": 0,
+      "id_subcategory": 1
   },
   {
          "title": "Clásica limonada",
-        "id_subcategory": 1,
       "images": "/35.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -594,11 +595,11 @@ let products =  [
       "cholesterol": 0,
       "sodium": 30,
       "sugars": 41,
-      "fiber": 0
+      "fiber": 0,
+      "id_subcategory": 1
   },
   {
          "title": "Agua",
-        "id_subcategory": 1,
       "images": "/36.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con agua fresca para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -611,7 +612,8 @@ let products =  [
       "cholesterol": 0,
       "sodium": 0,
       "sugars": 0,
-      "fiber": 0
+      "fiber": 0,
+      "id_subcategory": 3
   }
 ]
 

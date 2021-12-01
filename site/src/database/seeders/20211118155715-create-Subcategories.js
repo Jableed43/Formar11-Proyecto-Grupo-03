@@ -43,6 +43,14 @@ module.exports = {
         {
           name : 'Chile',
           id_category: 2        
+        } ,
+        {
+          name : 'Ensalada',
+          id_category: 2        
+        } ,
+        {
+          name : 'Dulces',
+          id_category: 2        
         } 
       ], {});
    
