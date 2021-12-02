@@ -41,10 +41,3 @@ module.exports = [
 ]
 
 
-// agrego chequeo de email si ya fue registrado, es el tercero, body ('email') y agrego const users = require('../data/users.json'); arriba para leer la data
-
-// desde userControler redireccione al home, pero no se carga el css no se por que
-
-// con el registro deberian siempre iniciar sesion, chequear con el equipo si les parece bien así
-
-// En el error del register.ejs cambie p1 por password

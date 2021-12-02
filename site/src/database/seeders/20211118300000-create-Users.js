@@ -1,6 +1,24 @@
 'use strict';
 const bcrypt = require('bcryptjs');
 
+let usuarios = require('../../data/users.json')
+
+// let usuariosDB = usuarios.map(user => {
+//   return {
+//     name: user.name,
+//     email: user.email,
+//     password: user.password,
+//     id_sex: if(user.sex == 0){
+      
+//     },
+//     "id_province": 3,
+//     "avatar": "default-img.jpg",
+//     "id_rol": 1,
+//     createdAt: null,
+//     updatedAt: null
+//   }
+// })
+
 let users = [
   {
     "name": "Taco",
