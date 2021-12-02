@@ -2,6 +2,7 @@ const db = require('../database/models/product')
 const { Op } = require('sequelize')
 
 module.exports = {
+    // Para listar productos en vista Products
     list: (req, res) => {
         let products = db.Product.findAll({
             include: ['subcategory']
@@ -69,7 +70,7 @@ module.exports = {
                 { association: 'products' }
             ]
         })
-        
+
         let Dulces = db.Subcategory.findAll({
             where: {
                 id: 8
@@ -78,7 +79,7 @@ module.exports = {
                 { association: 'products' }
             ]
         })
-        
+
         let Gaseosas = db.Subcategory.findAll({
             where: {
                 id: 9
@@ -87,7 +88,7 @@ module.exports = {
                 { association: 'products' }
             ]
         })
-        
+
         let Jugos = db.Subcategory.findAll({
             where: {
                 id: 10
@@ -96,7 +97,7 @@ module.exports = {
                 { association: 'products' }
             ]
         })
-        
+
         let Aguas = db.Subcategory.findAll({
             where: {
                 id: 11
@@ -125,9 +126,9 @@ module.exports = {
                     .catch(err => {
                         console.log('Error al requerir los géneros de la base de datos ' + err)
                     })
-            }
-        },
+            }},
     detail: (req, res) => {
+        // Para entrar al detalle del producto
         db.Product.findByPK(+req.params.id)
             .then(producto => {
                 res.render('detalle-producto', { products: producto })
