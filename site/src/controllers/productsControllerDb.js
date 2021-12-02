@@ -5,7 +5,7 @@ module.exports = {
     // Para listar productos en vista Products
     list: (req, res) => {
         let products = db.Product.findAll({
-            include: ['subcategory']
+            include: ['id_subcategory']
         })
 
         let Tacos = db.Subcategory.findAll({
@@ -126,7 +126,7 @@ module.exports = {
                     .catch(err => {
                         console.log('Error al requerir los géneros de la base de datos ' + err)
                     })
-            }},
+            })},
     detail: (req, res) => {
         // Para entrar al detalle del producto
         db.Product.findByPK(+req.params.id)
