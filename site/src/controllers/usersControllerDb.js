@@ -51,18 +51,29 @@ module.exports = {
     },
     // Para mostrar vista registro
     register: (req, res, next) => {
-        res.render('users/register');
+        let sexes = db.Sex.findAll()
+        let provinces = db.Province.findAll()
+
+        Promise.all(([sexes, provinces]))
+
+            .then(([sexes, provinces]) => {
+                return res.render('users/register', {
+                    sexes,
+                    provinces
+                })
+            }) 
+            .catch(error => console.log(error)) 
     },
     // Para registrar usuario por método POST
     newUser: (req, res, next) => {
         let errors = validationResult(req);
-        // Para validar la imagen
-        if (req.fileValidationError) {
-            let img = {
-                param: "img",
-                msj: "Solo se permiten imágenes"
-            }
-            errors.errors.push(img)
+        if (!errors.isEmpty()) {
+            return res.render('users/register', {
+                errores: errors.mapped(),
+                old: req.body
+            })
+        
+        } else {
             const { name, sexo, provincia, email, password } = req.body
 
             db.User.create({
@@ -70,22 +81,17 @@ module.exports = {
                 email,
                 password: bcrypt.hashSync(password, 12),
                 avatar: req.file ? req.file.filename : 'default-img.jpg',
-                sexo,
-                provincia,
-                rol: 2
+                id_sex: sexo,
+                id_province: provincia,
+                id_rol: 2
             })
                 .then(() => {
-                    res.redirect('/users')
+                    res.redirect('/')
                 })
                 .catch((error) => {
                     res.send(error)
-                })
-        } else {
-            return res.render('users/register', {
-                errores: errors.mapped(),
-                old: req.body
-            })
-        }
+                })       
+    }
     },
     // Acceder a carrito
     carrito: (req, res, next) => {
@@ -106,15 +112,20 @@ module.exports = {
     // Update - Form to edit
     edit: (req, res) => {
 
-        db.User.findByPk(req.params.id)
-            .then((user) => {
-                res.render("users/edit", {
-                    user
+        let sexes = db.Sex.findAll()
+        let provinces = db.Province.findAll()
+        let user = db.User.findByPk(req.params.id)
+
+        Promise.all(([user, sexes, provinces]))
+
+            .then(([sexes, provinces]) => {
+                return res.render('users/edit', {
+                    user,
+                    sexes,
+                    provinces
                 })
-            })
-            .catch((error) => {
-                res.send(error)
-            })
+            }) 
+            .catch(error => console.log(error))
 
     },
     // Update - Method to update
@@ -129,8 +140,9 @@ module.exports = {
             email,
             password: bcrypt.hashSync(password, 12),
             avatar: req.file ? req.file.filename : 'default-img.jpg',
-            sexo,
-            provincia
+            id_sex: sexo,
+            id_province: provincia,
+            id_rol: 2
         },
             {
                 where: {

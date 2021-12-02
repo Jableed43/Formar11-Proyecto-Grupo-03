@@ -55,12 +55,10 @@
             <label for="user">Sexo</label>
             <select name="sexo" id="sexo">
               <option name="sexo" selected hidden>Seleccione aquí</option>
-              <% 
-                let sexo = ['Masculino','Femenino','Prefiero no decirlo']
-                %>
-                <% for (const sexSelec of sexo) { %>
-                  <option value="<%= sexSelec %>"><%= sexSelec %></option>
-                <% } %>
+
+                <% sexes.forEach(sex=> { %>
+                  <option value="<%= sex.id %>" <%= locals.old && old.id_sex === sex.id  ? 'selected' : null%>><%= sex.name %></option>
+                <% }) %>
               </select>
               <% if (locals.errors && errors.sexo) { %>
                 <small class="mensajeError"> <%= errors.sexo.msg %> </small>
@@ -71,12 +69,9 @@
             <label for="user">Provincia</label>
             <select name="provincia" id="provincia">
               <option value="provincia" selected hidden>Seleccione aquí</option>
-              <% 
-              let provincias = ['Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fé', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
-              %>
-              <% for (const unaPcia of provincias) { %>
-                <option value="<%= unaPcia %>"><%= unaPcia %></option>
-              <% } %>        
+              <% provinces.forEach(province=> { %>
+                <option value="<%= province.id %>" <%= locals.old && old.id_province === province.id  ? 'selected' : null%>><%= province.name %></option>
+              <% }) %>
             </select>
             <% if (locals.errors && errors.provincia) { %>
               <small class="mensajeError"> <%= errors.provincia.msg %> </small>
