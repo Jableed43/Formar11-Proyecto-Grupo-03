@@ -33,6 +33,7 @@ module.exports = {
                         }
                         if (recordarme) {
                             res.cookie('tacopadoCookie', req.session.user, { maxAge: 1000 * 60 * 60 })
+
                         }
                         return res.redirect('/')
                     } else {
@@ -47,14 +48,15 @@ module.exports = {
                 })
         }
     },
-    // Destruir la session
-    logout: (req, res) => {
-        req.session.destroy();
-        if (req.cookies.recordarme) {
-            res.cookie('tacopadoCookie', '', { maxAge: -1 })
-        }
-        res.redirect('/')
-    },
+// Destruir la session
+logout: (req, res) => {
+    req.session.destroy();
+    if (req.cookies.recordarme) {
+        res.cookie('tacopadoCookie', '', { maxAge: -1 })
+    }
+    res.redirect('/')
+},
+
     // Acceso a vista Registro
     register: (req, res, next) => {
         let sexes = db.Sex.findAll()
