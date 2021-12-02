@@ -126,7 +126,7 @@ module.exports = {
                     .catch(err => {
                         console.log('Error al requerir los géneros de la base de datos ' + err)
                     })
-            }},
+            })},
     detail: (req, res) => {
         // Para entrar al detalle del producto
         db.Product.findByPK(+req.params.id)
