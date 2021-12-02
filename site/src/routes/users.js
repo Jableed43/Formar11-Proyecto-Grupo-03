@@ -24,11 +24,12 @@ router.post('/register',subir.single('img'), validateRegister, usersControllers.
 router.get('/carrito', usersControllers.carrito);
 
 /* GET perfil */
-router.get('/user',usersControllers.profile);
+router.get('/profile', usersControllers.profile);
+
 
 /* PUT editar */
-router.get('/edit/user', usersControllers.edit);
-router.put('/edit/user', usersControllers.update);
+router.get('/edit', usersControllers.edit);
+router.put('/edit', usersControllers.update);
 
 /* DELETE user */ 
 router.delete('/delete/:id', usersControllers.destroy); 
