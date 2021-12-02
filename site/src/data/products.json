@@ -7,18 +7,9 @@
     "images": "/1.jpg",
     "description": "¡El original Tacopado! Una tortilla de maíz crujiente envuelve una abundante relleno de carne picada ligeramente sazonada o carne de pollo, junto con lechuga fresca, tomates jugosos y una mezcla recién rallada de queso cheddar y picantes para un sabor más que copado.",
     "price": 200,
-    "calories": [
-      170,
-      143
-    ],
-    "totalfat": [
-      10.7,
-      5
-    ],
-    "carb": [
-      9.7,
-      10
-    ],
+    "calories":170,
+    "totalfat":10.7,
+    "carb":9.7,
     "protein": [
       7.8,
       12
