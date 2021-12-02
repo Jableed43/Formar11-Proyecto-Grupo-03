@@ -67,7 +67,7 @@ let products =  [
     "sodium": 786.9,
     "sugars": 2.2,
     "fiber": 3,
-    "id_subcategory": 4
+    "id_subcategory": 1
 },
   {
         "title": "Copado Burrito",
@@ -84,7 +84,7 @@ let products =  [
       "sodium": 1598.4,
       "sugars": 2.1,
       "fiber": 14.7,
-      "id_subcategory": 5
+      "id_subcategory": 2
   },
   {
         "title": "El gran burrito gran",
@@ -101,7 +101,7 @@ let products =  [
       "sodium": 1464.8,
       "sugars": 2.2,
       "fiber": 5.4,
-      "id_subcategory": 5
+      "id_subcategory": 2
 
   },
   {
@@ -119,7 +119,7 @@ let products =  [
       "sodium": 1097.6,
       "sugars": 0.7,
       "fiber": 3.7,
-      "id_subcategory": 5
+      "id_subcategory": 2
   },
   {
         "title": "Burrito Mr. Bean",
@@ -136,7 +136,7 @@ let products =  [
       "sodium": 1225.2,
       "sugars": 1.8,
       "fiber": 18.9,
-      "id_subcategory": 5
+      "id_subcategory": 2
   },
   {
         "title": "Burrito combo",
@@ -153,12 +153,12 @@ let products =  [
       "sodium": 1185.5,
       "sugars": 1.3,
       "fiber": 11.3,
-      "id_subcategory": 5
+      "id_subcategory": 2
   },
   {
          "title": "Burrito Francisco",
       "images": "/10.jpg",
-        "description": "Vos decís Papa, nosotros decimos burrito. Disfruta de croquetas de patata crujiente en capas con carne picada o carne de pollo sazonada. Todo acompañado de queso derretido, lechuga fresca rallada y crema agria enrollada en una tortilla de harina suave y tibia.",
+        "description": "Vos decís Papa, nosotros decimos burrito. Disfruta de croquetas de patata crujiente en capas con carne picada. Todo acompañado de queso derretido, lechuga fresca rallada y crema agria enrollada en una tortilla de harina suave y tibia.",
         "price": 200,
       "calories": 310,
       "totalfat": 16.1,
@@ -170,7 +170,7 @@ let products =  [
       "sodium": 713.8,
       "sugars": 1.7,
       "fiber": 2.4,
-      "id_subcategory": 5
+      "id_subcategory": 2
   },
   {
          "title": "Quesadilla de ternera",
@@ -187,7 +187,7 @@ let products =  [
       "sodium": 1527,
       "sugars": 1,
       "fiber": 5,
-      "id_subcategory": 6
+      "id_subcategory": 3
   },
   {
          "title": "Quesadilla de pollo",
