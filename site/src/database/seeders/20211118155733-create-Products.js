@@ -16,7 +16,9 @@ let products =  [
     "sodium": 339,
     "sugars": 1,
     "fiber": 1,
-    "id_subcategory": 4,
+    "subcategoryId": 4,
+    createdAt:new Date,
+    updatedAt: new Date
 },
 {
     "title": "Taco Suave",
@@ -33,7 +35,9 @@ let products =  [
     "sodium": 492.4,
     "sugars": 0.5,
     "fiber": 1.7,
-    "id_subcategory": 4,
+    "subcategoryId": 4,
+    createdAt:new Date,
+    updatedAt: new Date
  }
 , {
     "title": "Tacopante",
@@ -50,7 +54,9 @@ let products =  [
     "sodium": 967.1,
     "sugars": 3.7,
     "fiber": 10,
-    "id_subcategory": 4
+    "subcategoryId": 4,
+    createdAt:new Date,
+    updatedAt: new Date
 },
 {
     "title": "¡Grande, taco!",
@@ -67,7 +73,9 @@ let products =  [
     "sodium": 786.9,
     "sugars": 2.2,
     "fiber": 3,
-    "id_subcategory": 1
+    "subcategoryId": 1,
+    createdAt:new Date,
+    updatedAt: new Date
 },
   {
         "title": "Copado Burrito",
@@ -84,7 +92,9 @@ let products =  [
       "sodium": 1598.4,
       "sugars": 2.1,
       "fiber": 14.7,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
         "title": "El gran burrito gran",
@@ -101,7 +111,9 @@ let products =  [
       "sodium": 1464.8,
       "sugars": 2.2,
       "fiber": 5.4,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
 
   },
   {
@@ -119,7 +131,9 @@ let products =  [
       "sodium": 1097.6,
       "sugars": 0.7,
       "fiber": 3.7,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
         "title": "Burrito Mr. Bean",
@@ -136,7 +150,9 @@ let products =  [
       "sodium": 1225.2,
       "sugars": 1.8,
       "fiber": 18.9,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
         "title": "Burrito combo",
@@ -153,7 +169,9 @@ let products =  [
       "sodium": 1185.5,
       "sugars": 1.3,
       "fiber": 11.3,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Burrito Francisco",
@@ -170,7 +188,9 @@ let products =  [
       "sodium": 713.8,
       "sugars": 1.7,
       "fiber": 2.4,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Quesadilla de ternera",
@@ -187,7 +207,9 @@ let products =  [
       "sodium": 1527,
       "sugars": 1,
       "fiber": 5,
-      "id_subcategory": 3
+      "subcategoryId": 3,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Quesadilla de pollo",
@@ -204,7 +226,9 @@ let products =  [
       "sodium": 1447.7,
       "sugars": 0.3,
       "fiber": 4.3,
-      "id_subcategory": 6
+      "subcategoryId": 6,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Quesadilla de queso",
@@ -221,7 +245,9 @@ let products =  [
       "sodium": 1141.5,
       "sugars": 0.3,
       "fiber": 4.3,
-      "id_subcategory": 6
+      "subcategoryId": 6,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Mexicanísimo",
@@ -238,7 +264,9 @@ let products =  [
       "sodium": 1527.4,
       "sugars": 4.8,
       "fiber": 25,
-      "id_subcategory": 8
+      "subcategoryId": 8,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Mucho Nacho",
@@ -255,7 +283,9 @@ let products =  [
       "sodium":   2748.8,
       "sugars":   7.9,
       "fiber":   26.9,
-      "id_subcategory": 9
+      "subcategoryId": 9,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Papas con queso",
@@ -272,7 +302,9 @@ let products =  [
       "sodium":   962.1, 
       "sugars":   2.9 ,
       "fiber":   2.3,
-      "id_subcategory": 8
+      "subcategoryId": 8,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "GuacaChips",
@@ -289,7 +321,9 @@ let products =  [
       "sodium":   326.8,
       "sugars":   1.5,
       "fiber":   7.6,
-      "id_subcategory": 7
+      "subcategoryId": 7,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Fuente de sabores",
@@ -306,7 +340,9 @@ let products =  [
       "sodium":   4016.4,
       "sugars":   11.3,
       "fiber":   37,
-      "id_subcategory": 4
+      "subcategoryId": 4,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "La taco-bandeja",
@@ -323,7 +359,9 @@ let products =  [
       "sodium": 2079.1,
       "sugars": 6.2,
       "fiber": 25.2,
-      "id_subcategory": 4
+      "subcategoryId": 4,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Fuente Tacopada",
@@ -340,7 +378,9 @@ let products =  [
       "sodium": 2270.5,
       "sugars": 5.8,
       "fiber": 17.6,
-      "id_subcategory": 11
+      "subcategoryId": 11,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Fuente Chilacopada",
@@ -357,7 +397,9 @@ let products =  [
       "sodium": 2992.1,
       "sugars": 6,
       "fiber": 26.4,
-      "id_subcategory": 11
+      "subcategoryId": 11,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Mega ensalada en taco",
@@ -374,7 +416,9 @@ let products =  [
       "sodium": 2158,
       "sugars": 8,
       "fiber": 7,
-      "id_subcategory": 11
+      "subcategoryId": 11,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Nacho ensalada",
@@ -391,7 +435,9 @@ let products =  [
       "sodium": 1118.4,
       "sugars": 3.8,
       "fiber": 4.1,
-      "id_subcategory": 11
+      "subcategoryId": 11,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Salsa de frijoles picante",
@@ -408,7 +454,9 @@ let products =  [
       "sodium": 772,
       "sugars": 2,
       "fiber": 16,
-      "id_subcategory": 10
+      "subcategoryId": 10,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Arroz mexicano",
@@ -425,11 +473,13 @@ let products =  [
       "sodium": 549.3,
       "sugars": 1.4,
       "fiber": 1.5,
-      "id_subcategory": 11
+      "subcategoryId": 11,
+      createdAt:new Date,
+      updatedAt: new Date
       
   },
   {
-         "title": "Guacamole",
+      "title": "Guacamole",
       "images": "/26.jpg",
       "description": "El dip favorito de todos. Nuestro guacamole fresco esta elaborado con paltas perfectamente maduras, tomates jugosos, cebollas picadas, y una mezcla de nuestras especias exclusivas.",
       "price": 120,
@@ -443,7 +493,9 @@ let products =  [
       "sodium": 157.3,
       "sugars": 0.1,
       "fiber": 5.5,
-      "id_subcategory": 10
+      "subcategoryId": 10,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Queso derretido",
@@ -460,7 +512,9 @@ let products =  [
       "sodium": 792.6,
       "sugars": 1.5,
       "fiber": 0.2,
-      "id_subcategory": 10
+      "subcategoryId": 10,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Chips de canela",
@@ -477,7 +531,9 @@ let products =  [
       "sodium": 299.4,
       "sugars": 4.6,
       "fiber": 1,
-      "id_subcategory": 12
+      "subcategoryId": 11,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Churros",
@@ -494,7 +550,9 @@ let products =  [
       "sodium": 226.9,
       "sugars": 1.4,
       "fiber": 0.5,
-      "id_subcategory": 12
+      "subcategoryId": 11,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Coca cola",
@@ -511,7 +569,9 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Sprite",
@@ -528,7 +588,9 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
          "title": "Fanta",
@@ -545,10 +607,12 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "id_subcategory": 2
+      "subcategoryId": 2,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
-         "title": "Jugo de Lima y Mango",
+      "title": "Jugo de Lima y Mango",
       "images": "/33.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -562,10 +626,12 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "id_subcategory": 1
+      "subcategoryId": 1,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
-         "title": "Jugo de Lima y Frambuesa",
+      "title": "Jugo de Lima y Frambuesa",
       "images": "/34.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -579,10 +645,12 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "id_subcategory": 1
+      "subcategoryId": 1,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
-         "title": "Clásica limonada",
+      "title": "Clásica limonada",
       "images": "/35.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -596,10 +664,12 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "id_subcategory": 1
+      "subcategoryId": 1,
+      createdAt:new Date,
+      updatedAt: new Date
   },
   {
-         "title": "Agua",
+      "title": "Agua",
       "images": "/36.jpg",
       "description": "Algo fresco para tanto picor. Refrescate con agua fresca para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
@@ -613,7 +683,9 @@ let products =  [
       "sodium": 0,
       "sugars": 0,
       "fiber": 0,
-      "id_subcategory": 3
+      "subcategoryId": 3,
+      createdAt:new Date,
+      updatedAt: new Date
   }
 ]
 

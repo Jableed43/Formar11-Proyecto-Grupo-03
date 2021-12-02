@@ -11,9 +11,14 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
       }
-    }, 
-    {timestamps: false});
+    });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Sexes');

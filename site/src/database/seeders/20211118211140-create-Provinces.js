@@ -5,76 +5,124 @@ module.exports = {
     
       await queryInterface.bulkInsert('Provinces', [
         {
-          name : 'Buenos Aires'        
+          name : 'Buenos Aires',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Capital Federal'        
+          name : 'Capital Federal',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Catamarca'        
+          name : 'Catamarca',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Chaco'        
+          name : 'Chaco',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Chubut'        
+          name : 'Chubut',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Córdoba'        
+          name : 'Córdoba' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Corrientes'        
+          name : 'Corrientes',
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Entre Ríos'        
+          name : 'Entre Ríos' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Formosa'        
+          name : 'Formosa' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Jujuy'        
+          name : 'Jujuy'  ,
+          createdAt:new Date,
+          updatedAt: new Date      
         },
         {
-          name : 'La Pampa'        
+          name : 'La Pampa',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'La Rioja'        
+          name : 'La Rioja',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Mendoza'        
+          name : 'Mendoza'  ,
+          createdAt:new Date,
+          updatedAt: new Date      
         },
         {
-          name : 'Misiones'        
+          name : 'Misiones' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Neuquén'        
+          name : 'Neuquén' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Río Negro'        
+          name : 'Río Negro' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Salta'        
+          name : 'Salta' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'San Juan'        
+          name : 'San Juan' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'San Luis'        
+          name : 'San Luis' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Santa Cruz'        
+          name : 'Santa Cruz',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Santa Fé'        
+          name : 'Santa Fé' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Santiago del Estero'        
+          name : 'Santiago del Estero' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Tierra del Fuego'        
+          name : 'Tierra del Fuego',
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
-          name : 'Tucumán'        
+          name : 'Tucumán' ,
+          createdAt:new Date,
+          updatedAt: new Date       
         }
       ], {});
     

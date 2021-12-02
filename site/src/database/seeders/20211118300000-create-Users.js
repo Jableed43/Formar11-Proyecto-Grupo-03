@@ -10,8 +10,8 @@ let users = [
     "id_province": 3,
     "avatar": "default-img.jpg",
     "id_rol": 1,
-    createdAt: null,
-    updatedAt: null
+    createdAt: new Date,
+    updatedAt: new Date
     },
   {
     "name": "Mace Cadd",
@@ -21,8 +21,8 @@ let users = [
     "id_province": 1,
     "avatar": "Mace.jpeg",
     "id_rol": 2,
-    createdAt: null,
-    updatedAt: null
+    createdAt: new Date,
+    updatedAt: new Date
   }
 ]
 

@@ -6,47 +6,69 @@ module.exports = {
       await queryInterface.bulkInsert('Subcategories', [
         {
           name : 'Tacos',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Burritos',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Quesadillas',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Entradas',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Platos',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Ensaladas',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Salsas',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Dulces',
-          id_category: 2       
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Gaseosas',
-          id_category: 1       
+          categoryId: 1,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Jugos',
-          id_category: 1       
+          categoryId: 1,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
           name : 'Aguas',
-          id_category: 1       
+          categoryId: 1,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
       ], {});
    
@@ -54,7 +76,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkDelete('People', null, {});
+      await queryInterface.bulkDelete('Subcategories', null, {});
      
   }
 };

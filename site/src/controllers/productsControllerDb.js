@@ -1,14 +1,13 @@
-const db = require('../database/models/product')
+const db = require('../database/models')
 const { Op } = require('sequelize')
 
 module.exports = {
     // Para listar productos en vista Products
     list: (req, res) => {
-        let products = db.Product.findAll({
+        let products = db.Products.findAll({
             include: ['subcategory']
         })
-
-        let tacos = db.Subcategory.findAll({
+         let tacos = db.Subcategories.findAll({
             where: {
                 id: 1
             },
@@ -16,8 +15,7 @@ module.exports = {
                 { association: 'products' }
             ]
         })
-
-        let Burritos = db.Subcategory.findAll({
+        let Burritos = db.Subcategories.findAll({
             where: {
                 id: 2
             },
@@ -26,7 +24,7 @@ module.exports = {
             ]
         })
 
-        let Quesadillas = db.Subcategory.findAll({
+        let Quesadillas = db.Subcategories.findAll({
             where: {
                 id: 3
             },
@@ -35,7 +33,7 @@ module.exports = {
             ]
         })
 
-        let Entradas = db.Subcategory.findAll({
+        let Entradas = db.Subcategories.findAll({
             where: {
                 id: 4
             },
@@ -44,7 +42,7 @@ module.exports = {
             ]
         })
 
-        let Platos = db.Subcategory.findAll({
+        let Platos = db.Subcategories.findAll({
             where: {
                 id: 5
             },
@@ -53,7 +51,7 @@ module.exports = {
             ]
         })
 
-        let Ensaladas = db.Subcategory.findAll({
+        let Ensaladas = db.Subcategories.findAll({
             where: {
                 id: 6
             },
@@ -62,7 +60,7 @@ module.exports = {
             ]
         })
 
-        let Salsas = db.Subcategory.findAll({
+        let Salsas = db.Subcategories.findAll({
             where: {
                 id: 7
             },
@@ -71,7 +69,7 @@ module.exports = {
             ]
         })
 
-        let Dulces = db.Subcategory.findAll({
+        let Dulces = db.Subcategories.findAll({
             where: {
                 id: 8
             },
@@ -80,7 +78,7 @@ module.exports = {
             ]
         })
 
-        let Gaseosas = db.Subcategory.findAll({
+        let Gaseosas = db.Subcategories.findAll({
             where: {
                 id: 9
             },
@@ -89,7 +87,7 @@ module.exports = {
             ]
         })
 
-        let Jugos = db.Subcategory.findAll({
+        let Jugos = db.Subcategories.findAll({
             where: {
                 id: 10
             },
@@ -98,7 +96,7 @@ module.exports = {
             ]
         })
 
-        let Aguas = db.Subcategory.findAll({
+        let Aguas = db.Subcategories.findAll({
             where: {
                 id: 11
             },
@@ -107,10 +105,9 @@ module.exports = {
             ]
         })
 
-        Promise.all([products, tacos, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas])
-            .then(([products, tacos, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
-                console.log(tacos),
-                    res.render('products', {
+        Promise.all([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas] )
+            .then(([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
+                res.render('products', {
                         products: products,
                         tacos: tacos[0].products,
                         Burritos: Burritos[0].products,
@@ -124,7 +121,6 @@ module.exports = {
                         Jugos: Jugos[0].products,
                         Aguas: Aguas[0].products,
                     })
-
             })
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)
