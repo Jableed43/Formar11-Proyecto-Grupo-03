@@ -29,7 +29,7 @@ router.get('/profile', usersControllers.profile);
 
 /* PUT editar */
 router.get('/edit', usersControllers.edit);
-router.put('/edit', usersControllers.update);
+router.put('/edit:id', usersControllers.update);
 
 /* DELETE user */ 
 router.delete('/delete/:id', usersControllers.destroy); 

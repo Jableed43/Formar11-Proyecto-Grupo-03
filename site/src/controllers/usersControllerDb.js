@@ -27,6 +27,7 @@ module.exports = {
                         req.session.userLogin = {
                             id: user.id,
                             name: user.name,
+                            sex: user.id_sex,
                             email: user.email,
                             avatar: user.avatar,
                             rol: user.id_rol
@@ -121,7 +122,7 @@ module.exports = {
 
         Promise.all(([user, sexes, provinces]))
 
-            .then(([sexes, provinces]) => {
+            .then(([user, sexes, provinces]) => {
                 return res.render('users/edit', {
                     user,
                     sexes,
@@ -133,18 +134,16 @@ module.exports = {
     },
     // Modifica datos del perfil por metodo PUT
     update: (req, res, next) => {
-        const { name, sexo, provincia, email, password } = req.body;
+        const { name, sexo, provincia, email } = req.body;
 
         let img = req.files[0] ? req.files[0].filename : undefined;
 
         db.User.update({
             name,
             email,
-            password: bcrypt.hashSync(password, 12),
             avatar: req.file ? req.file.filename : 'default-img.jpg',
             id_sex: sexo,
-            id_province: provincia,
-            id_rol: 2
+            id_province: provincia
         },
             {
                 where: {
@@ -152,13 +151,13 @@ module.exports = {
                 }
             })
             .then((result) => {
-                res.redirect(`/users/profile)`)
+                res.redirect('/users/profile')
             })
             .catch((error) => {
                 res.send(error)
             })
     },
-    // Delete - Delete one product from DB
+    // Delete -
     destroy: (req, res) => {
 
         db.User.destroy({
