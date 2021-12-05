@@ -13,7 +13,7 @@
           
           <section class="camposform">
           <h1>Estas editando tus datos</h1>
-          <form action="edit/<%= userLogin.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <form action="/users/update?_method=PUT" method="POST" >
 
             <div class="campo">
               <label for="user">Nombre Completo</label>
@@ -33,6 +33,22 @@
                   <%= errors.email.msg %>
                 </small>
                 <% } %>
+            </div>
+
+            <div class="campo">
+              <label for="password">Contraseña</label>
+              <input type="password" id="p1" name="password" placeholder="Ingrese contraseña...">
+            <% if (locals.errors && errors.password) { %>
+              <small class="mensajeError"> <%= errors.password.msg %> </small>
+              <% } %>
+            </div>
+
+            <div class="campo">
+              <label for="password">Confirmar Contraseña</label>
+              <input type="password" id="p2" name="p2" placeholder="Ingrese contraseña...">
+            <% if (locals.errors && errors.p2) { %>
+              <small class="mensajeError"> <%= errors.p2.msg %> </small>
+              <% } %>
             </div>
 
 

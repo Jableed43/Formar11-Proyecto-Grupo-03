@@ -133,39 +133,93 @@ module.exports = {
 
     },
     // Modifica datos del perfil por metodo PUT
-    update: (req, res, next) => {
-        const { name, sexo, provincia, email } = req.body;
+    // update: (req, res, next) => {
+    //     const { name, sexo, provincia, email } = req.body;
 
-        let img = req.files[0] ? req.files[0].filename : undefined;
+    //     let img = req.files[0] ? req.files[0].filename : undefined;
 
-        db.User.update({
-            name,
-            email,
-            avatar: req.file ? req.file.filename : 'default-img.jpg',
-            id_sex: sexo,
-            id_province: provincia
-        },
+    //     db.User.update({
+    //         name,
+    //         email,
+    //         avatar: req.file ? req.file.filename : 'default-img.jpg',
+    //         id_sex: sexo,
+    //         id_province: provincia
+    //     },
+    //         {
+    //             where: {
+    //                 id: req.params.id
+    //             }
+    //         })
+    //         .then((result) => {
+    //             res.redirect('/users/profile')
+    //         })
+    //         .catch((error) => {
+    //             res.send(error)
+    //         })
+    // },
+    update: (req, res) => {
+        const { name, password } = req.body;
+        console.log(name, password);
+        db.User.update(
+            {
+                name: name.trim()
+            },
             {
                 where: {
-                    id: req.params.id
+                    id: req.session.userLogin.id
                 }
-            })
-            .then((result) => {
-                res.redirect('/users/profile')
-            })
-            .catch((error) => {
-                res.send(error)
-            })
+            }).then(() => {
+
+                if (password) {
+                    
+                    db.User.update(
+                        {
+                            password: bcrypt.hashSync(password.trim(), 10)
+                        },
+                        {
+                            where: {
+                                id: req.session.userLogin.id
+                            }
+                        }
+                    )
+                        .then(() => {
+
+                            req.session.destroy();
+                            return res.redirect('/users/login')
+                        })
+                } else {
+
+                    db.User.findByPk(req.session.userLogin.id)
+                        .then(user => {
+                            req.session.userLogin = {
+                                id: user.id,
+                                name: user.name,
+                                email: user.email,
+                                avatar: user.avatar,
+                                sex: user.id_sex,
+                                province: user.id_province,
+                                rol: user.id_rol
+                            }
+                            res.locals.userLogin = req.session.userLogin
+
+                            return res.redirect('/users/profile')
+
+                        })
+                }
+
+
+            }).catch(error => console.log(error))
     },
     // Delete -
     destroy: (req, res) => {
 
         db.User.destroy({
             where: {
-                id: req.params.id
+                id: req.session.userLogin.id
             }
         })
             .then(result => {
+                req.session.destroy();
                 return res.redirect('/')
             })
             .catch((error) => {
