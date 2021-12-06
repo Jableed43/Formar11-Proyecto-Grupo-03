@@ -108,11 +108,11 @@ module.exports = {
             ]
         })
 
-        Promise.all([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas])
-            .then(([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
+        Promise.all([Tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas])
+            .then(([Tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
                 res.render('products', {
                     products: products,
-                    tacos: tacos[0].products,
+                    tacos: Tacos[0].products,
                     Burritos: Burritos[0].products,
                     Quesadillas: Quesadillas[0].products,
                     Entradas: Entradas[0].products,
