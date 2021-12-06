@@ -6,18 +6,18 @@ module.exports = {
       await queryInterface.bulkInsert('Sexes', [
         {
           name : 'Masculino',
-          createdAt : new Date,
-          updatedAt : new Date          
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
           name : 'Femenino',
-          createdAt : new Date,
-          updatedAt : new Date          
+          createdAt:new Date,
+          updatedAt: new Date        
         },
         {
           name : 'Prefiero no decirlo',
-          createdAt : new Date,
-          updatedAt : new Date          
+          createdAt:new Date,
+          updatedAt: new Date        
         }    
       ], {});
     

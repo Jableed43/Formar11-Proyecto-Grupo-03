@@ -64,7 +64,7 @@ module.exports = {
         type: Sequelize.DECIMAL,
         allowNull: false
       },
-      id_subcategory: {
+      subcategoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
@@ -73,9 +73,14 @@ module.exports = {
           },
           key:'id'
         }
+      },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
       }
-    }, 
-    {timestamps: false});
+    });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Products');

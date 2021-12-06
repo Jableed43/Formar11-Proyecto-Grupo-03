@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      id_category: {
+      categoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
@@ -21,9 +21,14 @@ module.exports = {
           },
           key:'id'
         }
+      },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
       }
-    }, 
-    {timestamps: false});
+    });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Subcategories');

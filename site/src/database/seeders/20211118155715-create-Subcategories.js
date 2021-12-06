@@ -5,52 +5,78 @@ module.exports = {
     
       await queryInterface.bulkInsert('Subcategories', [
         {
-          name : 'Jugo',
-          id_category: 1       
+          name : 'Tacos',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Gaseosa',
-          id_category: 1          
+          name : 'Burritos',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Agua',
-          id_category: 1          
+          name : 'Quesadillas',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Taco',
-          id_category: 2        
+          name : 'Entradas',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Burrito',
-          id_category: 2        
+          name : 'Platos',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Quesadilla',
-          id_category: 2        
+          name : 'Ensaladas',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Chips',
-          id_category: 2        
+          name : 'Salsas',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Papas',
-          id_category: 2        
+          name : 'Dulces',
+          categoryId: 2,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Nachos',
-          id_category: 2        
+          name : 'Gaseosas',
+          categoryId: 1,
+          createdAt:new Date,
+          updatedAt: new Date       
         },
         {
-          name : 'Chile',
-          id_category: 2        
-        } 
+          name : 'Jugos',
+          categoryId: 1,
+          createdAt:new Date,
+          updatedAt: new Date       
+        },
+        {
+          name : 'Aguas',
+          categoryId: 1,
+          createdAt:new Date,
+          updatedAt: new Date       
+        },
       ], {});
    
   },
 
   down: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkDelete('People', null, {});
+      await queryInterface.bulkDelete('Subcategories', null, {});
      
   }
 };
