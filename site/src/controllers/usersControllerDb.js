@@ -27,6 +27,7 @@ module.exports = {
                         req.session.userLogin = {
                             id: user.id,
                             name: user.name,
+                            sex: user.id_sex,
                             email: user.email,
                             avatar: user.avatar,
                             rol: user.id_rol
@@ -123,7 +124,7 @@ logout: (req, res) => {
 
         Promise.all(([user, sexes, provinces]))
 
-            .then(([sexes, provinces]) => {
+            .then(([user, sexes, provinces]) => {
                 return res.render('users/edit', {
                     user,
                     sexes,
@@ -134,41 +135,93 @@ logout: (req, res) => {
 
     },
     // Modifica datos del perfil por metodo PUT
-    update: (req, res, next) => {
-        const { name, sexo, provincia, email, password } = req.body;
+    // update: (req, res, next) => {
+    //     const { name, sexo, provincia, email } = req.body;
 
-        let img = req.files[0] ? req.files[0].filename : undefined;
+    //     let img = req.files[0] ? req.files[0].filename : undefined;
 
-        db.User.update({
-            name,
-            email,
-            password: bcrypt.hashSync(password, 12),
-            avatar: req.file ? req.file.filename : 'default-img.jpg',
-            id_sex: sexo,
-            id_province: provincia,
-            id_rol: 2
-        },
+    //     db.User.update({
+    //         name,
+    //         email,
+    //         avatar: req.file ? req.file.filename : 'default-img.jpg',
+    //         id_sex: sexo,
+    //         id_province: provincia
+    //     },
+    //         {
+    //             where: {
+    //                 id: req.params.id
+    //             }
+    //         })
+    //         .then((result) => {
+    //             res.redirect('/users/profile')
+    //         })
+    //         .catch((error) => {
+    //             res.send(error)
+    //         })
+    // },
+    update: (req, res) => {
+        const { name, password } = req.body;
+        console.log(name, password);
+        db.User.update(
+            {
+                name: name.trim()
+            },
             {
                 where: {
-                    id: req.params.id
+                    id: req.session.userLogin.id
                 }
-            })
-            .then((result) => {
-                res.redirect(`/users/profile)`)
-            })
-            .catch((error) => {
-                res.send(error)
-            })
+            }).then(() => {
+
+                if (password) {
+                    
+                    db.User.update(
+                        {
+                            password: bcrypt.hashSync(password.trim(), 10)
+                        },
+                        {
+                            where: {
+                                id: req.session.userLogin.id
+                            }
+                        }
+                    )
+                        .then(() => {
+
+                            req.session.destroy();
+                            return res.redirect('/users/login')
+                        })
+                } else {
+
+                    db.User.findByPk(req.session.userLogin.id)
+                        .then(user => {
+                            req.session.userLogin = {
+                                id: user.id,
+                                name: user.name,
+                                email: user.email,
+                                avatar: user.avatar,
+                                sex: user.id_sex,
+                                province: user.id_province,
+                                rol: user.id_rol
+                            }
+                            res.locals.userLogin = req.session.userLogin
+
+                            return res.redirect('/users/profile')
+
+                        })
+                }
+
+
+            }).catch(error => console.log(error))
     },
-    // Delete - Delete one product from DB
+    // Delete -
     destroy: (req, res) => {
 
         db.User.destroy({
             where: {
-                id: req.params.id
+                id: req.session.userLogin.id
             }
         })
             .then(result => {
+                req.session.destroy();
                 return res.redirect('/')
             })
             .catch((error) => {
