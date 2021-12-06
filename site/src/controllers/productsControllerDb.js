@@ -5,9 +5,12 @@ module.exports = {
     // Para listar productos en vista Products
     list: (req, res) => {
         let products = db.Products.findAll({
-            include: ['subcategory']
-        })
-         let tacos = db.Subcategories.findAll({
+            include: {
+                association: 'subcategory',
+                include: [{ all: true }]}
+
+            })
+        let tacos = db.Subcategories.findAll({
             where: {
                 id: 1
             },
@@ -105,22 +108,22 @@ module.exports = {
             ]
         })
 
-        Promise.all([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas] )
+        Promise.all([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas])
             .then(([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
                 res.render('products', {
-                        products: products,
-                        tacos: tacos[0].products,
-                        Burritos: Burritos[0].products,
-                        Quesadillas: Quesadillas[0].products,
-                        Entradas: Entradas[0].products,
-                        Platos: Platos[0].products,
-                        Ensaladas: Ensaladas[0].products,
-                        Salsas: Salsas[0].products,
-                        Dulces: Dulces[0].products,
-                        Gaseosas: Gaseosas[0].products,
-                        Jugos: Jugos[0].products,
-                        Aguas: Aguas[0].products,
-                    })
+                    products: products,
+                    tacos: tacos[0].products,
+                    Burritos: Burritos[0].products,
+                    Quesadillas: Quesadillas[0].products,
+                    Entradas: Entradas[0].products,
+                    Platos: Platos[0].products,
+                    Ensaladas: Ensaladas[0].products,
+                    Salsas: Salsas[0].products,
+                    Dulces: Dulces[0].products,
+                    Gaseosas: Gaseosas[0].products,
+                    Jugos: Jugos[0].products,
+                    Aguas: Aguas[0].products,
+                })
             })
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)

@@ -6,7 +6,15 @@ const { validationResult } = require('express-validator')
 module.exports = {
     // List - Product's List
     list: (req,res) => {
-        db.Product.findAll()
+        db.Product.findAll(
+            {include: {
+                association: 'subcategory', 
+                include: [{ all: true}]
+            },
+            order: [
+                ['subcategory', 'ASC']
+            ]}
+        )
         .then(productos => {
             res.render('admin', {Product : productos})
         })
