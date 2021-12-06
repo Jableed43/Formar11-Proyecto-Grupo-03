@@ -112,7 +112,7 @@ module.exports = {
             .then(([Tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
                 res.render('products', {
                     products: products,
-                    tacos: Tacos[0].products,
+                    Tacos: Tacos[0].products,
                     Burritos: Burritos[0].products,
                     Quesadillas: Quesadillas[0].products,
                     Entradas: Entradas[0].products,
