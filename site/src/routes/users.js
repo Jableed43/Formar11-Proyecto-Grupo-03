@@ -34,6 +34,7 @@ router.put('/update', usersControllers.update);
 /* DELETE user */ 
 router.delete('/delete/:id', usersControllers.destroy); 
 
+/* Desloguear session */
 router.get('/logout', usersControllers.logout)
 
 module.exports = router;

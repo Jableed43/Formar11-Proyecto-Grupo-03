@@ -10,7 +10,7 @@ module.exports = {
                 include: [{ all: true }]}
 
             })
-        let tacos = db.Subcategories.findAll({
+        let Tacos = db.Subcategories.findAll({
             where: {
                 id: 1
             },
