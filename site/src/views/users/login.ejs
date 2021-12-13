@@ -35,7 +35,7 @@
 
               <div class="buttons">
               <label for="submit">Ingresar</label>
-              <input type="submit" id="submit" name="submit" value="Ingresar" hidden>
+              <input type="submit" id="submit-login" name="submit" value="Ingresar" hidden>
               </div>
 
               <div>
@@ -46,7 +46,7 @@
               <p>¿Sos nuevo en Tacopado?</p>
               <div class="buttons">
                 <label for="submit">Registrarme</label>
-                <button href="users/register" id="submit" name="submit" value="Ingresar" hidden>Registrarme</button>
+                <button href="users/register" id="submit-register" name="submit" value="Ingresar" hidden>Registrarme</button>
                 </div>
           </form>
         </section>
@@ -56,6 +56,7 @@
 
       <%- include("../partials/footer.ejs") %>
 
+      <script src="javascripts/validacion-login.js"></script>
   </body>
 
   </html>
