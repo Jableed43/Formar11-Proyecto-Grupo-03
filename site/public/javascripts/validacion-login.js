@@ -3,7 +3,7 @@ const qs = (tag) => {
     return document.querySelector(tag)
 }
 
-const divErr = document.querySelector(".errores ul")
+let divErr = document.querySelector("#divError")
 
 window.addEventListener("load", function() {
 
@@ -15,15 +15,23 @@ window.addEventListener("load", function() {
 
         let errores = []
 
-        const campoEmail = qs("#user");
+        let campoEmail = qs("#email");
 
         if(campoEmail.value === "") {
-            errores.push("El campo de nombre tiene que estar completo")
-        }
-        const campoPassword = qs("#password")
+            errores.push("El campo de mail tiene que estar completo")
+
+        };
+
+        let campoPassword = qs("#password");
 
         if(campoPassword.value === "") {
             errores.push("El campo de contraseña tiene que estar completo")
+        };
+
+        if (errores.length > 0) {
+            errores.map(error => {
+                divErr.innerHTML += `<li>${error}</li>`
+            })
         }
 
 
