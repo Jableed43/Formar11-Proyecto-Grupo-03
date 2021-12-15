@@ -1,6 +1,6 @@
 const db = require('../database/models');
-const { validationResult } = require('express-validator')
-const bcrypt = require('bcryptjs')
+const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 module.exports = {
     // Acceso a vista login
@@ -36,15 +36,11 @@ module.exports = {
                             res.cookie('tacopadoCookie', req.session.user, { maxAge: 1000 * 60 * 60 })
                         }
                         return res.redirect('/')
-                    } else {
-                        return res.render('users/login', {
-                            errores: errors.mapped()
-                        }
-                        )
-                    }
-                })
-                .catch((error) => {
-                    res.send(error)
+                .catch(error => console.log(error))
+
+                    } 
+                
+            
                 })
         }
     },
@@ -73,30 +69,53 @@ module.exports = {
     },
     // Para registrar usuario por método POST
     newUser: (req, res, next) => {
+
         let errors = validationResult(req);
+
         if (!errors.isEmpty()) {
+
+            let sexes = db.Sex.findAll()
+            let provinces = db.Province.findAll()
+    
+            Promise.all(([sexes, provinces]))
+            
+            .then(([sexes, provinces]) => {
             return res.render('users/register', {
                 errores: errors.mapped(),
-                old: req.body
+                old: req.body,
+                sexes,
+                provinces
             })
+        })
+        .catch(error => console.log(error))
+
         } else {
-            const { name, sexo, provincia, email, password } = req.body
+            const { name, sexo, provincia, email, password } = req.body;
 
             db.User.create({
-                name,
-                email,
+                name: name.trim(),
+                email: email.trim(),
                 password: bcrypt.hashSync(password, 12),
                 avatar: req.file ? req.file.filename : 'default-img.jpg',
                 id_sex: sexo,
                 id_province: provincia,
                 id_rol: 2
             })
-                .then(() => {
-                    res.redirect('/')
-                })
-                .catch((error) => {
-                    res.send(error)
-                })
+            .then(user => {
+                req.session.userLogin = {
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    avatar: user.avatar,
+                    sex: user.id_sex,
+                    province: user.id_province,
+                    rol: user.id_rol
+                }            
+                return res.redirect('/')
+            })
+            .catch(error => {
+                res.send(error)
+            })
         }
     },
     // Acceder a carrito
@@ -116,21 +135,20 @@ module.exports = {
     // Acceso a vista de edición del perfil del usuario.
     edit: (req, res) => {
 
-        let sexes = db.Sex.findAll()
-        let provinces = db.Province.findAll()
-        let user = db.User.findByPk(req.params.id)
+            let sexes = db.Sex.findAll()
+            let provinces = db.Province.findAll()
+            let user = db.User.findByPk(req.params.id)
 
-        Promise.all(([user, sexes, provinces]))
+            Promise.all(([user, sexes, provinces]))
 
-            .then(([user, sexes, provinces]) => {
-                return res.render('users/edit', {
-                    user,
-                    sexes,
-                    provinces
+                .then(([user, sexes, provinces]) => {
+                    return res.render('users/edit', {
+                        user,
+                        sexes,
+                        provinces
+                    })
                 })
-            })
-            .catch(error => console.log(error))
-
+                .catch(error => console.log(error))
     },
     // Modifica datos del perfil por metodo PUT
     // update: (req, res, next) => {
@@ -158,6 +176,9 @@ module.exports = {
     //         })
     // },
     update: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+
         const { name, password } = req.body;
         console.log(name, password);
         db.User.update(
@@ -183,10 +204,10 @@ module.exports = {
                         }
                     )
                         .then(() => {
-
                             req.session.destroy();
                             return res.redirect('/users/login')
                         })
+                        
                 } else {
 
                     db.User.findByPk(req.session.userLogin.id)
@@ -206,9 +227,27 @@ module.exports = {
 
                         })
                 }
-
-
             }).catch(error => console.log(error))
+
+        } else {
+
+            let sexes = db.Sex.findAll()
+            let provinces = db.Province.findAll()
+            let user = db.User.findByPk(req.params.id)
+
+            Promise.all(([user, sexes, provinces]))
+
+                .then(([user, sexes, provinces]) => {
+                    return res.render('users/edit', {
+                        errores: errors.mapped(),
+                        old: req.body,
+                        user,
+                        sexes,
+                        provinces
+                    })
+                })
+                .catch(error => console.log(error))            
+        }        
     },
     // Delete -
     destroy: (req, res) => {
