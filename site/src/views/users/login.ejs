@@ -18,11 +18,11 @@
             <div class="campo">
               <label for="user">Tu Correo Electrónico</label>
               <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="user" name="email" placeholder="Ingrese e-mail registrado..." required>
-              <!-- <% if (locals.errores && errores.email) { %>
+              <% if (locals.errores && errores.email) { %>
                 <small class="mensajeError">
                   <%= errores.email.msg %>
                 </small>
-                <% } %> -->
+                <% } %>
             </div>
 
             <div class="campo">

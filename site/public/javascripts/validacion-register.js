@@ -70,6 +70,7 @@ window.addEventListener("load", function() {
 
         const campoImg = qs("#img")
 
+        console.log(errores);
 
         
 
