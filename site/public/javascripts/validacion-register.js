@@ -2,7 +2,7 @@ const qs = (tag) => {
     return document.querySelector(tag)
 }
 
-const divErr = document.querySelector(".errores ul")
+let divErr = document.querySelector("#divError")
 
 window.addEventListener("load", function() {
 
@@ -14,13 +14,13 @@ window.addEventListener("load", function() {
 
         let errores = []
 
-        const campoUser = qs("#user");
+        const campoName = qs("#name");
 
-        if(campoUser.value === "") {
+        if(campoName.value === "") {
             errores.push("El el nombre tiene que estar completo")
         }
 
-        if(campoUser.value.length <= 1 ) {
+        if(campoName.value.length <= 1 ) {
             errores.push("El nombre debe poseer al menos dos caracteres")
         }
 
@@ -67,12 +67,14 @@ window.addEventListener("load", function() {
         }
 
         
+            const campoImg = qs("#img")
 
-        const campoImg = qs("#img")
 
-        console.log(errores);
-
-        
+        if (errores.length > 0) {
+            errores.map(error => {
+                divErr.innerHTML += `<li>${error}</li>`
+            })
+        }
 
     })
 

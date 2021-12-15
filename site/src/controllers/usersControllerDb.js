@@ -59,20 +59,26 @@ logout: (req, res) => {
 },
 
     // Acceso a vista Registro
-    register: (req, res, next) => {
-        let sexes = db.Sex.findAll()
-        let provinces = db.Province.findAll()
 
-        Promise.all(([sexes, provinces]))
+    // register: (req, res, next) => {
+    //     let sexes = db.Sex.findAll()
+    //     let provinces = db.Province.findAll()
 
-            .then(([sexes, provinces]) => {
-                return res.render('users/register', {
-                    sexes,
-                    provinces
-                })
-            })
-            .catch(error => console.log(error))
+    //     Promise.all(([sexes, provinces]))
+
+    //         .then(([sexes, provinces]) => {
+    //             return res.render('users/register', {
+    //                 sexes,
+    //                 provinces
+    //             })
+    //         })
+    //         .catch(error => console.log(error))
+    // },
+
+    register: (req, res) => {
+        res.render('users/register')
     },
+
     // Para registrar usuario por método POST
     newUser: (req, res, next) => {
         let errors = validationResult(req);
