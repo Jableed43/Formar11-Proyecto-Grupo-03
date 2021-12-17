@@ -5,22 +5,36 @@ const { validationResult } = require('express-validator')
 
 module.exports = {
     // List - Product's List
-    list: (req,res) => {
-        db.Product.findAll(
-            {include: {
-                association: 'subcategory', 
-                include: [{ all: true}]
-            },
-            order: [
-                ['subcategory', 'ASC']
-            ]}
-        )
-        .then(productos => {
-            res.render('admin', {Product : productos})
-        })
-        .catch(err=> {
-            console.log('Error al requerir los productos de la base de datos '+ err)
-        })
+    // admin: (req,res) => {
+    //     // res.render('admin/admin')
+    //     let products = db.Product.findAll()
+    //     let categories = db.Category.findAll(
+    //         {include : ['subcategories']}
+    //     )
+    //     Promise.all([products, categories])
+
+    //     .then(([products, categories]) => {
+    //         return res.render('admin/admin', {products, categories})
+    //     })
+    //     .catch(err=> {
+    //         console.log('Error al requerir los productos de la base de datos '+ err)
+    //     })
+    // },
+	// admin: (req, res) => {
+	// 	db.Product.findAll({
+	// 		include: [{ all: true }]
+	// 	})
+	// 		.then(products => {
+	// 			return res.render('admin', {
+	// 				products,
+	// 				toThousand,
+	// 				finalPrice
+	// 			})
+	// 		})
+	// 		.catch(error => console.log(error))
+	// },
+    admin: (req, res) => { 
+       return res.render('admin/admin')
     },
     // Create - Form to create
 	create: (req, res) => {

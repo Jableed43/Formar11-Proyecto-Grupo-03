@@ -8,7 +8,7 @@ let validacionesProducts = require ('../middlewares/validProducts')
 
 
 /* GET home page. */
-router.get('/', adminUserCheck, adminController.list);
+router.get('/', adminController.admin);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', adminController.create); 
