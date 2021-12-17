@@ -17,37 +17,32 @@
 
             <div class="campo">
               <label for="user">Nombre Completo</label>
-              <input type="text" value="<%= userLogin.name %>" id="user" name="name" placeholder="Ingrese nombre completo..." required>
-              <% if (locals.errors && errors.name) { %>
+              <input type="text" value="<%= userLogin.name %>" id="user" name="name" placeholder="Ingrese nombre completo...">
+              <% if (locals.errores && errores.name) { %>
                 <small class="mensajeError">
-                  <%= errors.name.msg %>
+                  <%= errores.name.msg %>
                 </small>
                 <% } %>
             </div>
 
             <div class="campo">
               <label for="user">Correo Electrónico</label>
-              <input type="text" value="<%= userLogin.email %>" id="user" name="email" placeholder="Ingrese e-mail..." required>
-              <% if (locals.errors && errors.email) { %>
-                <small class="mensajeError">
-                  <%= errors.email.msg %>
-                </small>
-                <% } %>
+              <input type="text" value="<%= userLogin.email %>" id="user" name="email" placeholder="Ingrese e-mail..." readonly>
             </div>
 
             <div class="campo">
               <label for="password">Contraseña</label>
               <input type="password" id="p1" name="password" placeholder="Ingrese contraseña...">
-            <% if (locals.errors && errors.password) { %>
-              <small class="mensajeError"> <%= errors.password.msg %> </small>
+            <% if (locals.errores && errores.password) { %>
+              <small class="mensajeError"> <%= errores.password.msg %> </small>
               <% } %>
             </div>
 
             <div class="campo">
               <label for="password">Confirmar Contraseña</label>
               <input type="password" id="p2" name="p2" placeholder="Ingrese contraseña...">
-            <% if (locals.errors && errors.p2) { %>
-              <small class="mensajeError"> <%= errors.p2.msg %> </small>
+            <% if (locals.errores && errores.p2) { %>
+              <small class="mensajeError"> <%= errores.p2.msg %> </small>
               <% } %>
             </div>
 
@@ -62,8 +57,8 @@
                   <option value="<%= sex.id %>" <%= locals.old && old.id_sex === sex.id  ? 'selected' : null%>><%= sex.name %></option>
                 <% }) %>
               </select>
-              <% if (locals.errors && errors.sexo) { %>
-                <small class="mensajeError"> <%= errors.sexo.msg %> </small>
+              <% if (locals.errores && errores.sexo) { %>
+                <small class="mensajeError"> <%= errores.sexo.msg %> </small>
                 <% } %> 
           </div>
 
@@ -77,8 +72,8 @@
                 <option value="<%= province.id %>" <%= locals.old && old.id_province === province.id  ? 'selected' : null%>><%= province.name %></option>
               <% }) %>
             </select>
-            <% if (locals.errors && errors.provincia) { %>
-              <small class="mensajeError"> <%= errors.provincia.msg %> </small>
+            <% if (locals.errores && errores.provincia) { %>
+              <small class="mensajeError"> <%= errores.provincia.msg %> </small>
               <% } %>
           </div>
 
@@ -86,17 +81,17 @@
           <label>Selecciona una nueva foto de perfil</label>
           <div class="buttons">
           <label for="img" >Subir imagen</label>
-          <input type="file" id="img" name="img" hidden multiple accept="image/*">
+          <input type="file" id="img" name="img" hidden>
           </div>
-          <% if (locals.errors && errors.img) { %>
-            <small class="mensajeError"> <%= errors.img.msg %> </small>
+          <% if (locals.errores && errores.img) { %>
+            <small class="mensajeError"> <%= errores.img.msg %> </small>
             <% } %>
           </div>
 
             
               <div class="buttons">
               <label for="submit">Editar datos</label>
-              <input type="submit" id="submit" name="submit" value="Editar datos" hidden>
+              <input type="submit" id="submit" value="Editar datos" hidden>
               </div>
 
           </form>
