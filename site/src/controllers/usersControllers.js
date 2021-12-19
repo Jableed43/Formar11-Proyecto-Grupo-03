@@ -142,7 +142,7 @@ const controller = {
     
             let usersModified = users.map(user => user.id === req.session.userLogin.id ? userModified : user);
     
-            fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(usersModified,null,3),'utf-8');
+            fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(usersModified,null,2),'utf-8');
     
             req.session.userLogin = {
                 id : user.id,
@@ -152,8 +152,11 @@ const controller = {
                 img : userModified.img,
                 rol : user.rol
             }
+            
     
-            return res.redirect('/')
+            // return res.redirect('/')
+            res.render('users/exito')
+            // return res.redirect('users/user', {usersModified})
         },
 
     // Para borrar información de usuario
@@ -162,9 +165,11 @@ const controller = {
 
         let usersModified = users.filter(user => user.id !== +req.params.id);
 
-        fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(usersModified,null,3),'utf-8');
+        fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(usersModified,null,2),'utf-8');
 
-        return res.redirect('/')    
+        return res.redirect('/')
+        
+           
     }
 
 }

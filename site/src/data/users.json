@@ -1,39 +1,42 @@
 [
-   {
-      "id": 1,
-      "email": "tacopado@gmail.com",
-      "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
-      "img": "Mace.jpeg",
-      "rol": "admin"
-   },
-   {
-      "id": 7,
-      "rol": "client",
-      "name": "Graciela Suarez",
-      "email": "gracielasu@yahoo.com.ar",
-      "password": "$2a$10$f8LVdRkQswpHs11BScJG..I82RlWiHQGZ/G0UIr0nZlghQbZWxeNO",
-      "img": "default-img.jpg",
-      "sexo": "Femenino",
-      "provincia": "Buenos Aires"
-   },
-   {
-      "id": 8,
-      "rol": "client",
-      "name": "fer",
-      "email": "fer@fer.com",
-      "password": "$2a$10$ubiOg5BDI657U9.JodABpuOIBqqvlULOF9XlDoKy3K50oYSLwfGdS",
-      "img": "default-img.jpg",
-      "sexo": "Femenino",
-      "provincia": "San Luis"
-   },
-   {
-      "id": 9,
-      "rol": "client",
-      "name": "Jorge Lopez",
-      "email": "Jorgelopez@hotmail.com",
-      "password": "$2a$10$JcAwXgFC/mOA0U4fyICFyuG/DzZksAjDsz/RHORa3y5NqLdOxVyDe",
-      "img": "default-img.jpg",
-      "sexo": "Masculino",
-      "provincia": "San Luis"
-   }
+  {
+    "id": 1,
+    "name": "Tacopado",
+    "email": "tacopado@gmail.com",
+    "password": "$2a$05$DCatfrj7ZIxnnsFY08sXp.2lMh04FeO7W.nkgiRF6mH.PgUjTHD3G",
+    "sexo": "Confirme este dato",
+    "provincia": "provincia",
+    "img": "Mace.jpeg",
+    "rol": "admin"
+  },
+  {
+    "id": 7,
+    "rol": "client",
+    "name": "Graciela Suarez",
+    "email": "gracielasu@yahoo.com.ar",
+    "password": "$2a$10$f8LVdRkQswpHs11BScJG..I82RlWiHQGZ/G0UIr0nZlghQbZWxeNO",
+    "img": "default-img.jpg",
+    "sexo": "Femenino",
+    "provincia": "Buenos Aires"
+  },
+  {
+    "id": 8,
+    "rol": "client",
+    "name": "fer",
+    "email": "fer@fer.com",
+    "password": "$2a$10$ubiOg5BDI657U9.JodABpuOIBqqvlULOF9XlDoKy3K50oYSLwfGdS",
+    "img": "default-img.jpg",
+    "sexo": "Femenino",
+    "provincia": "San Luis"
+  },
+  {
+    "id": 9,
+    "rol": "client",
+    "name": "Jorge Lopez",
+    "email": "Jorgelopez@hotmail.com",
+    "password": "$2a$10$JcAwXgFC/mOA0U4fyICFyuG/DzZksAjDsz/RHORa3y5NqLdOxVyDe",
+    "img": "default-img.jpg",
+    "sexo": "Masculino",
+    "provincia": "San Luis"
+  }
 ]
