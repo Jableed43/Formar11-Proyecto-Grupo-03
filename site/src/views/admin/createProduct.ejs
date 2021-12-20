@@ -16,7 +16,7 @@
       </div>
       <h1>CREA UN NUEVO PRODUCTO</h1>
 
-      <form action="create" method="post">
+      <form action="" method="post" enctype="multipart/form-data">
       <div class="contenedor">
         <article>
             <h2>Título</h2>
@@ -41,7 +41,7 @@
         <article>
             <h2>Imagen del producto</h2>
             <div>
-            <input type="file" id="images" name="images" hidden multiple accept="image/*">
+            <input type="file" id="images" name="images" hidden>
             <label class="file" for="images">Foto Producto</label>
             </div>
             <% if (locals.errors && errors.images) { %>
@@ -76,7 +76,9 @@
               <% }) %>
             </select>
             <% if (locals.errors && errors.subcategory) { %>
-              <small class="mensajeError"> <%= errors.subcategory.msg %> </small>
+              <small class="mensajeError"> 
+                <%= errors.subcategory.msg %> 
+              </small>
               <% } %> 
           </div>
 

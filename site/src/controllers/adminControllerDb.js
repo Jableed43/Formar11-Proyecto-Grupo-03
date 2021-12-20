@@ -45,9 +45,7 @@ module.exports = {
                 .then(([categories, subcategories]) => {
                     return res.render('admin/createProduct', {
                         categories,
-                        subcategories,
-                
-                        
+                        subcategories                       
                     })
                 })
                 .catch(error => console.log(error))
@@ -56,18 +54,12 @@ module.exports = {
 	},
     // Create -  Method to store
     store: (req,res) => {
-        // let errors = validationResult(req);
-        // if(errors.isEmpty()){
-                // Para validar la imagen
-        if (req.fileValidationError) {
-            let images = {
-                param: "images",
-                msj: "Solo se permiten imágenes"
-            }
-            errors.errors.push(images)
-        }
+
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+        
         const { title , description, price, calories, totalfat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory, category} = req.body;
-        let images = req.file ? req.file.filename : 'default-img.jpg';
+        // let images = req.file ? req.file.filename : 'default-img.jpg';
         
         db.Product.create ({
             title : title,            
@@ -83,34 +75,44 @@ module.exports = {
             sodium,
             sugars,
             fiber,
-            img : images,
+            images: req.file ? req.file.filename : 'default-img.jpg',
             subcategoryId: subcategory,
             categoryId: category
         })
         .then(() =>{
-            // res.redirect(`/products/detail/${product.id}`)
-            res.redirect('/')
+            // res.redirect(`/products/detail/${product.id}`)     
+            res.redirect('/')             
         })
         .catch(error => {
             res.send(error)
         })
-    // } else {
-    //     errors = errors.mapped()
-        
-    //     let categories = db.Category.findAll()
-    //     let subcategories = db.Subcategory.findAll()
 
-    //         Promise.all([categories, subcategories])
-    //         .then(([categories, subcategories]) => {
-    //             return res.render('admin/createProduct', {
-    //                 categories,
-    //                 subcategories,
-    //                 errors,
-    //                 old: req.body
-    //             })
-    //         })
-    //         .catch(error => console.log(error))
-    //     }
+    } else {
+        errors = errors.mapped()
+
+                // Para validar la imagen
+        if (req.fileValidationError) {
+            let images = {
+                param: "images",
+                msg: "Solo se permiten imágenes"
+            }
+            errors.errors.push(images)          
+        }
+        
+        let categories = db.Category.findAll()
+        let subcategories = db.Subcategory.findAll()
+
+            Promise.all([categories, subcategories])
+            .then(([categories, subcategories]) => {
+                return res.render('admin/createProduct', {
+                    categories,
+                    subcategories,
+                    errors,
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
+        }
     },
     // Update - Form to edit
     edit: (req, res) => {
