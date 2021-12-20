@@ -1,6 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const db = require('../database/models')
 const {Op} = require ('sequelize')
 const { validationResult } = require('express-validator')
+
 
 
 module.exports = {
@@ -9,40 +15,49 @@ module.exports = {
     //     // res.render('admin/admin')
     //     let products = db.Product.findAll()
     //     let categories = db.Category.findAll(
-    //         {include : ['subcategories']}
+    //         {include : ['Subcategories']}
     //     )
     //     Promise.all([products, categories])
 
-    //     .then(([products, categories]) => {
-    //         return res.render('admin/admin', {products, categories})
-    //     })
+    //     
     //     .catch(err=> {
     //         console.log('Error al requerir los productos de la base de datos '+ err)
     //     })
     // },
-	// admin: (req, res) => {
-	// 	db.Product.findAll({
-	// 		include: [{ all: true }]
-	// 	})
-	// 		.then(products => {
-	// 			return res.render('admin', {
-	// 				products,
-	// 				toThousand,
-	// 				finalPrice
-	// 			})
-	// 		})
-	// 		.catch(error => console.log(error))
-	// },
-    admin: (req, res) => { 
-       return res.render('admin/admin')
-    },
-    // Create - Form to create
+	admin: (req, res) => {
+		db.Product.findAll({
+			include: [{ all: true }]
+		})
+			.then((products) => {
+            return res.render('admin/admin', {products})
+        })
+	},
+    // admin: (req, res) => { 
+    //    return res.render('admin/admin')
+    // },
+    // Create - Form to create a product
 	create: (req, res) => {
-		res.render('create')
+        {
+            let categories = db.Category.findAll()
+            let subcategories = db.Subcategory.findAll()
+    
+                Promise.all([categories, subcategories])
+                .then(([categories, subcategories]) => {
+                    return res.render('admin/createProduct', {
+                        categories,
+                        subcategories,
+                
+                        
+                    })
+                })
+                .catch(error => console.log(error))
+            }
+		
 	},
     // Create -  Method to store
     store: (req,res) => {
         let errors = validationResult(req);
+        if(errors.isEmpty()){
                 // Para validar la imagen
         if (req.fileValidationError) {
             let images = {
@@ -70,7 +85,7 @@ module.exports = {
             sugars,
             fiber,
             img : images,
-            Id_subcategory: subcategory
+            subcategoryId: subcategory
         })
         .then(() =>{
             res.redirect(`/products/detail/${product.id}`)
@@ -78,13 +93,30 @@ module.exports = {
         .catch(err=> {
             res.send(error)
         })
+    } else {
+        errors = errors.mapped()
+        
+        let categories = db.Category.findAll()
+        let subcategories = db.Subcategory.findAll()
+
+            Promise.all([categories, subcategories])
+            .then(([categories, subcategories]) => {
+                return res.render('admin/createProduct', {
+                    categories,
+                    subcategories,
+                    errors,
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
+        }
     },
     // Update - Form to edit
     edit: (req, res) => {
 
         db.Product.findByPk(req.params.id)
             .then((product) => {
-                res.render("admin/editProduct", {
+                res.render("admin/editproduct", {
                     product
                 })
             })
@@ -115,7 +147,7 @@ module.exports = {
             sugars,
             fiber,
             img : images,
-            Id_subcategory: subcategory
+            subcategoryId: subcategory
         },
             {
                 where: {
