@@ -99,12 +99,14 @@ module.exports = {
             errors.errors.push(images)          
         }
         
+        let product = db.Product.findByPk(req.params.id)
         let categories = db.Category.findAll()
         let subcategories = db.Subcategory.findAll()
 
-            Promise.all([categories, subcategories])
-            .then(([categories, subcategories]) => {
+            Promise.all([product, categories, subcategories])
+            .then(([product, categories, subcategories]) => {
                 return res.render('admin/createProduct', {
+                    product,
                     categories,
                     subcategories,
                     errors,
@@ -117,10 +119,17 @@ module.exports = {
     // Update - Form to edit
     edit: (req, res) => {
 
-        db.Product.findByPk(req.params.id)
-            .then((product) => {
+        let product = db.Product.findByPk(req.params.id)
+        let categories = db.Category.findAll()
+        let subcategories = db.Subcategory.findAll()
+    
+        
+        Promise.all([product, categories, subcategories])
+        .then(([product, categories, subcategories]) => {
                 res.render("admin/editproduct", {
-                    product
+                    product,
+                    categories,
+                    subcategories
                 })
             })
             .catch((error) => {
@@ -130,6 +139,9 @@ module.exports = {
     },
     // Update - Method to update
     update: (req, res, next) => {
+
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         
         const { title, description, price, calories, total_fat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory } = req.body;
 
@@ -163,6 +175,32 @@ module.exports = {
             .catch((error) => {
                 res.send(error)
             })
+        } else {
+            errors = errors.mapped()
+    
+                    // Para validar la imagen
+            if (req.fileValidationError) {
+                let images = {
+                    param: "images",
+                    msg: "Solo se permiten imágenes"
+                }
+                errors.errors.push(images)          
+            }
+            
+            let categories = db.Category.findAll()
+            let subcategories = db.Subcategory.findAll()
+    
+                Promise.all([categories, subcategories])
+                .then(([categories, subcategories]) => {
+                    return res.render('admin/createProduct', {
+                        categories,
+                        subcategories,
+                        errors,
+                        old: req.body
+                    })
+                })
+                .catch(error => console.log(error))
+            }
     },
     // Delete - Delete one product from DB
 	destroy: (req, res) => {

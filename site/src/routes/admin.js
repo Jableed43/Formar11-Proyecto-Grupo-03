@@ -8,14 +8,14 @@ let validacionesProducts = require ('../middlewares/validProducts')
 
 
 /* GET home page. */
-router.get('/', adminController.admin);
+router.get('/', adminUserCheck, adminController.admin);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', adminController.create); 
+router.get('/create', adminUserCheck, adminController.create); 
 router.post('/create', upload.single('images'), validacionesProducts, adminController.store);  
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', adminController.edit); 
+router.get('/edit/:id', adminUserCheck, adminController.edit); 
 router.put('/edit/:id', upload.single('images'), validacionesProducts, adminController.update); 
 
 
