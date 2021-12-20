@@ -31,7 +31,9 @@ module.exports = (sequelize, DataTypes) => {
     sodium: DataTypes.DECIMAL,
     sugars: DataTypes.DECIMAL,
     fiber: DataTypes.DECIMAL,
-    subcategoryId: DataTypes.INTEGER
+    subcategoryId: DataTypes.INTEGER,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Product',

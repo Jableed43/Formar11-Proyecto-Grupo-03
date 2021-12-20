@@ -16,7 +16,7 @@
       </div>
       <h1>CREA UN NUEVO PRODUCTO</h1>
 
-      <form action="create" method="post" enctype="multipart/form-data">
+      <form action="create" method="post">
       <div class="contenedor">
         <article>
             <h2>Título</h2>
@@ -104,12 +104,12 @@
             <% } %>
 
           <div>
-            <label for="totalFat">Grasas Totales</label>
-            <input type="number" placeholder="(g)" name="totalFat" id="totalFat" value="<%= locals.old && old.name ? old.name : null %>">
+            <label for="totalfat">Grasas Totales</label>
+            <input type="number" placeholder="(g)" name="totalfat" id="totalfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
-          <% if (locals.errors && errors.totalFat) { %>
+          <% if (locals.errors && errors.totalfat) { %>
             <small class="mensajeError">
-              <%= errors.totalFat.msg %>
+              <%= errors.totalfat.msg %>
             </small>
             <% } %>
 
@@ -134,22 +134,22 @@
             <% } %>
 
           <div>
-            <label for="transFat" name="transFat" id="transFat">Grasas Trans</label>
-            <input type="number" placeholder="(g)" name="transFat" id="transFat" value="<%= locals.old && old.name ? old.name : null %>">
+            <label for="transfat" name="transfat" id="transfat">Grasas Trans</label>
+            <input type="number" placeholder="(g)" name="transfat" id="transfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
-          <% if (locals.errors && errors.transFat) { %>
+          <% if (locals.errors && errors.transfat) { %>
             <small class="mensajeError">
-              <%= errors.transFat.msg %>
+              <%= errors.transfat.msg %>
             </small>
             <% } %>
 
           <div>
-            <label for="saturatedFat" name="saturatedFat" id="saturatedFat">Grasas Saturadas</label>
-            <input type="number" placeholder="(g)" name="saturatedFat" id="saturatedFat" value="<%= locals.old && old.name ? old.name : null %>">
+            <label for="saturatedfat" name="saturatedfat" id="saturatedfat">Grasas Saturadas</label>
+            <input type="number" placeholder="(g)" name="saturatedfat" id="saturatedfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
-          <% if (locals.errors && errors.saturatedFat) { %>
+          <% if (locals.errors && errors.saturatedfat) { %>
             <small class="mensajeError">
-              <%= errors.saturatedFat.msg %>
+              <%= errors.saturatedfat.msg %>
             </small>
             <% } %>
 

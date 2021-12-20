@@ -56,8 +56,8 @@ module.exports = {
 	},
     // Create -  Method to store
     store: (req,res) => {
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
+        // let errors = validationResult(req);
+        // if(errors.isEmpty()){
                 // Para validar la imagen
         if (req.fileValidationError) {
             let images = {
@@ -66,16 +66,15 @@ module.exports = {
             }
             errors.errors.push(images)
         }
-        const { title, description, price, calories, total_fat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory} = req.body
-
+        const { title , description, price, calories, totalfat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory, category} = req.body;
         let images = req.file ? req.file.filename : 'default-img.jpg';
-
+        
         db.Product.create ({
-            title,
+            title : title,            
             description,
             price,
             calories,
-            total_fat,
+            totalfat,
             carb,
             protein,
             transfat, 
@@ -85,31 +84,33 @@ module.exports = {
             sugars,
             fiber,
             img : images,
-            subcategoryId: subcategory
+            subcategoryId: subcategory,
+            categoryId: category
         })
         .then(() =>{
-            res.redirect(`/products/detail/${product.id}`)
+            // res.redirect(`/products/detail/${product.id}`)
+            res.redirect('/')
         })
-        .catch(err=> {
+        .catch(error => {
             res.send(error)
         })
-    } else {
-        errors = errors.mapped()
+    // } else {
+    //     errors = errors.mapped()
         
-        let categories = db.Category.findAll()
-        let subcategories = db.Subcategory.findAll()
+    //     let categories = db.Category.findAll()
+    //     let subcategories = db.Subcategory.findAll()
 
-            Promise.all([categories, subcategories])
-            .then(([categories, subcategories]) => {
-                return res.render('admin/createProduct', {
-                    categories,
-                    subcategories,
-                    errors,
-                    old: req.body
-                })
-            })
-            .catch(error => console.log(error))
-        }
+    //         Promise.all([categories, subcategories])
+    //         .then(([categories, subcategories]) => {
+    //             return res.render('admin/createProduct', {
+    //                 categories,
+    //                 subcategories,
+    //                 errors,
+    //                 old: req.body
+    //             })
+    //         })
+    //         .catch(error => console.log(error))
+    //     }
     },
     // Update - Form to edit
     edit: (req, res) => {
