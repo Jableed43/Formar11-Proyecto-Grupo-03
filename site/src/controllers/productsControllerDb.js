@@ -131,9 +131,18 @@ module.exports = {
     },
     detail: (req, res) => {
         // Para entrar al detalle del producto
-        db.Product.findByPK(+req.params.id)
+        db.Product.findByPK(+req.params.id,{
+            include: [
+                { association: 'subcategory',
+                include: [{ all: true }] }
+            ],
+            include: [
+                { association: 'category',
+                include: [{ all: true }] }
+            ]})
+            
             .then(producto => {
-                res.render('detalle-producto', { products: producto })
+                res.render('detalle-producto', { products: producto, subcategory, category })
             })
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)
