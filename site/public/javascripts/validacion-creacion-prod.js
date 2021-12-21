@@ -91,7 +91,7 @@ subcategory.addEventListener('blur', (subcategoria)=>{
     } else {
         subcategory.classList.remove('invalido')
         subcategory.classList.add('valido')
-        ssubcategory.innerHTML =('')
+        ssubcategory.innerText =('')
         subcategory = true
     }
 })
@@ -100,7 +100,7 @@ price.addEventListener('blur', (precio)=>{
     if(precio.target.value ==''){
         price.classList.add('invalido')
         price.classList.remove('valido')
-        sprice.innerHTML = ('El campo de precio no puede estar vacío')
+        sprice.innerText = ('El campo de precio no puede estar vacío')
         price = false
     } else if (precio.target.value !== soloNumeros){
         price.classList.add('invalido')

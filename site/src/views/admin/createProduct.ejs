@@ -20,7 +20,7 @@
       <div class="contenedor">
         <article>
             <h2>Título</h2>
-            <input type="text" id="title" name="title" placeholder="Nombre de plato" value="<%= locals.old && old.name ? old.name : null %>">>
+            <input type="text" id="title" name="title" placeholder="Nombre de plato" value="<%= locals.old && old.name ? old.name : null %>">
             <% if (locals.errors && errors.title) { %>
               <small class="mensajeError" id="stitle">
                 <%= errors.title.msg %>
@@ -202,7 +202,7 @@
           <button class="guardar" type="submit">Guardar</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
         </article>
       </div>
-      <small class="mensajeError" id="screacionform"> <%= errors.creacionform.msg %> </small>
+ 
     </form>
       
     </main>
