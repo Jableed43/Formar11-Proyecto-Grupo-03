@@ -14,6 +14,43 @@ window.addEventListener("load", function() {
 
 
 
+    const smallEmail = qs("small.js-email");
+    const smallPassword = qs("small.js-password");
+
+    let campoEmail = qs("#email");
+    let campoPassword = qs("#password");
+
+
+    campoEmail.addEventListener("input", (e) => {
+        if (e.target.value.length < 3){
+        campoEmail.classList.add("is-invalid")
+        smallEmail.innerHTML = "El campo email debe estar completo"}
+        else {
+            campoEmail.classList.remove("is-invalid")
+            campoEmail.classList.add("is-valid")
+            smallEmail.innerHTML = ""
+        }
+    })
+
+
+    campoPassword.addEventListener("input", (e) => {
+
+
+        if(e.target.value.length === ""){
+            campoPassword.classList.add("is-invalid")
+            smallPassword.innerHTML = "El campo contraseña debe estar completo"
+        } else {
+            campoPassword.classList.remove("is-invalid")
+            campoPassword.classList.add("is-valid")
+
+            smallPassword.innerHTML = ""}
+        
+    })
+
+
+
+
+
     formulario.addEventListener("submit", function(e) {
         e.preventDefault();
 
@@ -28,14 +65,12 @@ window.addEventListener("load", function() {
 
         let errores = []
 
-        let campoEmail = qs("#email");
 
         if(campoEmail.value === "") {
             errores.push("El campo de mail tiene que estar completo")
 
         };
 
-        let campoPassword = qs("#password");
 
         if(campoPassword.value === "") {
             errores.push("El campo de contraseña tiene que estar completo")

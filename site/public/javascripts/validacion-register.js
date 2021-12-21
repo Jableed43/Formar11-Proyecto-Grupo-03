@@ -30,73 +30,10 @@ window.addEventListener("load", function() {
 
 
 
-
-
-
-
-    formulario.addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        let errores = []
-
-        if(campoName.value === "") {
-            errores.push("El campo nombre tiene que estar completo")
-        }
-
-        if(campoName.value.length <= 1 ) {
-            errores.push("El nombre debe poseer al menos dos caracteres")
-        }
-
-
-        if(campoEmail.value === "") {
-            errores.push("El mail tiene que estar completo")
-        }
-
-
-        if(campoPassword1.value === "") {
-            errores.push("La contraseña tiene que estar completa")
-        }
-
-        if(campoPassword1.value.length <= 7 ) {
-            errores.push("La contraseña debe poseer al menos ocho caracteres")
-        }
-
-
-        if(campoPassword2.value === "") {
-            errores.push("La contraseña tiene que estar completa")
-        }
-
-        if(campoPassword2.value.length <= 7 ) {
-            errores.push("La contraseña debe poseer al menos ocho caracteres")
-        }
-
-        if(campoPassword1.value !== campoPassword2.value) {
-            errores.push("Ambas contraseñas deben ser iguales")
-        }
-
-
-        if(campoSexo.value === "") {
-            errores.push("Ingrese su sexo porfavor")
-        }
-
-
-        if(campoProvincia.value === "") {
-            errores.push("Ingrese provincia que habita")
-        }
-
-        
-        if (errores.length > 0) {
-            errores.map(error => {
-                divErr.innerHTML += `<li>${error}</li>`
-            })
-        }
-
-    })
-
     campoName.addEventListener("input", (e) => {
         if (e.target.value.length < 3) {
         campoName.classList.add("is-invalid")
-        smallName.innerHTML = "error bish!"
+        smallName.innerHTML = "El campo nombre debe estar completo"
         } else {
             campoName.classList.remove("is-invalid")
             campoName.classList.add("is-valid")
@@ -108,7 +45,7 @@ window.addEventListener("load", function() {
     campoEmail.addEventListener("input", (e) => {
         if (e.target.value.length < 3){
         campoEmail.classList.add("is-invalid")
-        smallEmail.innerHTML = "error bish!"}
+        smallEmail.innerHTML = "El campo email debe estar completo"}
         else {
             campoEmail.classList.remove("is-invalid")
             campoEmail.classList.add("is-valid")
@@ -116,45 +53,83 @@ window.addEventListener("load", function() {
         }
     })
 
+    const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
+
+
     campoPassword1.addEventListener("input", (e) => {
 
 
-        const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
         if(validatePass.test(e.target.value)){
             campoPassword1.classList.remove("is-invalid")
             campoPassword1.classList.add("is-valid")
             smallPassword1.innerHTML = ""
         } else {
             campoPassword1.classList.add("is-invalid")
-            smallPassword1.innerHTML = "error bish!"}
+            smallPassword1.innerHTML = "La contraseña debe contener una mayúscula, una minúscula, un número y entre 8 y 15 caracteres"}
         
-
-
     })
 
     campoPassword2.addEventListener("input", (e) => {
-        if (e.target.value.length < 3) {
-            smallPassword2.innerHTML = "error bish!"
-            campoPassword2.classList.add("is-invalid")
+
+        if(validatePass.test(e.target.value)){
+            campoPassword2.classList.remove("is-invalid")
+            campoPassword2.classList.add("is-valid")
+            smallPassword2.innerHTML = ""
         } else {
-                campoPassword2.classList.remove("is-invalid")
-                campoPassword2.classList.add("is-valid")
-                smallPassword2.innerHTML = ""
-            }
+            campoPassword2.classList.add("is-invalid")
+            smallPassword2.innerHTML = "La contraseña debe contener una mayúscula, una minúscula, un número y entre 8 y 15 caracteres"}
+        
+    })
+
+
+    campoImg.addEventListener('change', (e)=> {
+
+        let extensiones = /(.jpg|.jpeg|.png|.gif|.webp)$/i.test(campoImg.value);
+
+        if(!extensiones){
+            smallImg.innerHTML = "Solo imagenes con extension jpg, png, gif, webp"
+            campoImg.classList.add("is-invalid")
+        } else {
+            campoImg.classList.remove("is-invalid");
+            campoImg.classList.add("is-valid");
+            smallImg.innerHTML = "";
+        }
+    })
+
+
+    formulario.addEventListener("submit", function(e) {
+
+        let errores = []
+
+
+        if(campoPassword1.value !== campoPassword2.value) {
+            errores.push("Ambas contraseñas deben ser iguales")
+        }
+
+
+        if(campoSexo.value === "") {
+            errores.push("Ingrese su sexo porfavor")
+            campoSexo.classList.add("is-invalid")
+            smallSexo.innerHTML = "El campo sexo debe estar completo"
+        }
+
+
+        if(campoProvincia.value === "") {
+            errores.push("Ingrese provincia que habita")
+            campoProvincia.classList.add("is-invalid")
+            smallProvincia.innerHTML = "El campo provincia debe estar completo"
+        }
+
+        
+        if (errores.length > 0) {
+            errores.map(error => {
+                divErr.innerHTML += `<li>${error}</li>`
+            })
+        }
 
     })
 
-    campoSexo.addEventListener("input", (e) => {
-        if (e.target.value === "")
-        campoSexo.classList.add("is-invalid")
-        smallSexo.innerHTML = "error bish!"
-    })
-
-    campoProvincia.addEventListener("input", (e) => {
-        if (e.target.value === "")
-        campoProvincia.classList.add("is-invalid")
-        smallProvincia.innerHTML = "error bish!"
-    })
+    
 
 
 })

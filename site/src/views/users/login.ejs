@@ -25,6 +25,7 @@
                 <% } %>
                 <!-- Div de errores -->
                 <div id="divError"> <ul></ul> </div>
+                <small class="js-email"> </small>
             </div>
 
             <div class="campo">
@@ -33,6 +34,7 @@
               <% if (locals.errores && errores.email) { %>
                 <small class="mensajeError"> <%= errores.email.msg %> </small>
                 <% } %>
+                <small class="js-password"> </small>
             </div>
 
 
