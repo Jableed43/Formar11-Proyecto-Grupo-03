@@ -16,13 +16,13 @@
       </div>
       <h1>CREA UN NUEVO PRODUCTO</h1>
 
-      <form action="" method="post" enctype="multipart/form-data">
+      <form class="creacionform" action="" method="post" enctype="multipart/form-data">
       <div class="contenedor">
         <article>
             <h2>Título</h2>
             <input type="text" id="title" name="title" placeholder="Nombre de plato" value="<%= locals.old && old.name ? old.name : null %>">>
             <% if (locals.errors && errors.title) { %>
-              <small class="mensajeError">
+              <small class="mensajeError" id="stitle">
                 <%= errors.title.msg %>
               </small>
               <% } %>
@@ -30,7 +30,7 @@
             <h2>Descripción</h2>
             <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px" value="<%= locals.old && old.name ? old.name : null %>"></textarea>
             <% if (locals.errors && errors.description) { %>
-              <small class="mensajeError">
+              <small class="mensajeError" id="sdescription">
                 <%= errors.description.msg %>
               </small>
               <% } %>
@@ -45,7 +45,7 @@
             <label class="file" for="images">Foto Producto</label>
             </div>
             <% if (locals.errors && errors.images) { %>
-              <small class="mensajeError"> <%= errors.images.msg %> </small>
+              <small class="mensajeError" id="simages"> <%= errors.images.msg %> </small>
               <% } %>
             </div>        
           </article>
@@ -64,7 +64,7 @@
               <% }) %>
               </select>
               <% if (locals.errors && errors.category) { %>
-                <small class="mensajeError"> <%= errors.category.msg %> </small>
+                <small class="mensajeError" id="scategory"> <%= errors.category.msg %> </small>
                 <% } %> 
           </div>
           <div>
@@ -76,7 +76,7 @@
               <% }) %>
             </select>
             <% if (locals.errors && errors.subcategory) { %>
-              <small class="mensajeError"> 
+              <small class="mensajeError" id="ssubcategory"> 
                 <%= errors.subcategory.msg %> 
               </small>
               <% } %> 
@@ -87,7 +87,7 @@
               <input type="number" name="price" id="price" placeholder="Inserte precio aquí..." value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.price) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="price">
               <%= errors.price.msg %>
             </small>
             <% } %>
@@ -100,7 +100,7 @@
             <input type="number" placeholder="(kcal)" name="calories" id="calories" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.calories) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="scalories">
               <%= errors.calories.msg %>
             </small>
             <% } %>
@@ -110,7 +110,7 @@
             <input type="number" placeholder="(g)" name="totalfat" id="totalfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.totalfat) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="stotalfat">
               <%= errors.totalfat.msg %>
             </small>
             <% } %>
@@ -120,7 +120,7 @@
             <input type="number" placeholder="(g)" name="carb" id="carb" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.carb) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="carb">
               <%= errors.carb.msg %>
             </small>
             <% } %>
@@ -130,7 +130,7 @@
             <input type="number" placeholder="(g)" name="protein" id="protein" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.protein) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="sprotein">
               <%= errors.protein.msg %>
             </small>
             <% } %>
@@ -140,7 +140,7 @@
             <input type="number" placeholder="(g)" name="transfat" id="transfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.transfat) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="stransfat">
               <%= errors.transfat.msg %>
             </small>
             <% } %>
@@ -150,7 +150,7 @@
             <input type="number" placeholder="(g)" name="saturatedfat" id="saturatedfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.saturatedfat) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="ssaturatedfat">
               <%= errors.saturatedfat.msg %>
             </small>
             <% } %>
@@ -160,7 +160,7 @@
             <input type="number" placeholder="(mg)" name="cholesterol" id="cholesterol" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.cholesterol) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="scholesterol">
               <%= errors.cholesterol.msg %>
             </small>
             <% } %>
@@ -170,17 +170,17 @@
             <input type="number" placeholder="(mg)" name="sodium" id="sodium" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.sodium) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="ssodium">
               <%= errors.sodium.msg %>
             </small>
             <% } %>
             
           <div>
             <label for="sugars" name="sugars">Azúcares</label>
-            <input type="number" placeholder="(g)" name="sugars" value="<%= locals.old && old.name ? old.name : null %>">
+            <input type="number" placeholder="(g)" name="sugars" id="sugars" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.sugars) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="ssugars">
               <%= errors.sugars.msg %>
             </small>
             <% } %>
@@ -190,7 +190,7 @@
             <input type="number" placeholder="(g)" name="fiber" id="fiber" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.fiber) { %>
-            <small class="mensajeError">
+            <small class="mensajeError" id="sfiber">
               <%= errors.fiber.msg %>
             </small>
             <% } %>
@@ -202,11 +202,12 @@
           <button class="guardar" type="submit">Guardar</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
         </article>
       </div>
+      <small class="mensajeError" id="screacionform"> <%= errors.creacionform.msg %> </small>
     </form>
       
     </main>
       
     <%- include("../partials/admin-footer.ejs") %>
-
+    <script src="/javascripts/validacion-creacion-prod.js"></script>
 </body>
 </html> 

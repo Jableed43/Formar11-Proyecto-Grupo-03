@@ -235,6 +235,14 @@ small {
     border: #f1d367 solid 2px;
 }
 
+main.create .invalido {
+    color: pink
+}
+
+main.create .valido {
+    color: greenyellow
+}
+
 @media (min-width: 480px){
     main.create div.contenedor2 article div{
         display: flex;
