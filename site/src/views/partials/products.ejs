@@ -1,13 +1,13 @@
 <div class="row">
 
-    <% products.map(product => { %>
+    <% products.map(products => { %>
             
     <div class="contenedor">
         <section class="products">
-            <a href="/products/detail/<%= product.id %> ">
+            <a href="/products/detail/<%= products.id %> ">
                 <article class="product-container">
-                    <img src="/images/imgmenu/<%= product.images %>" alt= "Foto Producto">
-                    <p><%= product.title %></p>
+                    <img src="/images/imgmenu/<%= products.images %>" alt= "Foto Producto">
+                    <p><%= products.title %></p>
                     <nav>
                         <ul type="numbers">
                             <li>Calorias</li>
@@ -16,10 +16,10 @@
                             <li>Carbohidratos</li>
                         </ul>
                         <ul type="none">
-                            <li><%= product.calories %></li>
-                            <li><%= product.totalfat %></li>
-                            <li><%= product.protein %></li>
-                            <li><%= product.carb %></li>
+                            <li><%= products.calories %></li>
+                            <li><%= products.totalfat %></li>
+                            <li><%= products.protein %></li>
+                            <li><%= products.carb %></li>
                         </ul>
                     </nav>
                     <button>Ver más</button>

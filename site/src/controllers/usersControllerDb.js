@@ -185,7 +185,8 @@ logout: (req, res) => {
         console.log(name, password);
         db.User.update(
             {
-                name: name.trim()
+                name: name.trim(),
+                avatar: req.file? req.file.filename : req.session.userLogin.avatar  
             },
             {
                 where: {

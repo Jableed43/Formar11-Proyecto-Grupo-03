@@ -5,9 +5,12 @@ module.exports = {
     // Para listar productos en vista Products
     list: (req, res) => {
         let products = db.Products.findAll({
-            include: ['subcategory']
-        })
-         let tacos = db.Subcategories.findAll({
+            include: {
+                association: 'subcategory',
+                include: [{ all: true }]}
+
+            })
+        let Tacos = db.Subcategory.findAll({
             where: {
                 id: 1
             },
@@ -15,7 +18,7 @@ module.exports = {
                 { association: 'products' }
             ]
         })
-        let Burritos = db.Subcategories.findAll({
+        let Burritos = db.Subcategory.findAll({
             where: {
                 id: 2
             },
@@ -24,7 +27,7 @@ module.exports = {
             ]
         })
 
-        let Quesadillas = db.Subcategories.findAll({
+        let Quesadillas = db.Subcategory.findAll({
             where: {
                 id: 3
             },
@@ -33,7 +36,7 @@ module.exports = {
             ]
         })
 
-        let Entradas = db.Subcategories.findAll({
+        let Entradas = db.Subcategory.findAll({
             where: {
                 id: 4
             },
@@ -42,7 +45,7 @@ module.exports = {
             ]
         })
 
-        let Platos = db.Subcategories.findAll({
+        let Platos = db.Subcategory.findAll({
             where: {
                 id: 5
             },
@@ -51,7 +54,7 @@ module.exports = {
             ]
         })
 
-        let Ensaladas = db.Subcategories.findAll({
+        let Ensaladas = db.Subcategory.findAll({
             where: {
                 id: 6
             },
@@ -60,7 +63,7 @@ module.exports = {
             ]
         })
 
-        let Salsas = db.Subcategories.findAll({
+        let Salsas = db.Subcategory.findAll({
             where: {
                 id: 7
             },
@@ -69,7 +72,7 @@ module.exports = {
             ]
         })
 
-        let Dulces = db.Subcategories.findAll({
+        let Dulces = db.Subcategory.findAll({
             where: {
                 id: 8
             },
@@ -78,7 +81,7 @@ module.exports = {
             ]
         })
 
-        let Gaseosas = db.Subcategories.findAll({
+        let Gaseosas = db.Subcategory.findAll({
             where: {
                 id: 9
             },
@@ -87,7 +90,7 @@ module.exports = {
             ]
         })
 
-        let Jugos = db.Subcategories.findAll({
+        let Jugos = db.Subcategory.findAll({
             where: {
                 id: 10
             },
@@ -96,7 +99,7 @@ module.exports = {
             ]
         })
 
-        let Aguas = db.Subcategories.findAll({
+        let Aguas = db.Subcategory.findAll({
             where: {
                 id: 11
             },
@@ -105,22 +108,22 @@ module.exports = {
             ]
         })
 
-        Promise.all([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas] )
-            .then(([tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
+        Promise.all([Tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas])
+            .then(([Tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
                 res.render('products', {
-                        products: products,
-                        tacos: tacos[0].products,
-                        Burritos: Burritos[0].products,
-                        Quesadillas: Quesadillas[0].products,
-                        Entradas: Entradas[0].products,
-                        Platos: Platos[0].products,
-                        Ensaladas: Ensaladas[0].products,
-                        Salsas: Salsas[0].products,
-                        Dulces: Dulces[0].products,
-                        Gaseosas: Gaseosas[0].products,
-                        Jugos: Jugos[0].products,
-                        Aguas: Aguas[0].products,
-                    })
+                    products: products,
+                    Tacos: Tacos[0].products,
+                    Burritos: Burritos[0].products,
+                    Quesadillas: Quesadillas[0].products,
+                    Entradas: Entradas[0].products,
+                    Platos: Platos[0].products,
+                    Ensaladas: Ensaladas[0].products,
+                    Salsas: Salsas[0].products,
+                    Dulces: Dulces[0].products,
+                    Gaseosas: Gaseosas[0].products,
+                    Jugos: Jugos[0].products,
+                    Aguas: Aguas[0].products,
+                })
             })
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)

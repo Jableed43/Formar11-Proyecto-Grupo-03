@@ -53,8 +53,8 @@
 
             <div class="campo">
             <label for="user">Sexo</label>
-            <select name="sexo" id="sexo">
-              <option name="sexo" selected hidden>Seleccione aquí</option>
+            <select name="sex" id="sex">
+              <option name="sex" selected hidden>Seleccione aquí</option>
 
                 <% sexes.forEach(sex=> { %>
                   <option value="<%= sex.id %>" <%= locals.old && old.id_sex === sex.id  ? 'selected' : null%>><%= sex.name %></option>
@@ -67,7 +67,7 @@
 
             <div class="campo">
             <label for="user">Provincia</label>
-            <select name="provincia" id="provincia">
+            <select name="province" id="province">
               <option value="provincia" selected hidden>Seleccione aquí</option>
               <% provinces.forEach(province=> { %>
                 <option value="<%= province.id %>" <%= locals.old && old.id_province === province.id  ? 'selected' : null%>><%= province.name %></option>

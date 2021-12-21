@@ -29,11 +29,12 @@ router.get('/profile', usersControllers.profile);
 
 /* PUT editar */
 router.get('/edit', usersControllers.edit);
-router.put('/update', subir.single('img') ,validateProfile, usersControllers.update);
+router.put('/update', subir.single('img'), validateProfile, usersControllers.update);
 
 /* DELETE user */ 
 router.delete('/delete/:id', usersControllers.destroy); 
 
+/* Desloguear session */
 router.get('/logout', usersControllers.logout)
 
 module.exports = router;
