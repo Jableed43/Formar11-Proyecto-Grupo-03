@@ -5,13 +5,26 @@ const qs = (tag) => {
 
 let divErr = document.querySelector("#divError")
 
+const inputs = document.querySelectorAll("input")
+
 window.addEventListener("load", function() {
 
 
     let formulario = qs("form");
 
+
+
     formulario.addEventListener("submit", function(e) {
         e.preventDefault();
+
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value === "") {
+                inputs[i].classList.add("is-invalid")
+            } else if (inputs[i].classList.contains("is-invalid")){
+                inputs[i].classList.remove("is-invalid")
+            }
+    
+        }
 
         let errores = []
 

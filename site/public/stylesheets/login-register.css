@@ -80,6 +80,14 @@
   text-align: center;
 }
 
+.is-invalid {
+  border-color: red;
+}
+
+.is-valid {
+  border-color: green;
+}
+
 @media (min-width: 769px) {
   .log-reg .login-register {
     max-width: 1200px;

@@ -17,7 +17,7 @@
 
             <div class="campo">
               <label for="email">Tu Correo Electrónico</label>
-              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="email" name="email" placeholder="Ingrese e-mail registrado..." >
+              <input type="email" value="<%= locals.old && old.email ? old.email : '' %>" id="email" name="email" placeholder="Ingrese e-mail registrado..." >
               <% if (locals.errores && errores.email) { %>
                 <small class="mensajeError">
                   <%= errores.email.msg %>
@@ -35,11 +35,7 @@
                 <% } %>
             </div>
 
-            <!-- Validacion errores front -->
 
-            <section class="errores">
-              <ul></ul>
-            </section>
 
               <div class="buttons">
               <label for="submit">Ingresar</label>

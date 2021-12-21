@@ -23,6 +23,8 @@
                   <%= errors.name.msg %>
                 </small>
                 <% } %>
+
+                <small class="js-name"> </small>
             </div>
 
             <div class="campo">
@@ -33,6 +35,8 @@
                   <%= errors.email.msg %>
                 </small>
                 <% } %>
+                <small class="js-email"> </small>
+
             </div>
 
             <div class="campo">
@@ -41,6 +45,8 @@
             <% if (locals.errors && errors.password) { %>
               <small class="mensajeError"> <%= errors.password.msg %> </small>
               <% } %>
+              <small class="js-password1"> </small>
+
             </div>
 
             <div class="campo">
@@ -49,6 +55,8 @@
             <% if (locals.errors && errors.p2) { %>
               <small class="mensajeError"> <%= errors.p2.msg %> </small>
               <% } %>
+              <small class="js-password2"> </small>
+
             </div>
 
             <div class="campo">
@@ -63,6 +71,8 @@
               <% if (locals.errors && errors.sexo) { %>
                 <small class="mensajeError"> <%= errors.sexo.msg %> </small>
                 <% } %> 
+                <small class="js-sexo"> </small>
+
           </div>
 
             <div class="campo">
@@ -76,6 +86,8 @@
             <% if (locals.errors && errors.provincia) { %>
               <small class="mensajeError"> <%= errors.provincia.msg %> </small>
               <% } %>
+              <small class="js-provincia"> </small>
+
           </div>
 
           <div class="campo">
@@ -87,7 +99,13 @@
           <% if (locals.errors && errors.img) { %>
             <small class="mensajeError"> <%= errors.img.msg %> </small>
             <% } %>
+            <small class="js-img"> </small>
+
           </div>
+
+                <!-- Div de errores -->
+                <div id="divError"> <ul></ul> </div>
+            </div>
 
  
 
@@ -112,7 +130,7 @@
       </main>
 
       <%- include("../partials/footer.ejs") %>
-
+      <script src="/javascripts/validacion-register.js"></script>
   </body>
 
   </html>
