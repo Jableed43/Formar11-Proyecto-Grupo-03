@@ -88,6 +88,10 @@
   border-color: green;
 }
 
+#divError{
+  color: red;
+}
+
 @media (min-width: 769px) {
   .log-reg .login-register {
     max-width: 1200px;

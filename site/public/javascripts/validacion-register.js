@@ -31,7 +31,7 @@ window.addEventListener("load", function() {
 
 
     campoName.addEventListener("input", (e) => {
-        if (e.target.value.length < 3) {
+        if (e.target.value.length < 2) {
         campoName.classList.add("is-invalid")
         smallName.innerHTML = "El campo nombre debe estar completo"
         } else {
@@ -43,7 +43,7 @@ window.addEventListener("load", function() {
     
 
     campoEmail.addEventListener("input", (e) => {
-        if (e.target.value.length < 3){
+        if (e.target.value.length < 2){
         campoEmail.classList.add("is-invalid")
         smallEmail.innerHTML = "El campo email debe estar completo"}
         else {
@@ -98,6 +98,9 @@ window.addEventListener("load", function() {
 
 
     formulario.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
 
         let errores = []
 

@@ -8,21 +8,22 @@ let divErr = document.querySelector("#divError")
 const inputs = document.querySelectorAll("input")
 
 window.addEventListener("load", function() {
+    console.log("Se vinculó correctamente");
 
 
     let formulario = qs("form");
 
 
 
-    const smallEmail = qs("small.js-email");
-    const smallPassword = qs("small.js-password");
-
-    let campoEmail = qs("#email");
+    let smallEmail = qs(".js-email");
+    let smallPassword = qs(".js-password");
+    
     let campoPassword = qs("#password");
+    let campoEmail = qs("#email");
 
 
     campoEmail.addEventListener("input", (e) => {
-        if (e.target.value.length < 3){
+        if (e.target.value.length < 2){
         campoEmail.classList.add("is-invalid")
         smallEmail.innerHTML = "El campo email debe estar completo"}
         else {
@@ -34,17 +35,14 @@ window.addEventListener("load", function() {
 
 
     campoPassword.addEventListener("input", (e) => {
-
-
-        if(e.target.value.length === ""){
+        if (e.target.value.length < 2) {
             campoPassword.classList.add("is-invalid")
             smallPassword.innerHTML = "El campo contraseña debe estar completo"
         } else {
             campoPassword.classList.remove("is-invalid")
             campoPassword.classList.add("is-valid")
-
-            smallPassword.innerHTML = ""}
-        
+            smallPassword.innerHTML = ""
+        }
     })
 
 
