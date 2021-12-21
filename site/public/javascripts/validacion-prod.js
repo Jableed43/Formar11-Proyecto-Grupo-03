@@ -35,12 +35,13 @@ let ssugars = qs('#ssugars')
 let fiber = qs('#fiber')
 let sfiber = qs('#sfiber')
 
+
 let extensiones = /(.jpg|.jpeg|.png|.gif|.webp)$/i;
 let soloNumeros = /^([0-9])*$/
 
 
 
-title.addEventListener('blur', (titulo)=>{
+title.addEventListener('input', (titulo)=>{
     if(titulo.target.value ==''){
         title.classList.add('invalido')
         title.classList.remove('valido')
@@ -54,7 +55,7 @@ title.addEventListener('blur', (titulo)=>{
     }
 })
 
-description.addEventListener('blur', (descripcion)=>{
+description.addEventListener('input', (descripcion)=>{
     if(descripcion.target.value ==''){
         description.classList.add('invalido')
         description.classList.remove('valido')
@@ -68,7 +69,21 @@ description.addEventListener('blur', (descripcion)=>{
     }
 })
 
-category.addEventListener('blur', (categoria)=>{
+description.addEventListener('input', (descripcion)=>{
+    if (descripcion.target.value.length <19){
+        description.classList.add('invalido')
+        description.classList.remove('valido')
+        sdescription.innerHTML = ('El campo de descripción no puede tener menos de 20 caracteres')
+        description = false
+    } else {
+        description.classList.remove('invalido')
+        description.classList.add('valido')
+        sdescription.innerHTML =('')
+        description = true
+    }
+})
+
+category.addEventListener('input', (categoria)=>{
     if(categoria.target.value ==''){
         category.classList.add('invalido')
         category.classList.remove('valido')
@@ -82,7 +97,7 @@ category.addEventListener('blur', (categoria)=>{
     }
 })
 
-subcategory.addEventListener('blur', (subcategoria)=>{
+subcategory.addEventListener('input', (subcategoria)=>{
     if(subcategoria.target.value ==''){
         subcategory.classList.add('invalido')
         subcategory.classList.remove('valido')
@@ -96,16 +111,11 @@ subcategory.addEventListener('blur', (subcategoria)=>{
     }
 })
 
-price.addEventListener('blur', (precio)=>{
+price.addEventListener('input', (precio)=>{
     if(precio.target.value ==''){
         price.classList.add('invalido')
         price.classList.remove('valido')
         sprice.innerText = ('El campo de precio no puede estar vacío')
-        price = false
-    } else if (precio.target.value !== soloNumeros){
-        price.classList.add('invalido')
-        price.classList.remove('valido')
-        sprice.innerHTML = ('El campo de precio sólo acepta números')
         price = false
     } else {
         price.classList.remove('invalido')
@@ -115,16 +125,11 @@ price.addEventListener('blur', (precio)=>{
     }
 })
 
-calories.addEventListener('blur', (calorias)=>{
+calories.addEventListener('input', (calorias)=>{
     if(calorias.target.value ==''){
         calories.classList.add('invalido')
         calories.classList.remove('valido')
         scalories.innerHTML = ('El campo de calorías no puede estar vacío')
-        calories = false
-    } else if (calorias.target.value !== soloNumeros){
-        calories.classList.add('invalido')
-        calories.classList.remove('valido')
-        scalories.innerHTML = ('El campo de calorías sólo acepta números')
         calories = false
     } else {
         calories.classList.remove('invalido')
@@ -134,16 +139,11 @@ calories.addEventListener('blur', (calorias)=>{
     }
 })
 
-totalfat.addEventListener('blur', (grasastotales)=>{
+totalfat.addEventListener('input', (grasastotales)=>{
     if(grasastotales.target.value ==''){
         totalfat.classList.add('invalido')
         totalfat.classList.remove('valido')
         stotalfat.innerHTML = ('El campo de grasas totales no puede estar vacío')
-        totalfat = false
-    } else if (grasastotales.target.value !== soloNumeros){
-        totalfat.classList.add('invalido')
-        totalfat.classList.remove('valido')
-        stotalfat.innerHTML = ('El campo de grasas totales sólo acepta números')
         totalfat = false
     } else {
         totalfat.classList.remove('invalido')
@@ -153,16 +153,11 @@ totalfat.addEventListener('blur', (grasastotales)=>{
     }
 })
 
-carb.addEventListener('blur', (carbohidratos)=>{
+carb.addEventListener('input', (carbohidratos)=>{
     if(carbohidratos.target.value ==''){
         carb.classList.add('invalido')
         carb.classList.remove('valido')
         scarb.innerHTML = ('El campo de carbohidratos no puede estar vacío')
-        carb = false
-    } else if (carbohidratos.target.value !== soloNumeros){
-        carb.classList.add('invalido')
-        carb.classList.remove('valido')
-        scarb.innerHTML = ('El campo de carbohidratos sólo acepta números')
         carb = false
     } else {
         carb.classList.remove('invalido')
@@ -172,16 +167,11 @@ carb.addEventListener('blur', (carbohidratos)=>{
     }
 })
 
-protein.addEventListener('blur', (proteinas)=>{
+protein.addEventListener('input', (proteinas)=>{
     if(proteinas.target.value ==''){
         protein.classList.add('invalido')
         protein.classList.remove('valido')
         sprotein.innerHTML = ('El campo de proteinas no puede estar vacío')
-        protein = false
-    } else if (proteinas.target.value !== soloNumeros){
-        protein.classList.add('invalido')
-        protein.classList.remove('valido')
-        sprotein.innerHTML = ('El campo de proteinas sólo acepta números')
         protein = false
     } else {
         protein.classList.remove('invalido')
@@ -191,16 +181,11 @@ protein.addEventListener('blur', (proteinas)=>{
     }
 })
 
-transfat.addEventListener('blur', (grasastrasns)=>{
+transfat.addEventListener('input', (grasastrasns)=>{
     if(grasastrasns.target.value ==''){
         transfat.classList.add('invalido')
         transfat.classList.remove('valido')
         stransfat.innerHTML = ('El campo de grasas trans no puede estar vacío')
-        transfat = false
-    } else if (grasastrasns.target.value !== soloNumeros){
-        transfat.classList.add('invalido')
-        transfat.classList.remove('valido')
-        stransfat.innerHTML = ('El campo de grasas trans sólo acepta números')
         transfat = false
     } else {
         transfat.classList.remove('invalido')
@@ -210,16 +195,11 @@ transfat.addEventListener('blur', (grasastrasns)=>{
     }
 })
 
-saturatedfat.addEventListener('blur', (grasassaturadas)=>{
+saturatedfat.addEventListener('input', (grasassaturadas)=>{
     if(grasassaturadas.target.value ==''){
         saturatedfat.classList.add('invalido')
         saturatedfat.classList.remove('valido')
         ssaturatedfat.innerHTML = ('El campo de grasas saturadas no puede estar vacío')
-        saturatedfat = false
-    } else if (grasassaturadas.target.value !== soloNumeros){
-        saturatedfat.classList.add('invalido')
-        saturatedfat.classList.remove('valido')
-        ssaturatedfat.innerHTML = ('El campo de grasas saturadas sólo acepta números')
         saturatedfat = false
     } else {
         saturatedfat.classList.remove('invalido')
@@ -229,16 +209,11 @@ saturatedfat.addEventListener('blur', (grasassaturadas)=>{
     }
 })
 
-cholesterol.addEventListener('blur', (sodio)=>{
+cholesterol.addEventListener('input', (colesterol)=>{
     if(colesterol.target.value ==''){
         cholesterol.classList.add('invalido')
         cholesterol.classList.remove('valido')
         scholesterol.innerHTML = ('El campo de colesterol no puede estar vacío')
-        cholesterol = false
-    } else if (colesterol.target.value !== soloNumeros){
-        cholesterol.classList.add('invalido')
-        cholesterol.classList.remove('valido')
-        scholesterol.innerHTML = ('El campo de colesterol sólo acepta números')
         cholesterol = false
     } else {
         cholesterol.classList.remove('invalido')
@@ -248,16 +223,11 @@ cholesterol.addEventListener('blur', (sodio)=>{
     }
 })
 
-sodium.addEventListener('blur', (sodio)=>{
+sodium.addEventListener('input', (sodio)=>{
     if(sodio.target.value ==''){
         sodium.classList.add('invalido')
         sodium.classList.remove('valido')
         ssodium.innerHTML = ('El campo de sodio no puede estar vacío')
-        sodium = false
-    } else if (sodio.target.value !== soloNumeros){
-        sodium.classList.add('invalido')
-        sodium.classList.remove('valido')
-        ssodium.innerHTML = ('El campo de sodio sólo acepta números')
         sodium = false
     } else {
         sodium.classList.remove('invalido')
@@ -267,16 +237,11 @@ sodium.addEventListener('blur', (sodio)=>{
     }
 })
 
-sugars.addEventListener('blur', (azucares)=>{
+sugars.addEventListener('input', (azucares)=>{
     if(azucares.target.value ==''){
         sugars.classList.add('invalido')
         sugars.classList.remove('valido')
         ssugars.innerHTML = ('El campo de azucares no puede estar vacío')
-        sugars = false
-    } else if (azucares.target.value !== soloNumeros){
-        sugars.classList.add('invalido')
-        sugars.classList.remove('valido')
-        ssugars.innerHTML = ('El campo de azucares sólo acepta números')
         sugars = false
     } else {
         sugars.classList.remove('invalido')
@@ -286,16 +251,11 @@ sugars.addEventListener('blur', (azucares)=>{
     }
 })
 
-fiber.addEventListener('blur', (fibras)=>{
+fiber.addEventListener('input', (fibras)=>{
     if(fibras.target.value ==''){
         fiber.classList.add('invalido')
         fiber.classList.remove('valido')
         sfiber.innerHTML = ('El campo de fibras no puede estar vacío')
-        fiber = false
-    } else if (fibras.target.value !== soloNumeros){
-        fiber.classList.add('invalido')
-        fiber.classList.remove('valido')
-        sfiber.innerHTML = ('El campo de fibras sólo acepta números')
         fiber = false
     } else {
         fiber.classList.remove('invalido')
@@ -305,7 +265,7 @@ fiber.addEventListener('blur', (fibras)=>{
     }
 })
 
-images.addEventListener('blur', function(){
+images.addEventListener('input', function(){
     switch (true) {
         case images.value == "":
             simages.innerHTML = "Adjuntá una imagen del producto"

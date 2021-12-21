@@ -236,11 +236,11 @@ small {
 }
 
 main.create .invalido {
-    color: pink
+    color: tomato
 }
 
 main.create .valido {
-    color: greenyellow
+    background-color: yellowgreen;
 }
 
 @media (min-width: 480px){

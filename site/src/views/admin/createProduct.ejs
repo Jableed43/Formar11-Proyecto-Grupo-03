@@ -116,7 +116,7 @@
             <% } %>
 
           <div>
-            <label for="carb" name="carb" id="carb">Carbohidratos</label>
+            <label for="carb" name="carb">Carbohidratos</label>
             <input type="number" placeholder="(g)" name="carb" id="carb" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.carb) { %>
@@ -126,7 +126,7 @@
             <% } %>
 
           <div>
-            <label for="protein" name="protein" id="protein">Proteínas</label>
+            <label for="protein" name="protein">Proteínas</label>
             <input type="number" placeholder="(g)" name="protein" id="protein" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.protein) { %>
@@ -136,7 +136,7 @@
             <% } %>
 
           <div>
-            <label for="transfat" name="transfat" id="transfat">Grasas Trans</label>
+            <label for="transfat" name="transfat">Grasas Trans</label>
             <input type="number" placeholder="(g)" name="transfat" id="transfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.transfat) { %>
@@ -146,7 +146,7 @@
             <% } %>
 
           <div>
-            <label for="saturatedfat" name="saturatedfat" id="saturatedfat">Grasas Saturadas</label>
+            <label for="saturatedfat" name="saturatedfat">Grasas Saturadas</label>
             <input type="number" placeholder="(g)" name="saturatedfat" id="saturatedfat" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.saturatedfat) { %>
@@ -156,7 +156,7 @@
             <% } %>
 
           <div>
-            <label for="cholesterol" name="cholesterol" id="cholesterol">Colesterol</label>
+            <label for="cholesterol" name="cholesterol">Colesterol</label>
             <input type="number" placeholder="(mg)" name="cholesterol" id="cholesterol" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.cholesterol) { %>
@@ -166,7 +166,7 @@
             <% } %>
             
           <div>
-            <label for="sodium" name="sodium" id="sodium">Sodio</label>
+            <label for="sodium" name="sodium">Sodio</label>
             <input type="number" placeholder="(mg)" name="sodium" id="sodium" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.sodium) { %>
@@ -186,7 +186,7 @@
             <% } %>
                         
           <div>
-            <label for="fiber" name="fiber" id="fiber">Fibras</label>
+            <label for="fiber" name="fiber">Fibras</label>
             <input type="number" placeholder="(g)" name="fiber" id="fiber" value="<%= locals.old && old.name ? old.name : null %>">
           </div>
           <% if (locals.errors && errors.fiber) { %>
@@ -208,6 +208,6 @@
     </main>
       
     <%- include("../partials/admin-footer.ejs") %>
-    <script src="/javascripts/validacion-creacion-prod.js"></script>
+    <script src="/javascripts/validacion-prod.js"></script>
 </body>
 </html> 
