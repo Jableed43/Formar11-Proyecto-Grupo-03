@@ -1,52 +1,72 @@
+const fs = require('fs');
+const path = require('path');
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const db = require('../database/models')
 const {Op} = require ('sequelize')
 const { validationResult } = require('express-validator')
 
 
+
 module.exports = {
     // List - Product's List
-    list: (req,res) => {
-        db.Product.findAll(
-            {include: {
-                association: 'subcategory', 
-                include: [{ all: true}]
-            },
-            order: [
-                ['subcategory', 'ASC']
-            ]}
-        )
-        .then(productos => {
-            res.render('admin', {Product : productos})
+    // admin: (req,res) => {
+    //     // res.render('admin/admin')
+    //     let products = db.Product.findAll()
+    //     let categories = db.Category.findAll(
+    //         {include : ['Subcategories']}
+    //     )
+    //     Promise.all([products, categories])
+
+    //     
+    //     .catch(err=> {
+    //         console.log('Error al requerir los productos de la base de datos '+ err)
+    //     })
+    // },
+	admin: (req, res) => {
+		db.Product.findAll({
+			include: [{ all: true }]
+		})
+			.then((products) => {
+            return res.render('admin/admin', {products})
         })
-        .catch(err=> {
-            console.log('Error al requerir los productos de la base de datos '+ err)
-        })
-    },
-    // Create - Form to create
+	},
+    // admin: (req, res) => { 
+    //    return res.render('admin/admin')
+    // },
+    // Create - Form to create a product
 	create: (req, res) => {
-		res.render('create')
+        {
+            let categories = db.Category.findAll()
+            let subcategories = db.Subcategory.findAll()
+    
+                Promise.all([categories, subcategories])
+                .then(([categories, subcategories]) => {
+                    return res.render('admin/createProduct', {
+                        categories,
+                        subcategories                       
+                    })
+                })
+                .catch(error => console.log(error))
+            }
+		
 	},
     // Create -  Method to store
     store: (req,res) => {
+
         let errors = validationResult(req);
-                // Para validar la imagen
-        if (req.fileValidationError) {
-            let images = {
-                param: "images",
-                msj: "Solo se permiten imágenes"
-            }
-            errors.errors.push(images)
-        }
-        const { title, description, price, calories, total_fat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory} = req.body
-
-        let images = req.file ? req.file.filename : 'default-img.jpg';
-
+        if(errors.isEmpty()){
+        
+        const { title , description, price, calories, totalfat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory, category} = req.body;
+        // let images = req.file ? req.file.filename : 'default-img.jpg';
+        
         db.Product.create ({
-            title,
+            title : title,            
             description,
             price,
             calories,
-            total_fat,
+            totalfat,
             carb,
             protein,
             transfat, 
@@ -55,23 +75,61 @@ module.exports = {
             sodium,
             sugars,
             fiber,
-            img : images,
-            Id_subcategory: subcategory
+            images: req.file ? req.file.filename : 'default-img.jpg',
+            subcategoryId: subcategory,
+            categoryId: category
         })
         .then(() =>{
-            res.redirect(`/products/detail/${product.id}`)
+            // res.redirect(`/products/detail/${product.id}`)     
+            res.redirect('/')             
         })
-        .catch(err=> {
+        .catch(error => {
             res.send(error)
         })
+
+    } else {
+        errors = errors.mapped()
+
+                // Para validar la imagen
+        if (req.fileValidationError) {
+            let images = {
+                param: "images",
+                msg: "Solo se permiten imágenes"
+            }
+            errors.errors.push(images)          
+        }
+        
+        let product = db.Product.findByPk(req.params.id)
+        let categories = db.Category.findAll()
+        let subcategories = db.Subcategory.findAll()
+
+            Promise.all([product, categories, subcategories])
+            .then(([product, categories, subcategories]) => {
+                return res.render('admin/createProduct', {
+                    product,
+                    categories,
+                    subcategories,
+                    errors,
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
+        }
     },
     // Update - Form to edit
     edit: (req, res) => {
 
-        db.Product.findByPk(req.params.id)
-            .then((product) => {
-                res.render("admin/editProduct", {
-                    product
+        let product = db.Product.findByPk(req.params.id)
+        let categories = db.Category.findAll()
+        let subcategories = db.Subcategory.findAll()
+    
+        
+        Promise.all([product, categories, subcategories])
+        .then(([product, categories, subcategories]) => {
+                res.render("admin/editproduct", {
+                    product,
+                    categories,
+                    subcategories
                 })
             })
             .catch((error) => {
@@ -81,6 +139,9 @@ module.exports = {
     },
     // Update - Method to update
     update: (req, res, next) => {
+
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
         
         const { title, description, price, calories, total_fat, carb, protein, transfat, saturatedfat, cholesterol, sodium, sugars, fiber, subcategory } = req.body;
 
@@ -101,7 +162,7 @@ module.exports = {
             sugars,
             fiber,
             img : images,
-            Id_subcategory: subcategory
+            subcategoryId: subcategory
         },
             {
                 where: {
@@ -114,6 +175,32 @@ module.exports = {
             .catch((error) => {
                 res.send(error)
             })
+        } else {
+            errors = errors.mapped()
+    
+                    // Para validar la imagen
+            if (req.fileValidationError) {
+                let images = {
+                    param: "images",
+                    msg: "Solo se permiten imágenes"
+                }
+                errors.errors.push(images)          
+            }
+            
+            let categories = db.Category.findAll()
+            let subcategories = db.Subcategory.findAll()
+    
+                Promise.all([categories, subcategories])
+                .then(([categories, subcategories]) => {
+                    return res.render('admin/createProduct', {
+                        categories,
+                        subcategories,
+                        errors,
+                        old: req.body
+                    })
+                })
+                .catch(error => console.log(error))
+            }
     },
     // Delete - Delete one product from DB
 	destroy: (req, res) => {
