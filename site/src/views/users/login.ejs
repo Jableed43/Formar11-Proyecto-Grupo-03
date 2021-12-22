@@ -17,7 +17,7 @@
 
             <div class="campo">
               <label for="email">Tu Correo Electrónico</label>
-              <input type="email" value="<%= locals.old && old.email ? old.email : '' %>" id="email" name="email" placeholder="Ingrese e-mail registrado..." >
+              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="email" name="email" placeholder="Ingrese e-mail registrado..." >
               <% if (locals.errores && errores.email) { %>
                 <small class="mensajeError">
                   <%= errores.email.msg %>
