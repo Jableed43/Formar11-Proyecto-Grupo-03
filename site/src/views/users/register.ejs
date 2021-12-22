@@ -42,8 +42,8 @@
             <div class="campo">
               <label for="p1">Contraseña</label>
               <input type="password" id="p1" name="p1" placeholder="Ingrese contraseña...">
-            <% if (locals.errors && errors.password) { %>
-              <small class="mensajeError"> <%= errors.password.msg %> </small>
+            <% if (locals.errores && errores.password) { %>
+              <small class="mensajeError"> <%= errores.password.msg %> </small>
               <% } %>
               <small class="js-password1"> </small>
 
