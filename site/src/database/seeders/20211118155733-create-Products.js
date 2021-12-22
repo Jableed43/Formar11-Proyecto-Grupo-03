@@ -16,7 +16,7 @@ let products =  [
     "sodium": 339,
     "sugars": 1,
     "fiber": 1,
-    "subcategoryId": 4,
+    "subcategoryId": 1,
     createdAt:new Date,
     updatedAt: new Date
 },
@@ -35,7 +35,7 @@ let products =  [
     "sodium": 492.4,
     "sugars": 0.5,
     "fiber": 1.7,
-    "subcategoryId": 4,
+    "subcategoryId": 1,
     createdAt:new Date,
     updatedAt: new Date
  }
@@ -54,7 +54,7 @@ let products =  [
     "sodium": 967.1,
     "sugars": 3.7,
     "fiber": 10,
-    "subcategoryId": 4,
+    "subcategoryId": 1,
     createdAt:new Date,
     updatedAt: new Date
 },
@@ -226,7 +226,7 @@ let products =  [
       "sodium": 1447.7,
       "sugars": 0.3,
       "fiber": 4.3,
-      "subcategoryId": 6,
+      "subcategoryId": 3,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -245,7 +245,7 @@ let products =  [
       "sodium": 1141.5,
       "sugars": 0.3,
       "fiber": 4.3,
-      "subcategoryId": 6,
+      "subcategoryId": 3,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -264,7 +264,7 @@ let products =  [
       "sodium": 1527.4,
       "sugars": 4.8,
       "fiber": 25,
-      "subcategoryId": 8,
+      "subcategoryId": 4,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -283,7 +283,7 @@ let products =  [
       "sodium":   2748.8,
       "sugars":   7.9,
       "fiber":   26.9,
-      "subcategoryId": 9,
+      "subcategoryId": 4,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -302,7 +302,7 @@ let products =  [
       "sodium":   962.1, 
       "sugars":   2.9 ,
       "fiber":   2.3,
-      "subcategoryId": 8,
+      "subcategoryId": 4,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -321,7 +321,7 @@ let products =  [
       "sodium":   326.8,
       "sugars":   1.5,
       "fiber":   7.6,
-      "subcategoryId": 7,
+      "subcategoryId": 4,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -340,7 +340,7 @@ let products =  [
       "sodium":   4016.4,
       "sugars":   11.3,
       "fiber":   37,
-      "subcategoryId": 4,
+      "subcategoryId": 5,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -359,7 +359,7 @@ let products =  [
       "sodium": 2079.1,
       "sugars": 6.2,
       "fiber": 25.2,
-      "subcategoryId": 4,
+      "subcategoryId": 5,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -378,7 +378,7 @@ let products =  [
       "sodium": 2270.5,
       "sugars": 5.8,
       "fiber": 17.6,
-      "subcategoryId": 11,
+      "subcategoryId": 5,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -397,7 +397,7 @@ let products =  [
       "sodium": 2992.1,
       "sugars": 6,
       "fiber": 26.4,
-      "subcategoryId": 11,
+      "subcategoryId": 5,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -416,7 +416,7 @@ let products =  [
       "sodium": 2158,
       "sugars": 8,
       "fiber": 7,
-      "subcategoryId": 11,
+      "subcategoryId": 6,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -435,7 +435,7 @@ let products =  [
       "sodium": 1118.4,
       "sugars": 3.8,
       "fiber": 4.1,
-      "subcategoryId": 11,
+      "subcategoryId": 6,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -454,7 +454,7 @@ let products =  [
       "sodium": 772,
       "sugars": 2,
       "fiber": 16,
-      "subcategoryId": 10,
+      "subcategoryId": 7,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -473,7 +473,7 @@ let products =  [
       "sodium": 549.3,
       "sugars": 1.4,
       "fiber": 1.5,
-      "subcategoryId": 11,
+      "subcategoryId": 7,
       createdAt:new Date,
       updatedAt: new Date
       
@@ -493,7 +493,7 @@ let products =  [
       "sodium": 157.3,
       "sugars": 0.1,
       "fiber": 5.5,
-      "subcategoryId": 10,
+      "subcategoryId": 7,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -512,7 +512,7 @@ let products =  [
       "sodium": 792.6,
       "sugars": 1.5,
       "fiber": 0.2,
-      "subcategoryId": 10,
+      "subcategoryId": 7,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -531,7 +531,7 @@ let products =  [
       "sodium": 299.4,
       "sugars": 4.6,
       "fiber": 1,
-      "subcategoryId": 11,
+      "subcategoryId": 8,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -550,7 +550,7 @@ let products =  [
       "sodium": 226.9,
       "sugars": 1.4,
       "fiber": 0.5,
-      "subcategoryId": 11,
+      "subcategoryId": 8,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -569,7 +569,7 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "subcategoryId": 2,
+      "subcategoryId": 9,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -588,7 +588,7 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "subcategoryId": 2,
+      "subcategoryId": 9,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -607,7 +607,7 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "subcategoryId": 2,
+      "subcategoryId": 9,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -626,7 +626,7 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "subcategoryId": 1,
+      "subcategoryId": 10,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -645,7 +645,7 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "subcategoryId": 1,
+      "subcategoryId": 10,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -664,7 +664,7 @@ let products =  [
       "sodium": 30,
       "sugars": 41,
       "fiber": 0,
-      "subcategoryId": 1,
+      "subcategoryId": 10,
       createdAt:new Date,
       updatedAt: new Date
   },
@@ -683,7 +683,7 @@ let products =  [
       "sodium": 0,
       "sugars": 0,
       "fiber": 0,
-      "subcategoryId": 3,
+      "subcategoryId": 11,
       createdAt:new Date,
       updatedAt: new Date
   }

@@ -21,11 +21,11 @@
 
         <!-- Información producto -->
         <section class="detalle">
-            <article class="categoria"><%= productDetail.category %> / <%= productDetail.subcategory %></article>
+            <article class="categoria"><%= products.category %> / <%= products.subcategory %></article>
             
-            <h1 class="nombreprod"><%= productDetail.title%></h1>
+            <h1 class="nombreprod"><%= products.title%></h1>
             
-            <p class="desc"><%= productDetail.description %></p>
+            <p class="desc"><%= products.description %></p>
             
             <article class="cantycarr">
             <a href="#" class="cant">-</a>
@@ -37,16 +37,16 @@
 
             <article class="tablainfo">
                 <div class="columna">
-                  <div class="carta"><%= productDetail.calories %><br>Calorías</div>
+                  <div class="carta"><%= products.calories %><br>Calorías</div>
                 </div>
                 <div class="columna">
-                  <div class="carta"><%= productDetail.totalfat %><br>Grasas(g)</div>
+                  <div class="carta"><%= products.totalfat %><br>Grasas(g)</div>
                 </div>
                 <div class="columna">
-                  <div class="carta"><%= productDetail.protein %><br>Prot (g)</div>
+                  <div class="carta"><%= products.protein %><br>Prot (g)</div>
                 </div>
                 <div class="columna">
-                  <div class="carta"><%= productDetail.carb %><br>Carb (g)</div>
+                  <div class="carta"><%= products.carb %><br>Carb (g)</div>
                 </div>
             </article>
 
@@ -56,26 +56,26 @@
               <table>
                 <tr>
                   <td class="c1">Grasa Saturada (g)</td>
-                  <td class="c2"><%= productDetail.saturatedfat %></td>
+                  <td class="c2"><%= products.saturatedfat %></td>
                   <tr>
                     <td class="c1">Grasas trans (g)</td>
-                    <td class="c2"><%= productDetail.transfat %></td>
+                    <td class="c2"><%= products.transfat %></td>
                   </tr>
                   <tr>
                     <td class="c1">Colesterol (mg)</td>
-                    <td class="c2"><%= productDetail.cholesterol %></td>
+                    <td class="c2"><%= products.cholesterol %></td>
                   </tr>
                   <tr>
                     <td class="c1">Azúcares (g)</td>
-                    <td class="c2"><%= productDetail.sugars %></td>
+                    <td class="c2"><%= products.sugars %></td>
                   </tr>
                   <tr>
                     <td class="c1">Sodio (mg)</td>
-                    <td class="c2"><%= productDetail.sodium %></td>
+                    <td class="c2"><%= products.sodium %></td>
                   </tr>
                   <tr>
                     <td class="c1">Fibra (g)</td>
-                    <td class="c2"><%= productDetail.fiber %></td>
+                    <td class="c2"><%= products.fiber %></td>
                   </tr>
                 </tr>
                 </tr>
@@ -83,7 +83,7 @@
             </article>
 
             <div class="final-buttons">
-              <a href="/products/create"><button class="b1">Crear</button></a><a href="/products/edit/<%= productDetail.id %>"><button class="b2">Editar</button></a><form action="/products/delete/<%= productDetail.id %>?_method=DELETE" method="POST"><button class="b3">Eliminar</button></form>
+              <a href="/products/create"><button class="b1">Crear</button></a><a href="/products/edit/<%= products.id %>"><button class="b2">Editar</button></a><form action="/products/delete/<%= products.id %>?_method=DELETE" method="POST"><button class="b3">Eliminar</button></form>
             </div>
         </section>
 

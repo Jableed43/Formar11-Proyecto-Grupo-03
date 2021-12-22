@@ -14,80 +14,85 @@
       <div class="logo">
         <img src='/images/logomin.png' alt="Logo Tacopado">
       </div>
-      <h1>Estás editando <%= productEdit.title %></h1>
+      <h1>Estás editando "<%= product.title %>"</h1>
 
-      <form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST">
-      <div class="contenedor">
-        <article>
-            <h2>Título</h2>
-            <input type="text" id="title" name="title" value="<%= productEdit.title %>" placeholder="Nombre de plato">
-            <h2>Descripción</h2>
-            <textarea id="description" name="description" value="<%= productEdit.description %>" placeholder="Escribí la descripción del producto aquí.." style="height:170px"></textarea>
-        </article>
-      </div>
-
-      <div class="contenedor2">
-        <article>
-            <h2>Imagen del producto</h2>
-
-            <img class="prod" src="/images/imgmenu/<%= productEdit.images %>" alt="Foto producto actual">
-            <div>
-            <input type="file" id="images" name="images" hidden multiple accept="image/*">
-            <label class="file" for="images">Foto Producto</label>
-            </div>
-            <% if (locals.errors && errors.images) { %>
-              <small class="mensajeError"> <%= errors.images.msg %> </small>
-              <% } %>
-            </div>        
-          </article>
-      </div>  
-
-      <div class="contenedor3">
-        <article>
-          <h2>Organizar</h2>
-          <div>    
-            <label for="categoria">Categoría</label>
-            <select name="category" id="category" required>
-              <option name="category" selected hidden>Seleccione aquí</option>
-              <% 
-                let category = ['Comida','Bebida']
-                %>
-                <% for (const catSelec of category) { %>
-                  <option value="<%= catSelec %>" <%= productEdit.category === "catSelec" ? "selected" : null %> ><%= catSelec %></option>
+      <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST"enctype="multipart/form-data">
+        <div class="contenedor">
+          <article>
+              <h2>Título</h2>
+              <input type="text" id="title" name="title" value="<%= product.title %>" placeholder="Nombre de plato">
+              <% if (locals.errors && errors.title) { %>
+                <small class="mensajeError">
+                  <%= errors.title.msg %>
+                </small>
                 <% } %>
-              </select>
-              <% if (locals.errors && errors.category) { %>
-                <small class="mensajeError"> <%= errors.category.msg %> </small>
-                <% } %> 
-          </div>
-          <div>
-            <label for="subcategoria">Subcategoría</label>
-            <select name="subcategory" id="subcategory" required>
-              <option value="subcategory" name= "default" selected hidden>Seleccione aquí</option>
-              <% 
-              let subcategory = ['Tacos', 'Burritos', 'Quesadillas', 'Entradas', 'Platos', 'Ensaladas', 'Salsas', 'Dulces', 'Gaseosas', 'Jugo', 'Agua']
-              %>
-              <% for (const subSelec of subcategory) { %>
-                <option value="<%= subSelec %>" <%= productEdit.subcategory === "subSelec" ? "selected" : null %> ><%= subSelec %></option>
-              <% } %>
-            </select>
-            <% if (locals.errors && errors.subcategory) { %>
-              <small class="mensajeError"> <%= errors.subcategory.msg %> </small>
-              <% } %> 
-          </div>
 
-          <div class="ultimo-input">
-              <label for="precio">Precio</label>
-              <input type="number" name="price" id="price" value="<%= productEdit.price %>" placeholder="Inserte precio aquí...">
-          </div>
-        </article>
+              <h2>Descripción</h2>
+              <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"><%= product.description %></textarea>
+              <% if (locals.errors && errors.description) { %>
+                <small class="mensajeError">
+                  <%= errors.description.msg %>
+                </small>
+                <% } %>
+          </article>
+        </div>
+
+        <div class="contenedor2">
+          <article>
+              <h2>Imagen del producto</h2>
+
+              <img class="prod" src="/images/imgmenu/<%= product.images %>" alt="Foto producto actual">
+              <div>
+              <input type="file" id="images" name="images" hidden>
+              <label class="file" for="images">Foto Producto</label>
+              </div>
+              <% if (locals.errors && errors.images) { %>
+                <small class="mensajeError"> <%= errors.images.msg %> </small>
+                <% } %>
+              </div>        
+            </article>
+        </div>  
+
+        <div class="contenedor3">
+          <article>
+            <h2>Organizar</h2>
+            <div>    
+              <label for="category">Categoría</label>
+              <select name="category" id="category">
+                <option selected hidden>Seleccione aquí</option>
+                <% categories.forEach(category => { %>
+                  <option value="<%= category.id %>" <%= product.subcategoryId === category.id ? 'selected' : null%>><%= category.name%></option>
+                <% }) %>
+                </select>
+                <% if (locals.errors && errors.category) { %>
+                  <small class="mensajeError"> <%= errors.category.msg %> </small>
+                  <% } %> 
+            </div>
+            <div>
+              <label for="subcategory">Subcategoría</label>
+              <select name="subcategory" id="subcategory" required>
+                <option value="subcategory" name= "default" selected hidden>Seleccione aquí</option>
+                <% subcategories.forEach(subcategory => { %>
+                  <option value="<%= subcategory.id %>" <%= product.subcategoryId === subcategory.id ? 'selected' : null%>><%= subcategory.name %></option>
+                <% }) %>
+              </select>
+              <% if (locals.errors && errors.subcategory) { %>
+                <small class="mensajeError"> <%= errors.subcategory.msg %> </small>
+                <% } %> 
+            </div>
+
+            <div class="ultimo-input">
+                <label for="precio">Precio</label>
+                <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Inserte precio aquí...">
+            </div>
+          </article>
     
             
         <article>
           <h2>Valores Nutricionales</h2>
           <div>
             <label for="Calorías" name="calories" >Calorías</label>
-            <input type="number" placeholder="(kcal)" name="calories"  value="<%= productEdit.calories %>">
+            <input type="number" placeholder="(kcal)" name="calories"  value="<%= product.calories %>">
           </div>
           <% if (locals.errors && errors.calories) { %>
             <small class="mensajeError">
@@ -97,7 +102,7 @@
 
           <div>
             <label for="Grasas Totales" name="totalfat" >Grasas Totales</label>
-            <input type="number" placeholder="(g)" name="totalfat"  value="<%= productEdit.totalfat %>">
+            <input type="number" placeholder="(g)" name="totalfat"  value="<%= product.totalfat %>">
           </div>
           <% if (locals.errors && errors.totalfat) { %>
             <small class="mensajeError">
@@ -107,7 +112,7 @@
 
           <div>
             <label for="Carbohidratos" name="carb" >Carbohidratos</label>
-            <input type="number" placeholder="(g)" name="carb"  value="<%= productEdit.carb %>">
+            <input type="number" placeholder="(g)" name="carb"  value="<%= product.carb %>">
           </div>
           <% if (locals.errors && errors.carb) { %>
             <small class="mensajeError">
@@ -117,7 +122,7 @@
 
           <div>
             <label for="Proteínas" name="protein">Proteínas</label>
-            <input type="number" placeholder="(g)" name="protein"  value="<%= productEdit.protein %>">
+            <input type="number" placeholder="(g)" name="protein"  value="<%= product.protein %>">
           </div>
           <% if (locals.errors && errors.protein) { %>
             <small class="mensajeError">
@@ -127,7 +132,7 @@
 
           <div>
             <label for="Grasas Trans" name="transfat" >Grasas Trans</label>
-            <input type="number" placeholder="(g)" name="transfat"  value="<%= productEdit.transfat %>">
+            <input type="number" placeholder="(g)" name="transfat"  value="<%= product.transfat %>">
           </div>
           <% if (locals.errors && errors.transfat) { %>
             <small class="mensajeError">
@@ -137,7 +142,7 @@
 
           <div>
             <label for="Grasas Saturadas" name="saturatedfat" >Grasas Saturadas</label>
-            <input type="number" placeholder="(g)" name="saturatedfat"  value="<%= productEdit.saturatedfat %>">
+            <input type="number" placeholder="(g)" name="saturatedfat"  value="<%= product.saturatedfat %>">
           </div>
           <% if (locals.errors && errors.saturatedfat) { %>
             <small class="mensajeError">
@@ -147,7 +152,7 @@
 
           <div>
             <label for="Colesterol" name="cholesterol" >Colesterol</label>
-            <input type="number" placeholder="(mg)" name="cholesterol"  value="<%= productEdit.cholesterol %>">
+            <input type="number" placeholder="(mg)" name="cholesterol"  value="<%= product.cholesterol %>">
           </div>
           <% if (locals.errors && errors.cholesterol) { %>
             <small class="mensajeError">
@@ -157,7 +162,7 @@
             
           <div>
             <label for="Sodio" name="sodium" >Sodio</label>
-            <input type="number" placeholder="(mg)" name="sodium"  value="<%= productEdit.sodium %>">
+            <input type="number" placeholder="(mg)" name="sodium"  value="<%= product.sodium %>">
           </div>
           <% if (locals.errors && errors.sodium) { %>
             <small class="mensajeError">
@@ -167,7 +172,7 @@
             
           <div>
             <label for="Azúcares" name="sugars" >Azúcares</label>
-            <input type="number" placeholder="(g)" name="sugars"  value="<%= productEdit.sugars %>">
+            <input type="number" placeholder="(g)" name="sugars"  value="<%= product.sugars %>">
           </div>
           <% if (locals.errors && errors.sugars) { %>
             <small class="mensajeError">
@@ -177,7 +182,7 @@
                         
           <div>
             <label for="Fibras" name="fiber" >Fibras</label>
-            <input type="number" placeholder="(g)" name="fiber"  value="<%= productEdit.fiber %>">
+            <input type="number" placeholder="(g)" name="fiber"  value="<%= product.fiber %>">
           </div>
           <% if (locals.errors && errors.fiber) { %>
             <small class="mensajeError">
@@ -189,7 +194,8 @@
         </article>
 
           <article class="botonera">
-          <button class="guardar" type="submit">Guardar Modificaciones</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
+          <button class="guardar" type="submit">Guardar Modificaciones</button>
+          <button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
         </article>
       </div>
     </form>

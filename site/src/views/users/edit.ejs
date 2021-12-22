@@ -13,14 +13,14 @@
           
           <section class="camposform">
           <h1>Estas editando tus datos</h1>
-          <form action="/users/update?_method=PUT" method="POST" >
+          <form action="/users/update?_method=PUT" method="POST" enctype="multipart/form-data">
 
             <div class="campo">
               <label for="name">Nombre Completo</label>
               <input type="text" value="<%= userLogin.name %>" id="name" name="name" placeholder="Ingrese nombre completo..." >
               <% if (locals.errors && errors.name) { %>
                 <small class="mensajeError">
-                  <%= errors.name.msg %>
+                  <%= errores.name.msg %>
                 </small>
                 <% } %>
 
@@ -53,8 +53,8 @@
             <div class="campo">
               <label for="p2">Confirmar Contraseña</label>
               <input type="password" id="p2" name="p2" placeholder="Ingrese contraseña...">
-            <% if (locals.errors && errors.p2) { %>
-              <small class="mensajeError"> <%= errors.p2.msg %> </small>
+            <% if (locals.errores && errores.p2) { %>
+              <small class="mensajeError"> <%= errores.p2.msg %> </small>
               <% } %>
 
               <small class="js-password2"> </small>
@@ -72,8 +72,8 @@
                   <option value="<%= sex.id %>" <%= locals.old && old.id_sex === sex.id  ? 'selected' : null%>><%= sex.name %></option>
                 <% }) %>
               </select>
-              <% if (locals.errors && errors.sexo) { %>
-                <small class="mensajeError"> <%= errors.sexo.msg %> </small>
+              <% if (locals.errores && errores.sexo) { %>
+                <small class="mensajeError"> <%= errores.sexo.msg %> </small>
                 <% } %> 
                 <small class="js-sexo"> </small>
 
@@ -89,8 +89,8 @@
                 <option value="<%= province.id %>" <%= locals.old && old.id_province === province.id  ? 'selected' : null%>><%= province.name %></option>
               <% }) %>
             </select>
-            <% if (locals.errors && errors.provincia) { %>
-              <small class="mensajeError"> <%= errors.provincia.msg %> </small>
+            <% if (locals.errores && errores.provincia) { %>
+              <small class="mensajeError"> <%= errores.provincia.msg %> </small>
               <% } %>
               <small class="js-provincia"> </small>
 
@@ -100,10 +100,10 @@
           <label>Selecciona una nueva foto de perfil</label>
           <div class="buttons">
           <label for="img" >Subir imagen</label>
-          <input type="file" id="img" name="img" hidden multiple accept="image/*">
+          <input type="file" id="img" name="img" hidden>
           </div>
-          <% if (locals.errors && errors.img) { %>
-            <small class="mensajeError"> <%= errors.img.msg %> </small>
+          <% if (locals.errores && errores.img) { %>
+            <small class="mensajeError"> <%= errores.img.msg %> </small>
             <% } %>
             <small class="js-img"> </small>
 
@@ -115,7 +115,7 @@
             
               <div class="buttons">
               <label for="submit">Editar datos</label>
-              <input type="submit" id="submit" name="submit" value="Editar datos" hidden>
+              <input type="submit" id="submit" value="Editar datos" hidden>
               </div>
 
           </form>

@@ -104,3 +104,28 @@
 
 
 ![Sprint 5](https://user-images.githubusercontent.com/85651952/141028597-6f69281e-3747-4e40-887c-6093701a055b.jpeg)
+
+---
+# Breve retrospectiva quinto Sprint (dinámica estrella de mar)
+## Comenzar a hacer
+- Empezar a trabajar desde el día 0
+- Consulta docentes durante el proceso
+## Hacer más
+- Reuniones frecuentes
+- Priorizar lo elemental del sprint
+- Tomar iniciativa
+- Organizacion en Trello
+## Continuar haciendo
+- Ayudarnos entre los integrantes del equipo
+- Guardar cambios en conjunto
+- Comunicación dentro del Sprint
+- Mantener buen ritmo de trabajo
+## Hacer menos
+- Dejar menos trabajo de un sprint a otro
+## Dejar de hacer
+- Procrastinar
+- Colgar en Whatsapp
+
+
+![sprint 6](https://user-images.githubusercontent.com/85651952/147019183-6b5f3672-7d11-4730-928d-3bd2e64bb689.jpeg)
+
