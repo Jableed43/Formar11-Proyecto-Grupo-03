@@ -25,8 +25,9 @@ window.addEventListener("load", function() {
     campoEmail.addEventListener("input", (e) => {
         if (e.target.value.length < 2){
         campoEmail.classList.add("is-invalid")
-        smallEmail.innerHTML = "El campo email debe estar completo"}
-        else {
+        smallEmail.innerHTML = "El campo email debe estar completo"
+        e.preventDefault()
+    }else {
             campoEmail.classList.remove("is-invalid")
             campoEmail.classList.add("is-valid")
             smallEmail.innerHTML = ""
@@ -38,6 +39,7 @@ window.addEventListener("load", function() {
         if (e.target.value.length < 2) {
             campoPassword.classList.add("is-invalid")
             smallPassword.innerHTML = "El campo contraseña debe estar completo"
+            e.preventDefault()
         } else {
             campoPassword.classList.remove("is-invalid")
             campoPassword.classList.add("is-valid")
@@ -54,6 +56,7 @@ window.addEventListener("load", function() {
         for (let i = 0; i < inputs.length; i++) {
             if (inputs[i].value === "") {
                 inputs[i].classList.add("is-invalid")
+                 
             } else if (inputs[i].classList.contains("is-invalid")){
                 inputs[i].classList.remove("is-invalid")
             }
@@ -65,15 +68,17 @@ window.addEventListener("load", function() {
 
         if(campoEmail.value === "") {
             errores.push("El campo de mail tiene que estar completo")
-
+             
         };
 
 
         if(campoPassword.value === "") {
             errores.push("El campo de contraseña tiene que estar completo")
+             
         };
 
         if (errores.length > 0) {
+            e.preventDefault()
             errores.map(error => {
                 divErr.innerHTML += `<li>${error}</li>`
             })

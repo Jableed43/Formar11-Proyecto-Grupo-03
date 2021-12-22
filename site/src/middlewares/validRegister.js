@@ -6,10 +6,10 @@ const validacionesRegister = [
     check('email')
     .isEmail().withMessage('Debes completar un email válido').bail()
     .notEmpty().withMessage('Debes completar el campo de email'),
-    check('p1').notEmpty().withMessage('Debes completar el campo de contraseña y las contraseñas deben coincidir'),
-    check('p2').notEmpty().withMessage('Debes completar el campo de contraseña y las contraseñas deben coincidir'),
-    body('p2').custom((value,{req}) => {
-        if(value !== req.body.p1){
+    check('password').notEmpty().withMessage('Debes completar el campo de contraseña y las contraseñas deben coincidir'),
+    check('password2').notEmpty().withMessage('Debes completar el campo de contraseña y las contraseñas deben coincidir'),
+    body('password').custom((value,{req}) => {
+        if(value !== req.body.password2){
             return false
         }
         return true
@@ -20,3 +20,4 @@ const validacionesRegister = [
 ]
 
 module.exports = validacionesRegister
+
