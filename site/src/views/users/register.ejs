@@ -20,7 +20,7 @@
               <input type="text" value="<%= locals.old && old.name ? old.name : '' %>" id="name" name="name" placeholder="Ingrese nombre completo...">
               <% if (locals.errors && errors.name) { %>
                 <small class="mensajeError">
-                  <%= errors.name.msg %>
+                  <%= errores.name.msg %>
                 </small>
                 <% } %>
 
@@ -32,7 +32,7 @@
               <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="email" name="email" placeholder="Ingrese e-mail...">
               <% if (locals.errors && errors.email) { %>
                 <small class="mensajeError">
-                  <%= errors.email.msg %>
+                  <%= errores.email.msg %>
                 </small>
                 <% } %>
                 <small class="js-email"> </small>
@@ -68,8 +68,8 @@
                   <option value="<%= sex.id %>" <%= locals.old && old.id_sex === sex.id  ? 'selected' : null%>><%= sex.name %></option>
                 <% }) %>
               </select>
-              <% if (locals.errors && errors.sexo) { %>
-                <small class="mensajeError"> <%= errors.sexo.msg %> </small>
+              <% if (locals.errores && errores.sexo) { %>
+                <small class="mensajeError"> <%= errores.sexo.msg %> </small>
                 <% } %> 
                 <small class="js-sexo"> </small>
 
@@ -83,8 +83,8 @@
                 <option value="<%= province.id %>" <%= locals.old && old.id_province === province.id  ? 'selected' : null%>><%= province.name %></option>
               <% }) %>
             </select>
-            <% if (locals.errors && errors.provincia) { %>
-              <small class="mensajeError"> <%= errors.provincia.msg %> </small>
+            <% if (locals.errores && errores.provincia) { %>
+              <small class="mensajeError"> <%= errores.provincia.msg %> </small>
               <% } %>
               <small class="js-provincia"> </small>
 
@@ -96,8 +96,8 @@
           <label for="img" >Subir imagen</label>
           <input type="file" id="img" name="img" hidden multiple accept="image/*">
           </div>
-          <% if (locals.errors && errors.img) { %>
-            <small class="mensajeError"> <%= errors.img.msg %> </small>
+          <% if (locals.errores && errores.img) { %>
+            <small class="mensajeError"> <%= errores.img.msg %> </small>
             <% } %>
             <small class="js-img"> </small>
 
@@ -114,13 +114,13 @@
                   privacidad</a> de Tacopado</p>
               <div class="buttons">
               <label for="submit">Registrarme</label>
-              <input type="submit" id="submit" name="submit" value="Registrarme" hidden>
+              <input type="submit" id="submit" value="Registrarme" hidden>
               </div>
 
               <div>
                 <p>¿Ya tenes una cuenta?</p>
                 <div class="buttons">
-                <a href="/users/login" id="login" name="login" value="login">Iniciá sesión</a>
+                <a href="/users/login" id="login" value="login">Iniciá sesión</a>
               </div>
 
           </form>
