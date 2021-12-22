@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
     const smallTitle = qs("small.js-mensajeError");
     const campoName = qs("#name");
     const campoEmail = qs("#email");
-    const campoPassword1 = qs("#p1")
+    const campoPassword1 = qs("#password")
     const campoPassword2 = qs("#p2")
     const campoSexo = qs("#sexo")
     const campoProvincia = qs("#provincia")

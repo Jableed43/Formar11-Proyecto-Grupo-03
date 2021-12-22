@@ -17,7 +17,7 @@
 
             <div class="campo">
               <label for="user">Nombre Completo</label>
-              <input type="text" value="<%= locals.old && old.name ? old.name : '' %>" id="user" name="name" placeholder="Ingrese nombre completo...">
+              <input type="text" value="<%= locals.old && old.name ? old.name : '' %>" id="name" name="name" placeholder="Ingrese nombre completo...">
               <% if (locals.errores && errores.name) { %>
                 <small class="mensajeError">
                   <%= errores.name.msg %>
@@ -29,7 +29,7 @@
 
             <div class="campo">
               <label for="user">Correo Electrónico</label>
-              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="user" name="email" placeholder="Ingrese e-mail...">
+              <input type="text" value="<%= locals.old && old.email ? old.email : '' %>" id="email" name="email" placeholder="Ingrese e-mail...">
               <% if (locals.errores && errores.email) { %>
                 <small class="mensajeError">
                   <%= errores.email.msg %>
@@ -40,8 +40,8 @@
             </div>
 
             <div class="campo">
-              <label for="p1">Contraseña</label>
-              <input type="password" id="p1" name="p1" placeholder="Ingrese contraseña...">
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" name="password" placeholder="Ingrese contraseña...">
             <% if (locals.errores && errores.password) { %>
               <small class="mensajeError"> <%= errores.password.msg %> </small>
               <% } %>
