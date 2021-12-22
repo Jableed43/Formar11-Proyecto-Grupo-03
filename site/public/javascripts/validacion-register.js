@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
 
     const smallName = qs("small.js-name");
     const smallEmail = qs("small.js-email");
-    const smallPassword1 = qs("small.js-password1");
+    const smallPassword = qs("small.js-password");
     const smallPassword2 = qs("small.js-password2");
     const smallSexo = qs("small.js-sexo");
     const smallProvincia = qs("small.js-provincia");
@@ -22,8 +22,8 @@ window.addEventListener("load", function() {
     const smallTitle = qs("small.js-mensajeError");
     const campoName = qs("#name");
     const campoEmail = qs("#email");
-    const campoPassword1 = qs("#p1")
-    const campoPassword2 = qs("#p2")
+    const campoPassword = qs("#password")
+    const campoPassword2 = qs("#password2")
     const campoSexo = qs("#sexo")
     const campoProvincia = qs("#provincia")
     const campoImg = qs("#img")
@@ -56,16 +56,16 @@ window.addEventListener("load", function() {
     const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
 
 
-    campoPassword1.addEventListener("input", (e) => {
+    campoPassword.addEventListener("input", (e) => {
 
 
         if(validatePass.test(e.target.value)){
-            campoPassword1.classList.remove("is-invalid")
-            campoPassword1.classList.add("is-valid")
-            smallPassword1.innerHTML = ""
+            campoPassword.classList.remove("is-invalid")
+            campoPassword.classList.add("is-valid")
+            smallPassword.innerHTML = ""
         } else {
-            campoPassword1.classList.add("is-invalid")
-            smallPassword1.innerHTML = "La contraseña debe contener una mayúscula, una minúscula, un número y entre 8 y 15 caracteres"}
+            campoPassword.classList.add("is-invalid")
+            smallPassword.innerHTML = "La contraseña debe contener una mayúscula, una minúscula, un número y entre 8 y 15 caracteres"}
         
     })
 
@@ -102,7 +102,7 @@ window.addEventListener("load", function() {
         let errores = []
 
 
-        if(campoPassword1.value !== campoPassword2.value) {
+        if(campoPassword.value !== campoPassword2.value) {
             errores.push("Ambas contraseñas deben ser iguales")
         }
 
