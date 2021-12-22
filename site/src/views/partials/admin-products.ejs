@@ -1,23 +1,27 @@
 <div class="row">
 
-    <% products.map(product => { %>
+    <% products.map((product, index)=> { %>
             
         <tr>
+          <th scope="row"><%= index + 1 %></th>
             <td class="taco"><%=product.title%></td>
             <td><%=product.price%></td>
-            <td><%=product.category%></td>
-            <td><%=product.subcategory%></td>
+            <td><%=product.categoryId%></td>
+            <td><%=product.subcategoryId%></td>
 
             <td>
               <a href="admin/edit/<%= product.id %>">
                  <button class="editar"><i class="fas fa-edit"></i></button>
               </a>
-              <form>
+              <!-- <form>
                 <div>
-                  <a href="admin/delete/<%= product.id %>">
+                  <a href="admin/delete/">
                     <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
                  </a>
                 </div>
+              </form> -->
+              <form action="admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button  class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
               </form>
             </td>
           </tr>
