@@ -99,8 +99,6 @@ window.addEventListener("load", function() {
 
     formulario.addEventListener("submit", function(e) {
 
-        e.preventDefault();
-
 
         let errores = []
 
