@@ -7,10 +7,11 @@ module.exports = {
         let products = db.Products.findAll({
             include: {
                 association: 'subcategory',
-                include: [{ all: true }]}
+                include: [{ all: true }]
+            }
 
-            })
-        let Tacos = db.Subcategory.findAll({
+        })
+        let Tacos = db.Subcategories.findAll({
             where: {
                 id: 1
             },
@@ -18,7 +19,7 @@ module.exports = {
                 { association: 'products' }
             ]
         })
-        let Burritos = db.Subcategory.findAll({
+        let Burritos = db.Subcategories.findAll({
             where: {
                 id: 2
             },
@@ -27,7 +28,7 @@ module.exports = {
             ]
         })
 
-        let Quesadillas = db.Subcategory.findAll({
+        let Quesadillas = db.Subcategories.findAll({
             where: {
                 id: 3
             },
@@ -36,7 +37,7 @@ module.exports = {
             ]
         })
 
-        let Entradas = db.Subcategory.findAll({
+        let Entradas = db.Subcategories.findAll({
             where: {
                 id: 4
             },
@@ -45,7 +46,7 @@ module.exports = {
             ]
         })
 
-        let Platos = db.Subcategory.findAll({
+        let Platos = db.Subcategories.findAll({
             where: {
                 id: 5
             },
@@ -54,7 +55,7 @@ module.exports = {
             ]
         })
 
-        let Ensaladas = db.Subcategory.findAll({
+        let Ensaladas = db.Subcategories.findAll({
             where: {
                 id: 6
             },
@@ -63,7 +64,7 @@ module.exports = {
             ]
         })
 
-        let Salsas = db.Subcategory.findAll({
+        let Salsas = db.Subcategories.findAll({
             where: {
                 id: 7
             },
@@ -72,7 +73,7 @@ module.exports = {
             ]
         })
 
-        let Dulces = db.Subcategory.findAll({
+        let Dulces = db.Subcategories.findAll({
             where: {
                 id: 8
             },
@@ -81,7 +82,7 @@ module.exports = {
             ]
         })
 
-        let Gaseosas = db.Subcategory.findAll({
+        let Gaseosas = db.Subcategories.findAll({
             where: {
                 id: 9
             },
@@ -90,7 +91,7 @@ module.exports = {
             ]
         })
 
-        let Jugos = db.Subcategory.findAll({
+        let Jugos = db.Subcategories.findAll({
             where: {
                 id: 10
             },
@@ -99,7 +100,7 @@ module.exports = {
             ]
         })
 
-        let Aguas = db.Subcategory.findAll({
+        let Aguas = db.Subcategories.findAll({
             where: {
                 id: 11
             },

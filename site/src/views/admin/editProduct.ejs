@@ -16,179 +16,184 @@
       </div>
       <h1>Estás editando "<%= product.title %>"</h1>
 
-      <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST"enctype="multipart/form-data">
-        <div class="contenedor">
-          <article>
-              <h2>Título</h2>
-              <input type="text" id="title" name="title" value="<%= product.title %>" placeholder="Nombre de plato">
-              <% if (locals.errors && errors.title) { %>
-                <small class="mensajeError">
-                  <%= errors.title.msg %>
-                </small>
-                <% } %>
-
-              <h2>Descripción</h2>
-              <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"><%= product.description %></textarea>
-              <% if (locals.errors && errors.description) { %>
-                <small class="mensajeError">
-                  <%= errors.description.msg %>
-                </small>
-                <% } %>
-          </article>
-        </div>
-
-        <div class="contenedor2">
-          <article>
-              <h2>Imagen del producto</h2>
-
-              <img class="prod" src="/images/imgmenu/<%= product.images %>" alt="Foto producto actual">
-              <div>
-              <input type="file" id="images" name="images" hidden>
-              <label class="file" for="images">Foto Producto</label>
-              </div>
-              <% if (locals.errors && errors.images) { %>
-                <small class="mensajeError"> <%= errors.images.msg %> </small>
-                <% } %>
-              </div>        
-            </article>
-        </div>  
-
-        <div class="contenedor3">
-          <article>
-            <h2>Organizar</h2>
-            <div>    
-              <label for="category">Categoría</label>
-              <select name="category" id="category">
-                <option selected hidden>Seleccione aquí</option>
-                <% categories.forEach(category => { %>
-                  <option value="<%= category.id %>" <%= product.subcategoryId === category.id ? 'selected' : null%>><%= category.name%></option>
-                <% }) %>
-                </select>
-                <% if (locals.errors && errors.category) { %>
-                  <small class="mensajeError"> <%= errors.category.msg %> </small>
-                  <% } %> 
-            </div>
-            <div>
-              <label for="subcategory">Subcategoría</label>
-              <select name="subcategory" id="subcategory" required>
-                <option value="subcategory" name= "default" selected hidden>Seleccione aquí</option>
-                <% subcategories.forEach(subcategory => { %>
-                  <option value="<%= subcategory.id %>" <%= product.subcategoryId === subcategory.id ? 'selected' : null%>><%= subcategory.name %></option>
-                <% }) %>
-              </select>
-              <% if (locals.errors && errors.subcategory) { %>
-                <small class="mensajeError"> <%= errors.subcategory.msg %> </small>
-                <% } %> 
-            </div>
-
-            <div class="ultimo-input">
-                <label for="precio">Precio</label>
-                <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Inserte precio aquí...">
-            </div>
-          </article>
+      <form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST">
+          <div class="contenedor">
+            <article>
+                <h2>Título</h2>
+                <input type="text" id="title" name="title" placeholder="Nombre de plato" value="<%= locals.old && old.name ? old.name : null %>">
+                <% if (locals.errors && errors.title) { %>
+                  <small class="mensajeError" id="stitle">
+                    <%= errors.title.msg %>
+                  </small>
+                  <% } %>
     
-            
-        <article>
-          <h2>Valores Nutricionales</h2>
-          <div>
-            <label for="Calorías" name="calories" >Calorías</label>
-            <input type="number" placeholder="(kcal)" name="calories"  value="<%= product.calories %>">
+                <h2>Descripción</h2>
+                <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px" value="<%= locals.old && old.name ? old.name : null %>"></textarea>
+                <% if (locals.errors && errors.description) { %>
+                  <small class="mensajeError" id="sdescription">
+                    <%= errors.description.msg %>
+                  </small>
+                  <% } %>
+            </article>
           </div>
-          <% if (locals.errors && errors.calories) { %>
-            <small class="mensajeError">
-              <%= errors.calories.msg %>
-            </small>
-            <% } %>
-
-          <div>
-            <label for="Grasas Totales" name="totalfat" >Grasas Totales</label>
-            <input type="number" placeholder="(g)" name="totalfat"  value="<%= product.totalfat %>">
-          </div>
-          <% if (locals.errors && errors.totalfat) { %>
-            <small class="mensajeError">
-              <%= errors.totalfat.msg %>
-            </small>
-            <% } %>
-
-          <div>
-            <label for="Carbohidratos" name="carb" >Carbohidratos</label>
-            <input type="number" placeholder="(g)" name="carb"  value="<%= product.carb %>">
-          </div>
-          <% if (locals.errors && errors.carb) { %>
-            <small class="mensajeError">
-              <%= errors.carb.msg %>
-            </small>
-            <% } %>
-
-          <div>
-            <label for="Proteínas" name="protein">Proteínas</label>
-            <input type="number" placeholder="(g)" name="protein"  value="<%= product.protein %>">
-          </div>
-          <% if (locals.errors && errors.protein) { %>
-            <small class="mensajeError">
-              <%= errors.protein.msg %>
-            </small>
-            <% } %>
-
-          <div>
-            <label for="Grasas Trans" name="transfat" >Grasas Trans</label>
-            <input type="number" placeholder="(g)" name="transfat"  value="<%= product.transfat %>">
-          </div>
-          <% if (locals.errors && errors.transfat) { %>
-            <small class="mensajeError">
-              <%= errors.transfat.msg %>
-            </small>
-            <% } %>
-
-          <div>
-            <label for="Grasas Saturadas" name="saturatedfat" >Grasas Saturadas</label>
-            <input type="number" placeholder="(g)" name="saturatedfat"  value="<%= product.saturatedfat %>">
-          </div>
-          <% if (locals.errors && errors.saturatedfat) { %>
-            <small class="mensajeError">
-              <%= errors.saturatedfat.msg %>
-            </small>
-            <% } %>
-
-          <div>
-            <label for="Colesterol" name="cholesterol" >Colesterol</label>
-            <input type="number" placeholder="(mg)" name="cholesterol"  value="<%= product.cholesterol %>">
-          </div>
-          <% if (locals.errors && errors.cholesterol) { %>
-            <small class="mensajeError">
-              <%= errors.cholesterol.msg %>
-            </small>
-            <% } %>
-            
-          <div>
-            <label for="Sodio" name="sodium" >Sodio</label>
-            <input type="number" placeholder="(mg)" name="sodium"  value="<%= product.sodium %>">
-          </div>
-          <% if (locals.errors && errors.sodium) { %>
-            <small class="mensajeError">
-              <%= errors.sodium.msg %>
-            </small>
-            <% } %>
-            
-          <div>
-            <label for="Azúcares" name="sugars" >Azúcares</label>
-            <input type="number" placeholder="(g)" name="sugars"  value="<%= product.sugars %>">
-          </div>
-          <% if (locals.errors && errors.sugars) { %>
-            <small class="mensajeError">
-              <%= errors.sugars.msg %>
-            </small>
-            <% } %>
-                        
-          <div>
-            <label for="Fibras" name="fiber" >Fibras</label>
-            <input type="number" placeholder="(g)" name="fiber"  value="<%= product.fiber %>">
-          </div>
-          <% if (locals.errors && errors.fiber) { %>
-            <small class="mensajeError">
-              <%= errors.fiber.msg %>
-            </small>
-            <% } %>
+    
+          <div class="contenedor2">
+            <article>
+                <h2>Imagen del producto</h2>
+                <div>
+                <input type="file" id="images" name="images" hidden>
+                <label class="file" for="images">Foto Producto</label>
+                </div>
+                <% if (locals.errors && errors.images) { %>
+                  <small class="mensajeError" id="simages"> <%= errors.images.msg %> </small>
+                  <% } %>
+                </div>        
+              </article>
+          </div>  
+    
+          <div class="contenedor3">
+            <article>
+              <h2>Organizar</h2>
+              <div>    
+                <label for="categoria">Categoría</label>
+                <select name="category" id="category" required>
+                  <option name="category" selected hidden>Seleccione aquí</option>
+    
+                  <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>" <%= locals.old && old.categoryId === category.id  ? 'selected' : null%>><%= category.name %></option>
+                  <% }) %>
+                  </select>
+                  <% if (locals.errors && errors.category) { %>
+                    <small class="mensajeError" id="scategory"> <%= errors.category.msg %> </small>
+                    <% } %> 
+              </div>
+              <div>
+                <label for="subcategoria">Subcategoría</label>
+                <select name="subcategory" id="subcategory" required>
+                  <option value="subcategory" selected hidden>Seleccione aquí</option>
+                  <% subcategories.forEach(subcategory => { %>
+                    <option value="<%= subcategory.id %>" <%= locals.old && old.subcategoryId === subcategory.id  ? 'selected' : null%>><%= subcategory.name %></option>
+                  <% }) %>
+                </select>
+                <% if (locals.errors && errors.subcategory) { %>
+                  <small class="mensajeError" id="ssubcategory"> 
+                    <%= errors.subcategory.msg %> 
+                  </small>
+                  <% } %> 
+              </div>
+    
+              <div class="ultimo-input">
+                  <label for="price">Precio</label>
+                  <input type="number" name="price" id="price" placeholder="Inserte precio aquí..." value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.price) { %>
+                <small class="mensajeError" id="price">
+                  <%= errors.price.msg %>
+                </small>
+                <% } %>
+            </article>
+        
+            <article>
+              <h2>Valores Nutricionales</h2>
+              <div>
+                <label for="calories">Calorías</label>
+                <input type="number" placeholder="(kcal)" name="calories" id="calories" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.calories) { %>
+                <small class="mensajeError" id="scalories">
+                  <%= errors.calories.msg %>
+                </small>
+                <% } %>
+    
+              <div>
+                <label for="totalfat">Grasas Totales</label>
+                <input type="number" placeholder="(g)" name="totalfat" id="totalfat" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.totalfat) { %>
+                <small class="mensajeError" id="stotalfat">
+                  <%= errors.totalfat.msg %>
+                </small>
+                <% } %>
+    
+              <div>
+                <label for="carb" name="carb">Carbohidratos</label>
+                <input type="number" placeholder="(g)" name="carb" id="carb" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.carb) { %>
+                <small class="mensajeError" id="carb">
+                  <%= errors.carb.msg %>
+                </small>
+                <% } %>
+    
+              <div>
+                <label for="protein" name="protein">Proteínas</label>
+                <input type="number" placeholder="(g)" name="protein" id="protein" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.protein) { %>
+                <small class="mensajeError" id="sprotein">
+                  <%= errors.protein.msg %>
+                </small>
+                <% } %>
+    
+              <div>
+                <label for="transfat" name="transfat">Grasas Trans</label>
+                <input type="number" placeholder="(g)" name="transfat" id="transfat" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.transfat) { %>
+                <small class="mensajeError" id="stransfat">
+                  <%= errors.transfat.msg %>
+                </small>
+                <% } %>
+    
+              <div>
+                <label for="saturatedfat" name="saturatedfat">Grasas Saturadas</label>
+                <input type="number" placeholder="(g)" name="saturatedfat" id="saturatedfat" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.saturatedfat) { %>
+                <small class="mensajeError" id="ssaturatedfat">
+                  <%= errors.saturatedfat.msg %>
+                </small>
+                <% } %>
+    
+              <div>
+                <label for="cholesterol" name="cholesterol">Colesterol</label>
+                <input type="number" placeholder="(mg)" name="cholesterol" id="cholesterol" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.cholesterol) { %>
+                <small class="mensajeError" id="scholesterol">
+                  <%= errors.cholesterol.msg %>
+                </small>
+                <% } %>
+                
+              <div>
+                <label for="sodium" name="sodium">Sodio</label>
+                <input type="number" placeholder="(mg)" name="sodium" id="sodium" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.sodium) { %>
+                <small class="mensajeError" id="ssodium">
+                  <%= errors.sodium.msg %>
+                </small>
+                <% } %>
+                
+              <div>
+                <label for="sugars" name="sugars">Azúcares</label>
+                <input type="number" placeholder="(g)" name="sugars" id="sugars" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.sugars) { %>
+                <small class="mensajeError" id="ssugars">
+                  <%= errors.sugars.msg %>
+                </small>
+                <% } %>
+                            
+              <div>
+                <label for="fiber" name="fiber">Fibras</label>
+                <input type="number" placeholder="(g)" name="fiber" id="fiber" value="<%= locals.old && old.name ? old.name : null %>">
+              </div>
+              <% if (locals.errors && errors.fiber) { %>
+                <small class="mensajeError" id="sfiber">
+                  <%= errors.fiber.msg %>
+                </small>
+                <% } %>
             
          
         </article>
@@ -203,6 +208,7 @@
     </main>
       
     <%- include("../partials/admin-footer.ejs") %>
+    <script src="/javascripts/validacion-prod.js"></script>
 
 </body>
 </html> 
