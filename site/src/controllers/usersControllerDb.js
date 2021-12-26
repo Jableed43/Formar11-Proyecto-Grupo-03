@@ -67,8 +67,8 @@ logout: (req, res) => {
                     sexes,
                     provinces
                 })
-            })
-            .catch(error => console.log(error))
+            }) 
+            .catch(error => console.log(error))  
     },
 
 

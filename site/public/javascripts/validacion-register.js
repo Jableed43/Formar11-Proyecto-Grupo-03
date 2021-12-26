@@ -22,8 +22,8 @@ window.addEventListener("load", function() {
     const smallTitle = qs("small.js-mensajeError");
     const campoName = qs("#name");
     const campoEmail = qs("#email");
-    const campoPassword = qs("#password")
-    const campoPassword2 = qs("#password2")
+    const campoPassword1 = qs("#password")
+    const campoPassword2 = qs("#p2")
     const campoSexo = qs("#sexo")
     const campoProvincia = qs("#provincia")
     const campoImg = qs("#img")
@@ -56,15 +56,15 @@ window.addEventListener("load", function() {
     const validatePass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,15}$/
 
 
-    campoPassword.addEventListener("input", (e) => {
+    campoPassword1.addEventListener("input", (e) => {
 
 
         if(validatePass.test(e.target.value)){
-            campoPassword.classList.remove("is-invalid")
-            campoPassword.classList.add("is-valid")
+            campoPassword1.classList.remove("is-invalid")
+            campoPassword1.classList.add("is-valid")
             smallPassword.innerHTML = ""
         } else {
-            campoPassword.classList.add("is-invalid")
+            campoPassword1.classList.add("is-invalid")
             smallPassword.innerHTML = "La contraseña debe contener una mayúscula, una minúscula, un número y entre 8 y 15 caracteres"}
         
     })
@@ -102,7 +102,7 @@ window.addEventListener("load", function() {
         let errores = []
 
 
-        if(campoPassword.value !== campoPassword2.value) {
+        if(campoPassword1.value !== campoPassword2.value) {
             errores.push("Ambas contraseñas deben ser iguales")
         }
 
