@@ -15,7 +15,7 @@
         <% if (locals.userLogin) { %>
           <label for='user' class="input-user"><img class="imgUser" src="/images/users/<%= locals.userLogin.avatar ? locals.userLogin.avatar : 'default-img.jpg'%>" alt="imagen de usuario"> </label>
         <%  }else{ %> 
-          <label for='user' class="input-user"> <i class="fas fa-user"></i> </label>
+
         <% } %>
           <div class="user-cart">
           <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
@@ -40,7 +40,7 @@
                 <li class="texto"><a href="/users/logout">Cerrar Sesión</a> </li> 
 
         <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
-          <li class="texto"><a href="/admin">ADMIN</a> </li>
+          <li class="texto"><a href="/admin">Admin</a> </li>
         <% } %>
               </ul>
 

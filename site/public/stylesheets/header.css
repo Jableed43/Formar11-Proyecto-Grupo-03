@@ -36,13 +36,9 @@ margin: 10px 2px 5px;
 }
 
 i.fas.fa-shopping-cart {
-  color: #f1d367;
-  font-size: 20px;
-  border: 1px solid #2d2254;
-  border-radius: 50%;
-  background-color: #2d2254;
-  padding: 7px;
+  color: #2d2254;
   margin: 10px 2px 5px;
+  font-size: 34px;
 }
 
 header p.login{
@@ -84,6 +80,8 @@ text-align: center;
 font-size: 18px;
 }
 
+
+
 header label.input-user {
 margin: 10px 2px 5px;
 text-align: center;
@@ -101,8 +99,6 @@ header div ul li {
   background-color: #2d2254;
   margin-bottom: 1px;
 }
-
-
 
 header .menu{
   display: none ;
@@ -133,12 +129,27 @@ header ul.user{
 
 
 .imgUser{
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
 }
  i.fas.fa-user, i.fas.fa-shopping-cart{
   font-size: 50px;
   display: inline;
+
+}
+
+
+i.fas.fa-shopping-cart{
+  background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);;
+background-size: 200%;
+background-repeat: no-repeat;
+background-position: left;
+transition:background-position .5s ease;
+
+}
+
+i.fas.fa-shopping-cart:hover{
+  background-position: right;
 
 }
 
@@ -168,6 +179,20 @@ header div ul li a{
 
 @media (min-width: 1024px) {
   /* Header */
+
+  header {
+    padding-bottom: 15px;
+    
+  }
+  
+  header ul li img{
+    left: 310px;
+  }
+  
+  header input#user[type=checkbox]:checked ~ .container-user{
+    display: flex;
+    }
+
   header img.logo{
     display: none;
   }
@@ -218,6 +243,18 @@ header div ul li a {
   width: 100%;
 }
 
+header div ul li a {
+  background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition:background-position .5s ease;
+}
+
+header div ul li a:hover{
+  background-position: right;
+}
+
 header ul.menu{
   display: flex;
   width: 30vw;
@@ -240,24 +277,6 @@ header .logo-desktop {
 header img {
   max-width: 300px; 
 }
-}
-
-
-@media (min-width: 1024px) {
-
-/* Header */
-header {
-  padding-bottom: 15px;
-  
-}
-
-header ul li img{
-  left: 310px;
-}
-
-header input#user[type=checkbox]:checked ~ .container-user{
-  display: flex;
-  }
 
 
 .container-user{
@@ -269,9 +288,8 @@ header input#user[type=checkbox]:checked ~ .container-user{
 }
 
 i.fas.fa-user, i.fas.fa-shopping-cart, .input-user{
-  color: #2d2254;
   border: none;
-  background: none;
+
 }
 
 }
