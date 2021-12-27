@@ -37,21 +37,19 @@ module.exports = {
 
                         }
                         return res.redirect('/')
-                .catch(error => console.log(error))
-
-                    } 
-                
+                    }                 
             
-                })
+                }).catch(error => console.log(error))
         }
     },
 // Destruir la session
 logout: (req, res) => {
-    req.session.destroy();
-    if (req.cookies.recordarme) {
-        res.cookie('tacopadoCookie', '', { maxAge: -1 })
-    }
-    res.redirect('/')
+
+    req.session.destroy(function() {
+        res.clearCookie('tacopadoCookie', { path: '/' });
+        res.redirect('/')
+      });
+
 },
 
     // Acceso a vista Registro
