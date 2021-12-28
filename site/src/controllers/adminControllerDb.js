@@ -76,9 +76,10 @@ module.exports = {
             subcategoryId: subcategory,
             categoryId: category
         })
-        .then(() =>{
-            // res.redirect(`/products/detail/${product.id}`)     
-            res.redirect('/')             
+        .then((producto) =>{
+            
+            res.redirect('/products/detail/'+producto.id)     
+            // res.redirect('/')             
         })
         .catch(error => {
             res.send(error)
