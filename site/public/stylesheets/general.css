@@ -30,16 +30,14 @@ li {
 #myBtn {
   position: fixed;
   bottom: 63px;
-  right: 6px;
+  right: 3px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #2D2254;
-  color: white;
+  color: black;
   cursor: pointer;
-  padding: 3px;
   border-radius: 10px;
-  font-size: 40px;
+  font-size: 35px;
   }
   
   #myBtn:hover {
