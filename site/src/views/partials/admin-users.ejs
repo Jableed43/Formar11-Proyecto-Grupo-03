@@ -1,0 +1,29 @@
+<div class="row">
+
+    <% users.map((user, index)=> { %>
+            
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+            <td class="taco"><%=user.name%></td>
+            <td><img src="/images/users/<%=user.avatar%>" alt="Foto Usuario" height="100vh"></td>
+            <td><%=user.email%></td>
+
+            <td>
+              <a href="admin/edit/<%= user.id %>">
+                 <button class="editar"><i class="fas fa-edit"></i></button>
+              </a>
+              <!-- <form>
+                <div>
+                  <a href="admin/delete/">
+                    <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                 </a>
+                </div>
+              </form> -->
+              <form action="admin/delete/<%= user.id %>?_method=DELETE" method="POST">
+                <button  class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+              </form>
+            </td>
+          </tr>
+
+<% }) %>
+</div>

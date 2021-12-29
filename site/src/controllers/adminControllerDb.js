@@ -220,5 +220,13 @@ module.exports = {
             .catch((error) => {
                 res.send(error)
             })
-    }
+    },
+    userlist: (req, res) => {
+		db.User.findAll({
+			include: [{ all: true }]
+		})
+			.then((users) => {
+            return res.render('admin/userlist', {users})
+        })
+	},
 }
