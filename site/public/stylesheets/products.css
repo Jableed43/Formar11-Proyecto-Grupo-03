@@ -88,6 +88,7 @@ div.botonera-contenedor {
     border-radius: 50px;
     font-size: 20px;
     width: 40%;
+    cursor: pointer;
   }
   
   /* nueva card  cierra */
