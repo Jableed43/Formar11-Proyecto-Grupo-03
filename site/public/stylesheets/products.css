@@ -33,6 +33,7 @@ body.products div.contenedor article img{
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    filter: drop-shadow(7px 3px 10px white);
 
 }
 body.products div.contenedor article p{
