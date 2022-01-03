@@ -1,9 +1,18 @@
+.userProfile-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.userprofile-buttons{
+  display: flex;
+}
+
 .card {
   background-color:  rgba(255,255,255,0.5);
   border-radius: 18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  margin: auto;
   text-align: center;
   margin-top: 5%;
 }
@@ -13,19 +22,34 @@
   font-size: 22px;
 }
 
-.card .button {
+.card .button, .button-eliminar{
   border: none;
-  outline: 0;
   padding: 12px;
   color: white;
-  background-color: #2D2254;
   text-align: center;
   cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .button {
+  background-color: #2D2254;
+  width: 63%;
 }
 
 .card .button:hover {
   color: #2D2254;
   background-color:#f1d367;
 }
+
+.button-eliminar{
+  background-color: red;
+}
+
+.button-eliminar:hover{
+  color: #2D2254 ;
+
+}
+

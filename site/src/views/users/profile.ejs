@@ -5,7 +5,11 @@
     <%- include("../partials/header.ejs") %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<main class="userProfile-main">
+
   <div class="card">
+
+    <div class="userProfile-info">
     <img src="/images/users/<%= locals.userLogin.avatar %>" alt="profile photo" style="width:100%">
     <% if (locals.userLogin.sex == 1){ %>
       <h1>¡Bienvenido <%= locals.userLogin.name %>!</h1>
@@ -16,16 +20,29 @@
       <% } %>
     <p class="price">Tu perfil Tacopado</p>
     <p>Tu email es <%= locals.userLogin.email %></p>
-    <p>Nos elegís desde <%= locals.userLogin.id_province %></p>
+    <p>Nos elegís de <%= locals.userLogin.id_province %></p>
+  </div>
+
+    <div class="userprofile-buttons">  
     
-    <p><a href="/users/edit" class="button">Editar datos</a></p>
-    
-    <form action="/users/delete/<%= locals.userLogin.id %>?_method=DELETE" method="POST">
-    <button class="button">Eliminar perfil</button>
-    </form>
+      <a href="/users/edit" class="button">Editar datos</a>
+
+      
+      <form action="/users/delete/<%= locals.userLogin.id %>?_method=DELETE" method="POST">
+      <input type=button onclick="eliminarPerfil()" value="Eliminar perfil" class="button-eliminar">
+
+      </form>
+
+    </div>
 
   </div>
+
+</main>
+
+
 <%- include("../partials/footer.ejs") %>
+<script src="/javascripts/eliminar-user-alert.js"></script>
+
 </body>
 
 </html>

@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
 
     const smallName = qs("small.js-name");
     const smallEmail = qs("small.js-email");
-    const smallPassword1 = qs("small.js-password1");
+    const smallPassword = qs("small.js-password");
     const smallPassword2 = qs("small.js-password2");
     const smallSexo = qs("small.js-sexo");
     const smallProvincia = qs("small.js-provincia");
@@ -62,10 +62,10 @@ window.addEventListener("load", function() {
         if(validatePass.test(e.target.value)){
             campoPassword1.classList.remove("is-invalid")
             campoPassword1.classList.add("is-valid")
-            smallPassword1.innerHTML = ""
+            smallPassword.innerHTML = ""
         } else {
             campoPassword1.classList.add("is-invalid")
-            smallPassword1.innerHTML = "La contraseña debe contener una mayúscula, una minúscula, un número y entre 8 y 15 caracteres"}
+            smallPassword.innerHTML = "La contraseña debe contener una mayúscula, una minúscula, un número y entre 8 y 15 caracteres"}
         
     })
 
@@ -98,7 +98,6 @@ window.addEventListener("load", function() {
 
 
     formulario.addEventListener("submit", function(e) {
-
 
         let errores = []
 

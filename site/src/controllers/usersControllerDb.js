@@ -94,7 +94,7 @@ logout: (req, res) => {
         .catch(error => console.log(error))
 
         } else {
-            const { name, sexo, provincia, email, password } = req.body;
+            const { name, email, password, sexo, provincia } = req.body;
 
             db.User.create({
                 name: name.trim(),
