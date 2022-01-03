@@ -33,7 +33,7 @@ module.exports = {
                             rol: user.id_rol
                         }
                         if (recordarme) {
-                            res.cookie('tacopadoCookie', req.session.user, { maxAge: 1000 * 60 * 60 })
+                            res.cookie('tacopadoCookie', req.session.userLogin, { maxAge: 1000 * 60 * 60 })
 
                         }
                         return res.redirect('/')

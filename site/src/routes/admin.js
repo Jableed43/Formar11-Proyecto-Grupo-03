@@ -5,6 +5,7 @@ const adminUserCheck = require('../middlewares/adminUserCheck')
 // let multer = require('multer');
 let upload = require ('../middlewares/multerProducts')
 let validacionesProducts = require ('../middlewares/validProducts')
+let validacionesProductsEdit = require ('../middlewares/validProductsEdit')
 
 
 /* GET home page. */
@@ -16,7 +17,7 @@ router.post('/create', upload.single('images'), validacionesProducts, adminContr
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', adminUserCheck, adminController.edit); 
-router.put('/edit/:id', upload.single('images'), validacionesProducts, adminController.update); 
+router.put('/edit/:id', upload.single('images'), validacionesProductsEdit, adminController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

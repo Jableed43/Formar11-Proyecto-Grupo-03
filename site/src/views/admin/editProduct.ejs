@@ -59,23 +59,23 @@
             <div>    
               <label for="category">Categoría</label>
               <select name="category" id="category">
-                <option selected hidden>Seleccione aquí</option>
+                <option value="" selected hidden>Seleccione aquí</option>
                 <% categories.forEach(category => { %>
-                  <option value="<%= category.id %>" <%= product.subcategoryId === category.id ? 'selected' : null%>><%= category.name%></option>
+                  <option value="<%= category.id %>" <%= product.subcategories.categoryId === category.id? 'selected' : null%>><%= category.name%></option>
                 <% }) %>
-                </select>
+                </select><br>
                 <% if (locals.errors && errors.category) { %>
                   <small class="mensajeError"> <%= errors.category.msg %> </small>
                   <% } %> 
             </div>
             <div>
               <label for="subcategory">Subcategoría</label>
-              <select name="subcategory" id="subcategory" required>
-                <option value="subcategory" name= "default" selected hidden>Seleccione aquí</option>
+              <select name="subcategory" id="subcategory">
+                <option value="" name= "default" selected hidden>Seleccione aquí</option>
                 <% subcategories.forEach(subcategory => { %>
                   <option value="<%= subcategory.id %>" <%= product.subcategoryId === subcategory.id ? 'selected' : null%>><%= subcategory.name %></option>
                 <% }) %>
-              </select>
+              </select><br>
               <% if (locals.errors && errors.subcategory) { %>
                 <small class="mensajeError"> <%= errors.subcategory.msg %> </small>
                 <% } %> 

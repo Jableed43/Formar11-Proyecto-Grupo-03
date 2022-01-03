@@ -11,8 +11,6 @@ const validacionesProducts = [
         min : 20
     }).withMessage('La descripción debe tener un mínimo de 20 caracteres'),  
 
-    // check('images').notEmpty().withMessage('Debes subir una imagen'),
-
     check('category').notEmpty().withMessage('Debes seleccionar una opción'),
     check('subcategory').notEmpty().withMessage('Debes seleccionar una opción'),
 

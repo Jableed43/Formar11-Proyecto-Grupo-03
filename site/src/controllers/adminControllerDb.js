@@ -88,12 +88,13 @@ module.exports = {
         errors = errors.mapped()
 
                 // Para validar la imagen
-        if (req.fileValidationError) {
-            let images = {
-                param: "images",
-                msg: "Solo se permiten imágenes"
-            }
-            errors.errors.push(images)          
+        if (req.fileValidationError) {  
+            errors = {
+                ...errors,
+                images: {
+                    msg: req.fileValidationError,
+                },
+            };       
         }
         
         let product = db.Product.findByPk(req.params.id)
@@ -111,6 +112,7 @@ module.exports = {
                 })
             })
             .catch(error => console.log(error))
+            console.log(req.file);
         }
     },
     // Update - Form to edit
@@ -120,14 +122,16 @@ module.exports = {
             {
                 include: ['subcategories']
             })
-        let categories = db.Category.findAll()
+        let categories = db.Category.findAll({
+            include: ['category']
+            })
         let subcategories = db.Subcategory.findAll()
     
         
         Promise.all([product, categories, subcategories])
         .then(([product, categories, subcategories]) => {
                 res.render('admin/editProduct', {
-                    product,
+                    product, 
                     categories,
                     subcategories
                 })
