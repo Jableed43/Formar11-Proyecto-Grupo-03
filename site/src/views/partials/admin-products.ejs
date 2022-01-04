@@ -6,8 +6,8 @@
           <th scope="row"><%= index + 1 %></th>
             <td class="taco"><%=product.title%></td>
             <td><%=product.price%></td>
-            <td><%=product.categoryId%></td>
-            <td><%=product.subcategoryId%></td>
+            <td><%=product.subcategories.categoryId%></td>
+            <td><%=product.subcategories.name%></td>
 
             <td>
               <a href="admin/edit/<%= product.id %>">

@@ -25,11 +25,21 @@ module.exports = {
     //     })
     // },
 	admin: (req, res) => {
-		db.Product.findAll({
-			include: [{ all: true }]
+		let products = db.Product.findAll({
+			include: ['subcategories']
 		})
-			.then((products) => {
-            return res.render('admin/admin', {products})
+        let categories = db.Category.findAll({
+            include: ['category']
+            })
+        let subcategories = db.Subcategory.findAll({
+            include: ['category', 'products']
+            })
+
+        Promise.all([products, categories, subcategories])
+			.then(([products, categories, subcategories]) => {
+            return res.render('admin/admin', {
+                products, categories, subcategories
+            })
         })
 	},
     // Create - Form to create a product
