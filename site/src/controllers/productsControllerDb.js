@@ -142,23 +142,18 @@ module.exports = {
     },
     search: (req, res) => {
         db.Product.findAll({
-            association: 'subcategory',
-            include: [{ all: true }],
+            include: [ "subcategories" ],
                 where: {
                     [Op.or]: [{
                             title: {
-                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
-                            }
-                        },
-                        {
-                            id: {
-                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                                [Op.like]: `%${req.query.busqueda.toLowerCase().trim()}%`
                             }
                         },
                     ]
                 },
             })
             .then(product => {
+                return res.send(product)
                 res.render('products/results', {
                     title: 'Resultado de busqueda',
                     product

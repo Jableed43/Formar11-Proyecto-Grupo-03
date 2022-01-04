@@ -22,7 +22,7 @@ module.exports = {
                     email: email.trim()
                 }
             })
-                .then (user => {
+                .then(user => {
                     if (user && bcrypt.compareSync(password.trim(), user.password)) {
                         req.session.userLogin = {
                             id: user.id,
@@ -31,71 +31,68 @@ module.exports = {
                             email: user.email,
                             avatar: user.avatar,
                             rol: user.id_rol
-                        }}
+                        }
                         if (recordarme) {
                             res.cookie('tacopadoCookie', req.session.userLogin, { maxAge: 1000 * 60 * 60 })
+
                         }
-                    })
-                        
 
-                        /* Carrito */
-                       /* req.session.cart = [];
+                        /* carrito */
+                        req.session.cart = [];
 
-
-                        let order = await db.Order.findOne({
-                            where : {
-                                id_client : req.session.userLogin.id,
-                                status : 'pending'
-                            }, 
-                            includes : [
-                                {association : 'carts',
-                                include: [
-                                    {
-                                        association : 'product',
-                                        include : [{all:true}]
-                                    }
-                                ]
-                            }],
-                        })
-                        .then (order => {
-                            if (order){
-                                order.carts.forEach( item => {
-                                    let product = {
-                                        id: item.id_products,
-                                        title: item.product.title,
-                                        image: item.product.image,
-                                        price: item.product.price,
-                                        subcategory : product.subcategory.name,
-                                        amount : item.cantidad,
-                                        total : item.product.price * item.cantidad,
-                                        id_order : order.id
-                                    }
-                                    req.session.cart.push(product)
+                        db.Order.findOne({
+                            where: {
+                                id_client: req.session.userLogin.id,
+                                status: 'pending'
+                            },
+                            includes: [
+                                {
+                                    association: 'carts',
+                                    include: [
+                                        {
+                                            association: 'product',
+                                            include: [{ all: true }]
+                                        }
+                                    ]
                                 }
-                                )
-                            }
-                            return res.redirect('/')
+                            ],
                         })
+                            .then(order => {
+                                if (order) {
+                                    order.carts.forEach(item => {
+                                        let product = {
+                                            id: item.id_products,
+                                            title: item.product.title,
+                                            image: item.product.image,
+                                            price: item.product.price,
+                                            subcategory: item.product.subcategories.name,
+                                            amount: item.cantidad,
+                                            total: item.product.price * item.cantidad,
+                                            id_order: order.id
+                                        }
+                                        req.session.cart.push(product)
+                                    })
+                                }
+                                console.log('cart >>>>>>>',req.session.cart)
+                                return res.redirect('/')
 
-                            
-    
+                            })
+                            .catch(error => console.log(error))
 
-                        return res.redirect('/')
-                    }                 
-            
-                })*/
-                .catch(error => console.log(error))  
-            }
+                    }
+
+                }).catch(error => console.log(error))
+        }
     },
-// Destruir la session
-logout: (req, res) => {
+    // Destruir la session
+    logout: (req, res) => {
 
-    req.session.destroy(function() {
-        res.clearCookie('tacopadoCookie', { path: '/' });
-        res.redirect('/')
-      });
+        req.session.destroy(function () {
+            res.clearCookie('tacopadoCookie', { path: '/' });
+            res.redirect('/')
+        });
 
-},
+    },
 
     // Acceso a vista Registro
 
@@ -110,8 +107,8 @@ logout: (req, res) => {
                     sexes,
                     provinces
                 })
-            }) 
-            .catch(error => console.log(error))  
+            })
+            .catch(error => console.log(error))
     },
 
 
@@ -125,18 +122,18 @@ logout: (req, res) => {
 
             let sexes = db.Sex.findAll()
             let provinces = db.Province.findAll()
-    
+
             Promise.all(([sexes, provinces]))
-            
-            .then(([sexes, provinces]) => {
-            return res.render('users/register', {
-                errores: errors.mapped(),
-                old: req.body,
-                sexes,
-                provinces
-            })
-        })
-        .catch(error => console.log(error))
+
+                .then(([sexes, provinces]) => {
+                    return res.render('users/register', {
+                        errores: errors.mapped(),
+                        old: req.body,
+                        sexes,
+                        provinces
+                    })
+                })
+                .catch(error => console.log(error))
 
         } else {
             const { name, email, password, sexo, provincia } = req.body;
@@ -150,21 +147,21 @@ logout: (req, res) => {
                 id_province: provincia,
                 id_rol: 2
             })
-            .then(user => {
-                req.session.userLogin = {
-                    id: user.id,
-                    name: user.name,
-                    email: user.email,
-                    avatar: user.avatar,
-                    sex: user.id_sex,
-                    province: user.id_province,
-                    rol: user.id_rol
-                }            
-                return res.redirect('/')
-            })
-            .catch(error => {
-                res.send(error)
-            })
+                .then(user => {
+                    req.session.userLogin = {
+                        id: user.id,
+                        name: user.name,
+                        email: user.email,
+                        avatar: user.avatar,
+                        sex: user.id_sex,
+                        province: user.id_province,
+                        rol: user.id_rol
+                    }
+                    return res.redirect('/')
+                })
+                .catch(error => {
+                    res.send(error)
+                })
         }
     },
     // Acceder a carrito
@@ -174,30 +171,30 @@ logout: (req, res) => {
     // Acceso a vista del perfil del usuario.
     profile: (req, res, next) => {
         db.User.findOne({
-            where: {id: req.session.userLogin.id}
+            where: { id: req.session.userLogin.id }
         })
             .then(user => {
                 res.render('users/profile');
-            })  
-            .catch(error => console.log(error))      
-     },
+            })
+            .catch(error => console.log(error))
+    },
     // Acceso a vista de edición del perfil del usuario.
     edit: (req, res) => {
 
-            let sexes = db.Sex.findAll()
-            let provinces = db.Province.findAll()
-            let user = db.User.findByPk(req.params.id)
+        let sexes = db.Sex.findAll()
+        let provinces = db.Province.findAll()
+        let user = db.User.findByPk(req.params.id)
 
-            Promise.all(([user, sexes, provinces]))
+        Promise.all(([user, sexes, provinces]))
 
-                .then(([user, sexes, provinces]) => {
-                    return res.render('users/edit', {
-                        user,
-                        sexes,
-                        provinces
-                    })
+            .then(([user, sexes, provinces]) => {
+                return res.render('users/edit', {
+                    user,
+                    sexes,
+                    provinces
                 })
-                .catch(error => console.log(error))
+            })
+            .catch(error => console.log(error))
     },
     // Modifica datos del perfil por metodo PUT
     // update: (req, res, next) => {
@@ -228,56 +225,56 @@ logout: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
 
-        const { name, password } = req.body;
-        console.log(name, password);
-        db.User.update(
-            {
-                name: name.trim(),
-                avatar: req.file? req.file.filename : req.session.userLogin.avatar  
-            },
-            {
-                where: {
-                    id: req.session.userLogin.id
-                }
-            }).then(() => {
+            const { name, password } = req.body;
+            console.log(name, password);
+            db.User.update(
+                {
+                    name: name.trim(),
+                    avatar: req.file ? req.file.filename : req.session.userLogin.avatar
+                },
+                {
+                    where: {
+                        id: req.session.userLogin.id
+                    }
+                }).then(() => {
 
-                if (password) {
-                    
-                    db.User.update(
-                        {
-                            password: bcrypt.hashSync(password.trim(), 10)
-                        },
-                        {
-                            where: {
-                                id: req.session.userLogin.id
+                    if (password) {
+
+                        db.User.update(
+                            {
+                                password: bcrypt.hashSync(password.trim(), 10)
+                            },
+                            {
+                                where: {
+                                    id: req.session.userLogin.id
+                                }
                             }
-                        }
-                    )
-                        .then(() => {
-                            req.session.destroy();
-                            return res.redirect('/users/login')
-                        })
-                        
-                } else {
+                        )
+                            .then(() => {
+                                req.session.destroy();
+                                return res.redirect('/users/login')
+                            })
 
-                    db.User.findByPk(req.session.userLogin.id)
-                        .then(user => {
-                            req.session.userLogin = {
-                                id: user.id,
-                                name: user.name,
-                                email: user.email,
-                                avatar: user.avatar,
-                                sex: user.id_sex,
-                                province: user.id_province,
-                                rol: user.id_rol
-                            }
-                            res.locals.userLogin = req.session.userLogin
+                    } else {
 
-                            return res.redirect('/users/profile')
+                        db.User.findByPk(req.session.userLogin.id)
+                            .then(user => {
+                                req.session.userLogin = {
+                                    id: user.id,
+                                    name: user.name,
+                                    email: user.email,
+                                    avatar: user.avatar,
+                                    sex: user.id_sex,
+                                    province: user.id_province,
+                                    rol: user.id_rol
+                                }
+                                res.locals.userLogin = req.session.userLogin
 
-                        })
-                }
-            }).catch(error => console.log(error))
+                                return res.redirect('/users/profile')
+
+                            })
+                    }
+                }).catch(error => console.log(error))
 
         } else {
 
@@ -296,8 +293,8 @@ logout: (req, res) => {
                         provinces
                     })
                 })
-                .catch(error => console.log(error))            
-        }        
+                .catch(error => console.log(error))
+        }
     },
     // Delete -
     destroy: (req, res) => {
