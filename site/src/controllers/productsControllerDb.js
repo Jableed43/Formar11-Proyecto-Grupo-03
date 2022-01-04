@@ -139,5 +139,33 @@ module.exports = {
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)
             })
-    }
+    },
+    search: (req, res) => {
+        db.Product.findAll({
+            association: 'subcategory',
+            include: [{ all: true }],
+                where: {
+                    [Op.or]: [{
+                            title: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            id: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(product => {
+                res.render('products/results', {
+                    title: 'Resultado de busqueda',
+                    product
+                })
+            })
+            .catch(err => {
+                console.log('Error al requerir los productos de la base de datos ' + err)
+            })
+    },
 }

@@ -6,8 +6,14 @@
           <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
         </a>
   
+          <!-- BARRA DE BUSQUEDA -->
           <div id="input">
-            <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
+          <form action="/products/results" method="GET" class="search">
+              <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
+              <button class="btn-search" type="search">
+                  <i class="fas fa-search"></i>
+              </button>
+          </form>
         </div>
 
 

@@ -1,0 +1,46 @@
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+
+    <main class="resultado_busqueda">
+        
+        <% if(product.length > 0) { %> 
+            <% product.forEach(element => { %>
+                <div>
+                    <h1>
+                      Tu búsqueda coincide con los siguientes productos:
+                    </h1>
+                  </div>
+                <div class="contenedor">
+                    <section class="products">
+                        <a href="/products/detail/<%= element.id %> ">
+                            <article class="product-container">
+                                <img src="/images/imgmenu/<%= element.images %>" alt= "Foto Producto">
+                                <p><%= element.title %></p>
+                                    <ul type="none">
+                                        <li><%= element.calories %></li>
+                                        <li><%= element.totalfat %></li>
+                                        <li><%= element.protein %></li>
+                                        <li><%= element.carb %></li>
+                                    </ul>
+                                </nav>
+                                <button>Ver más</button>
+                            </article>
+                        </a>
+                    </section>
+                </div>
+        <% }) %> 
+        <% } else { %>
+            <div>
+              <h1>
+                No hay producto que coincidan con tu búsqueda.
+              </h1>
+            </div>
+        <% } %>
+
+    </main>
+
+    <%- include('../partials/scripts.ejs') %>
+</body>
+</html>

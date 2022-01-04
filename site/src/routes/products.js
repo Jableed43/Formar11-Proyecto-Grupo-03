@@ -10,8 +10,7 @@ router.get('/', productsControllerDb.list);
 /* GET detalle de productos */
 router.get('/detail/:id', productsControllerDb.detail);
 
-
-
-
+/* GET resultados de búsqueda */ 
+router.get('/results', productsControllerDb.search); 
 
 module.exports = router;
