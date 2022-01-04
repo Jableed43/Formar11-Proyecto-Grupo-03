@@ -229,4 +229,31 @@ module.exports = {
             return res.render('admin/userlist', {users})
         })
 	},
+    prodsearch: (req, res) => {
+        db.Product.findAll({
+            include: [{ all: true }],
+                where: {
+                    [Op.or]: [{
+                            title: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            id: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(product => {
+                res.render('admin/results', {
+                    title: 'Resultado de busqueda',
+                    product
+                })
+            })
+            .catch(err => {
+                console.log('Error al requerir los productos de la base de datos ' + err)
+            })
+        }
 }
