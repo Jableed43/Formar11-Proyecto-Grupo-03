@@ -22,7 +22,7 @@ module.exports = {
                     email: email.trim()
                 }
             })
-                .then((user) => {
+                .then (user => {
                     if (user && bcrypt.compareSync(password.trim(), user.password)) {
                         req.session.userLogin = {
                             id: user.id,
@@ -31,16 +31,61 @@ module.exports = {
                             email: user.email,
                             avatar: user.avatar,
                             rol: user.id_rol
-                        }
+                        }}
                         if (recordarme) {
                             res.cookie('tacopadoCookie', req.session.userLogin, { maxAge: 1000 * 60 * 60 })
-
                         }
+                    })
+                        
+
+                        /* Carrito */
+                       /* req.session.cart = [];
+
+
+                        let order = await db.Order.findOne({
+                            where : {
+                                id_client : req.session.userLogin.id,
+                                status : 'pending'
+                            }, 
+                            includes : [
+                                {association : 'carts',
+                                include: [
+                                    {
+                                        association : 'product',
+                                        include : [{all:true}]
+                                    }
+                                ]
+                            }],
+                        })
+                        .then (order => {
+                            if (order){
+                                order.carts.forEach( item => {
+                                    let product = {
+                                        id: item.id_products,
+                                        title: item.product.title,
+                                        image: item.product.image,
+                                        price: item.product.price,
+                                        subcategory : product.subcategory.name,
+                                        amount : item.cantidad,
+                                        total : item.product.price * item.cantidad,
+                                        id_order : order.id
+                                    }
+                                    req.session.cart.push(product)
+                                }
+                                )
+                            }
+                            return res.redirect('/')
+                        })
+
+                            
+    
+
                         return res.redirect('/')
                     }                 
             
-                }).catch(error => console.log(error))
-        }
+                })*/
+                .catch(error => console.log(error))  
+            }
     },
 // Destruir la session
 logout: (req, res) => {

@@ -6,14 +6,8 @@ module.exports = {
     list: (req, res) => {
         let products = db.Product.findAll({
             include: {
-<<<<<<< HEAD
-                association: 'subcategory',
-                include: [{ all: true }]
-            }
-=======
                 association: 'subcategories',
                 include: [{ all: true }]}
->>>>>>> 8f62f125734c215fd71a67caa34d27cdc3c65a38
 
         })
         let Tacos = db.Subcategories.findAll({

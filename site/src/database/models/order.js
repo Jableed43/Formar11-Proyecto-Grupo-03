@@ -11,18 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Order.belongsTo(models.User,{
-        as : 'order'
+        as : 'order',
+        foreignKey: 'id_client'
       }),
       Order.hasMany(models.Cart,{
-        as : 'carts'
+        as : 'carts',
+        foreignKey: 'id_order'
       })
     }
   };
   Order.init({
     status: DataTypes.STRING,
     id_client: DataTypes.INTEGER,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE,
     total: DataTypes.DECIMAL
   }, {
     sequelize,
