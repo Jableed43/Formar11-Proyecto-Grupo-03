@@ -4,11 +4,16 @@ const { Op } = require('sequelize')
 module.exports = {
     // Para listar productos en vista Products
     list: (req, res) => {
-        let products = db.Products.findAll({
+        let products = db.Product.findAll({
             include: {
+<<<<<<< HEAD
                 association: 'subcategory',
                 include: [{ all: true }]
             }
+=======
+                association: 'subcategories',
+                include: [{ all: true }]}
+>>>>>>> 8f62f125734c215fd71a67caa34d27cdc3c65a38
 
         })
         let Tacos = db.Subcategories.findAll({
@@ -17,6 +22,7 @@ module.exports = {
             },
             include: [
                 { association: 'products' }
+                
             ]
         })
         let Burritos = db.Subcategories.findAll({
@@ -109,8 +115,8 @@ module.exports = {
             ]
         })
 
-        Promise.all([Tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas])
-            .then(([Tacos, products, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
+        Promise.all([Tacos, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas])
+            .then(([Tacos, Burritos, Quesadillas, Entradas, Platos, Ensaladas, Salsas, Dulces, Gaseosas, Jugos, Aguas]) => {
                 res.render('products', {
                     products: products,
                     Tacos: Tacos[0].products,
@@ -132,9 +138,9 @@ module.exports = {
     },
     detail: (req, res) => {
         // Para entrar al detalle del producto
-        db.Product.findByPK(+req.params.id)
+        db.Product.findByPk(req.params.id)
             .then(producto => {
-                res.render('detalle-producto', { products: producto })
+                res.render('products/detalle-producto', { products: producto })
             })
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)

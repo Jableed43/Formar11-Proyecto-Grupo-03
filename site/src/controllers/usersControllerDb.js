@@ -33,25 +33,23 @@ module.exports = {
                             rol: user.id_rol
                         }
                         if (recordarme) {
-                            res.cookie('tacopadoCookie', req.session.user, { maxAge: 1000 * 60 * 60 })
+                            res.cookie('tacopadoCookie', req.session.userLogin, { maxAge: 1000 * 60 * 60 })
 
                         }
                         return res.redirect('/')
-                .catch(error => console.log(error))
-
-                    } 
-                
+                    }                 
             
-                })
+                }).catch(error => console.log(error))
         }
     },
 // Destruir la session
 logout: (req, res) => {
-    req.session.destroy();
-    if (req.cookies.recordarme) {
-        res.cookie('tacopadoCookie', '', { maxAge: -1 })
-    }
-    res.redirect('/')
+
+    req.session.destroy(function() {
+        res.clearCookie('tacopadoCookie', { path: '/' });
+        res.redirect('/')
+      });
+
 },
 
     // Acceso a vista Registro
@@ -67,8 +65,8 @@ logout: (req, res) => {
                     sexes,
                     provinces
                 })
-            })
-            .catch(error => console.log(error))
+            }) 
+            .catch(error => console.log(error))  
     },
 
 
@@ -96,7 +94,7 @@ logout: (req, res) => {
         .catch(error => console.log(error))
 
         } else {
-            const { name, sexo, provincia, email, password } = req.body;
+            const { name, email, password, sexo, provincia } = req.body;
 
             db.User.create({
                 name: name.trim(),

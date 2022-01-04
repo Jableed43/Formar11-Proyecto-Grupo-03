@@ -16,6 +16,7 @@
       </div>
       <h1>Estás editando "<%= product.title %>"</h1>
 
+<<<<<<< HEAD
       <form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST">
           <div class="contenedor">
             <article>
@@ -26,6 +27,78 @@
                     <%= errors.title.msg %>
                   </small>
                   <% } %>
+=======
+      <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST"enctype="multipart/form-data">
+        <div class="contenedor">
+          <article>
+              <h2>Título</h2>
+              <input type="text" id="title" name="title" value="<%= product.title %>" placeholder="Nombre de plato">
+              <% if (locals.errors && errors.title) { %>
+                <small class="mensajeError">
+                  <%= errors.title.msg %>
+                </small>
+                <% } %>
+
+              <h2>Descripción</h2>
+              <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"><%= product.description %></textarea>
+              <% if (locals.errors && errors.description) { %>
+                <small class="mensajeError">
+                  <%= errors.description.msg %>
+                </small>
+                <% } %>
+          </article>
+        </div>
+
+        <div class="contenedor2">
+          <article>
+              <h2>Imagen del producto</h2>
+
+              <img class="prod" src="/images/imgmenu/<%= product.images %>" alt="Foto producto actual">
+              <div>
+              <input type="file" id="images" name="images" hidden>
+              <label class="file" for="images">Foto Producto</label>
+              </div>
+              <% if (locals.errors && errors.images) { %>
+                <small class="mensajeError"> <%= errors.images.msg %> </small>
+                <% } %>
+              </div>        
+            </article>
+        </div>  
+
+        <div class="contenedor3">
+          <article>
+            <h2>Organizar</h2>
+            <div>    
+              <label for="category">Categoría</label>
+              <select name="category" id="category">
+                <option value="" selected hidden>Seleccione aquí</option>
+                <% categories.forEach(category => { %>
+                  <option value="<%= category.id %>" <%= product.subcategories.categoryId === category.id? 'selected' : null%>><%= category.name%></option>
+                <% }) %>
+                </select><br>
+                <% if (locals.errors && errors.category) { %>
+                  <small class="mensajeError"> <%= errors.category.msg %> </small>
+                  <% } %> 
+            </div>
+            <div>
+              <label for="subcategory">Subcategoría</label>
+              <select name="subcategory" id="subcategory">
+                <option value="" name= "default" selected hidden>Seleccione aquí</option>
+                <% subcategories.forEach(subcategory => { %>
+                  <option value="<%= subcategory.id %>" <%= product.subcategoryId === subcategory.id ? 'selected' : null%>><%= subcategory.name %></option>
+                <% }) %>
+              </select><br>
+              <% if (locals.errors && errors.subcategory) { %>
+                <small class="mensajeError"> <%= errors.subcategory.msg %> </small>
+                <% } %> 
+            </div>
+
+            <div class="ultimo-input">
+                <label for="precio">Precio</label>
+                <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Inserte precio aquí...">
+            </div>
+          </article>
+>>>>>>> 8f62f125734c215fd71a67caa34d27cdc3c65a38
     
                 <h2>Descripción</h2>
                 <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px" value="<%= locals.old && old.name ? old.name : null %>"></textarea>

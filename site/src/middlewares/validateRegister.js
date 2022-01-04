@@ -27,10 +27,10 @@ module.exports = [
     }),
 
     check('password')
-    .matches(/^(?=.[A-Za-z])(?=.*\d)(?=.*[@$!*%#?&])[A-Za-z\d@$!%*#?&]{8,16}$/)
+    .matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/)
     .withMessage('Mínimo 8 letras, y debe contener mayúscula, un número y un carácter especial.'),
 
-    body('p2')
+    body('password2')
         .custom((value,{req}) => {
             if(value !== req.body.password){
                 return false
@@ -40,7 +40,7 @@ module.exports = [
         }).withMessage('Las contraseñas no coinciden'),
 
     check('sexo')
-        .notEmpty().withMessage('Debes seleccionar una opción').bail(),
+        .notEmpty().withMessage('Debes seleccionar una opción'),
         
     check('provincia')
         .notEmpty().withMessage('Debes seleccionar una opción'),

@@ -26,7 +26,7 @@ let users = [
     "password": bcrypt.hashSync('123123',10),
     "id_sex": 1,
     "id_province": 3,
-    "avatar": "default-img.jpg",
+    "avatar": "default-img.jpg", 
     "id_rol": 1,
     createdAt: new Date,
     updatedAt: new Date

@@ -130,10 +130,14 @@
           </section>
   
           <section class="beneficios">
-            <p>Compa sumese a la pachanga, y disfrute de CHIDOS BENEFICIOS</p>
-             <a href="/users/register"> <button class="unite"> Quiero ser Cuate! </button></a>
+            <% if (locals.userLogin) { %>
+              <p>Compa vea aquí sus CHIDOS BENEFICIOS</p>
+              <a href="/beneficios"> <button class="unite"> Quiero ver mis beneficios </button></a>
+            <%  }else{ %> 
+              <p>Compa sumese a la pachanga, y disfrute de CHIDOS BENEFICIOS</p>
+              <a href="/users/register"> <button class="unite"> Quiero ser Cuate! </button></a>
+            <% } %>
           </section>
-  
           <section class="eligen">
             <h1>Por qué nos eligen...</h1>
             <div class="eligen-flex">

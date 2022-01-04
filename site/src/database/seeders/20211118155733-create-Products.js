@@ -3,7 +3,7 @@
 let products =  [
   {
     "title": "El original",
-    "images": "/1.jpg",
+    "images": "/1.png",
     "description": "¡El original Tacopado! Una tortilla de maíz crujiente.",
     "price": 200,
     "calories": 170,
@@ -22,7 +22,7 @@ let products =  [
 },
 {
     "title": "Taco Suave",
-    "images": "/2.jpg",
+    "images": "/2.png",
     "description": "Probá el lado más suave de Tacopado.",
     "price": 220,
     "calories": 180,
@@ -41,7 +41,7 @@ let products =  [
  }
 , {
     "title": "Tacopante",
-    "images": "/3.jpg",
+    "images": "/3.png",
     "description": "Esta exclusiva de Tacopado lleva los tacos a un nivel completamente nuevo. Cambiamos la cáscara con pan de pita tibio y esponjoso, y lo rellenamos con frijoles refritos cocidos a fuego lento. Con relleno a elección: carne picada fresca o carne de pollo. Y con la infaltable lechuga fresca, tomates jugosos y coronandolo con queso cheddar rallado.",
     "price": 500,
     "calories": 530,
@@ -60,7 +60,7 @@ let products =  [
 },
 {
     "title": "¡Grande, taco!",
-    "images": "/4.jpg",
+    "images": "/4.png",
     "description": "Un camino más grande a lo copado. Un taco nunca es suficiente, así que empacamos el doble de sabor y frescura en esta crujiente tortilla de maíz para agarrar con las dos manos. Disfrutá el doble de carne picada fresca o carne de pollo. Además tiene una mezcla rallada de queso cheddar y picantes, con lechuga fresca, tomates jugosos y una cucharada de crema agria fresca.",
     "price": 580,
     "calories": 360,
@@ -79,7 +79,7 @@ let products =  [
 },
   {
         "title": "Copado Burrito",
-      "images": "/5.jpg",
+      "images": "/5.png",
         "description": "Envolvé tus papilas gustativas alrededor de 5 capas de todo lo copado. Comenzamos con frijoles refritos cocidos a fuego lento y una capa de sabroso arroz mexicano, salsa de chile, una mezcla rallada de queso cheddar y picante. A tu elección el relleno de carne picada o carne de pollo.",
         "price": 220,
       "calories": 660,
@@ -98,7 +98,7 @@ let products =  [
   },
   {
         "title": "El gran burrito gran",
-      "images": "/6.jpg",
+      "images": "/6.png",
         "description": "Un burrito tan grande que no le cabía otro nombre. Actualizamos nuestra tortilla de harina fresca a un tamaño que puede contener rellenos adicionales. Elegí rellenarlo con carne picada o pollo, para ,ezcñarse em caás de salsa de chile picante, hebras de queso cheddar y picantes, lechuga fresca, tomates jugosos y crema agria fresca para hacer este burrito famoso de Tacopado.",
         "price": 550,
       "calories": 650,
@@ -118,7 +118,7 @@ let products =  [
   },
   {
         "title": "Burrito de carne",
-      "images": "/7.jpg",
+      "images": "/7.png",
         "description": "Poné en tus manos este burrito 100% carne vacuna. Disfruta de la carne molida, perfectamente sazonada, combinada con una mezcla de queso cheddar, picantes y salsa de chile. Todo envuelto en una tortilla de harina de trigo y tibia",
         "price": 190,
       "calories": 470,
@@ -137,7 +137,7 @@ let products =  [
   },
   {
         "title": "Burrito Mr. Bean",
-      "images": "/8.jpg",
+      "images": "/8.png",
         "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
       "price": 180,
       "calories": 540,
@@ -156,7 +156,7 @@ let products =  [
   },
   {
         "title": "Burrito combo",
-      "images": "/9.jpg",
+      "images": "/9.png",
         "description": "Rodado a la perfección. Disfrutá de frijoles refritos cocidos a fuego lento y carne picada perfectamente sazonada, combinados con una mezcla derretida de queso cheddar, picante y salsa de chile, todo envuelto en una tortilla de harina suave y tibia.",
         "price": 230,
       "calories": 510,
@@ -175,7 +175,7 @@ let products =  [
   },
   {
          "title": "Burrito Francisco",
-      "images": "/10.jpg",
+      "images": "/10.png",
         "description": "Vos decís Papa, nosotros decimos burrito. Disfruta de croquetas de patata crujiente en capas con carne picada. Todo acompañado de queso derretido, lechuga fresca rallada y crema agria enrollada en una tortilla de harina suave y tibia.",
         "price": 200,
       "calories": 310,
@@ -194,7 +194,7 @@ let products =  [
   },
   {
          "title": "Quesadilla de ternera",
-      "images": "/11.jpg",
+      "images": "/11.png",
         "description": "No hay mejor manera de disfrutar tu elección de relleno de carne picada sazonada o cortada a cuchillo, con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
         "price": 250,
       "calories": 829,
@@ -213,7 +213,7 @@ let products =  [
   },
   {
          "title": "Quesadilla de pollo",
-      "images": "/12.jpg",
+      "images": "/12.png",
         "description": "No hay mejor manera de disfrutar pollo con una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
         "price": 220,
       "calories": 800,
@@ -232,7 +232,7 @@ let products =  [
   },
   {
          "title": "Quesadilla de queso",
-      "images": "/13.jpg",
+      "images": "/13.png",
         "description": "No hay mejor manera de disfrutar una mezcla de quesos cheddar y picantes, doblado en una tortilla de harina tibia y tostado a la perfección.",
         "price": 200,
       "calories": 720,
@@ -251,7 +251,7 @@ let products =  [
   },
   {
          "title": "Mexicanísimo",
-      "images": "/14.jpg",
+      "images": "/14.png",
         "description": "Tené esa dosis de papas que te merecés y salsas de este clásico de Tacopado. Nuestros chips de tortilla crujiente se combinan con guacamole hecho con paltas frescas, queso y frijoles refritos cocidos a fuego lento ¿Mencionamos que estas creaciones vienen en sus propios tazones de tortilla de maíz?",
         "price": 170,
       "calories": 780,
@@ -270,7 +270,7 @@ let products =  [
   },
   {
          "title": "Mucho Nacho",
-      "images": "/15.jpg",
+      "images": "/15.png",
         "description": "Porque nunca son suficientes nachos, mejoramos este clásico mexicano con más de lo que amás: chips de tortilla recién hechos, acompañados de carne picada o carne de pollo sazonada. Además tiene salsa de chile picante, frijoles refritos a fuego lento, queso derretido, tomates jugosos y una cucharada de crema agria fría.",
         "price": 250,
       "calories":   930  ,
@@ -289,7 +289,7 @@ let products =  [
   },
   {
          "title": "Papas con queso",
-      "images": "/16.jpg",
+      "images": "/16.png",
         "description": "Amor a primer bocado. Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujiente de trigo recién fritos y combinados con una salsa melty de queso y pimientos. Este dúo viene en tamaño regular y grande, según el hambre que tengas",
         "price":   190,
       "calories":   300,
@@ -308,7 +308,7 @@ let products =  [
   },
   {
          "title": "GuacaChips",
-      "images": "/17.jpg",
+      "images": "/17.png",
         "description": "Un clásico mexicano hecho al estilo Tacopado. Nuestros chips de tortilla crujientes se combinan con guacamole fresco hecho con palta perfectamente madura, tomates y cebollas cortados en cubitos y una mezcla de nuestras especias exclusivas. Este dúo viene en tamaño regular y grande, según el tamaño de tu antojo",
         "price":   280,
       "calories":   370,
@@ -327,7 +327,7 @@ let products =  [
   },
   {
          "title": "Fuente de sabores",
-      "images": "/18.jpg",
+      "images": "/18.png",
         "description": "Una fuente para acabar con tu hambre. Con una chilada de pollo o carne tibia bañada en sala de chile picante y queso derretido, un taco de carne crujiente y un Tacopante de carne suave. Esta fuente se completa con frijoles refritos a fuego lento, un acompañamiento de queso derretido, arroz mexicano sazonado y tortilla crujiente de papas fritas, crema agria fresca y una bola de guacamole recién hecho.",
         "price":   1290,
       "calories":   1790,
@@ -346,7 +346,7 @@ let products =  [
   },
   {
          "title": "La taco-bandeja",
-      "images": "/19.jpg",
+      "images": "/19.png",
       "description": "¿No podes elegir entre tacos crujientes y suaves? Con esta fuente podes tener ambos. Disfruta de dos tipos de taco, rellenos a tu elección: carne ligeramente sazonada o de carne de pollo. Disfruta de una variedad de acompañamientos: sabrozoz arroz mexicano, frijoles refritos a fuego lento, chips de tortilla crujientes, crema agria fresca y guacamoles recién hecho.",
       "price": 1300,
       "calories": 1050,
@@ -365,7 +365,7 @@ let products =  [
   },
   {
          "title": "Fuente Tacopada",
-      "images": "/20.jpg",
+      "images": "/20.png",
       "description": "Combina texturas crujientes y suabes con nuestro taco más grande de carne o pollo tibio. Disfrutá de un montón de arroz mexicano sazonado, frijoles refritos a fuego lento y chips de tortilla frescos a un lado, cubierto con crema agria fresca y guacamole recién hecho",
       "price": 2000,
       "calories": 1520,
@@ -384,7 +384,7 @@ let products =  [
   },
   {
          "title": "Fuente Chilacopada",
-      "images": "/21.jpg",
+      "images": "/21.png",
         "description": "Disfruta de dos chiladas empaquetadas con nuestra carne molida fresca y sazonada o carne de pollo, envuelto en una tortilla de harina tibia y bañada en salsa de chile picante con queso derretido caliente. Estos favoritos de Tacopado se combinan con un sabroso arroz mexicano, frijoles refritos hervidos a fuego lento y muchos chips de tortilla crujientes. Plus? una cucharada de crema agria fresca y una bola de guacamole fresco como acompañamiento.",
         "price": 1600,
       "calories": 1270,
@@ -403,7 +403,7 @@ let products =  [
   },
   {
          "title": "Mega ensalada en taco",
-      "images": "/22.jpg",
+      "images": "/22.png",
         "description": "Una ensalada crujiente, de sabor crujiente. Esta ensalada de taco tiene mucho sabor en un tazón de tortilla de trigo recién frito. Disfrutala con carne fresca o carne blanca de pollo. Acunada en un colchol de lechuga crujiente rallada y tomates cortados en cubitos. Terminado con queso cheddar rallado, guacamole recién hecho y una cucharada de crema agria fresca, perfecta como aderezo para ensalada o como salsa para este tazón crujiente e irresistible.",
         "price": 590,
       "calories": 980,
@@ -422,7 +422,7 @@ let products =  [
   },
   {
          "title": "Nacho ensalada",
-      "images": "/23.jpg",
+      "images": "/23.png",
         "description": "Una ensalada a la mexicana. Disfruta de una variedad de chips de tortilla crujientes hechos en casa, cubiertos con salsa de chile picante, queso derretido y pollo o carne a tu elección. Trae lechuga fresca, jugosos tomates y queso cheddar rallado que completan esta combinación perfecta de clásicos de Tacopado.",
         "price": 630,
       "calories": 420,
@@ -441,7 +441,7 @@ let products =  [
   },
   {
          "title": "Salsa de frijoles picante",
-      "images": "/24.jpg",
+      "images": "/24.png",
       "description": "Esta salsa cálida incluye frijoles refritos hervidos a fuego lento, salsa de chile picante y queso cheddar pegajoso, llenador y rico.",
       "price": 70,
       "calories": 282,
@@ -460,7 +460,7 @@ let products =  [
   },
   {
          "title": "Arroz mexicano",
-      "images": "/25.jpg",
+      "images": "/25.png",
       "description": "Granos llenos de sabor. El arroz se potencia con muchas especias sabrosas y toques de cebolla y pimiento.",
       "price": 80,
       "calories": 220,
@@ -480,7 +480,7 @@ let products =  [
   },
   {
       "title": "Guacamole",
-      "images": "/26.jpg",
+      "images": "/26.png",
       "description": "El dip favorito de todos. Nuestro guacamole fresco esta elaborado con paltas perfectamente maduras, tomates jugosos, cebollas picadas, y una mezcla de nuestras especias exclusivas.",
       "price": 120,
       "calories": 160,
@@ -499,7 +499,7 @@ let products =  [
   },
   {
          "title": "Queso derretido",
-      "images": "/27.jpg",
+      "images": "/27.png",
       "description": "Tan copado que se derrite en tu boca. Nuestro queso derretido esta hecho con la combinación perfecta de pimientos picantes y sabroso queso.",
       "price": 80,
       "calories": 100,
@@ -518,7 +518,7 @@ let products =  [
   },
   {
          "title": "Chips de canela",
-      "images": "/28.jpg",
+      "images": "/28.png",
       "description": "Canela y azucar crujiente ¡Para que los amantes de los chips salten de alegría! Tu bocadillo favorito llegó en forma de postre. Nuestros chips están recién fritos y cargados con una mezcla de canela y azucar que le encantará a tu paladar.",
       "price": 120,
       "calories": 360,
@@ -537,7 +537,7 @@ let products =  [
   },
   {
          "title": "Churros",
-      "images": "/29.jpg",
+      "images": "/29.png",
       "description": "Pequeño dulce, sabor pleno. Este amado dulce por todos viene en tamaño de un bocado. Recién fritos y espolvoreados con canela y azúcar para crear un sabor dulce, cálido y acogedor. Estos pedazos del cielo son fáciles de compartir... o de disfrutar en por tu cuenta.",
       "price": 130,
       "calories": 340,
@@ -575,7 +575,7 @@ let products =  [
   },
   {
          "title": "Sprite",
-      "images": "/31.jpg",
+      "images": "/31.png",
       "description": "Algo fresco para tanto picor. Refrescate con una sprite recién sacada de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 200,
       "calories": 150,
@@ -613,7 +613,7 @@ let products =  [
   },
   {
       "title": "Jugo de Lima y Mango",
-      "images": "/33.jpg",
+      "images": "/33.png",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
       "calories": 100,
@@ -632,7 +632,7 @@ let products =  [
   },
   {
       "title": "Jugo de Lima y Frambuesa",
-      "images": "/34.jpg",
+      "images": "/34.png",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
       "calories": 100,
@@ -651,7 +651,7 @@ let products =  [
   },
   {
       "title": "Clásica limonada",
-      "images": "/35.jpg",
+      "images": "/35.png",
       "description": "Algo fresco para tanto picor. Refrescate con jugo de calidad recién salido de la heladera para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
       "calories": 100,
@@ -670,7 +670,7 @@ let products =  [
   },
   {
       "title": "Agua",
-      "images": "/36.jpg",
+      "images": "/36.png",
       "description": "Algo fresco para tanto picor. Refrescate con agua fresca para largar ese AHHHHHHH desde el primer sorbo, al último trago.",
       "price": 150,
       "calories": 0,
