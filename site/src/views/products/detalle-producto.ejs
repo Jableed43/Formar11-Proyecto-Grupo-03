@@ -8,6 +8,9 @@
       <div class="button-container">
          <a href="/products"> <button class="menu">Volver al Menú</button> </a>
       </div>
+
+      <h1 class="nombreprod"><%= products.title%></h1>
+            
         
         <div class="foto-container">
           <button class="antsig">&#8249;</button>
@@ -21,18 +24,16 @@
 
         <!-- Información producto -->
         <section class="detalle">
-            <article class="categoria"><%= products.category %> / <%= products.subcategory %></article>
+            <article class="categoria"><%= products.category %>  <%= products.subcategory %></article>
             
-            <h1 class="nombreprod"><%= products.title%></h1>
-            
-            <p class="desc"><%= products.description %></p>
+
             
             <article class="cantycarr">
-            <a href="#" class="cant">-</a>
-            <input type="number" class="numero" value="1" >
-            <a href="#" class="cant">+</a>
+
+              <p class="desc"><%= products.description %></p>
+
             
-            <a href="/users/carrito" class="carrito">Agregar al Carrito</a>
+            <a href="/users/carrito" class="carrito"><i class="fas fa-cart-plus"></i></a>
             </article>
 
             <article class="tablainfo">

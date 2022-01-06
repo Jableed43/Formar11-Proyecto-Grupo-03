@@ -245,7 +245,7 @@ header div ul li a {
 
 header div ul li a {
   background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);
-  background-size: 200%;
+  background-size: 240%;
   background-repeat: no-repeat;
   background-position: left;
   transition:background-position .5s ease;
@@ -253,6 +253,7 @@ header div ul li a {
 
 header div ul li a:hover{
   background-position: right;
+  color:#f1d367 ;
 }
 
 header ul.menu{

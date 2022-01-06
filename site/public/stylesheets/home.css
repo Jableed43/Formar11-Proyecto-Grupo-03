@@ -450,15 +450,28 @@ display: none;
  }
 
  .home  .unite{
-  background-color: #2d2254;
   color: white;
   padding: 8px;
   width: 150px;
   border-radius: 10%;
   font-size: 25px;
   font-weight: bold;
+  border: none;
+  background-image: linear-gradient(to right, #2d2254 50%, #f1d367 100%);;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition:background-position .5s ease;
+  border: solid 1px black;
+  cursor: pointer;
+ }
+
+ .home  .unite:hover{
+  background-position: right;
 
  }
+
+
 
  /* section Eligen */
  .home .eligen{
@@ -483,13 +496,26 @@ display: none;
 
 
 .home #ACA{
-  background-color: #f1d367;
-  color: #2D2254;
+  color: white;
   padding: 8px;
   width: 150px;
   border-radius: 10%;
   font-size: 25px;
   font-weight: bold;
+  border: solid 1px black;
+
+  background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition:background-position .5s ease;
+  cursor: pointer;
+
+ }
+
+ .home #ACA:hover{
+  background-position: right;
+
  }
 
  .home .fondo-eligen{
