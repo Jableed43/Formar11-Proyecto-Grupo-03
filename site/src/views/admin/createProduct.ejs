@@ -14,51 +14,50 @@
       <div class="logo">
         <img src='/images/logomin.png' alt="Logo Tacopado">
       </div>
-      <h1>CREA UN NUEVO PRODUCTO</h1>
+      <h1>NUEVO PRODUCTO</h1>
 
       <form action="" method="post" enctype="multipart/form-data">
+        <section class="contenedor-padre"> 
       <div class="contenedor">
         <article>
-            <h2>Título</h2>
-            <input type="text" id="title" name="title" placeholder="Nombre de plato" value="<%= locals.old && old.title ? old.title : null %>">>
+            <input type="text" id="title" name="title" placeholder="Nombre" value="<%= locals.old && old.title ? old.title : null %>">
             <% if (locals.errors && errors.title) { %>
               <small class="mensajeError">
                 <%= errors.title.msg %>
               </small>
               <% } %>
 
-            <h2>Descripción</h2>
-            <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"><%= locals.old && old.description ? old.description : null %> </textarea>
+            <!-- <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"><%= locals.old && old.description ? old.description : null %> </textarea> -->
+            <input type="text" id="description" name="description" placeholder="Descripción" style="height:170px"><%= locals.old && old.description ? old.description : null %> </input>
+
             <% if (locals.errors && errors.description) { %>
               <small class="mensajeError">
                 <%= errors.description.msg %>
               </small>
               <% } %>
+
+              
+                <!-- Carga imagen -->
+          <img id="preview" width="400px">
+          <div>
+          <input type="file" id="images" name="images" oninput="preview.src=window.URL.createObjectURL(this.files[0])" hidden>
+          <label class="file" for="images">Foto Producto</label>
+          </div>
+          <% if (locals.errors && errors.images) { %>
+            <small class="mensajeError"> <%= errors.images.msg %> </small>
+            <% } %>
+          </div>        
+        
         </article>
       </div>
 
-      <div class="contenedor2">
-        <article>
-            <h2>Imagen del producto</h2>
-            <img id="preview" width="400px">
-            <div>
-            <input type="file" id="images" name="images" oninput="preview.src=window.URL.createObjectURL(this.files[0])" hidden>
-            <label class="file" for="images">Foto Producto</label>
-            </div>
-            <% if (locals.errors && errors.images) { %>
-              <small class="mensajeError"> <%= errors.images.msg %> </small>
-              <% } %>
-            </div>        
-          </article>
-      </div>  
 
       <div class="contenedor3">
-        <article>
-          <h2>Organizar</h2>
+        <article class="organizar">
+                            <!-- Carga sub, categoria, precio -->
           <div>    
-            <label for="categoria">Categoría</label>
             <select name="category" id="category">
-              <option value="" selected hidden>Seleccione aquí</option>
+              <option value="" selected hidden>Categoría</option>
 
               <% categories.forEach(category => { %>
                 <option value="<%= category.id %>" <%= locals.old && old.categoryId === category.id  ? 'selected' : null%>><%= category.name %></option>
@@ -69,9 +68,8 @@
                 <% } %> 
           </div>
           <div>
-            <label for="subcategoria">Subcategoría</label>
             <select name="subcategory" id="subcategory">
-              <option value="" selected hidden>Seleccione aquí</option>
+              <option value="" selected hidden>Subcategoría</option>
               <% subcategories.forEach(subcategory => { %>
                 <option value="<%= subcategory.id %>" <%= locals.old && old.subcategoryId === subcategory.id  ? 'selected' : null%>><%= subcategory.name %></option>
               <% }) %>
@@ -84,8 +82,7 @@
           </div>
 
           <div class="ultimo-input">
-              <label for="price">Precio</label>
-              <input type="number" name="price" id="price" placeholder="Inserte precio aquí..." value="<%= locals.old && old.price ? old.price : null %>">
+              <input type="number" name="price" id="price" placeholder="Precio" value="<%= locals.old && old.price ? old.price : null %>">
           </div>
           <% if (locals.errors && errors.price) { %>
             <small class="mensajeError">
@@ -94,8 +91,12 @@
             <% } %>
         </article>
     
-        <article>
-          <h2>Valores Nutricionales</h2>
+        <!-- Valores nutricionales -->
+
+        <article class="nutri-big-box">
+
+                      <!-- Nutricionales-1 -->
+          <div class="nutri-box">
           <div>
             <label for="calories">Calorías</label>
             <input type="number" placeholder="(kcal)" name="calories" id="calories" value="<%= locals.old && old.calories ? old.calories : null %>">
@@ -146,6 +147,10 @@
             </small>
             <% } %>
 
+          </div>
+          <!-- Nutricionales-2 -->
+          <div class="nutri-box">
+
           <div>
             <label for="saturatedfat" name="saturatedfat" id="saturatedfat">Grasas Saturadas</label>
             <input type="number" placeholder="(g)" name="saturatedfat" id="saturatedfat" value="<%= locals.old && old.saturatedfat ? old.saturatedfat : null %>">
@@ -195,14 +200,16 @@
               <%= errors.fiber.msg %>
             </small>
             <% } %>
-            
+          </div>
          
         </article>
 
-          <article class="botonera">
-          <button class="guardar" type="submit">Guardar</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
-        </article>
+
       </div>
+      <article class="botonera">
+        <button class="guardar" type="submit">Guardar</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
+      </article>
+    </section>
     </form>
       
     </main>
