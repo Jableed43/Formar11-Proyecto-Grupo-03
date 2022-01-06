@@ -14,12 +14,14 @@
         <input type="checkbox" id='user'>          
         <% if (locals.userLogin) { %>
           <label for='user' class="input-user"><a href="/users/profile"><img class="imgUser" src="/images/users/<%= locals.userLogin.avatar ? locals.userLogin.avatar : 'default-img.jpg'%>" alt="imagen de usuario"></a></label>
-        <%  }else{ %> 
+          <div class="user-cart position-relative">
+            <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
+            <span class=" badge rounded-pill bg-warning text-dark position-absolute bottom-0" id="span-cantidad-cart"></span>
+            </div>
+          <%  }else{ %> 
 
         <% } %>
-          <div class="user-cart">
-          <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
-          </div>
+       
 
 
         <input type="checkbox" id='menu'>
