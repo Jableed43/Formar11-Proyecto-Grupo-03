@@ -28,6 +28,8 @@ body.products div.contenedor{
 body.products div.contenedor:hover{
     background-color: #463686;
     color: white;
+    transform: scale(1.08);
+
 }
 body.products div.contenedor article img{
     width: 100%;
@@ -38,9 +40,11 @@ body.products div.contenedor article img{
 body.products div.contenedor article p{
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 20px;
+    font-size: 23px;
     color: black;
     font-style: normal;
+    font-weight: 700;
+    margin: 10px 0;
 }
 
 body.products div.contenedor article:hover p{
@@ -63,13 +67,7 @@ body.products div.contenedor article nav ul li{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-/* body.products div.contenedor article button{
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
-    width: 80px;
-    align-items: center;
-    margin-bottom: 20px;
-} */
+
 
 /* nueva card */
 div.botonera-contenedor {
@@ -90,6 +88,17 @@ div.botonera-contenedor {
     width: 40%;
     cursor: pointer;
   }
+
+  button.plus:hover, button.ver-mas:hover{
+      background-color: var(--Amarillo);
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      transition-property: background-color, color;
+      transition-duration: 0.5s;
+      color: #373737;
+      transform: scale(1.08);
+
+  }
+
   
   /* nueva card  cierra */
 body.products .product-container{
