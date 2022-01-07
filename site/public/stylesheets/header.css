@@ -52,6 +52,10 @@ header div input{
   display: none;
 }
 
+header div .user-cart {
+  margin: 10px;
+}
+
 header div ul li a{
   color: #f1d367;
   font-size: 20px;
@@ -276,7 +280,7 @@ header .logo-desktop {
   }
 
 header img {
-  max-width: 300px; 
+  max-width: 250px;
 }
 
 
