@@ -47,7 +47,7 @@ body{
   }
 
   .slideshow-container video{
-    width: 90%;
+    width: 100%;
     }
   
   .mySlides.fade img{
@@ -184,7 +184,6 @@ body{
 .home main .icono-container {
   width: 100%;
   text-align: center;
-  background-color: rgba(241,211,103,0.5 );
   margin-top: 65px;
 }
 
@@ -413,8 +412,10 @@ display: none;
   }
 
 .home main section div.icono-container img {
+  border: black solid;
   width: 50%;
-  
+  border-radius: 50%;
+  background-color: rgba(241,211,103,0.5 );
 }
 
 

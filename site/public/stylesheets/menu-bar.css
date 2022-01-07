@@ -39,13 +39,12 @@
 
 /* Caption text */
 .home main .icono-nombre {
-  color: #f2f2f2;
-  font-size: 15px;
+  font-size: 35px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
+  color: var(--Amarillo);
 }
 
 /* Number text (1/3 etc) */

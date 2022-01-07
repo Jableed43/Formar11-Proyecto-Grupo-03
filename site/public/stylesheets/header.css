@@ -4,15 +4,19 @@ header{
 
 header .flex-header{
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  margin-right: 7px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header div#input{
+  left: -40%;
+    position: relative;
 }
 
 img.logo{
-margin-right: auto;
-margin-bottom: 5px;
-width: 95px;
+width: 100px;
 }
 
 .imgUser{
@@ -53,12 +57,30 @@ header div input{
 }
 
 header div .user-cart {
+  display: none;
   margin: 10px;
+  position: relative;
+    left: 40%;
 }
 
+header .container-menu{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+
+
+header .menu-hiden li i.fas.fa-shopping-cart{
+  background: var(--Violeta) ;
+  color: var(--Amarillo);
+  font-size: 50px;
+  margin: 0;
+ }
+
 header div ul li a{
-  color: #f1d367;
-  font-size: 20px;
+  color: var(--Amarillo);
+  font-size: 50px;
 }
 
 header .li-img{
@@ -99,27 +121,22 @@ width: 36px;
 
 header div ul li {
   text-align: center;
-  width: 100vw;
+  width: 20vw;
   background-color: #2d2254;
-  margin-bottom: 1px;
 }
 
-header .menu{
-  display: none ;
-}
-
-header nav.container-user  ul.user{
-display: none;
-}
-
-header input#menu[type=checkbox]:checked ~ nav .menu{
-  display: block;
-}
-
-header input#user[type=checkbox]:checked ~ nav .user{
+ul.menu{
+  width: 50%;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
+
+
+
+
+
 
 header ul.user{
   width: 100%;
@@ -131,6 +148,13 @@ header ul.user{
 
 /* Header */
 
+img.logo {
+  width: 160px;
+}
+
+header div ul li a{
+  font-size: 20px;
+}
 
 .imgUser{
   width: 100%;
@@ -154,6 +178,8 @@ transition:background-position .5s ease;
 
 i.fas.fa-shopping-cart:hover{
   background-position: right;
+  transform: scale(1.2);
+
 
 }
 
@@ -176,13 +202,27 @@ header div label{
 }
 
 header div ul li a{
-    font-size: 25px;
+  font-size: 50px;
 }
-}
+
 
 
 @media (min-width: 1024px) {
   /* Header */
+  header div .user-cart {
+    display: block;
+  }
+
+
+
+  header i{
+    color: var(--Violeta);
+    font-size: 50px;
+  }
+
+  header i:hover{
+    transform: scale(1.2);
+  }
 
   header {
     padding-bottom: 15px;
@@ -203,7 +243,7 @@ header div ul li a{
 
   header .flex-header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-right: 40px;
     padding: 0px 40px;
     width: 100%;
@@ -247,18 +287,6 @@ header div ul li a {
   width: 100%;
 }
 
-header div ul li a {
-  background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);
-  background-size: 240%;
-  background-repeat: no-repeat;
-  background-position: left;
-  transition:background-position .5s ease;
-}
-
-header div ul li a:hover{
-  background-position: right;
-  color:#f1d367 ;
-}
 
 header ul.menu{
   display: flex;
@@ -269,6 +297,10 @@ header ul.menu-hiden{
   width: 30vw;
   display: flex;
   justify-content: center;
+}
+
+header ul.menu-hiden i {
+display: none;
 }
 
 header .logo-desktop {
@@ -297,4 +329,5 @@ i.fas.fa-user, i.fas.fa-shopping-cart, .input-user{
 
 }
 
+}
 }
