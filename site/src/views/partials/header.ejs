@@ -6,10 +6,14 @@
           <img class="logo" src='/images/Menu/logomin.png' alt='Logo' />
         </a>
   
+        <form action="/products/results">
           <div id="input">
             <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
-        </div>
-
+          </div>
+          <button class="btn-search" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+        </form>
 
         <input type="checkbox" id='user'>          
         <% if (locals.userLogin) { %>

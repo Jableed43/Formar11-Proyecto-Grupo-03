@@ -45,7 +45,6 @@ module.exports = {
                 amount : 1,
                 total : +price,
             }
-
             if(req.session.cart.length === 0){
 
                 let order = await db.Order.findOne({

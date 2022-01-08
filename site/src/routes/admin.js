@@ -19,6 +19,8 @@ router.post('/create', upload.single('images'), validacionesProducts, adminContr
 router.get('/edit/:id', adminUserCheck, adminController.edit); 
 router.put('/edit/:id', upload.single('images'), validacionesProductsEdit, adminController.update); 
 
+/* GET busqueda de productos */
+router.get('/results', adminController.adminsearch); 
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 

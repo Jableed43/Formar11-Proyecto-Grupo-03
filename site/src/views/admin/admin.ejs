@@ -23,7 +23,7 @@
           <img src='/images/logomin.png' alt="Logo Tacopado">
         </a>
       </div>
-      <h1 class="titulo">PRODUCTOS</h1>      
+      <h1 class="titulo"><%= title %></h1>      
   
 
       <div class="table-responsive">
@@ -44,6 +44,10 @@
         </tbody>
        </table>
       </div> 
+
+      <% if (products.length <= 0) { %>
+      <h3 class="titulo">Tacomplicado encontrar tu producto</h3>
+       <% } %>
     </main>
 
     <%- include("../partials/admin-footer.ejs") %>

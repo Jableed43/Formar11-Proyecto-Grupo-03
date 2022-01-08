@@ -139,5 +139,29 @@ module.exports = {
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)
             })
-    }
+    },
+    prodsearch: (req, res) => {
+        let products = db.Product.findAll({
+            where: {
+                title: {
+                    [Op.substring]: req.query.busqueda
+                }
+            },
+            include: [{ all: true }]
+        })
+        let subcategories = db.Subcategory.findAll()
+
+        Promise.all([products, subcategories])
+
+            .then(([products, subcategories]) => {
+                res.render('products/prodsearch', {
+                    title: 'Resultados de la búsqueda',
+                    products,
+                    subcategories
+                })
+            })
+            .catch(err => {
+                console.log('Error al requerir los productos de la base de datos ' + err)
+            })
+        }
 }
