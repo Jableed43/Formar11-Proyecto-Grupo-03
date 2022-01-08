@@ -59,6 +59,10 @@
   will-change: transform;
 }
 
+a#submit-register{
+  color: var(--Amarillo);
+}
+
 .log-reg .buttons:disabled {
   pointer-events: none;
 }

@@ -14,6 +14,11 @@
 
         <% if (locals.userLogin) { %>
           <label for='user' class="input-user"><a href="/users/profile"><img class="imgUser" src="/images/users/<%= locals.userLogin.avatar ? locals.userLogin.avatar : 'default-img.jpg'%>" alt="imagen de usuario"></a></label>
+          <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
+            <ul>
+            <li class="texto"><a href="/admin"><i class="fas fa-crown"></i></a> </li>
+          </ul>
+          <% } %>
         <%  }else{ %> 
 
         <% } %>
@@ -38,9 +43,7 @@
                 
                 <li class="texto"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a> </li> 
 
-        <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
-          <li class="texto"><a href="/admin"><i class="fas fa-crown"></i></a> </li>
-        <% } %>
+
               </ul>
 
         <%  }else{ %>     

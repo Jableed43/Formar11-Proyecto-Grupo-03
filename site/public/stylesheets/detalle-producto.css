@@ -18,7 +18,7 @@ body.Detalleprodu {
 }
 
 /* Botón Volver a página menú */
-.Detalleprodu main .menu {
+.Detalleprodu main .menu-nav {
   border: 1px solid grey;
   color: white;
   font-size: 12px;
@@ -29,7 +29,7 @@ body.Detalleprodu {
   padding: 10px;
 }
 
-.Detalleprodu .menu:hover{
+.Detalleprodu .menu-nav:hover {
   background-color: #3b3a36;
 }
 
@@ -45,11 +45,21 @@ body.Detalleprodu {
 }
 
 .Detalleprodu .foto {
-  background-color: white;
   width: 90vw;
   border: 5px solid #f1d367;
   border-radius: 20px;
+  background-image: url(/images/taco-vector.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: drop-shadow(2px 4px 6px white);
 }
+
+
+img.foto:hover{
+  transform:scale(1.01);
+}
+
+
 
 /* Botones para moverse entre productos */
 .Detalleprodu .antsig {
@@ -176,6 +186,10 @@ margin-top: 15px;
   margin-left: 2%;
   margin-bottom: 20px;
   filter: drop-shadow(2px 4px 6px white);
+}
+
+.Detalleprodu .carrito:hover{
+  transform: scaleX(1.2);
 }
 
 /* Columnas de info */
@@ -306,6 +320,8 @@ margin-top: 15px;
     justify-content: center;
     align-items: center;
     width: 50%;
+
+    
 }
 
   .Detalleprodu .detalle {
@@ -330,7 +346,7 @@ margin-top: 15px;
 
 
 @media (min-width: 1024px){
-.Detalleprodu main .menu {
+.Detalleprodu main .menu-nav {
   border: 1px solid grey;
   color: white;
   font-size: 12px;
