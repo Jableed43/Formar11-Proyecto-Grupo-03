@@ -10,9 +10,9 @@ header .flex-header{
   flex-direction: column;
 }
 
-header div#input{
-  left: -40%;
-    position: relative;
+header div#input {
+  left: -27%;
+  position: relative;
 }
 
 img.logo{
@@ -20,8 +20,8 @@ width: 100px;
 }
 
 .imgUser{
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -31,11 +31,11 @@ width: 100px;
 }
 
 
-i.fas.fa-user{
+/* i.fas.fa-user{
   color: #f1d367;
   border: 1px solid #2d2254;
   border-radius: 50%;
-}
+} */
 
 i.fas.fa-shopping-cart {
   color: #2d2254;
@@ -58,6 +58,10 @@ header div .user-cart {
   margin: 10px;
   position: relative;
   left: 26%;
+}
+
+header div .user-cart{
+  display: none;
 }
 
 header .container-menu{
@@ -105,15 +109,15 @@ font-size: 18px;
 
 
 
+
+
 header label.input-user {
-margin: 10px 2px 5px;
-text-align: center;
-font-size: 20px;
-border-radius: 50%;
-margin: 10px 2px 5px;
-padding: 0;
-height: 36px;
-width: 36px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 0;
+  height: 70px;
+  width: 70px;
 }
 
 header div ul li {
@@ -210,6 +214,9 @@ header div ul li a{
     display: block;
   }
 
+  header ul.menu-hiden li a{
+    display: none;
+  }
 
 
   header i{
@@ -303,7 +310,7 @@ display: none;
 header .logo-desktop {
   z-index: 1;
   position: absolute;
-  top: 30px;
+  top: 80px;
   display: flex;
   justify-content: center;
   }
