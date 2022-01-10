@@ -39,10 +39,16 @@ body{
 /* Slideshow */
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+  max-width: 1300px;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  display: flex;
   }
+
+  .slideshow-container video{
+    width: 100%;
+    }
   
   .mySlides.fade img{
     height: auto;
@@ -126,8 +132,8 @@ body{
 }
 
 .home main  section.top-menu{
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 2px;
   display: none;
   background-color: #f1d367;
   justify-content: center;
@@ -143,7 +149,17 @@ body{
     margin-left: 10px;
     padding: 0;
     box-shadow: 0px 0px 10px rgb(100 100 100);
+
+    
 }
+
+.home main section.top-menu div a img:hover{
+  transform: scale(1.20);
+  box-shadow: 0px 0px 20px rgb(100 100 100);
+}
+
+
+
 .home main section.top-menu div p{
   font-size: 25px;
      font-family: 'Open Sans Condensed', sans-serif;
@@ -168,7 +184,6 @@ body{
 .home main .icono-container {
   width: 100%;
   text-align: center;
-  background-color: rgba(241,211,103,0.5 );
   margin-top: 65px;
 }
 
@@ -352,7 +367,7 @@ width: 100%;
 display: none;
 }
 
-
+  
 
   .home main section.articulos div.productos {
     display: flex;
@@ -367,14 +382,7 @@ display: none;
 }
 
 
-
-
 }
-
-
-/* .home main section.top-menu .items-menu{
-    display: none;
-} */
 
 
 /* Section Nosotros */ 
@@ -401,12 +409,13 @@ display: none;
 
 .home main section div img, .home main section div iframe  {
   width: 80%;
-  margin-bottom: 20px;
   }
 
 .home main section div.icono-container img {
+  border: black solid;
   width: 50%;
-  
+  border-radius: 50%;
+  background-color: rgba(241,211,103,0.5 );
 }
 
 
@@ -450,15 +459,28 @@ display: none;
  }
 
  .home  .unite{
-  background-color: #2d2254;
   color: white;
   padding: 8px;
   width: 150px;
   border-radius: 10%;
   font-size: 25px;
   font-weight: bold;
+  border: none;
+  background-image: linear-gradient(to right, #2d2254 50%, #f1d367 100%);;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition:background-position .5s ease;
+  border: solid 1px black;
+  cursor: pointer;
+ }
+
+ .home  .unite:hover{
+  background-position: right;
 
  }
+
+
 
  /* section Eligen */
  .home .eligen{
@@ -483,13 +505,26 @@ display: none;
 
 
 .home #ACA{
-  background-color: #f1d367;
-  color: #2D2254;
+  color: white;
   padding: 8px;
   width: 150px;
   border-radius: 10%;
   font-size: 25px;
   font-weight: bold;
+  border: solid 1px black;
+
+  background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition:background-position .5s ease;
+  cursor: pointer;
+
+ }
+
+ .home #ACA:hover{
+  background-position: right;
+
  }
 
  .home .fondo-eligen{
@@ -619,8 +654,15 @@ display: none;
   /* Slideshow */
 
   .slideshow-container{
-    width: 1000px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .slideshow-container video{
+    width: 90%;
+    }
   
   .mySlides.fade img {
     height: auto;

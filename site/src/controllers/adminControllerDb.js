@@ -25,13 +25,39 @@ module.exports = {
     //     })
     // },
 	admin: (req, res) => {
-		db.Product.findAll({
-			include: [{ all: true }]
-		})
-			.then((products) => {
-            return res.render('admin/admin', {products})
-        })
-	},
+		// let products = db.Product.findAll({
+		// 	include: ['subcategories']
+		// })
+        // let categories = db.Category.findAll({
+        //     include: ['category']
+        //     })
+        // let subcategories = db.Subcategory.findAll({
+        //     include: ['category', 'products']
+        //     })
+
+        // Promise.all([products, categories, subcategories])
+		// 	.then(([products, categories, subcategories]) => {
+        //     return res.render('admin/admin', {
+        //         products, categories, subcategories
+        //     })
+        // })
+
+        db.Product.findAll({
+            include: [
+            {
+            association : 'subcategories',
+            include : [
+            {association : 'category'}
+            ]
+            }
+            ]
+            }) 
+
+            .then((products) => {
+                return res.render('admin/admin', {products})
+	})
+
+},
     // Create - Form to create a product
 	create: (req, res) => {
         {

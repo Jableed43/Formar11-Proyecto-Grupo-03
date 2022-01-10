@@ -26,7 +26,7 @@
           </div>
         </div>
 
-        <div class="loader">
+        <!-- <div class="loader">
           <img src="/images/tacoloader.png" alt="Taco" width="250vw">
           <div class="lds-roller">
             <div></div>
@@ -40,7 +40,7 @@
           </div>
           <h2 id="loader">Cargando los mejores ingredientes para vos...</h2>
           <script src="/javascripts/loader.js"></script>
-        </div>
+        </div> -->
 
         <!-- Script para mail -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -63,40 +63,40 @@
           }
           emailjs()
 
-          function validate() {
-            let loader = document.querySelector(".loader");
-            let name = document.querySelector("#fname")
-            let lastname = document.querySelector("#lname")
-            let subject = document.querySelector("#subject")
-            let btn = document.querySelector(".contactok")
+          // function validate() {
+          //   // let loader = document.querySelector(".loader");
+          //   let name = document.querySelector("#fname")
+          //   let lastname = document.querySelector("#lname")
+          //   let subject = document.querySelector("#subject")
+          //   let btn = document.querySelector(".contactok")
 
-            submit.addEventListener("click", (e) => {
-              e.preventDefault();
-              if (name.value == "" || lastname.value == "" || subject.value == "" || subject.value == "") {
-                error();
-              } else {
-                loader.style.display = "flex";
-                if (!sendmail()) {
-                  error();
-                  loader.style.display = "none";
-                  return;
-                }
-                sendmail(name.value, lastname.value, subject.value)
-                success();
-                loader.style.display = "none"
-                sendmail() ? loader.style.display = "none" : error()
-              }
-            })
-            validate();
+            // submit.addEventListener("click", (e) => {
+            //   e.preventDefault();
+            //   if (name.value == "" || lastname.value == "" || subject.value == "") {
+            //     error();
+            //   } else {
+            //     // loader.style.display = "flex";
+            //     if (!sendmail()) {
+            //       error();
+            //       loader.style.display = "none";
+            //       return;
+            //     }
+            //     sendmail(name.value, lastname.value, subject.value)
+            //     success();
+            //     // loader.style.display = "none"
+            //     sendmail() ? loader.style.display = "none" : error()
+            //   }
+            // })
+            // validate();
 
 
-            function sendmail(name, lastname, subject)
-            emailjs.send("service_x5r60jj", "template_ykg95fa", {
-              from_name: name,
-              to_name: lastname,
-              message: subject,
-            });
-          }
+          //   function sendmail(name, lastname, subject)
+          //   emailjs.send("service_x5r60jj", "template_ykg95fa", {
+          //     from_name: name,
+          //     to_name: lastname,
+          //     message: subject,
+          //   });
+          // }
 
           function success() {
             swal({
@@ -116,7 +116,7 @@
               button: "Ok!",
             });
           }
-
+          error()
 
 
         </script>

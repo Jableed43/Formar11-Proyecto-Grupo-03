@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <%- include("../partials/edit-create-head.ejs") %>
+
+    <title>Editar Producto</title>
+</head>
+<body>
+    
+    <%- include("../partials/admin-header.ejs") %>
+
+    <main class="create">
+      <div class="logo">
+        <img src='/images/logomin.png' alt="Logo Tacopado">
+      </div>
+      <h1>Estás editando "<%= product.title %>"</h1>
+
+      <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST"enctype="multipart/form-data">
+        <section class="contenedor-padre"> 
+      <div class="contenedor">
+        <article>
+            <input type="text" id="title" name="title" value="<%= product.title %>" placeholder="Nombre">
+            <% if (locals.errors && errors.title) { %>
+              <small class="mensajeError">
+                <%= errors.title.msg %>
+              </small>
+              <% } %>
+
+              <input type="text" id="description" name="description" placeholder="Descripción" style="height:170px"><%= product.description %></input>
+            <% if (locals.errors && errors.description) { %>
+              <small class="mensajeError">
+                <%= errors.description.msg %>
+              </small>
+              <% } %>
+
+              
+                <!-- Carga imagen -->
+                <img class="prod" src="/images/imgmenu/<%= product.images %>" alt="Foto producto actual">
+
+          <div>
+          <input type="file" id="images" name="images" oninput="preview.src=window.URL.createObjectURL(this.files[0])" hidden>
+          <label class="file" for="images">Foto Producto</label>
+          </div>
+          <% if (locals.errors && errors.images) { %>
+            <small class="mensajeError"> <%= errors.images.msg %> </small>
+            <% } %>
+          </div>        
+        </article>
+      </div>
+
+
+      <div class="contenedor3">
+        <article class="organizar">
+                            <!-- Carga sub, categoria, precio -->
+          <div>    
+            <select name="category" id="category">
+              <option value="" selected hidden>Categoría</option>
+
+              <% categories.forEach(category => { %>
+                <option value="<%= category.id %>" <%= product.subcategories.categoryId === category.id? 'selected' : null%>><%= category.name%></option>
+                <% }) %>
+              </select><br>
+              <% if (locals.errors && errors.category) { %>
+                <small class="mensajeError"> <%= errors.category.msg %> </small>
+                <% } %> 
+          </div>
+          <div>
+            <select name="subcategory" id="subcategory">
+              <option value="" selected hidden>Subcategoría</option>
+              <% subcategories.forEach(subcategory => { %>
+                <option value="<%= subcategory.id %>" <%= product.subcategoryId === subcategory.id ? 'selected' : null%>><%= subcategory.name %></option>
+                <% }) %>
+            </select><br>
+            <% if (locals.errors && errors.subcategory) { %>
+              <small class="mensajeError"> 
+                <%= errors.subcategory.msg %> 
+              </small>
+              <% } %> 
+          </div>
+
+          <div class="ultimo-input">
+            <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Precio">
+        </div>
+        </article>
+    
+        <!-- Valores nutricionales -->
+
+        <article class="nutri-big-box">
+
+                      <!-- Nutricionales-1 -->
+          <div class="nutri-box">
+          <div>
+            <label for="Calorías" name="calories" >Calorías</label>
+            <input type="number" placeholder="(kcal)" name="calories"  value="<%= product.calories %>">
+          </div>
+          <% if (locals.errors && errors.calories) { %>
+            <small class="mensajeError">
+              <%= errors.calories.msg %>
+            </small>
+            <% } %>
+
+          <div>
+            <label for="totalfat">Grasas Totales</label>
+            <input type="number" placeholder="(g)" name="totalfat"  value="<%= product.totalfat %>">
+          </div>
+          <% if (locals.errors && errors.totalfat) { %>
+            <small class="mensajeError">
+              <%= errors.totalfat.msg %>
+            </small>
+            <% } %>
+
+          <div>
+            <label for="carb" name="carb" id="carb">Carbohidratos</label>
+            <input type="number" placeholder="(g)" name="carb"  value="<%= product.carb %>">
+          </div>
+          <% if (locals.errors && errors.carb) { %>
+            <small class="mensajeError">
+              <%= errors.carb.msg %>
+            </small>
+            <% } %>
+
+          <div>
+            <label for="protein" name="protein" id="protein">Proteínas</label>
+            <input type="number" placeholder="(g)" name="protein"  value="<%= product.protein %>">
+          </div>
+          <% if (locals.errors && errors.protein) { %>
+            <small class="mensajeError">
+              <%= errors.protein.msg %>
+            </small>
+            <% } %>
+
+          <div>
+            <label for="transfat" name="transfat" id="transfat">Grasas Trans</label>
+            <input type="number" placeholder="(g)" name="transfat"  value="<%= product.transfat %>">
+          </div>
+          <% if (locals.errors && errors.transfat) { %>
+            <small class="mensajeError">
+              <%= errors.transfat.msg %>
+            </small>
+            <% } %>
+
+          </div>
+          <!-- Nutricionales-2 -->
+          <div class="nutri-box">
+
+          <div>
+            <label for="saturatedfat" name="saturatedfat" id="saturatedfat">Grasas Saturadas</label>
+            <input type="number" placeholder="(g)" name="saturatedfat"  value="<%= product.saturatedfat %>">
+          </div>
+          <% if (locals.errors && errors.saturatedfat) { %>
+            <small class="mensajeError">
+              <%= errors.saturatedfat.msg %>
+            </small>
+            <% } %>
+
+          <div>
+            <label for="cholesterol" name="cholesterol" id="cholesterol">Colesterol</label>
+            <input type="number" placeholder="(mg)" name="cholesterol"  value="<%= product.cholesterol %>">
+          </div>
+          <% if (locals.errors && errors.cholesterol) { %>
+            <small class="mensajeError">
+              <%= errors.cholesterol.msg %>
+            </small>
+            <% } %>
+            
+          <div>
+            <label for="sodium" name="sodium" id="sodium">Sodio</label>
+            <input type="number" placeholder="(mg)" name="sodium"  value="<%= product.sodium %>">
+          </div>
+          <% if (locals.errors && errors.sodium) { %>
+            <small class="mensajeError">
+              <%= errors.sodium.msg %>
+            </small>
+            <% } %>
+            
+          <div>
+            <label for="sugars" name="sugars">Azúcares</label>
+            <input type="number" placeholder="(g)" name="sugars"  value="<%= product.sugars %>">
+          </div>
+          <% if (locals.errors && errors.sugars) { %>
+            <small class="mensajeError">
+              <%= errors.sugars.msg %>
+            </small>
+            <% } %>
+                        
+          <div>
+            <label for="fiber" name="fiber" id="fiber">Fibras</label>
+            <input type="number" placeholder="(g)" name="fiber"  value="<%= product.fiber %>">
+          </div>
+          <% if (locals.errors && errors.fiber) { %>
+            <small class="mensajeError">
+              <%= errors.fiber.msg %>
+            </small>
+            <% } %>
+          </div>
+         
+        </article>
+
+
+      </div>
+    </article>
+
+    <article class="botonera">
+    <button class="guardar" type="submit">Guardar Modificaciones</button>
+    <button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
+  </article>
+    </section>
+    </form>
+      
+    </main>
+      
+    <%- include("../partials/admin-footer.ejs") %>
+    <script src="/javascripts/imagePreview.js"></script>
+  
+</body>
+</html> 

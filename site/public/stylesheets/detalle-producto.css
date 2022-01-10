@@ -18,7 +18,7 @@ body.Detalleprodu {
 }
 
 /* Botón Volver a página menú */
-.Detalleprodu main .menu {
+.Detalleprodu main .menu-nav {
   border: 1px solid grey;
   color: white;
   font-size: 12px;
@@ -29,7 +29,7 @@ body.Detalleprodu {
   padding: 10px;
 }
 
-.Detalleprodu .menu:hover{
+.Detalleprodu .menu-nav:hover {
   background-color: #3b3a36;
 }
 
@@ -45,11 +45,21 @@ body.Detalleprodu {
 }
 
 .Detalleprodu .foto {
-  background-color: white;
   width: 90vw;
   border: 5px solid #f1d367;
   border-radius: 20px;
+  background-image: url(/images/taco-vector.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: drop-shadow(2px 4px 6px white);
 }
+
+
+img.foto:hover{
+  transform:scale(1.01);
+}
+
+
 
 /* Botones para moverse entre productos */
 .Detalleprodu .antsig {
@@ -86,9 +96,12 @@ body.Detalleprodu {
 }
 
 .Detalleprodu h1 {
-  color: #2d2254;
+  color: var(--Amarillo);
   font-size: 2em;
   text-align: center;
+  width: 100%;
+  margin: 13px;
+  filter: drop-shadow(5px 1px 7px var(--Amarillo));
 }
 
 
@@ -98,8 +111,8 @@ body.Detalleprodu {
   width: 100%;
   font-weight: 300;
   text-align: center;
-  margin-top: 10px;
-  color: #373737;
+  padding: 10px;
+  color: var(--Violeta);
 }
 
 
@@ -161,19 +174,22 @@ margin-top: 15px;
 }
 
 .Detalleprodu .carrito{
-  background-color: #312757;
   border: none;
   border-radius: 5px;
-  color:white;
-  font-size: .8em;
+  color: #312757;
+  font-size: 2.8em;
   text-decoration: none;
   text-align: center;
   transition: 0.3s;
-  width: 25%;
-  padding: 10px;
+  width: 15%;
   margin-top: 15px;
   margin-left: 2%;
   margin-bottom: 20px;
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+.Detalleprodu .carrito:hover{
+  transform: scaleX(1.2);
 }
 
 /* Columnas de info */
@@ -184,6 +200,7 @@ margin-top: 15px;
   display: flex;
   text-align: center;
   justify-content: space-around;
+  flex-direction: row;
 }
 
 .Detalleprodu .columna {
@@ -291,9 +308,10 @@ margin-top: 15px;
 
  
 
-  .Detalleprodu .foto {
-    width: 80%;
-  }
+.Detalleprodu .foto {
+  width: 100%;
+  max-width: 700px;
+}
 
   .foto-container {
     display: flex;
@@ -302,6 +320,8 @@ margin-top: 15px;
     justify-content: center;
     align-items: center;
     width: 50%;
+
+    
 }
 
   .Detalleprodu .detalle {
@@ -326,7 +346,7 @@ margin-top: 15px;
 
 
 @media (min-width: 1024px){
-.Detalleprodu main .menu {
+.Detalleprodu main .menu-nav {
   border: 1px solid grey;
   color: white;
   font-size: 12px;
