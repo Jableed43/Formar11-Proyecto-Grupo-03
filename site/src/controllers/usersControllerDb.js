@@ -45,7 +45,7 @@ module.exports = {
                                 id_client: req.session.userLogin.id,
                                 status: 'pending'
                             },
-                            includes: [
+                            include: [
                                 {
                                     association: 'carts',
                                     include: [
@@ -58,6 +58,7 @@ module.exports = {
                             ],
                         })
                             .then(order => {
+                                console.log(order)
                                 if (order) {
                                     order.carts.forEach(item => {
                                         let product = {
@@ -73,7 +74,6 @@ module.exports = {
                                         req.session.cart.push(product)
                                     })
                                 }
-                                console.log('cart >>>>>>>',req.session.cart)
                                 return res.redirect('/')
 
                             })
@@ -196,31 +196,6 @@ module.exports = {
             })
             .catch(error => console.log(error))
     },
-    // Modifica datos del perfil por metodo PUT
-    // update: (req, res, next) => {
-    //     const { name, sexo, provincia, email } = req.body;
-
-    //     let img = req.files[0] ? req.files[0].filename : undefined;
-
-    //     db.User.update({
-    //         name,
-    //         email,
-    //         avatar: req.file ? req.file.filename : 'default-img.jpg',
-    //         id_sex: sexo,
-    //         id_province: provincia
-    //     },
-    //         {
-    //             where: {
-    //                 id: req.params.id
-    //             }
-    //         })
-    //         .then((result) => {
-    //             res.redirect('/users/profile')
-    //         })
-    //         .catch((error) => {
-    //             res.send(error)
-    //         })
-    // },
     update: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
