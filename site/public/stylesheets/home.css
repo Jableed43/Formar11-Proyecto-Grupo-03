@@ -653,6 +653,16 @@ display: none;
 
   /* Slideshow */
 
+  .top-menu-container{
+      display: flex;
+      justify-content: center;
+  }
+    
+  .top-menu{
+    width: 90%;
+  }
+  
+
   .slideshow-container{
     width: 80%;
     display: flex;
