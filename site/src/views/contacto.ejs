@@ -1,42 +1,130 @@
 <%- include("./partials/head.ejs") %>
-<body class="formcontacto">
+
+  <body class="formcontacto">
 
     <%- include("./partials/header.ejs") %>
 
-    <main>
+      <main>
         <div class="container">
-            <!-- <div style="text-align:center">
-              <h2>Contactanos</h2>
-              <p>Dejanos tu mensaje</p>
-            </div> -->
-            <div class="row">
-              <div class="column">
-                <img src="/images/sucursal3.jpeg" style="width:100%">
-              </div>
-              <div class="column">
-                <form action="/action_page.php">
-                  <label for="fname">Nombre</label>
-                  <input type="text" id="fname" name="Nombre" placeholder="Tu nombre..">
-                  <label for="lname">Apellido</label>
-                  <input type="text" id="lname" name="Apellido" placeholder="Tu apellido..">
-                  <label for="pais">País</label>
-                  <select id="country" name="country">
-                    <option value="argentina">Argentina</option>
-                    <option value="chile">Chile</option>
-                    <option value="uruguay">Uruguay</option>
-                    <option value="bolivia">Bolivia</option>
-                    <option value="paraguay">Paraguay</option>
-                  </select>
-                  <label for="subject">Mensaje</label>
-                  <textarea id="subject" name="subject" placeholder="Escribí tu mensaje aquí.." style="height:170px"></textarea>
-                  <input type="submit" value="Submit">
-                </form>
-              </div>
+          <div class="row">
+            <div class="column">
+              <img src="/images/sucursal3.jpeg" style="width:100%">
+            </div>
+            <div class="column">
+              <form action="/contacto">
+                <label for="fname">Nombre</label>
+                <input type="text" id="fname" name="Nombre" placeholder="Tu nombre..">
+                <label for="lname">Email</label>
+                <input type="text" id="lname" name="Email" placeholder="Tu Email..">
+                <label for="subject">Mensaje</label>
+                <textarea id="subject" name="subject" placeholder="Escribí tu mensaje aquí.."
+                  style="height:170px"></textarea>
+                <input type="submit" value="Submit" class="contactok">
+
+              </form>
             </div>
           </div>
-    </main>
+        </div>
 
-    <%- include("./partials/footer.ejs") %>
+        <!-- <div class="loader">
+          <img src="/images/tacoloader.png" alt="Taco" width="250vw">
+          <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <h2 id="loader">Cargando los mejores ingredientes para vos...</h2>
+          <script src="/javascripts/loader.js"></script>
+        </div> -->
+
+        <!-- Script para mail -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function () {
+            emailjs.init("user_yNOATuhLWUREVbrsoXdbL");
+          })();
+        </script>
+        <!-- 
+      User ID : user_yNOATuhLWUREVbrsoXdbL
+      Access Token : cb02bed941ccce214a01abb292114a75 
+    -->
+
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+
+          function emailjs() {
+            emailjs.init("user_yNOATuhLWUREVbrsoXdbL");
+          }
+          emailjs()
+
+          // function validate() {
+          //   // let loader = document.querySelector(".loader");
+          //   let name = document.querySelector("#fname")
+          //   let lastname = document.querySelector("#lname")
+          //   let subject = document.querySelector("#subject")
+          //   let btn = document.querySelector(".contactok")
+
+            // submit.addEventListener("click", (e) => {
+            //   e.preventDefault();
+            //   if (name.value == "" || lastname.value == "" || subject.value == "") {
+            //     error();
+            //   } else {
+            //     // loader.style.display = "flex";
+            //     if (!sendmail()) {
+            //       error();
+            //       loader.style.display = "none";
+            //       return;
+            //     }
+            //     sendmail(name.value, lastname.value, subject.value)
+            //     success();
+            //     // loader.style.display = "none"
+            //     sendmail() ? loader.style.display = "none" : error()
+            //   }
+            // })
+            // validate();
+
+
+          //   function sendmail(name, lastname, subject)
+          //   emailjs.send("service_x5r60jj", "template_ykg95fa", {
+          //     from_name: name,
+          //     to_name: lastname,
+          //     message: subject,
+          //   });
+          // }
+
+          function success() {
+            swal({
+              title: "Mensaje enviado!",
+              text: "En menos de 72hs nos pondremos en contacto con vos!",
+              icon: "success",
+              button: "Genial!",
+            });
+          }
+          success()
+
+          function error() {
+            swal({
+              title: "Algo salió mal!",
+              text: "Tu mensaje no pudo ser enviado. Verificá completar todos los datos e intentá nuevamente",
+              icon: "error",
+              button: "Ok!",
+            });
+          }
+          error()
+
+
+        </script>
+
+      </main>
+
+      <%- include("./partials/footer.ejs") %>
 
   </body>
+
   </html>

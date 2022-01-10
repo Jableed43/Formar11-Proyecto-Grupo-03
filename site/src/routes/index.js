@@ -14,4 +14,8 @@ router.get('/menu', indexController.menu);
 /* GET beneficios */
 router.get('/beneficios', indexController.beneficios);
 
+/* GET loader */
+router.get('/loader', indexController.loader);
+
+
 module.exports = router;

@@ -1,3 +1,6 @@
+const db = require('../database/models')
+const { Op } = require('sequelize')
+
 let controller = {
     home: (req, res, next) => {
         res.render('index');
@@ -10,6 +13,9 @@ let controller = {
     },
     beneficios: (req, res, next) => {
         res.render('beneficios');
+    },
+    loader: (req, res, next) => {
+        res.render('loader');
     }
 }
 

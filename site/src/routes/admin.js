@@ -19,8 +19,13 @@ router.post('/create', upload.single('images'), validacionesProducts, adminContr
 router.get('/edit/:id', adminUserCheck, adminController.edit); 
 router.put('/edit/:id', upload.single('images'), validacionesProductsEdit, adminController.update); 
 
-
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 
+
+/* GET USERS */
+router.get('/userlist', adminUserCheck, adminController.userlist);
+
+/* GET USERS */
+router.get('/results', adminUserCheck, adminController.prodsearch);
 
 module.exports = router;

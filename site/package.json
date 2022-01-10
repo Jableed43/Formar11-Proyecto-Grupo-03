@@ -6,6 +6,7 @@
     "start": "nodemon ./src/bin/www"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.3.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -20,6 +21,7 @@
     "multer": "^1.4.3",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.14",
-    "sequelize": "^6.9.0"
+    "sequelize": "^6.9.0",
+    "sweetalert": "^2.1.2"
   }
 }

@@ -9,8 +9,8 @@ module.exports = {
                 association: 'subcategories',
                 include: [{ all: true }]}
 
-            })
-        let Tacos = db.Subcategory.findAll({
+        })
+        let Tacos = db.Subcategories.findAll({
             where: {
                 id: 1
             },
@@ -19,7 +19,7 @@ module.exports = {
                 
             ]
         })
-        let Burritos = db.Subcategory.findAll({
+        let Burritos = db.Subcategories.findAll({
             where: {
                 id: 2
             },
@@ -28,7 +28,7 @@ module.exports = {
             ]
         })
 
-        let Quesadillas = db.Subcategory.findAll({
+        let Quesadillas = db.Subcategories.findAll({
             where: {
                 id: 3
             },
@@ -37,7 +37,7 @@ module.exports = {
             ]
         })
 
-        let Entradas = db.Subcategory.findAll({
+        let Entradas = db.Subcategories.findAll({
             where: {
                 id: 4
             },
@@ -46,7 +46,7 @@ module.exports = {
             ]
         })
 
-        let Platos = db.Subcategory.findAll({
+        let Platos = db.Subcategories.findAll({
             where: {
                 id: 5
             },
@@ -55,7 +55,7 @@ module.exports = {
             ]
         })
 
-        let Ensaladas = db.Subcategory.findAll({
+        let Ensaladas = db.Subcategories.findAll({
             where: {
                 id: 6
             },
@@ -64,7 +64,7 @@ module.exports = {
             ]
         })
 
-        let Salsas = db.Subcategory.findAll({
+        let Salsas = db.Subcategories.findAll({
             where: {
                 id: 7
             },
@@ -73,7 +73,7 @@ module.exports = {
             ]
         })
 
-        let Dulces = db.Subcategory.findAll({
+        let Dulces = db.Subcategories.findAll({
             where: {
                 id: 8
             },
@@ -82,7 +82,7 @@ module.exports = {
             ]
         })
 
-        let Gaseosas = db.Subcategory.findAll({
+        let Gaseosas = db.Subcategories.findAll({
             where: {
                 id: 9
             },
@@ -91,7 +91,7 @@ module.exports = {
             ]
         })
 
-        let Jugos = db.Subcategory.findAll({
+        let Jugos = db.Subcategories.findAll({
             where: {
                 id: 10
             },
@@ -100,7 +100,7 @@ module.exports = {
             ]
         })
 
-        let Aguas = db.Subcategory.findAll({
+        let Aguas = db.Subcategories.findAll({
             where: {
                 id: 11
             },
@@ -139,5 +139,28 @@ module.exports = {
             .catch(err => {
                 console.log('Error al requerir los géneros de la base de datos ' + err)
             })
-    }
+    },
+    search: (req, res) => {
+        db.Product.findAll({
+            include: [ "subcategories" ],
+                where: {
+                    [Op.or]: [{
+                            title: {
+                                [Op.like]: `%${req.query.busqueda.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(product => {
+                return res.send(product)
+                res.render('products/results', {
+                    title: 'Resultado de busqueda',
+                    product
+                })
+            })
+            .catch(err => {
+                console.log('Error al requerir los productos de la base de datos ' + err)
+            })
+    },
 }

@@ -32,4 +32,9 @@ Ofrecemos una página pensada y realizada para los jovenes que quieren experimen
 [Trello](https://trello.com/b/Ch0oeNJA/proyecto-integrador-grupo-3)
 
 
+## ***Recursos externos usados***
+* EmailJs para la página de contacto (https://www.emailjs.com/)
+* Sweet Alert para los alert de la página (https://sweetalert.js.org/)
+
+
 
