@@ -110,7 +110,7 @@
 	font-size: 20px;
 }
 
-.carrito .cart-total a{
+.carrito .cart-total .pagar{
 	display: block;
 	text-align: center;
 	height: 40px;
@@ -120,8 +120,22 @@
 	text-decoration: none;
 }
 
-.carrito .cart-total a:hover{
+.carrito .cart-total .pagar:hover{
 	background-color: red;
+}
+
+.carrito .cart-total .vaciar {
+	margin-left: auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.carrito .cart-total .vaciar a {
+	text-decoration: none;
+	background-color: #2d2254;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 @media screen and (max-width: 700px){

@@ -8,6 +8,7 @@ const spanCantidad = $('span-cantidad');
 const spanCantidadCarrito = $('span-cantidad-cart');
 const boxCart = $('box-cart');
 const cartEmpty = $('cart-empty');
+let btnCartEmpty = $('vaciar');
 
 const mostrarCantidad = (carrito) => {
     let amount = 0;
@@ -150,4 +151,24 @@ const removeTotalItem = async (e, id) => {
 
     }
 }
+
+const empty = async (e, id) => {
+    // e.preventDefault()
+
+    try {
+        
+        let response = await fetch('/cart/empty/');
+        let result = await response.json();
+
+        cargarTabla(result.data);
+        mostrarCantidad(result.data);
+
+    } catch (error) {
+        console.error(error)
+
+    }
+}
+
+btnCartEmpty.addEventListener('click',() => empty())
+
 getCarrito()

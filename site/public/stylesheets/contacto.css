@@ -7,18 +7,30 @@
     resize: vertical;
   }
   
-  .formcontacto  input[type=submit] {
+  /* .formcontacto  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  } */
+  
+  /* .formcontacto input[type=submit]:hover {
+    background-color: #45a049;
+  } */
+  
+  .formcontacto  button {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
   }
-  
-  .formcontacto input[type=submit]:hover {
+
+  .formcontacto button:hover {
     background-color: #45a049;
   }
-  
+
   /* Style the container/contact section */
   .formcontacto .container {
     border-radius: 5px;
