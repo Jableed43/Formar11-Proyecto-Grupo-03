@@ -121,9 +121,7 @@ module.exports = {
             {
                 include: ['subcategories']
             })
-        let categories = db.Category.findAll({
-            include: ['category']
-        })
+        let categories = db.Category.findAll()
         let subcategories = db.Subcategory.findAll()
 
 
