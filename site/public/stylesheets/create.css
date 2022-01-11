@@ -295,8 +295,10 @@ small {
 }
 
 .prod {
-    width: 50vw;
-    border: #f1d367 solid 2px;
+    max-width: 250px;
+    max-height: 230px;
+    margin: 20px;
+    width: 100%;
 }
 
 main.create .invalido {
@@ -375,9 +377,6 @@ main.create .valido {
     main.create div.contenedor5 article{
         border-radius: 0;
     }
-    .prod {
-        width: 30vw;
-        border: #f1d367 solid 2px;
-    }
+
 
 }

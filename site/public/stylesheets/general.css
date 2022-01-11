@@ -11,7 +11,7 @@ html{
 }
 
 a {
-    color: #2d2254;
+    color: #2d2254 !important;
     text-decoration: none !important;
 }
 
