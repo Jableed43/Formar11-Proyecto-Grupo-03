@@ -14,7 +14,12 @@
                         <div class="botonera-contenedor">
                         <button class="ver-mas">Ver más</button>
                         <!-- <button class="plus"> <i class="fas fa-cart-plus"></i> </button> -->
-                        <button class="plus"  onclick="addItem(event, '<%= products.id %>')"><i class="fas fa-cart-plus"></i></button>
+                        <% if (locals.userLogin) { %>
+                            <button class="plus"  onclick="addItem(event, '<%= products.id %>')"><i class="fas fa-cart-plus"></i></button>
+                          <%  }else{ %> 
+                           
+                          <% } %>
+                        
                         </div>
                 </article>
             </a>
