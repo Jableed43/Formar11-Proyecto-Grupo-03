@@ -8,14 +8,14 @@
         </a>
   
           <!-- BARRA DE BUSQUEDA -->
-          <div id="input">
-          <form action="/products/results" method="GET" class="search">
+          <form action="/products/results" id="busqueda">
+            <div id="input">
               <input type="text" id="busqueda" name="busqueda" size="25" placeholder="Buscar...">
-              <button class="btn-search" type="search">
-                  <i class="fas fa-search"></i>
-              </button>
+            </div>
+            <button class="btn-search" type="submit">
+              <i class="fas fa-search"></i>
+          </button>
           </form>
-        </div>
         
 
         <% if (locals.userLogin) { %>

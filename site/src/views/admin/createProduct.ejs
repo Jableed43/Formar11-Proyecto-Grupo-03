@@ -16,12 +16,6 @@
       </div>
       <h1>NUEVO PRODUCTO</h1>
 
-      <form class="creacionform" action="" method="post" enctype="multipart/form-data">
-      <div class="contenedor">
-        <article>
-            <h2>Título</h2>
-            <input type="text" id="title" name="title" placeholder="Nombre de plato" value="<%= locals.old && old.title ? old.title : null %>">>
-
       <form action="" method="post" enctype="multipart/form-data">
         <section class="contenedor-padre"> 
       <div class="contenedor">
@@ -34,8 +28,7 @@
               </small>
               <% } %>
 
-            <!-- <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px"><%= locals.old && old.description ? old.description : null %> </textarea> -->
-            <input type="text" id="description" name="description" placeholder="Descripción" style="height:170px"><%= locals.old && old.description ? old.description : null %> </input>
+            <input type="text" id="description" name="description" placeholder="Descripción" style="height:170px" value="<%= locals.old && old.description ? old.description : null %> "></input>
 
             <% if (locals.errors && errors.description) { %>
               <small class="mensajeError" id="sdescription">

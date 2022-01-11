@@ -129,7 +129,7 @@ module.exports = {
 
         Promise.all([product, categories, subcategories])
             .then(([product, categories, subcategories]) => {
-                res.render('admin/editProduct', {
+                res.render('admin/edit-nuevo', {
                     product,
                     categories,
                     subcategories
@@ -198,7 +198,7 @@ module.exports = {
 
             Promise.all([product, categories, subcategories])
                 .then(([product, categories, subcategories]) => {
-                    return res.render('admin/editProduct', {
+                    return res.render('admin/edit-nuevo', {
                         product,
                         categories,
                         subcategories,

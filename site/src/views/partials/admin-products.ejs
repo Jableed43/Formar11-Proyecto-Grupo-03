@@ -2,13 +2,13 @@
 
     <% products.map((product, index)=> { %>
             
-        <tr>
+        <!-- <tr>
           <th scope="row"><%= index + 1 %></th>
             <td class="taco"><%=product.title%></td>
             <td><%=product.price%></td>
 
             <td><%=product.subcategories.category.name%></td>
-            <td><%=product.subcategories.name%></td> 
+            <td><%=product.subcategories.name%></td>  -->
 
     <tr>
       <th scope="row">
@@ -22,10 +22,10 @@
         <%=product.price%>
       </td>
       <td>
-        <%=product.categoryId%>
+        <td><%=product.subcategories.category.name%></td>
       </td>
       <td>
-        <%=product.subcategoryId%>
+        <td><%=product.subcategories.name%></td> 
       </td>
 
       <td>

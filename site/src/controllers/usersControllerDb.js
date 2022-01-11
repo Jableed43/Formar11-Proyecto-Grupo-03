@@ -64,7 +64,7 @@ module.exports = {
                                         let product = {
                                             id: item.id_products,
                                             title: item.product.title,
-                                            image: item.product.image,
+                                            images: item.product.images,
                                             price: item.product.price,
                                             subcategory: item.product.subcategories.name,
                                             amount: item.cantidad,
