@@ -19,7 +19,7 @@
   width: auto;
   margin-top: 0px;
   padding: 16px;
-  color: white;
+  color: var(--Amarillo) !important;
   font-weight: bold;
   font-size: 18px;
   border-radius: 0 3px 3px 0;

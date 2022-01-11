@@ -18,9 +18,8 @@
         <% if (locals.userLogin) { %>
 
 
-          <label for='user' class="input-user"><a href="/users/profile"><img class="imgUser" src="/images/users/<%= locals.userLogin.avatar ? locals.userLogin.avatar : 'default-img.jpg'%>" alt="imagen de usuario"></a></label>
           <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
-            <ul>
+            <ul class="crown">
             <li class="texto"><a href="/admin"><i class="fas fa-crown"></i></a> </li>
           </ul>
           <% } %>
@@ -28,12 +27,12 @@
 
         <% } %>
 
-        <% if (locals.userLogin) { %>
+        <!-- <% if (locals.userLogin) { %>
           <div class="user-cart">
           <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
           <span class=" badge rounded-pill bg-warning text-dark position-absolute bottom-0" id="span-cantidad-cart"></span>
           </div>
-          <% } %>
+          <% } %> -->
 
 
         <nav class="container-menu">
@@ -42,15 +41,25 @@
             <li class="texto"><a href="/beneficios"><i class="fas fa-gift"></i></a> </li>
 
         </ul>
-        <ul class="menu-hiden"><li><a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
+
         </li><div class="logo-desktop"><a href="/"><img src="/images/Logo.png" alt="logo"></a></div>
         </ul>
+
+        <% if (locals.userLogin) { %>
+          <div class="user-cart">
+          <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
+          <span class=" badge rounded-pill bg-warning text-dark position-absolute" id="span-cantidad-cart"></span>
+          </div>
+          <% } %>
 
 
 
         <% if (locals.userLogin) { %>  
           <ul class="menu">      
-                <li class="texto"><a href="/users/profile"><i class="fas fa-user"></i></a> </li>
+            <li>
+              <label for='user' class="input-user"><a href="/users/profile"><img class="imgUser" src="/images/users/<%= locals.userLogin.avatar ? locals.userLogin.avatar : 'default-img.jpg'%>" alt="imagen de usuario"></a></label>
+
+            </li>
                 
                 <li class="texto"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a> </li> 
 

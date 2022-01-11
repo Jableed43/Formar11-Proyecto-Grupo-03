@@ -394,16 +394,23 @@ display: none;
 .home section h1{
   color: white;
   text-transform: uppercase;
-  margin: 10px;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
 }
 
 .home section h1 img{
   width: 20%;
 }
+
+.home div.fondo-eligen h1 img{
+  border: none;
+  width: 15%;
+  margin-left: 40px
+}
+
 
 
 .home .eligen-flex{
@@ -428,10 +435,10 @@ display: none;
 }
 
 .home main section div.icono-container img {
-  border: black solid;
+  border: var(--Amarillo) solid;
   width: 50%;
   border-radius: 50%;
-  background-color: rgba(241,211,103,0.5 );
+  background-color: rgba(241,211,10,0.2)
 }
 
 
@@ -554,8 +561,8 @@ display: none;
  .home .fondo-eligen{
   background-color: #2D2254;
   width: 100%;
-  padding-bottom: 40px;
-  border: 3px solid var(--Amarillo);
+  padding-bottom: 15px;
+  border: 3px solid var(--Amarillo)
  }
 /* section Sucursales */
 .home .sucursales, .fondo-sucursal {
@@ -641,8 +648,7 @@ display: none;
 }
 
 .home section h1{
-  font-size: 30px;
-  margin: 20px;
+  font-size: 25px;
 }
 
 .home main section h2 {
