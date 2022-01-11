@@ -1,8 +1,3 @@
-// const fs = require('fs');
-// const path = require('path');
-// const productsFilePath = path.join(__dirname, '../data/products.json');
-// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const db = require('../database/models')
 const { Op } = require('sequelize')
 const { validationResult } = require('express-validator')
@@ -121,9 +116,7 @@ module.exports = {
             {
                 include: ['subcategories']
             })
-        let categories = db.Category.findAll({
-            include: ['category']
-        })
+        let categories = db.Category.findAll()
         let subcategories = db.Subcategory.findAll()
 
 
