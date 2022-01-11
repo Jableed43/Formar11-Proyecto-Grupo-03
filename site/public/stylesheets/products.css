@@ -24,6 +24,7 @@ body.products div.contenedor{
     transition-duration: 0.5s;
     border-radius: 6%;
     margin: 15px 10px;
+    border: 2px solid var(--Amarillo);
 }
 body.products div.contenedor:hover{
     background-color: #463686;

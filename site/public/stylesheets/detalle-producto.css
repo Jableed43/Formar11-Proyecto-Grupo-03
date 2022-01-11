@@ -83,6 +83,7 @@ img.foto:hover{
   background-color: #f1d367;
   border-radius: 20px;
   box-sizing: border-box;
+  border: 3px solid var(--Violeta);
 }
 
 /* Categoría */

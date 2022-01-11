@@ -8,6 +8,7 @@ header .flex-header{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 3px solid var(--Violeta);
 }
 
 header div#input {
@@ -81,7 +82,7 @@ header .menu-hiden li i.fas.fa-shopping-cart{
  }
 
 header div ul li a{
-  color: var(--Amarillo);
+  color: var(--Amarillo) !important;
   font-size: 50px;
 }
 
@@ -134,10 +135,12 @@ ul.menu{
   flex-wrap: nowrap;
   justify-content: center;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 ul.menu-hiden{
   padding-left: 0;
+  margin-bottom: 0;
 
 }
 
@@ -235,10 +238,6 @@ header div ul li a{
     transform: scale(1.2);
   }
 
-  header {
-    padding-bottom: 15px;
-    
-  }
   
   header ul li img{
     left: 310px;
