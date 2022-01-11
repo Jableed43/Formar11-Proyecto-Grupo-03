@@ -27,7 +27,7 @@
               </small>
               <% } %>
 
-              <input type="text" id="description" name="description" placeholder="Descripción" style="height:170px"><%= product.description %></input>
+              <input type="text" id="description" name="description" placeholder="Descripción" style="height:170px" value="<%= product.description %>"></input>
             <% if (locals.errors && errors.description) { %>
               <small class="mensajeError">
                 <%= errors.description.msg %>
@@ -212,6 +212,7 @@
       
     <%- include("../partials/admin-footer.ejs") %>
     <script src="/javascripts/imagePreview.js"></script>
+    <script src="/javascripts/validacion-prod.js"></script>
   
 </body>
 </html> 

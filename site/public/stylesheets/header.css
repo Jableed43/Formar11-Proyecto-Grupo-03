@@ -11,8 +11,9 @@ header .flex-header{
 }
 
 header div#input {
-  left: -27%;
+  left: -26%;
   position: relative;
+  margin: 10px 0;
 }
 
 img.logo{

@@ -7,12 +7,12 @@ router.get('/', indexController.home);
 
 /* GET contacto */
 router.get('/contacto', indexController.contacto);
+router.post('/send', indexController.contactoSend);
 
 /* GET menu */
 router.get('/menu', indexController.menu);
 
 /* GET beneficios */
 router.get('/beneficios', indexController.beneficios);
-
 
 module.exports = router;

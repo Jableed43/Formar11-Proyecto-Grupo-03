@@ -1,0 +1,53 @@
+<%- include("../partials/head.ejs") %>
+
+<body class="products">
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+     
+            <h2 class="products-title">Resultados de la búsqueda</h2>
+
+            <!-- Show the "comidas" products -->
+      
+            <div class="row">
+
+                <% products.map(products => { %>
+                        
+                <div class="contenedor">
+                    <section class="products">
+                        <a href="/products/detail/<%= products.id %> ">
+                            <article class="product-container">
+                                <img src="/images/imgmenu/<%= products.images %>" alt= "Foto Producto">
+                                <p><%= products.title %></p>
+                                <nav>
+            
+                                    <ul type="none">
+            
+                                        <li><%= products.description %></li>
+            
+                                    </ul>
+                                </nav>
+                                    <div class="botonera-contenedor">
+                                    <button class="ver-mas">Ver más</button>
+                                    <button class="plus" onclick="addItem(event, '<%= products.id %>')">+</button>
+                                    </div>
+                            </article>
+                        </a>
+                    </section>
+                </div>
+            
+            <% }) %>
+            </div>         
+            
+            </div>
+            
+            <% if (products.length <= 0) { %>
+                <h2 class="products-title">Tacomplicado encontrar tu producto</h2>
+                 <% } %>
+        
+    </main>
+
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+</html>
