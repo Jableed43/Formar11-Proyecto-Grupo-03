@@ -19,36 +19,21 @@
                 <label for="subject">Mensaje</label>
                 <textarea id="subject" name="subject" placeholder="Escribí tu mensaje aquí.."
                   style="height:170px"></textarea>
-                <input type="submit" value="Submit" class="contactok">
+                <input type="submit" id="button" value="Enviar mensaje" class="contactok">
 
               </form>
             </div>
           </div>
         </div>
 
-        <!-- <div class="loader">
-          <img src="/images/tacoloader.png" alt="Taco" width="250vw">
-          <div class="lds-roller">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <h2 id="loader">Cargando los mejores ingredientes para vos...</h2>
-          <script src="/javascripts/loader.js"></script>
-        </div> -->
 
         <!-- Script para mail -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
         <script type="text/javascript">
-          (function () {
-            emailjs.init("user_yNOATuhLWUREVbrsoXdbL");
-          })();
+          emailjs.init('user_yNOATuhLWUREVbrsoXdbL')
         </script>
+
         <!-- 
       User ID : user_yNOATuhLWUREVbrsoXdbL
       Access Token : cb02bed941ccce214a01abb292114a75 
@@ -56,75 +41,96 @@
 
         <!-- Sweet Alert -->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script type="text/javascript">
-
-          function emailjs() {
-            emailjs.init("user_yNOATuhLWUREVbrsoXdbL");
-          }
-          emailjs()
-
-          // function validate() {
-          //   // let loader = document.querySelector(".loader");
-          //   let name = document.querySelector("#fname")
-          //   let lastname = document.querySelector("#lname")
-          //   let subject = document.querySelector("#subject")
-          //   let btn = document.querySelector(".contactok")
-
-            // submit.addEventListener("click", (e) => {
-            //   e.preventDefault();
-            //   if (name.value == "" || lastname.value == "" || subject.value == "") {
-            //     error();
-            //   } else {
-            //     // loader.style.display = "flex";
-            //     if (!sendmail()) {
-            //       error();
-            //       loader.style.display = "none";
-            //       return;
-            //     }
-            //     sendmail(name.value, lastname.value, subject.value)
-            //     success();
-            //     // loader.style.display = "none"
-            //     sendmail() ? loader.style.display = "none" : error()
-            //   }
-            // })
-            // validate();
-
-
-          //   function sendmail(name, lastname, subject)
-          //   emailjs.send("service_x5r60jj", "template_ykg95fa", {
-          //     from_name: name,
-          //     to_name: lastname,
-          //     message: subject,
-          //   });
-          // }
-
-          function success() {
-            swal({
-              title: "Mensaje enviado!",
-              text: "En menos de 72hs nos pondremos en contacto con vos!",
-              icon: "success",
-              button: "Genial!",
-            });
-          }
-          success()
-
-          function error() {
-            swal({
-              title: "Algo salió mal!",
-              text: "Tu mensaje no pudo ser enviado. Verificá completar todos los datos e intentá nuevamente",
-              icon: "error",
-              button: "Ok!",
-            });
-          }
-          error()
-
-
-        </script>
 
       </main>
 
       <%- include("./partials/footer.ejs") %>
 
   </body>
+  <script>
+    const btn = document.getElementById('button');
 
+    document.getElementById('form')
+      .addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_ykg95fa';
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.value = 'Enviar';
+            swal({
+              title: "Mensaje enviado!",
+              text: "En menos de 72hs nos pondremos en contacto con vos!",
+              icon: "success",
+              button: "Genial!",
+            });
+          }, (err) => {
+            btn.value = 'Enviar';
+            swal({
+              title: "Algo salió mal!",
+              text: "Tu mensaje no pudo ser enviado. Verificá completar todos los datos e intentá nuevamente",
+              icon: "error",
+              button: "Ok!",
+            });;
+          });
+      });
+  </script>
+          <script type="text/javascript">
+  
+          //   function validate() {
+          //     let name = document.querySelector("#fname")
+          //     let lastname = document.querySelector("#lname")
+          //     let subject = document.querySelector("#subject")
+          //     let btn = document.querySelector(".contactok")
+  
+          //   submit.addEventListener("click", (e) => {
+          //     e.preventDefault();
+          //     if (name.value == "" || lastname.value == "" || subject.value == "") {
+          //       error();
+          //     } else {
+          //       if (!sendmail()) {
+          //         error();
+          //         return;
+          //       }
+          //       sendmail(name.value, lastname.value, subject.value)
+          //       success();
+          //     }
+          //   })
+          //   validate();
+  
+  
+          //     function sendmail(name, lastname, subject)
+          //     emailjs.send("service_x5r60jj", "template_ykg95fa", {
+          //       from_name: name,
+          //       to_name: lastname,
+          //       message: subject,
+          //     });
+          //   }
+  
+          //   function success() {
+          //     swal({
+          //       title: "Mensaje enviado!",
+          //       text: "En menos de 72hs nos pondremos en contacto con vos!",
+          //       icon: "success",
+          //       button: "Genial!",
+          //     });
+          //   }
+          //   success()
+  
+          //   function error() {
+          //     swal({
+          //       title: "Algo salió mal!",
+          //       text: "Tu mensaje no pudo ser enviado. Verificá completar todos los datos e intentá nuevamente",
+          //       icon: "error",
+          //       button: "Ok!",
+          //     });
+          //   }
+          //   error()
+  
+  
+          // </script>
   </html>

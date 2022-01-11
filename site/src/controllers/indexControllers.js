@@ -13,9 +13,6 @@ let controller = {
     },
     beneficios: (req, res, next) => {
         res.render('beneficios');
-    },
-    loader: (req, res, next) => {
-        res.render('loader');
     }
 }
 
