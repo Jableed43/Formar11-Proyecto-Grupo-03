@@ -202,7 +202,16 @@
     </article>
 
     <article class="botonera">
-    <button class="guardar" type="submit">Guardar Modificaciones</button>
+    <button class="guardar" type="submit" onclick="cambios()">Guardar Modificaciones</button>
+
+    <script type="text/javascript">
+
+      function cambios() {
+        swal("¡Cambios guardados!", "Te redirigiremos a la lista de productos", "success");
+      }
+
+    </script>
+
     <button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
   </article>
     </section>

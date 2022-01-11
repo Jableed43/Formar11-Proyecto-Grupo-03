@@ -207,10 +207,16 @@
 
       </div>
       <article class="botonera">
-        <button class="guardar" type="submit">Guardar</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
+        <button class="guardar" type="submit" onclick="creado()">Guardar</button><button class="borrar" type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
       </article>
     </section>
     </form>
+
+    <script type="text/javascript">
+      function creado(){
+        swal("¡Producto creado!", "Te redirigiremos al producto creado", "success");
+      }
+    </script>
       
     </main>
       

@@ -115,10 +115,16 @@
             
               <div class="buttons">
               <label for="submit">Editar datos</label>
-              <input type="submit" id="submit" value="Editar datos" hidden>
+              <input type="submit" id="submit" value="Editar datos" hidden onclick="datoeditado()">
               </div>
 
           </form>
+
+          <script type="text/javascript">
+            function datoeditado(){
+              swal("¡Cambios guardados!", "¡Gracias por actualizar tus datos", "success");
+            }
+          </script>
         </section>
 
 

@@ -121,9 +121,7 @@ module.exports = {
             {
                 include: ['subcategories']
             })
-        let categories = db.Category.findAll({
-            include: ['category']
-        })
+        let categories = db.Category.findAll()
         let subcategories = db.Subcategory.findAll()
 
 
@@ -192,7 +190,10 @@ module.exports = {
                 errors.errors.push(images)
             }
 
-            let product = db.Product.findByPk(req.params.id)
+            let product = db.Product.findByPk(req.params.id,
+                {
+                    include: ['subcategories']
+                })
             let categories = db.Category.findAll()
             let subcategories = db.Subcategory.findAll()
 

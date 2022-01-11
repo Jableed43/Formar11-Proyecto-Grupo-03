@@ -1,8 +1,8 @@
 <div class="row">
 
-    <% products.map((product, index)=> { %>
-            
-        <!-- <tr>
+  <% products.map((product, index)=> { %>
+
+    <!-- <tr>
           <th scope="row"><%= index + 1 %></th>
             <td class="taco"><%=product.title%></td>
             <td><%=product.price%></td>
@@ -21,10 +21,14 @@
       <td>
         <%=product.price%>
       </td>
-      
-        <td><%=product.subcategories.category.name%></td>
-  
-        <td><%=product.subcategories.name%></td> 
+
+      <td>
+        <%=product.subcategories.category.name%>
+      </td>
+
+      <td>
+        <%=product.subcategories.name%>
+      </td>
 
       <td>
         <a href="admin/edit/<%= product.id %>">
@@ -32,8 +36,30 @@
         </a>
 
         <form action="admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-          <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+          <button class="borrar" onclick="confirmacion()"><i class="fa fa-trash" aria-hidden="true"></i></button>
         </form>
+
+        <script type="text/javascript">
+          function confirmacion() {
+            swal({
+              title: "¿Estás seguro de eliminar el producto?",
+              text: "Una vez eliminado se borrará el registro en la base de datos",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            })
+              .then((willDelete) => {
+                if (willDelete) {
+                  swal("Poof! Tu producto ya no existe!", {
+                    icon: "success",
+                  });
+                } else {
+                  swal("Tu producto sigue activo");
+                }
+              });
+          }
+        </script>
+
       </td>
     </tr>
 

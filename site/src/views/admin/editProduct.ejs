@@ -16,18 +16,6 @@
       </div>
       <h1>Estás editando "<%= product.title %>"</h1>
 
-<<<<<<< HEAD
-      <form action="/products/edit/<%= productEdit.id %>?_method=PUT" method="POST">
-          <div class="contenedor">
-            <article>
-                <h2>Título</h2>
-                <input type="text" id="title" name="title" placeholder="Nombre de plato" value="<%= locals.old && old.name ? old.name : null %>">
-                <% if (locals.errors && errors.title) { %>
-                  <small class="mensajeError" id="stitle">
-                    <%= errors.title.msg %>
-                  </small>
-                  <% } %>
-=======
       <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST"enctype="multipart/form-data">
         <div class="contenedor">
           <article>
@@ -98,7 +86,6 @@
                 <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Inserte precio aquí...">
             </div>
           </article>
->>>>>>> 8f62f125734c215fd71a67caa34d27cdc3c65a38
     
                 <h2>Descripción</h2>
                 <textarea id="description" name="description" placeholder="Escribí la descripción del producto aquí.." style="height:170px" value="<%= locals.old && old.name ? old.name : null %>"></textarea>
