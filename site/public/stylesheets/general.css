@@ -11,8 +11,8 @@ html{
 }
 
 a {
-    color: #2d2254;;
-    text-decoration: none;
+    color: #2d2254;
+    text-decoration: none !important;
 }
 
 li {

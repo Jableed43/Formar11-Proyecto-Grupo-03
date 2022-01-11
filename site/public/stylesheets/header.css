@@ -133,6 +133,12 @@ ul.menu{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  padding-left: 0;
+}
+
+ul.menu-hiden{
+  padding-left: 0;
+
 }
 
 
