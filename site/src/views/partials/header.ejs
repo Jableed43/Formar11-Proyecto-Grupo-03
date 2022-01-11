@@ -34,6 +34,7 @@
         <% if (locals.userLogin) { %>
           <div class="user-cart">
           <a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
+          <span class=" badge rounded-pill bg-warning text-dark position-absolute bottom-0" id="span-cantidad-cart"></span>
           </div>
           <% } %>
 
@@ -47,6 +48,8 @@
         <ul class="menu-hiden"><li><a href="/users/carrito"><i class="fas fa-shopping-cart"></i></a>
         </li><div class="logo-desktop"><a href="/"><img src="/images/Logo.png" alt="logo"></a></div>
         </ul>
+
+
 
         <% if (locals.userLogin) { %>  
           <ul class="menu">      

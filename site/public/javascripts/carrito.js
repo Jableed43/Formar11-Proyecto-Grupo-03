@@ -20,8 +20,10 @@ const mostrarCantidad = (carrito) => {
             total += +item.total
         })
     }
-
-    spanCantidadCarrito.innerHTML = amount
+    if(spanCantidadCarrito) {
+        spanCantidadCarrito.innerHTML = amount
+    }
+    
 
     if(spanCantidad){
         spanCantidad.innerHTML = amount;
@@ -82,7 +84,7 @@ const getCarrito = async () => {
 
         let response = await fetch('/cart/show');
         let result = await response.json();
-
+        console.log(result.data);
         mostrarCantidad(result.data);
 
 
@@ -169,6 +171,8 @@ const empty = async (e, id) => {
     }
 }
 
-btnCartEmpty.addEventListener('click',() => empty())
+if(btnCartEmpty){
+    btnCartEmpty.addEventListener('click',() => empty())
+}
 
 getCarrito()
