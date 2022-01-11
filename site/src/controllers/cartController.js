@@ -1,5 +1,7 @@
-const db = require("../database/models");
 const getURL = req => `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+
+const db = require('../database/models');
+
 
 const productVerify = (carrito,id) => {
     let index = -1;
@@ -22,28 +24,26 @@ module.exports = {
                 link : getURL(req)
             },
             data : req.session.cart
-        }
-
+        } 
         return res.status(200).json(response)
     },
     add : async (req,res) => {
-
         try {
 
             let product = await db.Product.findByPk(req.params.id, {
                 include : [{all : true}]
             })
 
-            const {id, title, image, price} = product
+            const {id, title, images, price} = product;
 
             let item = {
                 id,
                 title,
-                image,
+                images,
                 price,
-                subcategory : product.subcategory.name,
+                subcategory : product.subcategories.name,
                 amount : 1,
-                total : price
+                total : +price,
             }
             if(req.session.cart.length === 0){
 
@@ -54,10 +54,11 @@ module.exports = {
                     }
                 })
 
-                if(!orden){
+                if(!order){
                     order = await db.Order.create({
                         id_client : req.session.userLogin.id,
-                        status : 'pending'
+                        status : 'pending',
+                        total : 0
                     })
                 }
 
@@ -104,7 +105,7 @@ module.exports = {
 
                     let product = req.session.cart[index];
                     product.amount++;
-                    product.total = product.amount * product.price;
+                    product.total = product.amount * +product.price;
 
                     req.session.cart[index] = product;
 
@@ -162,7 +163,7 @@ module.exports = {
                 )
             }else{
 
-                res.session.cart.splice(index, 1);
+                req.session.cart.splice(index, 1);
 
                 await db.Cart.destroy({
                     where : {
@@ -171,6 +172,39 @@ module.exports = {
                     }
                 })
             }
+
+            let response = {
+                meta : {
+                    link : getURL(req)
+                },
+                data : req.session.cart
+            }
+    
+            return res.status(200).json(response)
+
+            
+        } catch (error) {
+            console.log(error)
+            return res.status(500).json({
+                msg: "Comuníquese con el administrador"
+            })
+        }
+    },
+    removeTotalItem : async (req,res) => {
+        try {
+
+            let index = productVerify(req.session.cart, req.params.id);
+            let product = req.session.cart[index];
+
+                req.session.cart.splice(index, 1);
+
+                await db.Cart.destroy({
+                    where : {
+                        id_order : product.id_order,
+                        id_products : product.id
+                    }
+                })
+
 
             let response = {
                 meta : {
@@ -215,6 +249,9 @@ module.exports = {
             return res.status(500).json({
                 msg: "Comuníquese con el administrador"
             })
-        }
+        }        
     }
 }
+
+
+

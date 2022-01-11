@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Order.belongsTo(models.User,{
         as : 'order',
-        foreignKey: 'id_client'
+        foreignKey : 'id_client'
       }),
       Order.hasMany(models.Cart,{
         as : 'carts',
-        foreignKey: 'id_order'
+        foreignKey : 'id_order'
       })
     }
   };
@@ -30,3 +30,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Order;
 };
+
+

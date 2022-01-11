@@ -9,8 +9,8 @@ module.exports = {
                 association: 'subcategories',
                 include: [{ all: true }]}
 
-        })
-        let Tacos = db.Subcategories.findAll({
+            })
+        let Tacos = db.Subcategory.findAll({
             where: {
                 id: 1
             },
@@ -19,7 +19,7 @@ module.exports = {
                 
             ]
         })
-        let Burritos = db.Subcategories.findAll({
+        let Burritos = db.Subcategory.findAll({
             where: {
                 id: 2
             },
@@ -28,7 +28,7 @@ module.exports = {
             ]
         })
 
-        let Quesadillas = db.Subcategories.findAll({
+        let Quesadillas = db.Subcategory.findAll({
             where: {
                 id: 3
             },
@@ -37,7 +37,7 @@ module.exports = {
             ]
         })
 
-        let Entradas = db.Subcategories.findAll({
+        let Entradas = db.Subcategory.findAll({
             where: {
                 id: 4
             },
@@ -46,7 +46,7 @@ module.exports = {
             ]
         })
 
-        let Platos = db.Subcategories.findAll({
+        let Platos = db.Subcategory.findAll({
             where: {
                 id: 5
             },
@@ -55,7 +55,7 @@ module.exports = {
             ]
         })
 
-        let Ensaladas = db.Subcategories.findAll({
+        let Ensaladas = db.Subcategory.findAll({
             where: {
                 id: 6
             },
@@ -64,7 +64,7 @@ module.exports = {
             ]
         })
 
-        let Salsas = db.Subcategories.findAll({
+        let Salsas = db.Subcategory.findAll({
             where: {
                 id: 7
             },
@@ -73,7 +73,7 @@ module.exports = {
             ]
         })
 
-        let Dulces = db.Subcategories.findAll({
+        let Dulces = db.Subcategory.findAll({
             where: {
                 id: 8
             },
@@ -82,7 +82,7 @@ module.exports = {
             ]
         })
 
-        let Gaseosas = db.Subcategories.findAll({
+        let Gaseosas = db.Subcategory.findAll({
             where: {
                 id: 9
             },
@@ -91,7 +91,7 @@ module.exports = {
             ]
         })
 
-        let Jugos = db.Subcategories.findAll({
+        let Jugos = db.Subcategory.findAll({
             where: {
                 id: 10
             },
@@ -100,7 +100,7 @@ module.exports = {
             ]
         })
 
-        let Aguas = db.Subcategories.findAll({
+        let Aguas = db.Subcategory.findAll({
             where: {
                 id: 11
             },
@@ -140,27 +140,28 @@ module.exports = {
                 console.log('Error al requerir los géneros de la base de datos ' + err)
             })
     },
-    search: (req, res) => {
-        db.Product.findAll({
-            include: [ "subcategories" ],
-                where: {
-                    [Op.or]: [{
-                            title: {
-                                [Op.like]: `%${req.query.busqueda.toLowerCase().trim()}%`
-                            }
-                        },
-                    ]
-                },
-            })
-            .then(product => {
-                return res.send(product)
-                res.render('products/results', {
-                    title: 'Resultado de busqueda',
-                    product
+    prodsearch: (req, res) => {
+        let products = db.Product.findAll({
+            where: {
+                title: {
+                    [Op.substring]: req.query.busqueda
+                }
+            },
+            include: [{ all: true }]
+        })
+        let subcategories = db.Subcategory.findAll()
+
+        Promise.all([products, subcategories])
+
+            .then(([products, subcategories]) => {
+                res.render('products/prodsearch', {
+                    title: 'Resultados de la búsqueda',
+                    products,
+                    subcategories
                 })
             })
             .catch(err => {
                 console.log('Error al requerir los productos de la base de datos ' + err)
             })
-    },
+        }
 }
