@@ -316,9 +316,10 @@ display: none;
 header .logo-desktop {
   z-index: 1;
   position: absolute;
-  top: 80px;
+  top: 50px;
   display: flex;
   justify-content: center;
+  
   }
 
 header img {

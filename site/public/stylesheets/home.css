@@ -396,8 +396,15 @@ display: none;
   text-transform: uppercase;
   margin: 10px;
   font-weight: 700;
-  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.home section h1 img{
+  width: 20%;
+}
+
 
 .home .eligen-flex{
   width: 100%;
@@ -446,22 +453,29 @@ display: none;
 
 /* Section Beneficios */
 .home section.beneficios{
-  background-color: #f1d367;
+  background-image: url(/images/taco-frame.jpg);
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 3px solid var(--Violeta);
+  background-size: 100%;
 
  }
 
  .home .beneficios p{
-  color: black;
-  font-size: 23px;
-  padding: 40px 10px;
+  padding: 0;
   font-weight: 700;
   text-align: center;
+    color: var(--Amarillo);
+    filter: drop-shadow(2px 4px 6px black);
+    font-size: 30px;;
+ }
+
+ .home .beneficios p img{
+  width: 20%;
+
  }
 
  .home .beneficios a{
@@ -635,7 +649,7 @@ display: none;
 
 .home .beneficios p {
   font-size: 50px;
-  padding: 40px 20px;
+  padding: 0;
 }
 
 .home .eligen-flex, .sucursales-flex{
