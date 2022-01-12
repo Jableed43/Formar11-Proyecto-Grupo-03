@@ -35,12 +35,24 @@ module.exports = {
         {
             let categories = db.Category.findAll()
             let subcategories = db.Subcategory.findAll()
+            let comida = db.Subcategory.findAll({
+                where: {
+                    categoryId: 2
+                }
+            })
+            let bebida = db.Subcategory.findAll({
+                where: {
+                    categoryId: 1
+                }
+            })
 
-            Promise.all([categories, subcategories])
-                .then(([categories, subcategories]) => {
+            Promise.all([categories, subcategories, comida, bebida])
+                .then(([categories, subcategories, comida, bebida]) => {
                     return res.render('admin/createProduct', {
                         categories,
-                        subcategories
+                        subcategories, 
+                        comida, 
+                        bebida
                     })
                 })
                 .catch(error => console.log(error))

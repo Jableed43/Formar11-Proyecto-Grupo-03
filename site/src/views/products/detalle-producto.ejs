@@ -33,7 +33,13 @@
 
 
 
-          <article class="cantycarr">
+              <% if (locals.userLogin) { %>
+                <button class="plus" onclick="addItem(event, '<%= products.id %>')">+</button>
+                <button class="plus"  onclick="addItem(event, '<%= products.id %>')"><i class="fas fa-cart-plus"></i></button>
+              <%  }else{ %> 
+                
+              <% } %>
+            </article>
 
             <p class="desc">
               <%= products.description %>

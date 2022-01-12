@@ -149,7 +149,14 @@ module.exports = {
             },
             include: [{ all: true }]
         })
-        let subcategories = db.Subcategory.findAll()
+        let subcategories = db.Subcategory.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.busqueda
+                }
+            },
+            include: [{ all: true }]
+        })
 
         Promise.all([products, subcategories])
 

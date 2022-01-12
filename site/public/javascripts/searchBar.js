@@ -1,9 +1,11 @@
 console.log('linkeado correctamente');
 
-const $$ = id => document.getElementById(id);
+const form = document.getElementById('form-busqueda');
+const busqueda = document.getElementById('busqueda');
+const btn = document.getElementById('btn-busqueda');
 
-$$('busqueda').addEventListener('click', e => {
-    
+btn.addEventListener('click', e => {
+
     e.preventDefault();
-    $$('busqueda').elements[0].value!='' && $$('busqueda').submit()
+    form.elements[0].value!='' && form.submit()
 })
