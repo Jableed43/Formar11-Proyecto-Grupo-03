@@ -242,6 +242,8 @@ module.exports = {
                 data : req.session.cart
             }
     
+            console.log(response);
+
             return res.status(200).json(response)
             
         } catch (error) {

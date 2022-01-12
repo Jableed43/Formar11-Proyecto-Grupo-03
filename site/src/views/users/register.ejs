@@ -8,8 +8,8 @@
 
           <section class="imagen">
             <img src="/images/register.png" style="width:100%">
+            <img id="previewUser" height="400px">
           </section>
-
           
           <section class="camposform">
           <h1>¡Sumate a Tacopado!</h1>
@@ -94,7 +94,7 @@
           <label>Selecciona una foto de perfil</label>
           <div class="buttons">
           <label for="img" >Subir imagen</label>
-          <input type="file" id="img" name="img" hidden multiple accept="image/*">
+          <input type="file" id="img" name="img" oninput="previewUser.src=window.URL.createObjectURL(this.files[0])"  hidden multiple accept="image/*">
           </div>
           <% if (locals.errores && errores.img) { %>
             <small class="mensajeError"> <%= errores.img.msg %> </small>
