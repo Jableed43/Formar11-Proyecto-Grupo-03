@@ -267,6 +267,14 @@ header div ul li a{
     top: 2%;
   }
 
+  header .crown {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
   header div#input i{
     display: block;
     position: absolute;
