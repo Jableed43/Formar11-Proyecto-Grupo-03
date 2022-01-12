@@ -21,6 +21,20 @@ header div#input i{
   display: none;
 }
 
+.carrito-flecha{
+  position: fixed;
+  bottom: 31px;
+  right: 20px;
+  z-index: 1;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px !important;
+  border: black 2px solid;
+  padding: 4px 10px !important;
+}
+
+
+
 img.logo{
 width: 100px;
 }
@@ -49,6 +63,22 @@ i.fas.fa-shopping-cart {
   margin: 0;
   font-size: 50px;
 }
+
+div#myBtn i.fas.fa-shopping-cart {
+  color: white;
+  margin: 0;
+  font-size: 48px;
+  position: absolute;
+  left: -50px;
+  filter: drop-shadow(2px 4px 2px black);
+  
+}
+
+div#myBtn i.fas.fa-shopping-cart:hover{
+  transform: none;
+  color: #2d2254;
+}
+
 
 header p.login{
   border-radius: 50%;

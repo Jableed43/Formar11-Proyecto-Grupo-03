@@ -1,5 +1,14 @@
 <header>
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <% if (locals.userLogin) { %>
+    <div id="myBtn"> 
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+      <a href="/users/carrito"><i class="fas fa-shopping-cart"></i><span class=" badge rounded-pill bg-warning text-dark carrito-flecha" id="span-cantidad-cart"></span>
+      </a>
+  </div>
+    <%  }else{ %> 
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+      <% } %>
 
     <div class="flex-header">
       
