@@ -25,4 +25,7 @@ router.get('/results', adminController.adminsearch);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminController.destroy); 
 
+/* GET lista de usuarios */
+router.get('/userlist', adminUserCheck, adminController.admin);
+
 module.exports = router;

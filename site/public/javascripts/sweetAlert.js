@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
                     cancelButton: 'swalBtnColor'
                 },
 
-                title: '¿Estas segur@ que quieres eliminar el producto?',
+                title: '¿Estas segur@ que quieres eliminarlo?',
                 text: "¡Esta acción es irreversible!",
                 icon: 'warning',
                 iconColor: '#2d2254',
