@@ -8,8 +8,8 @@
 
           <section class="imagen">
             <img src="/images/edit.png" style="width:100%">
+            <img id="preview" src="/images/users/<%= userLogin.avatar %>" height="400px">
           </section>
-
           
           <section class="camposform">
           <h1>Estas editando tus datos</h1>
@@ -100,7 +100,7 @@
           <label>Selecciona una nueva foto de perfil</label>
           <div class="buttons">
           <label for="img" >Subir imagen</label>
-          <input type="file" id="img" name="img" hidden>
+          <input type="file" id="img" name="img" oninput="preview.src=window.URL.createObjectURL(this.files[0])"  hidden>
           </div>
           <% if (locals.errores && errores.img) { %>
             <small class="mensajeError"> <%= errores.img.msg %> </small>
