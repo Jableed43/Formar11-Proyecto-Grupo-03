@@ -9,7 +9,7 @@
             <td><%=user.email%></td>
 
             <td>
-              <form action="/admin/delete/<%= user.id %>?_method=DELETE" method="POST" id="eliminar-producto">
+              <form action="/admin/deleteUser/<%= user.id %>?_method=DELETE" method="POST" id="eliminar-producto">
                 <button type="submit" class="b3" >Eliminar</button>
               </form>
             </td>

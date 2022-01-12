@@ -174,7 +174,7 @@ module.exports = {
                 sodium,
                 sugars,
                 fiber,
-                image: req.file ? req.file.filename : undefined,
+                images: req.file ? req.file.filename : undefined,
                 subcategoryId: subcategory
             },
                 {
@@ -282,10 +282,10 @@ module.exports = {
 
         db.User.destroy({
             where: {
-                id: db.User.findByPk(req.params.id)
+                id: req.params.id
             }
         })
-            .then(result => {
+            .then(() => {
                 return res.redirect('/admin/userlist')
             })
             .catch((error) => {

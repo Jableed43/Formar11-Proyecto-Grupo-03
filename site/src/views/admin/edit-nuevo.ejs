@@ -36,7 +36,7 @@
 
               
                 <!-- Carga imagen -->
-                <img class="prod" src="/images/imgmenu/<%= product.images %>" alt="Foto producto actual">
+                <img id="preview" class="prod" src="/images/imgmenu/<%= product.images %>" oninput="preview.src=window.URL.createObjectURL(this.files[0])"  alt="Foto producto actual">
 
           <div>
           <input type="file" id="images" name="images" oninput="preview.src=window.URL.createObjectURL(this.files[0])" hidden>

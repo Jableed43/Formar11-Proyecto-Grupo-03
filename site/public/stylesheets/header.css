@@ -173,6 +173,18 @@ header ul.user{
   width: 100%;
 }
 
+
+.search-header {
+  position: absolute;
+}
+
+.search-icon {
+  position: relative;
+  left: 190px;
+  bottom: 28px;
+  cursor: pointer;
+}
+
 /* mediaqueries */
 
 @media (min-width: 768px) {
