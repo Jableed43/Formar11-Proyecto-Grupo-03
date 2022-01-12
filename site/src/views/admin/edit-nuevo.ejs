@@ -68,6 +68,7 @@
           <div>
             <select name="subcategory" id="subcategory">
               <option value="" selected hidden>Subcategoría</option>
+              
               <% subcategories.forEach(subcategory => { %>
                 <option value="<%= subcategory.id %>" <%= product.subcategoryId === subcategory.id ? 'selected' : null%>><%= subcategory.name %></option>
                 <% }) %>
