@@ -42,8 +42,9 @@ main.create input#description{
 img#preview {
     max-width: 250px;
     max-height: 230px;
-    margin: 20px;
     width: 100%;
+    margin-top: 7px;
+    border: solid var(--Amarillo)
 }
 
 .contenedor{

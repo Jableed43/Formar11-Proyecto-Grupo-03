@@ -10,6 +10,12 @@
   padding: 5%;
 }
 
+.log-reg section.imagen{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .log-reg h1 {
   text-align: center;
   color: #2d2254;
