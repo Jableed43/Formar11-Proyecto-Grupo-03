@@ -94,6 +94,7 @@
           <label>Selecciona una foto de perfil</label>
           <div class="buttons">
           <label for="img" >Subir imagen</label>
+            
           <input type="file" id="img" name="img" oninput="previewUser.src=window.URL.createObjectURL(this.files[0])"  hidden multiple accept="image/*">
           </div>
           <% if (locals.errores && errores.img) { %>
@@ -120,9 +121,8 @@
               <div>
                 <p>¿Ya tenes una cuenta?</p>
                 <div class="buttons">
-                <a href="/users/login" style="color: #f1d367">Iniciá sesión</a>
+                <a href="/users/login" style="color: #f1d367 !important">Iniciá sesión</a>
               </div>
-              <a href="/users/login"><button class="buttons">Iniciá sesión</button></a>
 
           </form>
         </section>
