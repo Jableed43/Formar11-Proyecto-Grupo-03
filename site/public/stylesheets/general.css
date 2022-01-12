@@ -30,7 +30,7 @@ li {
 #myBtn {
   position: fixed;
   bottom: 63px;
-  right: 3px;
+  right: 20px;
   z-index: 99;
   border: none;
   outline: none;
