@@ -28,6 +28,7 @@ module.exports = {
                             id: user.id,
                             name: user.name,
                             sex: user.id_sex,
+                            province: user.id_province,
                             email: user.email,
                             avatar: user.avatar,
                             rol: user.id_rol
