@@ -28,29 +28,9 @@
       <a href="/users/edit" class="button">Editar datos</a>
 
       
-      <form action="/users/delete/<%= locals.userLogin.id %>?_method=DELETE" method="POST">
-      <input type=button onclick="eliminarPerfil()" value="Eliminar perfil" class="button-eliminar">
+      <form action="/users/delete/<%= locals.userLogin.id %>?_method=DELETE" method="POST" id="eliminar-producto">
+      <input type=button type="submit" value="Eliminar perfil" class="button-eliminar">
 
-      <script type="text/javascript">
-        function eliminarPerfil() {
-          swal({
-            title: "¿Estás seguro de eliminar el perfil?",
-            text: "Una vez eliminado no se podrán recuperar losdatos",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          })
-            .then((willDelete) => {
-              if (willDelete) {
-                swal("Poof! Tu perfil ya no existe!", {
-                  icon: "success",
-                });
-              } else {
-                swal("Tu perfil sigue activo");
-              }
-            });
-        }
-      </script>
       </form>
 
     </div>
@@ -61,7 +41,9 @@
 
 
 <%- include("../partials/footer.ejs") %>
-<script src="/javascripts/eliminar-user-alert.js"></script>
+<!-- <script src="/javascripts/eliminar-user-alert.js"></script> -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src='/javascripts/sweetAlert.js'></script>
 
 </body>
 

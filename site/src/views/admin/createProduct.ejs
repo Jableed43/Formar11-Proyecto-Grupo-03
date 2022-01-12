@@ -231,16 +231,25 @@
 
           </div>
           <article class="botonera">
-            <button class="guardar" type="submit" id="crearProd">Guardar</button><button class="borrar"
+            <button class="guardar" type="submit" onclick="crear()">Guardar</button><button class="borrar"
               type="reset">Resetear</button><button class="file" href="/admin">Cancelar</button>
           </article>
         </section>
       </form>
 
+      <script type="text/javascript">
+
+        function crear() {
+          preventDefault()
+          swal("¡Producto creado!", "Te redirigiremos al detalle del mismo", "success");
+        }
+  
+      </script>
 
     </main>
 
     <%- include("../partials/admin-footer.ejs") %>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="/javascripts/imagePreview.js"></script>
 
 </body>
