@@ -7,40 +7,103 @@
      
             <h2 class="products-title">Nuestro menú</h2>
 
+<!--          NAV BAR            -->
 
 
-            <!-- <section class="top-menu">
+
+              <!-- Menu Slide container -->
+              <div class="menu-container">
+
+                <!-- Iconos -->
+                <div class="icono-container icono-fade">
+                  <a href="/products/#taco"><img src="/images/Iconos_Tacotime/Taco_GRIcon_300x300-120x120.png" alt="taco icono">
+                  <div class="icono-nombre">Tacos</div></a>
+                </div>
+              
+                <div class="icono-container icono-fade">
+                  <a href="/products/#burrito"><img src="/images/Iconos_Tacotime/Burrito_GRIcon_300x300.png" alt="burrito icono">
+                  <div class="icono-nombre">Burritos</div></a>
+                </div>
+              
+                <div class="icono-container icono-fade">
+                  <a href="/products/#quesa"><img src="/images/Iconos_Tacotime/Quesa_GRIcon_300x300.png" alt="quesadilla icono">
+                    <div class="icono-nombre">Quesadillas</div></a>
+                  </div>
+              
+                  <div class="icono-container icono-fade">
+                    <a href="/products/#entrada"><img src="/images/Iconos_Tacotime/Nacho_GRIcon_300x300.png" alt="nacho icono">
+                    <div class="icono-nombre">Entradas</div></a>
+                  </div>
+              
+                  <div class="icono-container icono-fade">
+                    <a href="/products/#salsa"><img src="/images/Iconos_Tacotime/MexiFries_GRIcon_300x300.png" alt="papas icono">
+                    <div class="icono-nombre">Salsas</div></a>
+                  </div>
+              
+                  <div class="icono-container icono-fade">
+                    <a href="/products/#ensalada"><img src="/images/Iconos_Tacotime/TacoSalad_GRIcon_300x300.png" alt="ensalada icono">
+                    <div class="icono-nombre">Ensaladas</div></a>
+                  </div>
+              
+                  <div class="icono-container icono-fade">
+                    <a href="/products/#dulce"><img src="/images/Iconos_Tacotime/Dessert_GRIcon_300x300.png" alt="postre icono">
+                    <div class="icono-nombre">Dulces</div></a>
+                  </div>
+                        
+                <!-- Next and previous buttons -->
+                <a class="previo" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+
+              <!--                     TOP MENU                          -->
+              
+              <section class="top-menu">
                 <div>
-                    <a href="/products/#taco"><img src="/images/Iconos Tacotime/Taco_GRIcon_300x300-120x120.png" alt="taco icono"></a>
+                  <div class="img-box">
+                    <a href="/products/#taco"><img src="/images/Iconos_Tacotime/Taco_GRIcon_300x300-120x120.png" alt="taco icono"></a>
+                  </div>
                     <p>Tacos</p>
                 </div>
                 <div>
-                  <a href="/products/#burrito"><img src="/images/Iconos Tacotime/Burrito_GRIcon_300x300.png" alt="burrito icono"></a>
+                  <div class="img-box">
+                    <a href="/products/#burrito"><img src="/images/Iconos_Tacotime/Burrito_GRIcon_300x300.png" alt="burrito icono"></a>
+                </div>
                   <p>Burritos</p>
                 </div>
                 <div>
-                  <a href="/products/#quesa"><img src="/images/Iconos Tacotime/Quesa_GRIcon_300x300.png" alt="quesadilla icono"></a>
+                  <div class="img-box">
+                    <a href="/products/#quesa"><img src="/images/Iconos_Tacotime/Quesa_GRIcon_300x300.png" alt="quesadilla icono"></a>
+                </div>
                   <p>Quesadillas</p>
                 </div>
               <div class= "items-menu">
                 <div>
-                  <a href="/products/#entrada"><img src="/images/Iconos Tacotime/Nacho_GRIcon_300x300.png" alt="nacho icono"></a>
+                  <div class="img-box">
+                    <a href="/products/#entrada"><img src="/images/Iconos_Tacotime/Nacho_GRIcon_300x300.png" alt="nacho icono"></a>
+                </div>
                   <p>Entradas</p>
                 </div>
                 <div>
-                  <a href="/products/#salsa"><img src="/images/Iconos Tacotime/MexiFries_GRIcon_300x300.png" alt="papas icono"></a>
+                  <div class="img-box">
+                    <a href="/products/#salsa"><img src="/images/Iconos_Tacotime/MexiFries_GRIcon_300x300.png" alt="papas icono"></a>
+                </div>
                   <p>Salsas</p>
                 </div>
                 <div>
-                  <a href="/products/#ensalada"><img src="/images/Iconos Tacotime/TacoSalad_GRIcon_300x300.png" alt="ensalada icono"></a>
+                  <div class="img-box">
+                    <a href="/products/#ensalada"><img src="/images/Iconos_Tacotime/TacoSalad_GRIcon_300x300.png" alt="ensalada icono"></a>
+                </div>
                   <p>Ensaladas</p>
                 </div>
                 <div>
-                  <a href="/products/#dulce"><img src="/images/Iconos Tacotime/Dessert_GRIcon_300x300.png" alt="postre icono"></a>
+                  <div class="img-box">
+                    <a href="/products/#dulce"><img src="/images/Iconos_Tacotime/Dessert_GRIcon_300x300.png" alt="postre icono"></a>
+                </div>
                   <p>Dulces</p>
                 </div>
               </div>
-              </section> -->
+              </section> 
+              
 
             <!-- Show the "comidas" products -->
             <h2 id="taco" class="products-title">Tacos</h2>
@@ -95,6 +158,8 @@
     </main>
 
     <%- include("./partials/footer.ejs") %>
+    <script src="/javascripts/menu-bar.js"></script>
+
 
 </body>
 </html>
