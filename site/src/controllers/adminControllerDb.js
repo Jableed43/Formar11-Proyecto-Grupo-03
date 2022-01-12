@@ -257,6 +257,14 @@ module.exports = {
                 console.log('Error al requerir los productos de la base de datos ' + err)
             })
     },
+    userlist: (req, res) => {
+		db.User.findAll({
+			include: [{ all: true }]
+		})
+			.then((users) => {
+            return res.render('admin/userlist', {users})
+        })
+	},
     // Delete -
     destroyUser: (req, res) => {
 
