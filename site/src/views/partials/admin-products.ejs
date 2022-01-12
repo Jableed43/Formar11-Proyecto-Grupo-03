@@ -35,30 +35,10 @@
           <button class="editar"><i class="fas fa-edit"></i></button>
         </a>
 
-        <form action="admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-          <button class="borrar" onclick="confirmacion()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        <form action="admin/delete/<%= product.id %>?_method=DELETE" method="POST" id="eliminar-producto">
+          <button class="borrar" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
         </form>
-
-        <script type="text/javascript">
-          function confirmacion() {
-            swal({
-              title: "¿Estás seguro de eliminar el producto?",
-              text: "Una vez eliminado se borrará el registro en la base de datos",
-              icon: "warning",
-              buttons: true,
-              dangerMode: true,
-            })
-              .then((willDelete) => {
-                if (willDelete) {
-                  swal("Poof! Tu producto ya no existe!", {
-                    icon: "success",
-                  });
-                } else {
-                  swal("Tu producto sigue activo");
-                }
-              });
-          }
-        </script>
+        
 
       </td>
     </tr>

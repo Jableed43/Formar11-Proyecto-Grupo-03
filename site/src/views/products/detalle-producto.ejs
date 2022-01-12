@@ -1,108 +1,137 @@
 <%- include("../partials/head.ejs") %>
 
-<body class="Detalleprodu">
-    
+  <body class="Detalleprodu">
+
     <%- include("../partials/header.ejs") %>
 
-    <main>
-      <div class="button-container">
-         <a href="/products"> <button class="menu-nav">Volver al Menú</button> </a>
-      </div>
+      <main>
+        <div class="button-container">
+          <a href="/products"> <button class="menu-nav">Volver al Menú</button> </a>
+        </div>
 
-      <h1 class="nombreprod"><%= products.title%></h1>
-            
-        
+        <h1 class="nombreprod">
+          <%= products.title%>
+        </h1>
+
+
         <div class="foto-container">
           <button class="antsig">&#8249;</button>
 
           <!-- Imagen producto -->
           <img class="foto" src="/images/imgmenu/<%= products.images %>" alt="Foto de producto" width="100%">
 
-         <button class="antsig">&#8250;</button>
+          <button class="antsig">&#8250;</button>
         </div>
-        
+
 
         <!-- Información producto -->
         <section class="detalle">
-            <article class="categoria"><%= products.category %>  <%= products.subcategory %></article>
-            
+          <article class="categoria">
+            <%= products.category %>
+              <%= products.subcategory %>
+          </article>
 
-            
-            <article class="cantycarr">
 
-              <p class="desc"><%= products.description %></p>
 
-              <button class="plus" onclick="addItem(event, '<%= products.id %>')">+</button>
-            <a href="/users/carrito" class="carrito" onclick="addItem(event, '<%= products.id %>')"><i class="fas fa-cart-plus"></i></a>
-            </article>
+          <article class="cantycarr">
 
-            <article class="tablainfo">
-                <div class="columna">
-                  <div class="carta"><%= products.calories %><br>Calorías</div>
-                </div>
-                <div class="columna">
-                  <div class="carta"><%= products.totalfat %><br>Grasas(g)</div>
-                </div>
-                <div class="columna">
-                  <div class="carta"><%= products.protein %><br>Prot (g)</div>
-                </div>
-                <div class="columna">
-                  <div class="carta"><%= products.carb %><br>Carb (g)</div>
-                </div>
-            </article>
+            <p class="desc">
+              <%= products.description %>
+            </p>
 
-            <h2>Información Nutricional</h2>
+            <button class="plus" onclick="addItem(event, '<%= products.id %>')">+</button>
+            <a href="/users/carrito" class="carrito" onclick="addItem(event, '<%= products.id %>')"><i
+                class="fas fa-cart-plus"></i></a>
+          </article>
 
-            <article>
-              <table>
-                <tr>
-                  <td class="c1">Grasa Saturada (g)</td>
-                  <td class="c2"><%= products.saturatedfat %></td>
-                  <tr>
-                    <td class="c1">Grasas trans (g)</td>
-                    <td class="c2"><%= products.transfat %></td>
-                  </tr>
-                  <tr>
-                    <td class="c1">Colesterol (mg)</td>
-                    <td class="c2"><%= products.cholesterol %></td>
-                  </tr>
-                  <tr>
-                    <td class="c1">Azúcares (g)</td>
-                    <td class="c2"><%= products.sugars %></td>
-                  </tr>
-                  <tr>
-                    <td class="c1">Sodio (mg)</td>
-                    <td class="c2"><%= products.sodium %></td>
-                  </tr>
-                  <tr>
-                    <td class="c1">Fibra (g)</td>
-                    <td class="c2"><%= products.fiber %></td>
-                  </tr>
-                </tr>
-                </tr>
-              </table>
-            </article>
-            
-
-            <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
-              <div class="final-buttons">
-                <a href="/admin/create">
-                  <button class="b1">Crear</button>
-                </a>
-                <a href="/admin/edit/<%= products.id %>">
-                  <button class="b2">Editar</button>
-                </a>
-                <form action="/admin/delete/<%= products.id %>?_method=DELETE" method="POST">
-                  <button class="b3">Eliminar</button>
-                </form>
+          <article class="tablainfo">
+            <div class="columna">
+              <div class="carta">
+                <%= products.calories %><br>Calorías
               </div>
+            </div>
+            <div class="columna">
+              <div class="carta">
+                <%= products.totalfat %><br>Grasas(g)
+              </div>
+            </div>
+            <div class="columna">
+              <div class="carta">
+                <%= products.protein %><br>Prot (g)
+              </div>
+            </div>
+            <div class="columna">
+              <div class="carta">
+                <%= products.carb %><br>Carb (g)
+              </div>
+            </div>
+          </article>
+
+          <h2>Información Nutricional</h2>
+
+          <article>
+            <table>
+              <tr>
+                <td class="c1">Grasa Saturada (g)</td>
+                <td class="c2">
+                  <%= products.saturatedfat %>
+                </td>
+              <tr>
+                <td class="c1">Grasas trans (g)</td>
+                <td class="c2">
+                  <%= products.transfat %>
+                </td>
+              </tr>
+              <tr>
+                <td class="c1">Colesterol (mg)</td>
+                <td class="c2">
+                  <%= products.cholesterol %>
+                </td>
+              </tr>
+              <tr>
+                <td class="c1">Azúcares (g)</td>
+                <td class="c2">
+                  <%= products.sugars %>
+                </td>
+              </tr>
+              <tr>
+                <td class="c1">Sodio (mg)</td>
+                <td class="c2">
+                  <%= products.sodium %>
+                </td>
+              </tr>
+              <tr>
+                <td class="c1">Fibra (g)</td>
+                <td class="c2">
+                  <%= products.fiber %>
+                </td>
+              </tr>
+              </tr>
+              </tr>
+            </table>
+          </article>
+
+
+          <% if (locals.userLogin && locals.userLogin.rol===1) { %>
+            <div class="final-buttons">
+              <a href="/admin/edit/<%= products.id %>">
+                <button class="b2">Editar</button>
+              </a>
+              <form action="/admin/delete/<%= products.id %>?_method=DELETE" method="POST" id="eliminar-producto">
+                <button type="submit" class="b3" >Eliminar</button>
+              </form>
+            </div>
             <% } %>
 
         </section>
 
-    </main>
-    
-    <%- include("../partials/footer.ejs") %>
+      </main>
 
-</body>
-</html>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src='/javascripts/sweetAlert.js'></script>
+
+      <%- include("../partials/footer.ejs") %>
+
+  </body>
+
+  </html>

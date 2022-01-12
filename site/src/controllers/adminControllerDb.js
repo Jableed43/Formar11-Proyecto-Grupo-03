@@ -256,5 +256,20 @@ module.exports = {
             .catch(err => {
                 console.log('Error al requerir los productos de la base de datos ' + err)
             })
+    },
+    // Delete -
+    destroyUser: (req, res) => {
+
+        db.User.destroy({
+            where: {
+                id: db.User.findByPk(req.params.id)
+            }
+        })
+            .then(result => {
+                return res.redirect('/admin/userlist')
+            })
+            .catch((error) => {
+                res.send(error)
+            })
     }
 }

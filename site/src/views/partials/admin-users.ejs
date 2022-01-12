@@ -9,18 +9,8 @@
             <td><%=user.email%></td>
 
             <td>
-              <a href="admin/edit/<%= user.id %>">
-                 <button class="editar"><i class="fas fa-edit"></i></button>
-              </a>
-              <!-- <form>
-                <div>
-                  <a href="admin/delete/">
-                    <button class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                 </a>
-                </div>
-              </form> -->
-              <form action="admin/delete/<%= user.id %>?_method=DELETE" method="POST">
-                <button  class="borrar"><i class="fa fa-trash" aria-hidden="true"></i></button>
+              <form action="/admin/delete/<%= products.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="b3" id="eliminar-producto">Eliminar</button>
               </form>
             </td>
           </tr>
