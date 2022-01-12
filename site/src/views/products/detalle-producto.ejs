@@ -32,8 +32,9 @@
 
               <p class="desc"><%= products.description %></p>
 
-              <!-- <button class="plus" onclick="addItem(event, '<%= products.id %>')">+</button> -->
+              <% if (locals.userLogin) { %>
             <a href="/users/carrito" class="carrito" onclick="addItem(event, '<%= products.id %>')"><i class="fas fa-cart-plus"></i></a>
+            <% } %> 
             </article>
 
             <article class="tablainfo">
