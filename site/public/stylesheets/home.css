@@ -443,8 +443,6 @@ display: none;
 }
 
 
-
-
 .home main section h2{
   color: white;
   text-transform: capitalize;
@@ -452,6 +450,7 @@ display: none;
   width: 75%;
   font-size: 20px;
   text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .home .nosotros-flex{
