@@ -406,6 +406,7 @@ display: none;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
+  filter: drop-shadow(2px 4px 0px black);
 }
 
 .home section h1 img{
@@ -561,11 +562,18 @@ display: none;
  }
 
  .home .fondo-eligen{
-  background-color: #2D2254;
+  background-image: url(/images/taco-home-lima.jpg);
   width: 100%;
   padding-bottom: 15px;
-  border: 3px solid var(--Amarillo)
+  border: 3px solid var(--Amarillo);
+  background-size: 100%;
  }
+
+
+
+
+
+
 /* section Sucursales */
 .home .sucursales, .fondo-sucursal {
   display: flex;
@@ -650,7 +658,8 @@ display: none;
 }
 
 .home section h1{
-  font-size: 25px;
+  font-size: 35px;
+  
 }
 
 .home main section h2 {
