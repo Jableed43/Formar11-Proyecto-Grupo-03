@@ -17,6 +17,10 @@ header div#input {
   margin: 10px 0;
 }
 
+header div#input i{
+  display: none;
+}
+
 img.logo{
 width: 100px;
 }
@@ -261,6 +265,13 @@ header div ul li a{
     left: 90%;
     background: none;
     top: 2%;
+  }
+
+  header div#input i{
+    display: block;
+    position: absolute;
+    top: 33%;
+    left: 87%;
   }
 
   header ul.menu-hiden li a{
