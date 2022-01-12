@@ -45,6 +45,15 @@ body.admin main table.table td, th{
 padding: 0;
 text-align: center;
 vertical-align: middle;
+filter: drop-shadow(2px 4px 6px black);
+}
+
+body.admin main tr:hover{
+filter: brightness(1);
+}
+
+body.admin main td button:hover{
+    transform: scale(1.1);
 }
 
 

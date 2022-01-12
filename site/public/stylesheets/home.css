@@ -142,15 +142,13 @@ body{
 
 
 .home main section.top-menu div img{
-    border-radius: 50%;
-    border: 1.5px solid #2D2254;
-    width: 80px;
-    height: 80px;
-    margin-left: 10px;
-    padding: 0;
-    box-shadow: 0px 0px 10px rgb(100 100 100);
-
-    
+  border-radius: 50%;
+  border: 2px solid #2D2254;
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  padding: 0;
+  box-shadow: 0px 0px 10px    
 }
 
 .home main section.top-menu div a img:hover{
@@ -162,12 +160,11 @@ body{
 
 .home main section.top-menu div p{
   font-size: 25px;
-     font-family: 'Open Sans Condensed', sans-serif;
-    color:  #2D2254;
-    
- 
-    width: 100px;
-    text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #2D2254;
+  width: 100px;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 
@@ -185,6 +182,13 @@ body{
   width: 100%;
   text-align: center;
   margin-top: 65px;
+}
+
+.home main section div.icono-container img {
+  border: var(--Amarillo) solid;
+  width: 50%;
+  border-radius: 50%;
+  background-color: rgba(241,211,10,0.2)
 }
 
 /* Next & previous buttons */
@@ -360,6 +364,7 @@ width: 100%;
   .home main section.top-menu {
     justify-content: space-evenly;
     display: flex;
+    border: 3px solid var(--Violeta);
 }
 
 /* Slideshow container */
@@ -391,16 +396,30 @@ display: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
 }
 
 .home section h1{
   color: white;
   text-transform: uppercase;
-  margin: 10px;
   font-weight: 700;
-  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  filter: drop-shadow(2px 4px 0px black);
 }
+
+.home section h1 img{
+  width: 20%;
+}
+
+.home div.fondo-eligen h1 img{
+  border: none;
+  width: 15%;
+  margin-left: 40px
+}
+
+
 
 .home .eligen-flex{
   width: 100%;
@@ -409,13 +428,18 @@ display: none;
 
 .home main section div img, .home main section div iframe  {
   width: 80%;
+  border: var(--Amarillo) solid;
   }
 
-.home main section div.icono-container img {
-  border: black solid;
-  width: 50%;
-  border-radius: 50%;
-  background-color: rgba(241,211,103,0.5 );
+  .home main section div img:hover, .home main section div iframe:hover{
+    transform: scale(1.1);
+  }
+
+
+  .home main section div iframe {
+    margin-top: 19px;
+    margin-bottom: 40px;
+    border: 4px solid var(--Amarillo) !important;
 }
 
 
@@ -426,6 +450,7 @@ display: none;
   width: 75%;
   font-size: 20px;
   text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .home .nosotros-flex{
@@ -437,21 +462,29 @@ display: none;
 
 /* Section Beneficios */
 .home section.beneficios{
-  background-color: #f1d367;
+  background-image: url(/images/taco-frame.jpg);
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 3px solid var(--Violeta);
+  background-size: 100%;
 
  }
 
  .home .beneficios p{
-  color: black;
-  font-size: 23px;
-  padding: 40px 10px;
+  padding: 0;
   font-weight: 700;
   text-align: center;
+    color: var(--Amarillo);
+    filter: drop-shadow(2px 4px 6px black);
+    font-size: 30px;;
+ }
+
+ .home .beneficios p img{
+  width: 20%;
+
  }
 
  .home .beneficios a{
@@ -459,7 +492,7 @@ display: none;
  }
 
  .home  .unite{
-  color: white;
+  color: white !important;
   padding: 8px;
   width: 150px;
   border-radius: 10%;
@@ -528,10 +561,18 @@ display: none;
  }
 
  .home .fondo-eligen{
-  background-color: #2D2254;
+  background-image: url(/images/taco-home-lima.jpg);
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
+  border: 3px solid var(--Amarillo);
+  background-size: 100%;
  }
+
+
+
+
+
+
 /* section Sucursales */
 .home .sucursales, .fondo-sucursal {
   display: flex;
@@ -549,6 +590,7 @@ display: none;
 .home .fondo-sucursal{
   background-color:#373737;
   width: 100%;
+  border: 3px solid var(--Violeta);
 }
 .home .sucursal-bottom{
   color: #f1d367;
@@ -610,9 +652,13 @@ display: none;
   
 }
 
+.home .nosotros-img:hover{
+  transform: none;
+}
+
 .home section h1{
-  font-size: 30px;
-  margin: 20px;
+  font-size: 35px;
+  
 }
 
 .home main section h2 {
@@ -621,7 +667,7 @@ display: none;
 
 .home .beneficios p {
   font-size: 50px;
-  padding: 40px 20px;
+  padding: 0;
 }
 
 .home .eligen-flex, .sucursales-flex{
@@ -662,7 +708,11 @@ display: none;
 
   .slideshow-container video{
     width: 90%;
-    }
+    filter: drop-shadow(0px 0px 30px var(--Amarillo));
+    border: 3px solid var(--Violeta);
+    margin: 5px;
+}
+    
   
   .mySlides.fade img {
     height: auto;
@@ -671,7 +721,7 @@ display: none;
 
   /* Imagenes del body */
   .home main section div img {
-    width: 31vw;
+    width: 100%;
     height: auto;
 }
 

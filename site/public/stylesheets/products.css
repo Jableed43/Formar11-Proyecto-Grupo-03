@@ -2,8 +2,6 @@ body.products h2.products-title{
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
     font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 50px;
     background-color: rgba(255,255,255,0.5);
 }
 body.products h3{
@@ -24,6 +22,7 @@ body.products div.contenedor{
     transition-duration: 0.5s;
     border-radius: 6%;
     margin: 15px 10px;
+    border: 2px solid var(--Amarillo);
 }
 body.products div.contenedor:hover{
     background-color: #463686;
@@ -120,6 +119,12 @@ body.products div.row{
         justify-content: space-around;
     }
 }
+@media(min-width: 768px){
+    body.products h2.products-title{
+        margin-top: 82px;
+    }
+}
+
 @media (min-width: 1044px){
     body.products h2.products-title{
         margin-top: 100px;

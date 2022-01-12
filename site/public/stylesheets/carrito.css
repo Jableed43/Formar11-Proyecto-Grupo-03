@@ -60,6 +60,17 @@
     align-items: center;
 }
 
+.carrito p.product-quantity{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+	font-weight: 700;
+}
+
+.carrito p.product-quantity button{
+	margin: 0px 10px;
+}
+
 .carrito .product-name, .carrito  .product-price, .carrito  .product-offer{
     margin-bottom: 20px;
     color: #f1d367;
@@ -101,6 +112,7 @@
 	border: 1px solid black;
 	border-radius: 5px;
 	background-color: rgba(188, 188, 126, 0.5);
+	font-weight: 700;
 }
 
 .carrito .cart-total p{
@@ -112,12 +124,22 @@
 
 .carrito .cart-total a{
 	display: block;
-	text-align: center;
-	height: 40px;
-	line-height: 40px;
-	background-color: tomato;
-	color: white;
-	text-decoration: none;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+    border: black 1px solid;
+    margin: 5px 0;
+}
+
+.carrito .cart-total a.pagar{
+	background-color: lightgreen;
+}
+
+.carrito .cart-total a.pagar:hover{
+	background-color: green;
 }
 
 .carrito .cart-total a:hover{

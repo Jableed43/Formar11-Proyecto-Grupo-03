@@ -8,10 +8,11 @@ header .flex-header{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 3px solid var(--Violeta);
 }
 
 header div#input {
-  left: -26%;
+  left: -145%;
   position: relative;
   margin: 10px 0;
 }
@@ -21,10 +22,11 @@ width: 100px;
 }
 
 .imgUser{
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   cursor: pointer;
+  margin-top: 4px;
 }
 
 .logo-desktop{
@@ -39,9 +41,9 @@ width: 100px;
 } */
 
 i.fas.fa-shopping-cart {
-  color: #2d2254;
-  margin: 10px 2px 5px;
-  font-size: 34px;
+  color: var(--Amarillo);
+  margin: 0;
+  font-size: 50px;
 }
 
 header p.login{
@@ -56,14 +58,14 @@ header div input{
 }
 
 header div .user-cart {
-  margin: 10px;
-  position: relative;
-  left: 26%;
+  background-color: var(--Violeta);
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-header div .user-cart{
-  display: none;
-}
+
 
 header .container-menu{
   display: flex;
@@ -81,8 +83,11 @@ header .menu-hiden li i.fas.fa-shopping-cart{
  }
 
 header div ul li a{
-  color: var(--Amarillo);
+  color: var(--Amarillo) !important;
   font-size: 50px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header .li-img{
@@ -119,12 +124,26 @@ header label.input-user {
   padding: 0;
   height: 70px;
   width: 70px;
+  margin: 0;
 }
+
+header .crown{
+margin: 0;
+    padding: 0;
+  }
+
+  header .crown li{
+    margin: 0;
+  }
 
 header div ul li {
   text-align: center;
   width: 20vw;
   background-color: #2d2254;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0px;
 }
 
 ul.menu{
@@ -133,6 +152,16 @@ ul.menu{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  background-color: var(--Violeta);
+
+}
+
+ul.menu-hiden{
+  padding-left: 0;
+  margin-bottom: 0;
+
 }
 
 
@@ -161,6 +190,7 @@ header div ul li a{
 .imgUser{
   width: 100%;
   height: 100%;
+  margin-top: 0;
 }
  i.fas.fa-user, i.fas.fa-shopping-cart{
   font-size: 50px;
@@ -170,7 +200,7 @@ header div ul li a{
 
 
 i.fas.fa-shopping-cart{
-  background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);;
+  /* background-image: linear-gradient(to right, #f1d367 50%, #2d2254 100%);; */
 background-size: 200%;
 background-repeat: no-repeat;
 background-position: left;
@@ -189,6 +219,8 @@ header label.input-user{
   width: 65px;
   height: 65px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
 }
 
  header .home img.logo {
@@ -213,6 +245,10 @@ header div ul li a{
   /* Header */
   header div .user-cart {
     display: block;
+    position: absolute;
+    left: 90%;
+    background: none;
+    top: 2%;
   }
 
   header ul.menu-hiden li a{
@@ -229,10 +265,6 @@ header div ul li a{
     transform: scale(1.2);
   }
 
-  header {
-    padding-bottom: 15px;
-    
-  }
   
   header ul li img{
     left: 310px;
@@ -273,6 +305,7 @@ header input#busqueda {
 
 header .container-menu{
   display: flex;
+  justify-content: space-around;
 }
 
 header .menu{
@@ -281,6 +314,7 @@ header .menu{
 
 header div ul li {
   background: none;
+  margin: 8px 0px;
 }
 
 header div ul li a {
@@ -296,6 +330,7 @@ header div ul li a {
 header ul.menu{
   display: flex;
   width: 30vw;
+  background: none;
 }
 
 header ul.menu-hiden{
@@ -311,9 +346,10 @@ display: none;
 header .logo-desktop {
   z-index: 1;
   position: absolute;
-  top: 80px;
-  display: flex;
+  top: 27px;
+    display: flex;
   justify-content: center;
+  
   }
 
 header img {
@@ -331,6 +367,7 @@ header img {
 
 i.fas.fa-user, i.fas.fa-shopping-cart, .input-user{
   border: none;
+  color: var(--Violeta);
 
 }
 

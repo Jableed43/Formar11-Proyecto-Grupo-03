@@ -60,7 +60,7 @@
 }
 
 a#submit-register{
-  color: var(--Amarillo);
+  color: var(--Amarillo) !important;
 }
 
 .log-reg .buttons:disabled {
