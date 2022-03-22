@@ -26,5 +26,6 @@ Ofrecemos una página pensada y realizada para los jovenes que quieren experimen
 ## ***Tablero Del Trabajo***
 [Trello](https://trello.com/b/Ch0oeNJA/proyecto-integrador-grupo-3)
 
-
+##Home
+![TACOPADO-HOME](https://user-images.githubusercontent.com/76080165/159508277-e0c92f47-02f8-42b8-be62-9789bf82c570.png)
 
