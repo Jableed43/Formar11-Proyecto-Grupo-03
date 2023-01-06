@@ -1,18 +1,18 @@
 # Grupo_03_TacoPado
----
-## Integrantes:
----
-## Lopez Javier Nehuen:
-- 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
----
-## Sanchez Florencia Teresita:
-- 29 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
----
-## Yamila Vecces:
-- 21 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
----
+
 ## ***Bienvenidos a TacoPado***
 Ofrecemos una página pensada y realizada para los jovenes que quieren experimentar un viaje gastronomico a traves de nuestras especialidades mexicanas. Contamos con un variedad de ingredientes de alta calidad en nuestros productos que hacen de nuestra comida la mejor y a precio accesible. Queremos beneficiar a nuestros clientes mas comprometidos a traves de un programa de puntos.En nuestros servicios incluimos un carrito de compras para que agilmente puedan seleccionar a gusto nuestros productos y poder adquirirlos desde la comodidad de sus hogares.
+
+## Integrantes:
+
+## Lopez Javier Nehuen:
+- 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+
+## Sanchez Florencia Teresita:
+- 29 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+
+## Yamila Vecces:
+- 21 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
 
 ## ***Paginas Referentes***
 
@@ -23,9 +23,30 @@ Ofrecemos una página pensada y realizada para los jovenes que quieren experimen
 * Por contener en home page reseñas de sus clientes en un carroussel: [Taco Time Canada](https://tacotimecanada.com/)
 * Menú con icono circular integrado que sobresale: [Partake Foods](https://partakefoods.com/)
 
+***Tecnologías***
+
+- Node.js 
+- Express.js 
+- Html Css 
+- Responsive 
+- Js 
+- Bootstrap 
+- Mysql 
+- Sequelize 
+- Ejs-Template 
+- Sweet-Alert 
+- Api-Rest 
+- Form-Validation 
+- Font-Awesome 
+- Google-Fonts
+- SCRUM
+
+## ***Short Presentation***
+[Video](https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6902288475790675968?compact=1)
+
 ## ***Tablero Del Trabajo***
 [Trello](https://trello.com/b/Ch0oeNJA/proyecto-integrador-grupo-3)
 
-## Home
+## Home Snapshot
 ![TACOPADO-HOME](https://user-images.githubusercontent.com/76080165/159508277-e0c92f47-02f8-42b8-be62-9789bf82c570.png)
 
