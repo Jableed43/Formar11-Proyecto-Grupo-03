@@ -1,29 +1,29 @@
 # Grupo_03_TacoPado
 
-## ***Bienvenidos a TacoPado***
-Ofrecemos una página pensada y realizada para los jovenes que quieren experimentar un viaje gastronomico a traves de nuestras especialidades mexicanas. Contamos con un variedad de ingredientes de alta calidad en nuestros productos que hacen de nuestra comida la mejor y a precio accesible. Queremos beneficiar a nuestros clientes mas comprometidos a traves de un programa de puntos.En nuestros servicios incluimos un carrito de compras para que agilmente puedan seleccionar a gusto nuestros productos y poder adquirirlos desde la comodidad de sus hogares.
+## ***Welcome to TacoPado***
+We offer a page designed and made for young people who want to experience a gastronomic journey through our Mexican specialties. We have a variety of high quality ingredients in our products that make our food the best and at an affordable price. We want to benefit our most committed customers through a points program. In our services we include a shopping cart so that they can easily select our products and purchase them from the comfort of their homes.
 
-## Integrantes:
+## Team Members:
 
 ## Lopez Javier Nehuen:
-- 28 años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+- Full Stack Web Developer educated at Digital House & Fundación Formar.
 
 ## Sanchez Florencia Teresita:
-- 29 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+- Full Stack Web Developer educated at Digital House & Fundación Formar.
 
 ## Yamila Vecces:
-- 21 Años, Desarrollador Web Full Stack en Digital House y Fundación Formar.
+- Full Stack Web Developer educated at Digital House & Fundación Formar.
 
-## ***Paginas Referentes***
+## ***Referring web pages.***
 
-* Por el uso del lenguaje, colores y animaciones: [Tacos Tacos Barcelona](https://tacostacosbarcelona.com/)
-* Por el uso de iconos en el menú: [Mole Tacos Web](http://moletacosweb.com.ar/)
-* Por el uso de animaciones. Por la inclusión de imágenes con los ingredientes que usan para la elaboración. Descripciones de calorías e ingredientes: [Del Taco](https://www.deltaco.com/)
-* Por la implementación de iconos en su menú, animación sobre productos con datos nutricionales, selector para variantes del producto: [Taco Bueno](https://www.tacobueno.com/)
-* Por contener en home page reseñas de sus clientes en un carroussel: [Taco Time Canada](https://tacotimecanada.com/)
-* Menú con icono circular integrado que sobresale: [Partake Foods](https://partakefoods.com/)
+* Language, colors and animations: [Tacos Tacos Barcelona](https://tacostacosbarcelona.com/)
+* Menu Icons: [Mole Tacos Web](http://moletacosweb.com.ar/)
+* Animations, show fresh food ingredients, calories and ingredients descriptions at each product: [Del Taco](https://www.deltaco.com/)
+* Menu icons, hover animation over products with data, products selector: [Taco Bueno](https://www.tacobueno.com/)
+* Carrousel with user reviews: [Taco Time Canada](https://tacotimecanada.com/)
+* Icon that stands out in the header central part.: [Partake Foods](https://partakefoods.com/)
 
-***Tecnologías***
+***Technologies***
 
 - Node.js 
 - Express.js 
@@ -44,7 +44,7 @@ Ofrecemos una página pensada y realizada para los jovenes que quieren experimen
 ## ***Short Presentation***
 [Video](https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6902288475790675968?compact=1)
 
-## ***Tablero Del Trabajo***
+## ***Work Board***
 [Trello](https://trello.com/b/Ch0oeNJA/proyecto-integrador-grupo-3)
 
 ## Home Snapshot
